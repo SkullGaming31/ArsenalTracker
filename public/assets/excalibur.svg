@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect width="100%" height="100%" fill="#07202b"/>
+  <polygon points="128,24 168,200 88,200" fill="#9b5cff" />
+  <text x="128" y="230" font-size="18" text-anchor="middle" fill="#fff">Excalibur</text>
+</svg>

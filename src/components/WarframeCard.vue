@@ -2,6 +2,10 @@
   <div class="card p-card">
     <div class="card-header">
       <div class="accent" :style="{ background: accentColor }"></div>
+      <div class="thumb">
+        <img v-if="imgSrc" :src="imgSrc" alt="thumbnail" class="thumb-img" />
+        <img v-else src="/icons/icon-192.svg" alt="placeholder" class="thumb-img" />
+      </div>
       <div class="title">
   <h3 v-html="highlightedName"></h3>
         <div class="meta">
@@ -108,6 +112,7 @@ type WarframeUpdate = {
 const emit = defineEmits<{ (e: 'update', payload: WarframeUpdate): void }>()
 // keep `warframe` as a reactive ref so updates from parent propagate
 import { ref, watch, computed, toRef, watchEffect } from 'vue'
+import { onMounted, onBeforeUnmount } from 'vue'
 const warframe = toRef(props as { warframe: Warframe }, 'warframe')
 
 // local reactive copies so checkboxes can be toggled (props are readonly)
@@ -128,6 +133,52 @@ const showNeuroptics = ref(false)
 const showChassis = ref(false)
 const showSystems = ref(false)
 const showBlueprint = ref(false)
+
+// thumbnail state
+const imgSrc = ref<string | null>(null)
+let observer: IntersectionObserver | null = null
+let manifestCache: Record<string, string> | null = null
+
+async function loadAssetsManifest() {
+  if (manifestCache) return manifestCache
+  try {
+    const res = await fetch('/assets/manifest.json')
+    if (!res.ok) return (manifestCache = {})
+    const json = await res.json()
+    manifestCache = json.thumbnails || {}
+    return manifestCache
+  } catch (e) {
+    manifestCache = {}
+    return manifestCache
+  }
+}
+
+function startObserving(el: Element | null) {
+  if (!el || typeof IntersectionObserver === 'undefined') return
+  observer = new IntersectionObserver(async (entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        // attempt to load thumbnail from manifest
+  const m = await loadAssetsManifest() || {}
+  const name = String(warframe.value?.name || '')
+  const path = (m as Record<string, string>)[name]
+  if (path) imgSrc.value = path
+        // stop observing once attempted
+        if (observer) { observer.disconnect(); observer = null }
+      }
+    }
+  }, { rootMargin: '200px' })
+  observer.observe(el)
+}
+
+onMounted(() => {
+  const el = document.querySelector('.card')
+  startObserving(el)
+})
+
+onBeforeUnmount(() => {
+  if (observer) observer.disconnect()
+})
 
 // initialize local state when `warframe` prop arrives/changes
 watchEffect(() => {
