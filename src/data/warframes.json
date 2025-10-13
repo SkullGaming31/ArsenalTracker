@@ -1,0 +1,1726 @@
+[
+  {
+    "name": "Rhino Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": true,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [
+      {
+        "name": "Credits",
+        "quantity": 15000,
+        "collected": false
+      },
+      {
+        "name": "Alloy Plate",
+        "quantity": 150,
+        "collected": false
+      },
+      {
+        "name": "Neural Sensors",
+        "quantity": 2,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "quantity": 150,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "quantity": 750,
+        "collected": false
+      }
+    ],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Mirage",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [
+      {
+        "name": "Credits",
+        "quantity": 15000,
+        "collected": true
+      },
+      {
+        "name": "Alloy Plate",
+        "quantity": 250,
+        "collected": true
+      },
+      {
+        "name": "Neurodes",
+        "quantity": 1,
+        "collected": true
+      },
+      {
+        "name": "Polymer Bundle",
+        "quantity": 400,
+        "collected": true
+      },
+      {
+        "name": "Orokin Cell",
+        "quantity": 1,
+        "collected": true
+      }
+    ],
+    "chassis_resources": [
+      {
+        "name": "Credits",
+        "quantity": 15000,
+        "collected": true
+      },
+      {
+        "name": "Orokin Cell",
+        "quantity": 1,
+        "collected": true
+      },
+      {
+        "name": "Ferrite",
+        "quantity": 2500,
+        "collected": true
+      },
+      {
+        "name": "Plastids",
+        "quantity": 450,
+        "collected": true
+      },
+      {
+        "name": "Gallium",
+        "quantity": 1,
+        "collected": true
+      }
+    ],
+    "systems_resources": [
+      {
+        "name": "Credits",
+        "quantity": 15000,
+        "collected": true
+      },
+      {
+        "name": "Control Module",
+        "quantity": 1,
+        "collected": true
+      },
+      {
+        "name": "Circuits",
+        "quantity": 250,
+        "collected": true
+      },
+      {
+        "name": "Polymer Bundle",
+        "quantity": 650,
+        "collected": true
+      },
+      {
+        "name": "Orokin Cell",
+        "quantity": 1,
+        "collected": true
+      }
+    ],
+    "blueprint_resources": [
+      {
+        "name": "Credits",
+        "quantity": 25000,
+        "collected": true
+      },
+      {
+        "name": "Mirage Neuroptics Blueprint",
+        "quantity": 1,
+        "collected": true
+      },
+      {
+        "name": "Mirage Chassis Blueprint",
+        "quantity": 1,
+        "collected": true
+      },
+      {
+        "name": "Mirage System Blueprint",
+        "quantity": 1,
+        "collected": true
+      },
+      {
+        "name": " Orokin Cell",
+        "quantity": 1,
+        "collected": true
+      }
+    ]
+  },
+  {
+    "name": "Oberon",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Valkyr",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Excalibur Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Mag Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Loki Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Volt",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Nekros",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Nova Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Banshee",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Ember Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Garuda Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": false,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Hydroid Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Khora Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Zephyr Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Citrine",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Dante",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Equinox",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Excalibur",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Frost",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Jade",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Styanax",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Trinity",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Gyre",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Mag",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Chroma",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Inaros",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Loki",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Titania",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Limbo Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": true,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Revenant Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Valkyr Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Garuda",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": false,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [
+      {
+        "name": "Credits",
+        "quantity": 15000,
+        "collected": false
+      },
+      {
+        "name": "Sola Toroid",
+        "quantity": 2,
+        "collected": false
+      },
+      {
+        "name": "Marquise Thyst",
+        "quantity": 3,
+        "collected": false
+      },
+      {
+        "name": "Venerdo Alloy",
+        "quantity": 40,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "quantity": 2400,
+        "collected": false
+      }
+    ],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Gauss",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Harrow",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": true,
+    "systems_collected": false,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Octavia",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Vauban",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Mesa Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Atlas",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Gara",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Lavos",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Nyx",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Saryn Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Wisp Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Ivara",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Kullervo",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Frost Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": true,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Nekros Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Titania Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Ember",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Nezha",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Mirage Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Baruuk",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Yareli",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Atlas Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Gara Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Grendel Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Harrow Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Hydroid",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Protea",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Rhino",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Sevagoth",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Wisp",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Banshee Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Protea Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Volt Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Caliban",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Voruna",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Equinox Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Gauss Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [
+      {
+        "name": "Gauss Prime Neuroptics Blueprint",
+        "quantity": 1,
+        "collected": false
+      },
+      {
+        "name": "Gauss Prime Chassis Blueprint",
+        "quantity": 1,
+        "collected": false
+      },
+      {
+        "name": "Gauss Prime Systems Blueprint",
+        "quantity": 1,
+        "collected": false
+      },
+      {
+        "name": "Credits",
+        "quantity": 25000,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cells",
+        "quantity": 3,
+        "collected": false
+      }
+    ],
+    "chassis_resources": [
+      {
+        "name": "Credits",
+        "quantity": 15000,
+        "collected": false
+      },
+      {
+        "name": "Nitain Extract",
+        "quantity": 2,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "quantity": 450,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "quantity": 1425,
+        "collected": false
+      },
+      {
+        "name": "Alloy Plates",
+        "quantity": 5500,
+        "collected": false
+      }
+    ],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Hildryn Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Nidus Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Nyx Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Wukong Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Revenant",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Wukong",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Zephyr",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Inaros Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Trinity Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Nidus",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Baruuk Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Nezha Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Oberon Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Vauban Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Khora",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": true,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Mesa",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Xaku",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": true,
+    "systems_collected": false,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Excalibur Umbra",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Chroma Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Ivara Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Grendel",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Nova",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Qorvex",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Saryn",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Ash Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [
+      {
+        "name": "Alloy Plate",
+        "quantity": 150,
+        "collected": false
+      },
+      {
+        "name": "Neural Sensor",
+        "quantity": 1,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "quantity": 150,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "quantity": 500,
+        "collected": false
+      }
+    ],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Ash",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Dagath",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Octavia Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Hildryn",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Limbo",
+    "type": "non-prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": true,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Oraxia",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [
+      {
+        "name": "Credits",
+        "quantity": 15000,
+        "collected": true
+      },
+      {
+        "name": "Temporal Dust",
+        "quantity": 50,
+        "collected": true
+      },
+      {
+        "name": "Entrati Obols",
+        "quantity": 1500,
+        "collected": true
+      },
+      {
+        "name": "Kovnik",
+        "quantity": 200,
+        "collected": true
+      },
+      {
+        "name": "Neural Sensors",
+        "quantity": 4,
+        "collected": true
+      }
+    ],
+    "chassis_resources": [
+      {
+        "name": "Credits",
+        "quantity": 15000,
+        "collected": true
+      },
+      {
+        "name": "Temporal Dust",
+        "quantity": 50,
+        "collected": true
+      },
+      {
+        "name": "Necracoil",
+        "quantity": 400,
+        "collected": true
+      },
+      {
+        "name": "Aggristone",
+        "quantity": 200,
+        "collected": true
+      },
+      {
+        "name": "Morphics",
+        "quantity": 2,
+        "collected": true
+      }
+    ],
+    "systems_resources": [
+      {
+        "name": "Credits",
+        "quantity": 15000,
+        "collected": true
+      },
+      {
+        "name": "Temporal Dust",
+        "quantity": 50,
+        "collected": true
+      },
+      {
+        "name": "Entrati Obols",
+        "quantity": 800,
+        "collected": true
+      },
+      {
+        "name": "Tasoma Extract",
+        "quantity": 75,
+        "collected": true
+      },
+      {
+        "name": "Argon Crystal",
+        "quantity": 2,
+        "collected": true
+      }
+    ],
+    "blueprint_resources": [
+      {
+        "name": "Credits",
+        "quantity": 25000,
+        "collected": true
+      },
+      {
+        "name": "Oraxia Neuroptics Blueprint",
+        "quantity": 1,
+        "collected": true
+      },
+      {
+        "name": "Oraxia Chassis Blueprint",
+        "quantity": 1,
+        "collected": true
+      },
+      {
+        "name": "Oraxia Systems Blueprint",
+        "quantity": 1,
+        "collected": true
+      },
+      {
+        "name": "Orokin Cell",
+        "quantity": 3,
+        "collected": true
+      }
+    ]
+  },
+  {
+    "name": "Lavos Prime",
+    "type": "prime",
+    "neuroptics_collected": true,
+    "chassis_collected": true,
+    "systems_collected": true,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Sevagoth Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Xaku Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Yareli Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
+    "name": "Cyte-09",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  }
+]

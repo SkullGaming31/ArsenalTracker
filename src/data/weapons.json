@@ -1,0 +1,3125 @@
+[
+    {
+        "name": "Galatine Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Broken War",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Orthos",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Braton Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Soma Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Lex Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Nikana Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Braton",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Acceltra",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Acceltra Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Amprex",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Arca Plasmor",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Acceltra",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Acceltra Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Amprex",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Arca Plasmor",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Argonak",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Attica",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Baza",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Baza Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Battacor",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Boar",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Boar Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Boltor Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Braton",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Braton Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Braton Vandal",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Burston",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Burston Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Cernos",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Cernos Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Daikyu",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dera",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dera Vandal",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Drakgoon",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dread",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ferrox",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Fulmin",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Fulmin Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Glaxion",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Glaxion Vandal",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Grakata",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Grakata Wraith",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Grinlok",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Harpak",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Hek",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Hek Vaykor",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ignis",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ignis Wraith",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Karak",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Karak Wraith",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kohm",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kuva Bramma",
+        "category": "primary",
+        "type": "kuva",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kuva Chakkhurr",
+        "category": "primary",
+        "type": "kuva",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kuva Hind",
+        "category": "primary",
+        "type": "kuva",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kuva Hek",
+        "category": "primary",
+        "type": "kuva",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kuva Karak",
+        "category": "primary",
+        "type": "kuva",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kuva Kohm",
+        "category": "primary",
+        "type": "kuva",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kuva Ogris",
+        "category": "primary",
+        "type": "kuva",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kuva Quartakk",
+        "category": "primary",
+        "type": "kuva",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kuva Tonkor",
+        "category": "primary",
+        "type": "kuva",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kuva Zarr",
+        "category": "primary",
+        "type": "kuva",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Latron",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Latron Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Latron Wraith",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Lenz",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Miter",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "MK1-Braton",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "MK1-Paris",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "MK1-Strun",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Mutalist Cernos",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Nagantaka",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Nagantaka Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ogris",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Opticor",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Opticor Vandal",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Paris",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Paris Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Paracesis",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Penta",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Prisma Gorgon",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Prisma Grakata",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Prisma Tetra",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Quanta",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Quanta Vandal",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Quartakk",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Rubico",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Rubico Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Sancti Tigris",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Scourge",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Scourge Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Soma",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Soma Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Soma Vandal",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Snipetron",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Snipetron Vandal",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Stradavar",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Stradavar Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Strun",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Strun Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Strun Wraith",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Supra",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Supra Vandal",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Sybaris",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Sybaris Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Telos Boltor",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tenora",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tenora Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tetra",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tiberon",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tiberon Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tigris",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tigris Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tonkor",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Torid",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Trumna",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Veldt",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Vectis",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Vectis Prime",
+        "category": "primary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Vulkar",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Vulkar Wraith",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Zarr",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Zenith",
+        "category": "primary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Acrid",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Afuris",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Afuris Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Akbolto",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Akbolto Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Akbronco",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Akbronco Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Akjagara",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Akjagara Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Aklato",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Aksomati",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Aksomati Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Akstiletto",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Akstiletto Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Akvasto",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Akvasto Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Akzani",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Angstrum",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Atomos",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ballistica",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ballistica Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Bolto",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Brakk",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Bronco",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Bronco Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Castanas",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Cestra",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Detron",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dex Furis",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dex Dakra",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dex Pixia",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dex Sybaris",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Embolist",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Euphona Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Furis",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Gammacor",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Gaze",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Gremlins",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Hikou",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Hikou Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Hystrix",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Hystrix Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Knell",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Knell Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kohmak",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kraken",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kuva Twin Stubbas",
+        "category": "secondary",
+        "type": "kuva",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kuva Nukor",
+        "category": "secondary",
+        "type": "kuva",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kulstar",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Lato",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Lato Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Lato Vandal",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Lex",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Lex Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Magnus",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Magnus Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Marelok",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Marelok Vaykor",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "MK1-Kunai",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "MK1-Furis",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "MK1-Lato",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "MK1-Viper",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Nukor",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ocucor",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Pandero",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Pandero Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Pyrana",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Pyrana Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Raksa Ballistica",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Sancti Castanas",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Secura Dual Cestra",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Seer",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Sicarus",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Sicarus Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Sonicor",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Spectra",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Spira",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Spira Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Stug",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Stubba",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Stubbas Twin",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Synoid Gammacor",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Talons Akarius",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Telos Akbolto",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tysis",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Twin Gremlins",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Twin Kohmak",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Twin Vipers",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Twin Vipers Wraith",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Vasto",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Vasto Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Viper",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Viper Wraith",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Zakti",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Zakti Prime",
+        "category": "secondary",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Zylok",
+        "category": "secondary",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ack & Brunt",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Amphis",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Anku",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ankyros",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ankyros Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Arca Titron",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Atterax",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Bo",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Bo Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Broken War",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Broken Sword",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Caustacyst",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ceramic Dagger",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Chronus",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dakra Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dark Dagger",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dark Split-Sword",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dark Sword",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Destreza",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Destreza Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dragon Nikana",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dual Cleavers",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dual Ether",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dual Heat Swords",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dual Ichor",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dual Kama",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dual Kamas Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dual Skana",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Dual Zoren",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ether Daggers",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ether Reaper",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ether Sword",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Fang",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Fang Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Fragor",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Fragor Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Furax",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Furax Wraith",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Galatine",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Galatine Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Gazal Machete",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Glaive",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Glaive Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Gram",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Gram Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Guandao",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Guandao Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Halikar",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Halikar Wraith",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Heat Dagger",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Heat Sword",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Heliocor",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Hirudo",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Jaw Sword",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Jat Kittag",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Jat Kusar",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kama",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Karyst",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Karyst Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kesheg",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kogake",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kogake Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Krohkur",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kronen",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kronen Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Kuva Shildeg",
+        "category": "melee",
+        "type": "kuva",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Lacera",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Lecta",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Lesion",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Machete",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Machete Wraith",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Magistar",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Magistar Sancti",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Mios",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "MK1-Bo",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "MK1-Furax",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "MK1-Machete",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Nami Skyla",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Nami Skyla Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Nami Solo",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Nikana",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Nikana Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ninkondi",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ninkondi Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Obex",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Okina",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Orthos",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Orthos Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Pangolin Sword",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Pathocyst",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Plasma Sword",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Prova",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Prova Vandal",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Rakta Dark Dagger",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Redeemer",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Redeemer Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Reaper Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Ripkas",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Sarpa",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Scindo",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Scindo Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Scoliac",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Secura Lecta",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Sheev",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Shaku",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Sibear",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Sigma & Octantis",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Silva & Aegis",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Silva & Aegis Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Skana",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Skana Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Stropha",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tekko",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tekko Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tipedo",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tipedo Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Tonbo",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Twin Basolk",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Twin Krohkur",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Vaykor Sydon",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Venka",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Venka Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Vitrica",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Volnus",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Volnus Prime",
+        "category": "melee",
+        "type": "prime",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "War",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Wolf Sledge",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    },
+    {
+        "name": "Zenistar",
+        "category": "melee",
+        "type": "standard",
+        "is_crafted": false,
+        "is_mastered": false,
+        "parts": [],
+        "main_blueprint_resources": []
+    }
+]
