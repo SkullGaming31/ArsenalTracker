@@ -1,12 +1,14 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { setActivePinia, createPinia } from 'pinia'
 import Dashboard from '../pages/Dashboard.vue'
 import warframes from '../data/warframes.json'
 import weapons from '../data/weapons.json'
 
 describe('Dashboard', () => {
   it('renders totals for warframes and weapons', () => {
-    const wrapper = mount(Dashboard)
+    setActivePinia(createPinia())
+    const wrapper = mount(Dashboard, { global: { plugins: [createPinia()] } })
 
     const wf = (warframes as any[])
     const wp = (weapons as any[])
