@@ -1,6 +1,10 @@
 # arsenaltracker
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Homepage: https://SkullGaming31.github.io/ArsenalTracker
+
+How to contribute: see `CONTRIBUTING.md` for local setup, tests, and PR guidelines.
 
 This template should help get you started developing with Vue 3 in Vite.
 
