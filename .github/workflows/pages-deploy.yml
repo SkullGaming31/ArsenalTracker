@@ -23,24 +23,13 @@ jobs:
       - name: Build
         run: npm run build --if-present
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          deploy_key: ${{ secrets.DEPLOY_KEY }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          path: ./dist
 
-      # Fallback: if you don't want to use a deploy key, you can use GITHUB_TOKEN
-      # (less control over commits but no secrets required). Uncomment the step below
-      # and remove the peaceiris step above if you prefer to use GITHUB_TOKEN.
-
-      # - name: Deploy using GITHUB_TOKEN
-      #   uses: actions/configure-pages@v3
-      # - name: Upload artifact to pages
-      #   uses: actions/upload-pages-artifact@v1
-      #   with:
-      #     path: ./dist
-      # - name: Publish Pages
-      #   uses: actions/deploy-pages@v1
+      - name: Publish to GitHub Pages
+        uses: actions/deploy-pages@v1
