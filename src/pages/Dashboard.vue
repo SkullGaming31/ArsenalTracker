@@ -60,14 +60,27 @@
         </div>
       </div>
     </div>
-
-    <!-- recently collected removed per request -->
+    <!-- Import / Export controls -->
+    <div class="recent">
+      <h3>Import / Export</h3>
+      <p class="muted small-row">Export your local collection overrides or import a previously saved JSON backup.</p>
+      <div style="display:flex; gap:8px; margin-top:8px;">
+        <button @click="onExport" class="tag">Export JSON</button>
+        <label class="tag" style="cursor:pointer">
+          Import JSON
+          <input type="file" ref="fileInput" @change="onFileChange" accept="application/json" style="display:none" />
+        </label>
+        <button class="tag" @click="onClear">Clear Local Overrides</button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import warframes from '../data/warframes.json'
 import weapons from '../data/weapons.json'
+import { useCollectionStore } from '../stores/collection'
+import { ref } from 'vue'
 import { computed } from 'vue'
 
 const wf = warframes as any[]
@@ -118,6 +131,50 @@ const meleePrimesTotal = primesIn('melee').length
 const meleeStandardsTotal = standardsIn('melee').length
 const meleePrimesCompleted = primesIn('melee').filter(w => w.is_crafted || w.is_mastered).length
 const meleeStandardsCompleted = standardsIn('melee').filter(w => w.is_crafted || w.is_mastered).length
+
+const collection = useCollectionStore()
+
+const fileInput = ref<HTMLInputElement | null>(null)
+
+function onExport() {
+  const text = collection.exportState()
+  const blob = new Blob([text], { type: 'application/json' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = 'arsenaltracker-backup.json'
+  document.body.appendChild(a)
+  a.click()
+  a.remove()
+  URL.revokeObjectURL(url)
+}
+
+function onFileChange(e: Event) {
+  const el = e.target as HTMLInputElement
+  const file = el.files && el.files[0]
+  if (!file) return
+  const reader = new FileReader()
+  reader.onload = () => {
+    const text = String(reader.result || '')
+    if (collection.importState(text)) {
+      // eslint-disable-next-line no-console
+      console.log('[dashboard] import succeeded')
+      alert('Import successful')
+    } else {
+      alert('Import failed — invalid file')
+    }
+  }
+  reader.readAsText(file)
+  // reset so same file can be selected again
+  el.value = ''
+}
+
+function onClear() {
+  if (confirm('Clear all local overrides? This cannot be undone.')) {
+    collection.clearOverrides()
+    alert('Local overrides cleared')
+  }
+}
 
 // recently collected removed
 </script>
