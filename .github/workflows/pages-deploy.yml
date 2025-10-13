@@ -1,0 +1,46 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build --if-present
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+      # Fallback: if you don't want to use a deploy key, you can use GITHUB_TOKEN
+      # (less control over commits but no secrets required). Uncomment the step below
+      # and remove the peaceiris step above if you prefer to use GITHUB_TOKEN.
+
+      # - name: Deploy using GITHUB_TOKEN
+      #   uses: actions/configure-pages@v3
+      # - name: Upload artifact to pages
+      #   uses: actions/upload-pages-artifact@v1
+      #   with:
+      #     path: ./dist
+      # - name: Publish Pages
+      #   uses: actions/deploy-pages@v1

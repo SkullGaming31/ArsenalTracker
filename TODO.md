@@ -18,6 +18,7 @@ This file contains the project roadmap, current status, and suggested next steps
 - Push repository to GitHub — Remote created and initial push completed.
 - Rename project to `arsenaltracker` — `package.json`, `README.md`, and references updated.
 - Write project description — Short/medium/long descriptions drafted.
+ - Configure repo metadata & GitHub Pages — homepage metadata added to `package.json`, `docs/index.html` created and pushed; Pages responding at the repository homepage URL.
 
 ## In-progress
 
