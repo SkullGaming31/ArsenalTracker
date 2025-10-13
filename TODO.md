@@ -22,7 +22,7 @@ This file contains the project roadmap, current status, and suggested next steps
 
 ## In-progress
 
-- Configure repo metadata & GitHub Pages — description, topics, homepage and Pages enabling (needs finalization/authorization).
+None at the moment — short-term work items are listed under "Next steps (recommended)" and backlog.
 
 ## Backlog / Not started
 
@@ -109,4 +109,8 @@ The following items are planned improvements and features to make Arsenal Tracke
 - Mid term (1–2 weeks): Add PWA support, image thumbnails, and better search (Fuse.js). Add tests for persistence.
 - Long term: Optional cloud sync, i18n, and enhanced CI with nightly QA runs.
 
-If you want, I can commit this `TODO.md` to the repo (I will), create Issues for the top-priority items, and open PR branches for the first work items.
+
+Start scaffolding PWA support: add vite-plugin-pwa to the project, create manifest.webmanifest, and add a basic service worker strategy (cache-first for assets, network-first for API/data).
+Implement Fuse.js search: wire a search store or composable, update search input with debounce and highlight results in WarframeCard.vue. DONE
+Add image thumbnails pipeline: create public/assets/ manifest, update cards to lazy-load and fallback to SVG placeholders.
+Add tests for persistence: create Vitest tests for src/stores/collection.ts offline behaviors and migration edge cases.

@@ -3,7 +3,7 @@
     <div class="card-header">
       <div class="accent" :style="{ background: accentColor }"></div>
       <div class="title">
-        <h3>{{ warframe.name }}</h3>
+  <h3 v-html="highlightedName"></h3>
         <div class="meta">
           <span class="badge">{{ typeParts[0] }}</span>
           <span class="crafted">{{ craftedCount }}/4 crafted</span>
@@ -92,7 +92,7 @@
 <script lang="ts" setup>
 import type { Warframe, Resource } from "../types/warframe";
 
-const props = defineProps<{ warframe: Warframe }>()
+const props = defineProps<{ warframe: Warframe, highlight?: string }>()
 type WarframeUpdate = {
   name: string
   neuroptics_collected: boolean
@@ -185,6 +185,23 @@ const typeParts = computed(() => {
   if (parts.length === 1) return [parts[0]]
   // if more than 2, show first as top and rest joined as bottom
   return [parts[0], parts.slice(1).join(' / ')]
+})
+
+// highlightedName: if props.highlight provided, wrap the first occurrence in a <mark>
+const highlightedName = computed(() => {
+  const name = String(warframe.value?.name || '')
+  const hl = (props as any).highlight || ''
+  if (!hl) return name
+  try {
+    const idx = name.toLowerCase().indexOf(String(hl).toLowerCase())
+    if (idx === -1) return name
+    const before = name.slice(0, idx)
+    const match = name.slice(idx, idx + hl.length)
+    const after = name.slice(idx + hl.length)
+    return `${before}<mark>${match}</mark>${after}`
+  } catch (e) {
+    return name
+  }
 })
 
 // If all resources for a part are collected, mark that part as collected (ready to craft)
