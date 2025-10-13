@@ -59,25 +59,26 @@
 </template>
 
 <script setup lang="ts">
-import weapons from '../data/weapons.json'
-import WeaponCard from '../components/WeaponCard.vue'
-import type { Weapon } from '../types/weapon'
 import { computed, ref } from 'vue'
+import WeaponCard from '../components/WeaponCard.vue'
+import { useCollectionStore } from '../stores/collection'
+import type { Weapon } from '../types/weapon'
 
-const all = weapons as Weapon[]
+const collection = useCollectionStore()
+const all = computed<Weapon[]>(() => collection.mergedWeapons as Weapon[])
 
 const query = ref('')
 const selectedType = ref('all')
 const craftedFilter = ref('all') // all | crafted | not-crafted
 
 const types = computed(() => {
-  const set = new Set(all.map(w => w.type || 'standard'))
+  const set = new Set(all.value.map(w => w.type || 'standard'))
   return Array.from(set).sort()
 })
 
 const filtered = computed(() => {
   const q = query.value.trim().toLowerCase()
-  return all.filter(w => {
+  return all.value.filter(w => {
     if (selectedType.value !== 'all' && (w.type || 'standard') !== selectedType.value) return false
     if (craftedFilter.value !== 'all') {
       const wantsCrafted = craftedFilter.value === 'crafted'
@@ -94,6 +95,11 @@ const melees = computed(() => filtered.value.filter(w => w.category === 'melee')
 
 // expose length for results display
 const filteredLen = computed(() => filtered.value.length)
+
+function handleUpdate(payload: any) {
+  if (!payload || !payload.name) return
+  collection.setOverride(payload.name, payload)
+}
 </script>
 
 <style scoped>

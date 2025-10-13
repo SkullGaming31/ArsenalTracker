@@ -116,7 +116,7 @@ watch(parts, (newParts) => {
   })
   // emit an update so parent can persist
   emit('update', { name: weapon.name, parts: newParts.map(p => ({ ...p })) , main_blueprint_resources: blueprint.value.map(r => ({ ...r })), is_crafted: weapon.is_crafted, is_mastered: weapon.is_mastered })
-}, { deep: true })
+}, { deep: true, flush: 'sync' })
 
 // blueprint auto-check
 const blueprintAllResources = computed(() => blueprint.value.length > 0 && blueprint.value.every(r => Boolean(r.collected)))
@@ -126,7 +126,7 @@ watch(blueprintAllResources, (val) => {
 
 watch(blueprint, () => {
   emit('update', { name: weapon.name, parts: parts.value.map(p => ({ ...p })), main_blueprint_resources: blueprint.value.map(r => ({ ...r })), is_crafted: weapon.is_crafted, is_mastered: weapon.is_mastered })
-}, { deep: true })
+}, { deep: true, flush: 'sync' })
 
 </script>
 

@@ -66,40 +66,61 @@
       <p class="muted small-row">Export your local collection overrides or import a previously saved JSON backup.</p>
       <div style="display:flex; gap:8px; margin-top:8px;">
         <button @click="onExport" class="tag">Export JSON</button>
+        <button @click="onExportCSV" class="tag">Export CSV</button>
         <label class="tag" style="cursor:pointer">
-          Import JSON
-          <input type="file" ref="fileInput" @change="onFileChange" accept="application/json" style="display:none" />
+          Import JSON/CSV
+          <input type="file" ref="fileInput" @change="onFileChange" accept="application/json,text/csv,text/plain" style="display:none" />
         </label>
         <button class="tag" @click="onClear">Clear Local Overrides</button>
+      </div>
+      <div v-if="previewRows && previewRows.length" style="margin-top:12px">
+        <h4>Import preview (first {{ Math.min(10, previewRows.length) }} rows)</h4>
+        <div style="max-height:220px; overflow:auto; border:1px solid rgba(255,255,255,0.03); padding:6px; border-radius:6px">
+          <table style="width:100%">
+            <thead>
+              <tr>
+                <th v-for="h in previewHeaders" :key="h">{{ h }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(r, idx) in previewRows.slice(0,10)" :key="idx">
+                <td v-for="h in previewHeaders" :key="h">{{ r[h] }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:8px; display:flex; gap:8px">
+          <button class="tag" @click="applyPreview">Confirm Import</button>
+          <button class="tag" @click="clearPreview">Cancel</button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import warframes from '../data/warframes.json'
-import weapons from '../data/weapons.json'
 import { useCollectionStore } from '../stores/collection'
-import { ref } from 'vue'
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
+import { parseImportFile, mapRowsToOverrides, exportOverridesToCSV } from '../lib/importer'
 
-const wf = warframes as any[]
-const wp = weapons as any[]
+const collection = useCollectionStore()
+const wf = computed(() => collection.mergedWarframes)
+const wp = computed(() => collection.mergedWeapons)
 
-const totalWarframes = wf.length
-const totalWarframesMastered = wf.filter(w => w.is_mastered).length
+const totalWarframes = computed(() => wf.value.length)
+const totalWarframesMastered = computed(() => wf.value.filter((w: any) => w.is_mastered).length)
 
-const total = {
-  primary: wp.filter(w => w.category === 'primary').length,
-  secondary: wp.filter(w => w.category === 'secondary').length,
-  melee: wp.filter(w => w.category === 'melee').length,
-}
+const total = computed(() => ({
+  primary: wp.value.filter((w: any) => w.category === 'primary').length,
+  secondary: wp.value.filter((w: any) => w.category === 'secondary').length,
+  melee: wp.value.filter((w: any) => w.category === 'melee').length,
+}))
 
-const mastered = {
-  primary: wp.filter(w => w.category === 'primary' && w.is_mastered).length,
-  secondary: wp.filter(w => w.category === 'secondary' && w.is_mastered).length,
-  melee: wp.filter(w => w.category === 'melee' && w.is_mastered).length,
-}
+const mastered = computed(() => ({
+  primary: wp.value.filter((w: any) => w.category === 'primary' && w.is_mastered).length,
+  secondary: wp.value.filter((w: any) => w.category === 'secondary' && w.is_mastered).length,
+  melee: wp.value.filter((w: any) => w.category === 'melee' && w.is_mastered).length,
+}))
 
 // helper to identify prime vs non-prime
 const isPrime = (typeStr: string) => {
@@ -108,33 +129,48 @@ const isPrime = (typeStr: string) => {
 }
 
 // Warframe prime/standard totals and completed (any parts collected)
-const wfPrimesTotal = wf.filter(w => isPrime(w.type)).length
-const wfStandardsTotal = wf.filter(w => !isPrime(w.type)).length
-const wfPrimesCompleted = wf.filter(w => isPrime(w.type) && (w.neuroptics_collected || w.chassis_collected || w.systems_collected || w.blueprint_collected)).length
-const wfStandardsCompleted = wf.filter(w => !isPrime(w.type) && (w.neuroptics_collected || w.chassis_collected || w.systems_collected || w.blueprint_collected)).length
+const wfPrimesTotal = computed(() => wf.value.filter((w: any) => isPrime(w.type)).length)
+const wfStandardsTotal = computed(() => wf.value.filter((w: any) => !isPrime(w.type)).length)
+const wfPrimesCompleted = computed(() => wf.value.filter((w: any) => isPrime(w.type) && (w.neuroptics_collected || w.chassis_collected || w.systems_collected || w.blueprint_collected)).length)
+const wfStandardsCompleted = computed(() => wf.value.filter((w: any) => !isPrime(w.type) && (w.neuroptics_collected || w.chassis_collected || w.systems_collected || w.blueprint_collected)).length)
 
-// Weapon category helper
-const primesIn = (cat: string) => wp.filter(w => w.category === cat && isPrime(w.type))
-const standardsIn = (cat: string) => wp.filter(w => w.category === cat && !isPrime(w.type))
+// Weapon category helper (use computed .value)
+const primesIn = (cat: string) => wp.value.filter((w: any) => w.category === cat && isPrime(w.type))
+const standardsIn = (cat: string) => wp.value.filter((w: any) => w.category === cat && !isPrime(w.type))
 
-const primaryPrimesTotal = primesIn('primary').length
-const primaryStandardsTotal = standardsIn('primary').length
-const primaryPrimesCompleted = primesIn('primary').filter(w => w.is_crafted || w.is_mastered).length
-const primaryStandardsCompleted = standardsIn('primary').filter(w => w.is_crafted || w.is_mastered).length
+const primaryPrimesTotal = computed(() => primesIn('primary').length)
+const primaryStandardsTotal = computed(() => standardsIn('primary').length)
+const primaryPrimesCompleted = computed(() => primesIn('primary').filter((w: any) => w.is_crafted || w.is_mastered).length)
+const primaryStandardsCompleted = computed(() => standardsIn('primary').filter((w: any) => w.is_crafted || w.is_mastered).length)
 
-const secondaryPrimesTotal = primesIn('secondary').length
-const secondaryStandardsTotal = standardsIn('secondary').length
-const secondaryPrimesCompleted = primesIn('secondary').filter(w => w.is_crafted || w.is_mastered).length
-const secondaryStandardsCompleted = standardsIn('secondary').filter(w => w.is_crafted || w.is_mastered).length
+const secondaryPrimesTotal = computed(() => primesIn('secondary').length)
+const secondaryStandardsTotal = computed(() => standardsIn('secondary').length)
+const secondaryPrimesCompleted = computed(() => primesIn('secondary').filter((w: any) => w.is_crafted || w.is_mastered).length)
+const secondaryStandardsCompleted = computed(() => standardsIn('secondary').filter((w: any) => w.is_crafted || w.is_mastered).length)
 
-const meleePrimesTotal = primesIn('melee').length
-const meleeStandardsTotal = standardsIn('melee').length
-const meleePrimesCompleted = primesIn('melee').filter(w => w.is_crafted || w.is_mastered).length
-const meleeStandardsCompleted = standardsIn('melee').filter(w => w.is_crafted || w.is_mastered).length
+const meleePrimesTotal = computed(() => primesIn('melee').length)
+const meleeStandardsTotal = computed(() => standardsIn('melee').length)
+const meleePrimesCompleted = computed(() => primesIn('melee').filter((w: any) => w.is_crafted || w.is_mastered).length)
+const meleeStandardsCompleted = computed(() => standardsIn('melee').filter((w: any) => w.is_crafted || w.is_mastered).length)
 
-const collection = useCollectionStore()
+// (collection already initialized above)
 
 const fileInput = ref<HTMLInputElement | null>(null)
+const previewRows = ref<any[] | null>(null)
+const previewHeaders = ref<string[]>([])
+
+function onExportCSV() {
+  const text = exportOverridesToCSV(collection.overrides)
+  const blob = new Blob([text], { type: 'text/csv' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = 'arsenaltracker-backup.csv'
+  document.body.appendChild(a)
+  a.click()
+  a.remove()
+  URL.revokeObjectURL(url)
+}
 
 function onExport() {
   const text = collection.exportState()
@@ -156,17 +192,46 @@ function onFileChange(e: Event) {
   const reader = new FileReader()
   reader.onload = () => {
     const text = String(reader.result || '')
-    if (collection.importState(text)) {
-      // eslint-disable-next-line no-console
-      console.log('[dashboard] import succeeded')
-      alert('Import successful')
-    } else {
-      alert('Import failed — invalid file')
+    const parsed = parseImportFile(text)
+    if (parsed.type === 'versioned') {
+      // directly import the versioned payload
+      if (collection.importState(JSON.stringify(parsed.payload))) {
+        alert('Import successful')
+      } else {
+        alert('Import failed — invalid payload')
+      }
+      return
     }
+    if (parsed.type === 'csv' || parsed.type === 'json') {
+      // show preview and keep rows for confirmation
+      previewRows.value = parsed.rows as any[] || []
+      previewHeaders.value = previewRows.value && previewRows.value.length ? Object.keys(previewRows.value[0]) : []
+      return
+    }
+    alert('Import failed — unsupported file format')
   }
   reader.readAsText(file)
   // reset so same file can be selected again
   el.value = ''
+}
+
+function applyPreview() {
+  if (!previewRows.value || previewRows.value.length === 0) return
+  const overrides = mapRowsToOverrides(previewRows.value as any[])
+  // apply overrides into store
+  // merge into existing overrides
+  Object.keys(overrides).forEach(name => {
+    collection.setOverride(name, overrides[name])
+  })
+  // clear preview
+  previewRows.value = null
+  previewHeaders.value = []
+  alert('Import applied')
+}
+
+function clearPreview() {
+  previewRows.value = null
+  previewHeaders.value = []
 }
 
 function onClear() {

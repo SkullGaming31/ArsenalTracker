@@ -7,14 +7,14 @@
     <section class="section">
       <h3>Prime</h3>
       <div class="grid">
-        <WarframeCard v-for="w in filteredPrimeWarframes" :key="w.name" :warframe="w" />
+        <WarframeCard v-for="w in filteredPrimeWarframes" :key="w.name" :warframe="w" @update="handleUpdate" />
       </div>
     </section>
 
     <section class="section">
       <h3>Non-Prime</h3>
       <div class="grid">
-        <WarframeCard v-for="w in filteredNonPrimeWarframes" :key="w.name" :warframe="w" />
+        <WarframeCard v-for="w in filteredNonPrimeWarframes" :key="w.name" :warframe="w" @update="handleUpdate" />
       </div>
     </section>
     
@@ -22,20 +22,18 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, computed, type Ref } from 'vue'
+import { ref, computed } from 'vue'
 import WarframeCard from '../components/WarframeCard.vue'
-import data from '../data/warframes.json'
+import { useCollectionStore } from '../stores/collection'
 import type { Warframe } from '../types/warframe'
 
-const warframes: Ref<Warframe[]> = ref([])
+const collection = useCollectionStore()
 const query = ref<string>('')
 
-onMounted(() => {
-  warframes.value = data
-})
+const warframesAll = computed<Warframe[]>(() => collection.mergedWarframes as Warframe[])
 
 const primeWarframes = computed<Warframe[]>(() =>
-  warframes.value.filter((w) => {
+  warframesAll.value.filter((w: Warframe) => {
     const t = String(w.type || '').toLowerCase()
     const nonPrimeRegex = /\bnon[-\s]*prime\b|\bnonprime\b/
     if (nonPrimeRegex.test(t)) return false
@@ -44,7 +42,7 @@ const primeWarframes = computed<Warframe[]>(() =>
 )
 
 const nonPrimeWarframes = computed<Warframe[]>(() =>
-  warframes.value.filter((w) => {
+  warframesAll.value.filter((w: Warframe) => {
     const t = String(w.type || '').toLowerCase()
     const nonPrimeRegex = /\bnon[-\s]*prime\b|\bnonprime\b/
     if (nonPrimeRegex.test(t)) return true
@@ -63,6 +61,11 @@ const filteredNonPrimeWarframes = computed<Warframe[]>(() => {
   if (!q) return nonPrimeWarframes.value
   return nonPrimeWarframes.value.filter(w => String(w.name || '').toLowerCase().includes(q))
 })
+
+function handleUpdate(payload: any) {
+  if (!payload || !payload.name) return
+  collection.setOverride(payload.name, payload)
+}
 </script>
 
 <style scoped>

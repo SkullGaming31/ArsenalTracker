@@ -161,7 +161,7 @@ watch(
       blueprint_resources: blueprintResources.value.map(r => ({ ...r })),
     })
   },
-  { deep: true }
+  { deep: true, flush: 'sync' }
 )
 
 // computed visual stats

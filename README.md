@@ -53,6 +53,23 @@ npm run build
 npm run test:unit
 ```
 
+## Local storage / backup key
+
+The app persists local overrides in localStorage under the key `arsenaltracker.v1`.
+The payload format is JSON with the shape:
+
+```
+{
+  "version": 1,
+  "overrides": {
+    "Warframe Name": { "crafted": true, "blueprint": false },
+    "Weapon Name": { "parts": [ ... ] }
+  }
+}
+```
+
+Older versions used to store the overrides map directly (no version). The store will automatically migrate that legacy shape into the versioned payload on load.
+
 ### Run End-to-End Tests with [Playwright](https://playwright.dev)
 
 ```sh
