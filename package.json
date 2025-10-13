@@ -1,6 +1,7 @@
 {
-  "name": "aresnaltracker",
+  "name": "arsenaltracker",
   "version": "0.0.0",
+  "homepage": "https://SkullGaming31.github.io/ArsenalTracker",
   "private": true,
   "type": "module",
   "engines": {

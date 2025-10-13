@@ -1,4 +1,6 @@
-# aresnaltracker
+# arsenaltracker
+
+Homepage: https://SkullGaming31.github.io/ArsenalTracker
 
 This template should help get you started developing with Vue 3 in Vite.
 
