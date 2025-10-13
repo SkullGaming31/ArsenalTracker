@@ -32,3 +32,14 @@ jobs:
 
       - name: Run unit tests (Vitest)
         run: npm run test:unit -- --run
+
+      - name: Build production bundle
+        run: npm run build
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright e2e tests
+        run: npx playwright test --project=chromium --reporter=list
+        env:
+          CI: true
