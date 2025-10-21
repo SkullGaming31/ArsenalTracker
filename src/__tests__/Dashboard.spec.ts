@@ -2,19 +2,19 @@ import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { setActivePinia, createPinia } from 'pinia'
 import Dashboard from '../pages/Dashboard.vue'
-import warframes from '../data/warframes.json'
-import weapons from '../data/weapons.json'
+import { useCollectionStore } from '../stores/collection'
 
 describe('Dashboard', () => {
   it('renders totals for warframes and weapons', () => {
     setActivePinia(createPinia())
     const wrapper = mount(Dashboard, { global: { plugins: [createPinia()] } })
 
-    const wf = (warframes as any[])
-    const wp = (weapons as any[])
+  // Use the collection store merged views to match component behavior (deduped)
+  setActivePinia(createPinia())
+  const collection = useCollectionStore()
 
-    const totalWarframes = String(wf.length)
-    const totalWarframesMastered = String(wf.filter(w => w.is_mastered).length)
+  const totalWarframes = String(collection.mergedWarframes.length)
+  const totalWarframesMastered = String(collection.mergedWarframes.filter((w: any) => w.is_mastered).length)
 
     // assert the rendered text contains the totals
     const text = wrapper.text()
@@ -22,9 +22,9 @@ describe('Dashboard', () => {
     expect(text).toContain(totalWarframesMastered)
 
     // check weapon totals present (primary/secondary/melee)
-    const totalPrimary = String(wp.filter(w => w.category === 'primary').length)
-    const totalSecondary = String(wp.filter(w => w.category === 'secondary').length)
-    const totalMelee = String(wp.filter(w => w.category === 'melee').length)
+  const totalPrimary = String(collection.mergedWeapons.filter((w: any) => w.category === 'primary').length)
+  const totalSecondary = String(collection.mergedWeapons.filter((w: any) => w.category === 'secondary').length)
+  const totalMelee = String(collection.mergedWeapons.filter((w: any) => w.category === 'melee').length)
 
     expect(text).toContain(totalPrimary)
     expect(text).toContain(totalSecondary)

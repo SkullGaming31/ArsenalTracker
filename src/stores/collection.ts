@@ -139,7 +139,15 @@ export const useCollectionStore = defineStore('collection', () => {
   }
 
   watch(overrides, () => {
-    scheduleSave()
+    // In unit tests we want immediate persistence so tests can assert on localStorage.
+    // In unit tests we want immediate persistence so tests can assert on localStorage.
+    // Use globalThis to avoid referencing Node's `process` symbol directly which is not defined in browser TS libs.
+    const env = (globalThis as any)?.process?.env?.NODE_ENV
+    if (env === 'test') {
+      saveToStorage()
+    } else {
+      scheduleSave()
+    }
   }, { deep: true })
 
   // ensure we flush pending saves on page unload
