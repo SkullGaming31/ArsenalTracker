@@ -1,0 +1,4386 @@
+{
+  "warframes": {
+    "Amesha": {
+      "name": "Amesha",
+      "uniqueName": "/Lotus/Powersuits/Archwing/SupportJetPack/SupportJetPack",
+      "imageName": "amesha-5bef2b8e0e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Amesha.png?bb937"
+    },
+    "Ash": {
+      "name": "Ash",
+      "uniqueName": "/Lotus/Powersuits/Ninja/Ninja",
+      "imageName": "ash-f2c6f3ab3f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ash.png?db305"
+    },
+    "Ash Prime": {
+      "name": "Ash Prime",
+      "uniqueName": "/Lotus/Powersuits/Ninja/AshPrime",
+      "imageName": "ash-prime-bfcb09331e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AshPrime.png?373a7"
+    },
+    "Atlas": {
+      "name": "Atlas",
+      "uniqueName": "/Lotus/Powersuits/Brawler/Brawler",
+      "imageName": "atlas-a39443cc8b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Atlas.png?91499"
+    },
+    "Atlas Prime": {
+      "name": "Atlas Prime",
+      "uniqueName": "/Lotus/Powersuits/Brawler/AtlasPrime",
+      "imageName": "atlas-prime-7312f6d838.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AtlasPrime.png?25c96"
+    },
+    "Banshee": {
+      "name": "Banshee",
+      "uniqueName": "/Lotus/Powersuits/Banshee/Banshee",
+      "imageName": "banshee-f3216d3957.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Banshee.png?1f779"
+    },
+    "Banshee Prime": {
+      "name": "Banshee Prime",
+      "uniqueName": "/Lotus/Powersuits/Banshee/BansheePrime",
+      "imageName": "banshee-prime-7bebac6654.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/BansheePrime.png?5d57f"
+    },
+    "Baruuk": {
+      "name": "Baruuk",
+      "uniqueName": "/Lotus/Powersuits/Pacifist/Pacifist",
+      "imageName": "baruuk-e935d0749d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Baruuk.png?30a1c"
+    },
+    "Baruuk Prime": {
+      "name": "Baruuk Prime",
+      "uniqueName": "/Lotus/Powersuits/Pacifist/BaruukPrime",
+      "imageName": "baruuk-prime-7e1a50c877.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/BaruukPrime.png?b2420"
+    },
+    "Bonewidow": {
+      "name": "Bonewidow",
+      "uniqueName": "/Lotus/Powersuits/EntratiMech/ThanoTech",
+      "imageName": "bonewidow-e6080b9313.png",
+      "wikiaThumbnail": null
+    },
+    "Caliban": {
+      "name": "Caliban",
+      "uniqueName": "/Lotus/Powersuits/Sentient/Sentient",
+      "imageName": "caliban-c2f7820be2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Caliban.png?c916e"
+    },
+    "Caliban Prime": {
+      "name": "Caliban Prime",
+      "uniqueName": "/Lotus/Powersuits/Sentient/CalibanPrime",
+      "imageName": "caliban-prime-6e04a41118.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CalibanPrime.png?feeeb"
+    },
+    "Chroma": {
+      "name": "Chroma",
+      "uniqueName": "/Lotus/Powersuits/Dragon/Dragon",
+      "imageName": "chroma-2fd0ea0ba6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Chroma.png?545f7"
+    },
+    "Chroma Prime": {
+      "name": "Chroma Prime",
+      "uniqueName": "/Lotus/Powersuits/Dragon/ChromaPrime",
+      "imageName": "chroma-prime-2ac05d2866.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ChromaPrime.png?71048"
+    },
+    "Citrine": {
+      "name": "Citrine",
+      "uniqueName": "/Lotus/Powersuits/Geode/Geode",
+      "imageName": "citrine-d7392c4d7d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Citrine.png?89b01"
+    },
+    "Cyte-09": {
+      "name": "Cyte-09",
+      "uniqueName": "/Lotus/Powersuits/Frumentarius/Frumentarius",
+      "imageName": "cyte-09-62e778e37c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cyte-09.png?b161b"
+    },
+    "Dagath": {
+      "name": "Dagath",
+      "uniqueName": "/Lotus/Powersuits/Dagath/Dagath",
+      "imageName": "dagath-7589f2ce5b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Dagath.png?4b231"
+    },
+    "Dante": {
+      "name": "Dante",
+      "uniqueName": "/Lotus/Powersuits/Pagemaster/Pagemaster",
+      "imageName": "dante-43d70fb91a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Dante.png?c0761"
+    },
+    "Elytron": {
+      "name": "Elytron",
+      "uniqueName": "/Lotus/Powersuits/Archwing/DemolitionJetPack/DemolitionJetPack",
+      "imageName": "elytron-8f63d43729.png",
+      "wikiaThumbnail": null
+    },
+    "Ember": {
+      "name": "Ember",
+      "uniqueName": "/Lotus/Powersuits/Ember/Ember",
+      "imageName": "ember-338265ce88.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ember.png?20dac"
+    },
+    "Ember Prime": {
+      "name": "Ember Prime",
+      "uniqueName": "/Lotus/Powersuits/Ember/EmberPrime",
+      "imageName": "ember-prime-e978f28a35.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/EmberPrime.png?f1136"
+    },
+    "Equinox": {
+      "name": "Equinox",
+      "uniqueName": "/Lotus/Powersuits/YinYang/YinYang",
+      "imageName": "equinox-ae1572be82.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Equinox.png?62279"
+    },
+    "Equinox Prime": {
+      "name": "Equinox Prime",
+      "uniqueName": "/Lotus/Powersuits/YinYang/EquinoxPrime",
+      "imageName": "equinox-prime-9fbe947b57.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/EquinoxPrime.png?7dc5f"
+    },
+    "Excalibur": {
+      "name": "Excalibur",
+      "uniqueName": "/Lotus/Powersuits/Excalibur/Excalibur",
+      "imageName": "excalibur-2621a69bfa.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Excalibur.png?97103"
+    },
+    "Excalibur Prime": {
+      "name": "Excalibur Prime",
+      "uniqueName": "/Lotus/Powersuits/Excalibur/ExcaliburPrime",
+      "imageName": "excalibur-prime-6d56b10bbf.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ExcaliburPrime.png?0ba1d"
+    },
+    "Excalibur Umbra": {
+      "name": "Excalibur Umbra",
+      "uniqueName": "/Lotus/Powersuits/Excalibur/ExcaliburUmbra",
+      "imageName": "excalibur-umbra-d421af56c1.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ExcaliburUmbra.png?73c5c"
+    },
+    "Frost": {
+      "name": "Frost",
+      "uniqueName": "/Lotus/Powersuits/Frost/Frost",
+      "imageName": "frost-620cddb4a6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Frost.png?32f8e"
+    },
+    "Frost Prime": {
+      "name": "Frost Prime",
+      "uniqueName": "/Lotus/Powersuits/Frost/FrostPrime",
+      "imageName": "frost-prime-f177de2e0c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/FrostPrime.png?d491e"
+    },
+    "Gara": {
+      "name": "Gara",
+      "uniqueName": "/Lotus/Powersuits/Glass/Glass",
+      "imageName": "gara-b2089c43f8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Gara.png?1c84b"
+    },
+    "Gara Prime": {
+      "name": "Gara Prime",
+      "uniqueName": "/Lotus/Powersuits/Glass/GaraPrime",
+      "imageName": "gara-prime-faf70dfd7c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/GaraPrime.png?08009"
+    },
+    "Garuda": {
+      "name": "Garuda",
+      "uniqueName": "/Lotus/Powersuits/Garuda/Garuda",
+      "imageName": "garuda-5e3cc04493.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Garuda.png?0f856"
+    },
+    "Garuda Prime": {
+      "name": "Garuda Prime",
+      "uniqueName": "/Lotus/Powersuits/Garuda/GarudaPrime",
+      "imageName": "garuda-prime-2c4ce210a0.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/GarudaPrime.png?13f16"
+    },
+    "Gauss": {
+      "name": "Gauss",
+      "uniqueName": "/Lotus/Powersuits/Runner/Runner",
+      "imageName": "gauss-8060019853.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Gauss.png?fb087"
+    },
+    "Gauss Prime": {
+      "name": "Gauss Prime",
+      "uniqueName": "/Lotus/Powersuits/Runner/GaussPrime",
+      "imageName": "gauss-prime-170a77a036.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/GaussPrime.png?aa6cc"
+    },
+    "Grendel": {
+      "name": "Grendel",
+      "uniqueName": "/Lotus/Powersuits/Devourer/Devourer",
+      "imageName": "grendel-4d1c382605.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Grendel.png?f4a0b"
+    },
+    "Grendel Prime": {
+      "name": "Grendel Prime",
+      "uniqueName": "/Lotus/Powersuits/Devourer/GrendelPrime",
+      "imageName": "grendel-prime-e23d41072d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/GrendelPrime.png?62987"
+    },
+    "Gyre": {
+      "name": "Gyre",
+      "uniqueName": "/Lotus/Powersuits/Gyre/Gyre",
+      "imageName": "gyre-b17b2d4464.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Gyre.png?f7a7f"
+    },
+    "Harrow": {
+      "name": "Harrow",
+      "uniqueName": "/Lotus/Powersuits/Priest/Priest",
+      "imageName": "harrow-7f74b91fce.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Harrow.png?6b992"
+    },
+    "Harrow Prime": {
+      "name": "Harrow Prime",
+      "uniqueName": "/Lotus/Powersuits/Priest/HarrowPrime",
+      "imageName": "harrow-prime-8237c36a69.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/HarrowPrime.png?9cd5a"
+    },
+    "Helminth": {
+      "name": "Helminth",
+      "uniqueName": "/Lotus/Powersuits/PowersuitAbilities/Helminth",
+      "imageName": null,
+      "wikiaThumbnail": null
+    },
+    "Hildryn": {
+      "name": "Hildryn",
+      "uniqueName": "/Lotus/Powersuits/IronFrame/IronFrame",
+      "imageName": "hildryn-ceaeb4320d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Hildryn.png?f6fc3"
+    },
+    "Hildryn Prime": {
+      "name": "Hildryn Prime",
+      "uniqueName": "/Lotus/Powersuits/IronFrame/IronFramePrime",
+      "imageName": "hildryn-prime-20937cebe2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/HildrynPrime.png?36b86"
+    },
+    "Hydroid": {
+      "name": "Hydroid",
+      "uniqueName": "/Lotus/Powersuits/Pirate/Pirate",
+      "imageName": "hydroid-e97d6abb00.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Hydroid.png?48637"
+    },
+    "Hydroid Prime": {
+      "name": "Hydroid Prime",
+      "uniqueName": "/Lotus/Powersuits/Pirate/HydroidPrime",
+      "imageName": "hydroid-prime-718aec2104.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/HydroidPrime.png?170c3"
+    },
+    "Inaros": {
+      "name": "Inaros",
+      "uniqueName": "/Lotus/Powersuits/Sandman/Sandman",
+      "imageName": "inaros-826f62196f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Inaros.png?f5b59"
+    },
+    "Inaros Prime": {
+      "name": "Inaros Prime",
+      "uniqueName": "/Lotus/Powersuits/Sandman/InarosPrime",
+      "imageName": "inaros-prime-f6689c5568.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/InarosPrime.png?cd69a"
+    },
+    "Itzal": {
+      "name": "Itzal",
+      "uniqueName": "/Lotus/Powersuits/Archwing/StealthJetPack/StealthJetPack",
+      "imageName": "itzal-a120d975d8.png",
+      "wikiaThumbnail": null
+    },
+    "Ivara": {
+      "name": "Ivara",
+      "uniqueName": "/Lotus/Powersuits/Ranger/Ranger",
+      "imageName": "ivara-d0be78df04.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ivara.png?3a915"
+    },
+    "Ivara Prime": {
+      "name": "Ivara Prime",
+      "uniqueName": "/Lotus/Powersuits/Ranger/IvaraPrime",
+      "imageName": "ivara-prime-1be20f1393.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/IvaraPrime.png?59590"
+    },
+    "Jade": {
+      "name": "Jade",
+      "uniqueName": "/Lotus/Powersuits/Choir/Choir",
+      "imageName": "jade-d88fcb42ca.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Jade%28Warframe%29.png?532ac"
+    },
+    "Khora": {
+      "name": "Khora",
+      "uniqueName": "/Lotus/Powersuits/Khora/Khora",
+      "imageName": "khora-2062e830c0.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Khora.png?28137"
+    },
+    "Khora Prime": {
+      "name": "Khora Prime",
+      "uniqueName": "/Lotus/Powersuits/Khora/KhoraPrime",
+      "imageName": "khora-prime-29d9f8a9d7.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KhoraPrime.png?730fb"
+    },
+    "Koumei": {
+      "name": "Koumei",
+      "uniqueName": "/Lotus/Powersuits/Koumei/Koumei",
+      "imageName": "koumei-6cf94f7516.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Koumei.png?2085e"
+    },
+    "Kullervo": {
+      "name": "Kullervo",
+      "uniqueName": "/Lotus/Powersuits/PaxDuviricus/PaxDuviricus",
+      "imageName": "kullervo-994239dee1.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kullervo.png?5e09b"
+    },
+    "Lavos": {
+      "name": "Lavos",
+      "uniqueName": "/Lotus/Powersuits/Alchemist/Alchemist",
+      "imageName": "lavos-aea18ae52f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Lavos.png?8996d"
+    },
+    "Lavos Prime": {
+      "name": "Lavos Prime",
+      "uniqueName": "/Lotus/Powersuits/Alchemist/LavosPrime",
+      "imageName": "lavos-prime-90a6c16d29.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/LavosPrime.png?b1901"
+    },
+    "Limbo": {
+      "name": "Limbo",
+      "uniqueName": "/Lotus/Powersuits/Magician/Magician",
+      "imageName": "limbo-c107f3bcc2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Limbo.png?5b51a"
+    },
+    "Limbo Prime": {
+      "name": "Limbo Prime",
+      "uniqueName": "/Lotus/Powersuits/Magician/LimboPrime",
+      "imageName": "limbo-prime-7449a6c1ce.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/LimboPrime.png?081f6"
+    },
+    "Loki": {
+      "name": "Loki",
+      "uniqueName": "/Lotus/Powersuits/Loki/Loki",
+      "imageName": "loki-04905b317a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Loki.png?35af7"
+    },
+    "Loki Prime": {
+      "name": "Loki Prime",
+      "uniqueName": "/Lotus/Powersuits/Loki/LokiPrime",
+      "imageName": "loki-prime-5b192774c4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/LokiPrime.png?62a71"
+    },
+    "Mag": {
+      "name": "Mag",
+      "uniqueName": "/Lotus/Powersuits/Mag/Mag",
+      "imageName": "mag-1a461f5a07.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Mag.png?3a64c"
+    },
+    "Mag Prime": {
+      "name": "Mag Prime",
+      "uniqueName": "/Lotus/Powersuits/Mag/MagPrime",
+      "imageName": "mag-prime-a3d6c2f9ba.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/MagPrime.png?89603"
+    },
+    "Mesa": {
+      "name": "Mesa",
+      "uniqueName": "/Lotus/Powersuits/Cowgirl/Cowgirl",
+      "imageName": "mesa-30651569ff.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Mesa.png?fbb32"
+    },
+    "Mesa Prime": {
+      "name": "Mesa Prime",
+      "uniqueName": "/Lotus/Powersuits/Cowgirl/MesaPrime",
+      "imageName": "mesa-prime-f912b57a14.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/MesaPrime.png?c5a03"
+    },
+    "Mirage": {
+      "name": "Mirage",
+      "uniqueName": "/Lotus/Powersuits/Harlequin/Harlequin",
+      "imageName": "mirage-83f6195ffb.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Mirage.png?c6c07"
+    },
+    "Mirage Prime": {
+      "name": "Mirage Prime",
+      "uniqueName": "/Lotus/Powersuits/Harlequin/MiragePrime",
+      "imageName": "mirage-prime-96a31c01da.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/MiragePrime.png?606b5"
+    },
+    "Nekros": {
+      "name": "Nekros",
+      "uniqueName": "/Lotus/Powersuits/Necro/Necro",
+      "imageName": "nekros-61cb2c9f69.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Nekros.png?0fa45"
+    },
+    "Nekros Prime": {
+      "name": "Nekros Prime",
+      "uniqueName": "/Lotus/Powersuits/Necro/NekrosPrime",
+      "imageName": "nekros-prime-4f3e86be2a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/NekrosPrime.png?29f4a"
+    },
+    "Nezha": {
+      "name": "Nezha",
+      "uniqueName": "/Lotus/Powersuits/Nezha/Nezha",
+      "imageName": "nezha-39ab6803c6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Nezha.png?23673"
+    },
+    "Nezha Prime": {
+      "name": "Nezha Prime",
+      "uniqueName": "/Lotus/Powersuits/Nezha/NezhaPrime",
+      "imageName": "nezha-prime-b5e9ddf42b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/NezhaPrime.png?1d330"
+    },
+    "Nidus": {
+      "name": "Nidus",
+      "uniqueName": "/Lotus/Powersuits/Infestation/Infestation",
+      "imageName": "nidus-02067c4ce9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Nidus.png?d4fb6"
+    },
+    "Nidus Prime": {
+      "name": "Nidus Prime",
+      "uniqueName": "/Lotus/Powersuits/Infestation/InfestationPrime",
+      "imageName": "nidus-prime-c1781ebcc9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/NidusPrime.png?b61c5"
+    },
+    "Nova": {
+      "name": "Nova",
+      "uniqueName": "/Lotus/Powersuits/AntiMatter/Anti",
+      "imageName": "nova-1f908986f1.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Nova.png?a8d96"
+    },
+    "Nova Prime": {
+      "name": "Nova Prime",
+      "uniqueName": "/Lotus/Powersuits/AntiMatter/NovaPrime",
+      "imageName": "nova-prime-2345192401.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/NovaPrime.png?34d15"
+    },
+    "Nyx": {
+      "name": "Nyx",
+      "uniqueName": "/Lotus/Powersuits/Jade/Jade",
+      "imageName": "nyx-b6f1ec8736.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Nyx.png?00908"
+    },
+    "Nyx Prime": {
+      "name": "Nyx Prime",
+      "uniqueName": "/Lotus/Powersuits/Jade/NyxPrime",
+      "imageName": "nyx-prime-b16b670098.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/NyxPrime.png?10995"
+    },
+    "Oberon": {
+      "name": "Oberon",
+      "uniqueName": "/Lotus/Powersuits/Paladin/Paladin",
+      "imageName": "oberon-61900220ad.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Oberon.png?ea604"
+    },
+    "Oberon Prime": {
+      "name": "Oberon Prime",
+      "uniqueName": "/Lotus/Powersuits/Paladin/PaladinPrime",
+      "imageName": "oberon-prime-71fc40c9ca.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/OberonPrime.png?bd523"
+    },
+    "Octavia": {
+      "name": "Octavia",
+      "uniqueName": "/Lotus/Powersuits/Bard/Bard",
+      "imageName": "octavia-d57837e36e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Octavia.png?aa13e"
+    },
+    "Octavia Prime": {
+      "name": "Octavia Prime",
+      "uniqueName": "/Lotus/Powersuits/Bard/OctaviaPrime",
+      "imageName": "octavia-prime-93e1ad02f0.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/OctaviaPrime.png?5a09d"
+    },
+    "Odonata": {
+      "name": "Odonata",
+      "uniqueName": "/Lotus/Powersuits/Archwing/StandardJetPack/StandardJetPack",
+      "imageName": "odonata-0425304f27.png",
+      "wikiaThumbnail": null
+    },
+    "Odonata Prime": {
+      "name": "Odonata Prime",
+      "uniqueName": "/Lotus/Powersuits/Archwing/PrimeJetPack/PrimeJetPack",
+      "imageName": "odonata-prime-39baaa7427.png",
+      "wikiaThumbnail": null
+    },
+    "Oraxia": {
+      "name": "Oraxia",
+      "uniqueName": "/Lotus/Powersuits/Oraxia/Oraxia",
+      "imageName": "oraxia-8a9e4aab09.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Oraxia.png?f2ec1"
+    },
+    "Protea": {
+      "name": "Protea",
+      "uniqueName": "/Lotus/Powersuits/Odalisk/Odalisk",
+      "imageName": "protea-69a74795e8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Protea.png?5aaec"
+    },
+    "Protea Prime": {
+      "name": "Protea Prime",
+      "uniqueName": "/Lotus/Powersuits/Odalisk/ProteaPrime",
+      "imageName": "protea-prime-86cbc2b038.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ProteaPrime.png?56831"
+    },
+    "Qorvex": {
+      "name": "Qorvex",
+      "uniqueName": "/Lotus/Powersuits/ConcreteFrame/ConcreteFrame",
+      "imageName": "qorvex-ec9d170e8b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Qorvex.png?815ba"
+    },
+    "Revenant": {
+      "name": "Revenant",
+      "uniqueName": "/Lotus/Powersuits/Revenant/Revenant",
+      "imageName": "revenant-c9bd7cfbcc.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Revenant.png?fd975"
+    },
+    "Revenant Prime": {
+      "name": "Revenant Prime",
+      "uniqueName": "/Lotus/Powersuits/Revenant/RevenantPrime",
+      "imageName": "revenant-prime-a5be34cbf2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/RevenantPrime.png?e4097"
+    },
+    "Rhino": {
+      "name": "Rhino",
+      "uniqueName": "/Lotus/Powersuits/Rhino/Rhino",
+      "imageName": "rhino-87af2466b6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Rhino.png?ae954"
+    },
+    "Rhino Prime": {
+      "name": "Rhino Prime",
+      "uniqueName": "/Lotus/Powersuits/Rhino/RhinoPrime",
+      "imageName": "rhino-prime-7142165571.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/RhinoPrime.png?b18c1"
+    },
+    "Saryn": {
+      "name": "Saryn",
+      "uniqueName": "/Lotus/Powersuits/Saryn/Saryn",
+      "imageName": "saryn-88c1d4da08.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Saryn.png?74464"
+    },
+    "Saryn Prime": {
+      "name": "Saryn Prime",
+      "uniqueName": "/Lotus/Powersuits/Saryn/SarynPrime",
+      "imageName": "saryn-prime-8703933001.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SarynPrime.png?f437a"
+    },
+    "Sevagoth": {
+      "name": "Sevagoth",
+      "uniqueName": "/Lotus/Powersuits/Wraith/Wraith",
+      "imageName": "sevagoth-9264d64897.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sevagoth.png?6863b"
+    },
+    "Sevagoth Prime": {
+      "name": "Sevagoth Prime",
+      "uniqueName": "/Lotus/Powersuits/Wraith/SevagothPrime",
+      "imageName": "sevagoth-prime-5f34bf2dba.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SevagothPrime.png?2552c"
+    },
+    "Styanax": {
+      "name": "Styanax",
+      "uniqueName": "/Lotus/Powersuits/Hoplite/Hoplite",
+      "imageName": "styanax-09419fb39f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Styanax.png?60e60"
+    },
+    "Temple": {
+      "name": "Temple",
+      "uniqueName": "/Lotus/Powersuits/Temple/Temple",
+      "imageName": "temple-c3d2feb7ae.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Temple.png?1e14f"
+    },
+    "Titania": {
+      "name": "Titania",
+      "uniqueName": "/Lotus/Powersuits/Fairy/Fairy",
+      "imageName": "titania-dd20b18d5b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Titania.png?58f33"
+    },
+    "Titania Prime": {
+      "name": "Titania Prime",
+      "uniqueName": "/Lotus/Powersuits/Fairy/TitaniaPrime",
+      "imageName": "titania-prime-7a328a3d8a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TitaniaPrime.png?a33ec"
+    },
+    "Trinity": {
+      "name": "Trinity",
+      "uniqueName": "/Lotus/Powersuits/Trinity/Trinity",
+      "imageName": "trinity-b59556a37b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Trinity.png?ee30d"
+    },
+    "Trinity Prime": {
+      "name": "Trinity Prime",
+      "uniqueName": "/Lotus/Powersuits/Trinity/TrinityPrime",
+      "imageName": "trinity-prime-aa68b6373d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TrinityPrime.png?277fd"
+    },
+    "Valkyr": {
+      "name": "Valkyr",
+      "uniqueName": "/Lotus/Powersuits/Berserker/Berserker",
+      "imageName": "valkyr-c1f7e5d2ab.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Valkyr.png?d633f"
+    },
+    "Valkyr Prime": {
+      "name": "Valkyr Prime",
+      "uniqueName": "/Lotus/Powersuits/Berserker/ValkyrPrime",
+      "imageName": "valkyr-prime-354cd87f77.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ValkyrPrime.png?63221"
+    },
+    "Vauban": {
+      "name": "Vauban",
+      "uniqueName": "/Lotus/Powersuits/Trapper/Trapper",
+      "imageName": "vauban-c95db9ee09.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Vauban.png?4d2ec"
+    },
+    "Vauban Prime": {
+      "name": "Vauban Prime",
+      "uniqueName": "/Lotus/Powersuits/Trapper/TrapperPrime",
+      "imageName": "vauban-prime-f9c539bdde.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/VaubanPrime.png?d347f"
+    },
+    "Voidrig": {
+      "name": "Voidrig",
+      "uniqueName": "/Lotus/Powersuits/EntratiMech/NechroTech",
+      "imageName": "voidrig-51bc3a4b3c.png",
+      "wikiaThumbnail": null
+    },
+    "Volt": {
+      "name": "Volt",
+      "uniqueName": "/Lotus/Powersuits/Volt/Volt",
+      "imageName": "volt-9ad956c441.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Volt.png?6e107"
+    },
+    "Volt Prime": {
+      "name": "Volt Prime",
+      "uniqueName": "/Lotus/Powersuits/Volt/VoltPrime",
+      "imageName": "volt-prime-dd65a6befd.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/VoltPrime.png?35509"
+    },
+    "Voruna": {
+      "name": "Voruna",
+      "uniqueName": "/Lotus/Powersuits/Werewolf/Werewolf",
+      "imageName": "voruna-83e8799edc.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Voruna.png?3ec67"
+    },
+    "Wisp": {
+      "name": "Wisp",
+      "uniqueName": "/Lotus/Powersuits/Wisp/Wisp",
+      "imageName": "wisp-a046bb62f4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Wisp.png?e6cde"
+    },
+    "Wisp Prime": {
+      "name": "Wisp Prime",
+      "uniqueName": "/Lotus/Powersuits/Wisp/WispPrime",
+      "imageName": "wisp-prime-7a898e071d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/WispPrime.png?faa01"
+    },
+    "Wukong": {
+      "name": "Wukong",
+      "uniqueName": "/Lotus/Powersuits/MonkeyKing/MonkeyKing",
+      "imageName": "wukong-bbc641319b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Wukong.png?abcbf"
+    },
+    "Wukong Prime": {
+      "name": "Wukong Prime",
+      "uniqueName": "/Lotus/Powersuits/MonkeyKing/WukongPrime",
+      "imageName": "wukong-prime-4e1c56fd43.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/WukongPrime.png?7544f"
+    },
+    "Xaku": {
+      "name": "Xaku",
+      "uniqueName": "/Lotus/Powersuits/BrokenFrame/BrokenFrame",
+      "imageName": "xaku-8fb3ad2779.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Xaku.png?eb470"
+    },
+    "Xaku Prime": {
+      "name": "Xaku Prime",
+      "uniqueName": "/Lotus/Powersuits/BrokenFrame/XakuPrime",
+      "imageName": "xaku-prime-f6213dd36f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/XakuPrime.png?ea7e1"
+    },
+    "Yareli": {
+      "name": "Yareli",
+      "uniqueName": "/Lotus/Powersuits/Yareli/Yareli",
+      "imageName": "yareli-3b577c5064.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Yareli.png?a9e7b"
+    },
+    "Yareli Prime": {
+      "name": "Yareli Prime",
+      "uniqueName": "/Lotus/Powersuits/Yareli/YareliPrime",
+      "imageName": "yareli-prime-c4dbed6caa.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/YareliPrime.png?a28ee"
+    },
+    "Zephyr": {
+      "name": "Zephyr",
+      "uniqueName": "/Lotus/Powersuits/Tengu/Tengu",
+      "imageName": "zephyr-02db9643ed.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Zephyr.png?d427c"
+    },
+    "Zephyr Prime": {
+      "name": "Zephyr Prime",
+      "uniqueName": "/Lotus/Powersuits/Tengu/ZephyrPrime",
+      "imageName": "zephyr-prime-c777d1497b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ZephyrPrime.png?192c6"
+    }
+  },
+  "weapons": {
+    "Acceltra": {
+      "name": "Acceltra",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/SapientPrimary/SapientPrimaryWeapon",
+      "imageName": "acceltra-f87797699a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Acceltra.png?d00f4"
+    },
+    "Acceltra Prime": {
+      "name": "Acceltra Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeAcceltra/PrimeAcceltraWeapon",
+      "imageName": "acceltra-prime-5628f3e466.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AcceltraPrime.png?0686c"
+    },
+    "Ack & Brunt": {
+      "name": "Ack & Brunt",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrineerTylAxeAndBoar/RegorAxeShield",
+      "imageName": "ack-&-brunt-2e80c10c0d.png",
+      "wikiaThumbnail": null
+    },
+    "Acrid": {
+      "name": "Acrid",
+      "uniqueName": "/Lotus/Weapons/ClanTech/Bio/AcidDartPistol",
+      "imageName": "acrid-6363c31728.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Acrid.png?57294"
+    },
+    "Aegrit": {
+      "name": "Aegrit",
+      "uniqueName": "/Lotus/Weapons/Grineer/ThrowingWeapons/GrnVorStickyBomb/GrnVorStickyBomb",
+      "imageName": "aegrit-fe86bbbea4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Aegrit.png?33219"
+    },
+    "Aeolak": {
+      "name": "Aeolak",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnRifleErsatz/TnRifleErsatzWeapon",
+      "imageName": "aeolak-98339f06d2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Aeolak.png?3b3ec"
+    },
+    "Afentis": {
+      "name": "Afentis",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnHopliteSpear/TnHopliteSpearGunWeapon",
+      "imageName": "afentis-a053c519b8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Afentis.png?33fce"
+    },
+    "Afuris": {
+      "name": "Afuris",
+      "uniqueName": "/Lotus/Weapons/Tenno/Akimbo/AkimboAutoPistols",
+      "imageName": "afuris-c36c694ba4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Afuris.png?adcc0"
+    },
+    "Afuris Prime": {
+      "name": "Afuris Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeAfuris/PrimeAFurisWeapon",
+      "imageName": "afuris-prime-abcebdfbfa.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AfurisPrime.png?06de8"
+    },
+    "Agkuza": {
+      "name": "Agkuza",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Melee/ArchSwordHook/ArchHookSwordWeapon",
+      "imageName": "agkuza-ad630f8d41.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Agkuza.png?5cbfc"
+    },
+    "Akarius": {
+      "name": "Akarius",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/SapientPistol/SapientPistol",
+      "imageName": "akarius-2009d8750f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Akarius.png?42673"
+    },
+    "Akarius Prime": {
+      "name": "Akarius Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeAkarius/PrimeAkariusWeapon",
+      "imageName": "akarius-prime-7d8f0a0779.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AkariusPrime.png?6acd9"
+    },
+    "Akbolto": {
+      "name": "Akbolto",
+      "uniqueName": "/Lotus/Weapons/Tenno/Akimbo/AkimboBolto",
+      "imageName": "akbolto-6b0f3d7ac2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Akbolto.png?efe31"
+    },
+    "Akbolto Prime": {
+      "name": "Akbolto Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeAkbolto/PrimeAkBoltoWeapon",
+      "imageName": "akbolto-prime-1bf267febc.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AkboltoPrime.png?df159"
+    },
+    "Akbronco": {
+      "name": "Akbronco",
+      "uniqueName": "/Lotus/Weapons/Tenno/Akimbo/AkimboShotGun",
+      "imageName": "akbronco-2345401e0c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Akbronco.png?d5e63"
+    },
+    "Akbronco Prime": {
+      "name": "Akbronco Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Akimbo/PrimeAkimboShotGun",
+      "imageName": "akbronco-prime-e0b3fd0788.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AkbroncoPrime.png?9e11e"
+    },
+    "Akjagara": {
+      "name": "Akjagara",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/TigrisRedeemerSetPistol/TnoBladedPistols",
+      "imageName": "akjagara-091d3b6fa7.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Akjagara.png?00e91"
+    },
+    "Akjagara Prime": {
+      "name": "Akjagara Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeAkjagara/AkJagaraPrime",
+      "imageName": "akjagara-prime-c44280a30c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AkjagaraPrime.png?3821b"
+    },
+    "Aklato": {
+      "name": "Aklato",
+      "uniqueName": "/Lotus/Weapons/Tenno/Akimbo/AkimboPistol",
+      "imageName": "aklato-c5ecafca06.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Aklato.png?8d913"
+    },
+    "Aklex": {
+      "name": "Aklex",
+      "uniqueName": "/Lotus/Weapons/Tenno/Akimbo/AkLexPistols",
+      "imageName": "aklex-20f578f0e2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Aklex.png?57eb2"
+    },
+    "Aklex Prime": {
+      "name": "Aklex Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Akimbo/AkLexPrimePistols",
+      "imageName": "aklex-prime-3ba6556b1f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AklexPrime.png?37975"
+    },
+    "Akmagnus": {
+      "name": "Akmagnus",
+      "uniqueName": "/Lotus/Weapons/Tenno/Akimbo/DualMagnus",
+      "imageName": "akmagnus-98e45bbf74.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Akmagnus.png?74a24"
+    },
+    "Akmagnus Prime": {
+      "name": "Akmagnus Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Akimbo/DualMagnusPrime",
+      "imageName": "akmagnus-prime-641a54e112.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AkmagnusPrime.png?c2bbb"
+    },
+    "Aksomati": {
+      "name": "Aksomati",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/SomaSidearm/AkimboSomaPistols",
+      "imageName": "aksomati-452d3d8d0e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Aksomati.png?d8360"
+    },
+    "Aksomati Prime": {
+      "name": "Aksomati Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeAksomati/PrimeAksomati",
+      "imageName": "aksomati-prime-8fc151cef1.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AksomatiPrime.png?ce035"
+    },
+    "Akstiletto": {
+      "name": "Akstiletto",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/TennoUzi/TennoUzi",
+      "imageName": "akstiletto-5d5e77400c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Akstiletto.png?e644d"
+    },
+    "Akstiletto Prime": {
+      "name": "Akstiletto Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeAkstiletto/PrimeAkstiletto",
+      "imageName": "akstiletto-prime-a45f9d4e38.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AkstilettoPrime.png?b2b01"
+    },
+    "Akvasto": {
+      "name": "Akvasto",
+      "uniqueName": "/Lotus/Weapons/Tenno/Akimbo/DualVastos",
+      "imageName": "akvasto-7e279725d8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Akvasto.png?9ba62"
+    },
+    "Akvasto Prime": {
+      "name": "Akvasto Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/AkPrimeVasto/AkPrimeVastoPistol",
+      "imageName": "akvasto-prime-9416a0a363.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AkvastoPrime.png?d97f1"
+    },
+    "Akzani": {
+      "name": "Akzani",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/HarlequinGun/HarlequinPistols",
+      "imageName": "akzani-127d132ec5.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Akzani.png?22127"
+    },
+    "Alternox": {
+      "name": "Alternox",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/GyreRifle/GyreRifleWeapon",
+      "imageName": "alternox-448bc76586.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Alternox.png?d4760"
+    },
+    "Amanata": {
+      "name": "Amanata",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Polearms/Naginata/ShrineMaidenNaginataWeapon",
+      "imageName": "amanata-05760c3533.png",
+      "wikiaThumbnail": null
+    },
+    "Ambassador": {
+      "name": "Ambassador",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpArSniper/CrpArSniperRifle",
+      "imageName": "ambassador-0ff82bef8f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ambassador.png?d16a5"
+    },
+    "Amphis": {
+      "name": "Amphis",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Staff/GrnStaff",
+      "imageName": "amphis-6b69bc1995.png",
+      "wikiaThumbnail": null
+    },
+    "Amprex": {
+      "name": "Amprex",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/ChainLightningGun/ChainLightningRifle",
+      "imageName": "amprex-9e41d98a19.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Amprex.png?a040e"
+    },
+    "Angstrum": {
+      "name": "Angstrum",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/CorpusHandRocketLauncher",
+      "imageName": "angstrum-296fd1e714.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Angstrum.png?11bdd"
+    },
+    "Anku": {
+      "name": "Anku",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Scythe/ParisScythe/ParisScythe",
+      "imageName": "anku-0064a960cc.png",
+      "wikiaThumbnail": null
+    },
+    "Ankyros": {
+      "name": "Ankyros",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Gauntlet/Gauntlet",
+      "imageName": "ankyros-9fe87ef6d1.png",
+      "wikiaThumbnail": null
+    },
+    "Ankyros Prime": {
+      "name": "Ankyros Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Gauntlet/PrimeAnkyros/PrimeAnkyros",
+      "imageName": "ankyros-prime-db23dcbd9d.png",
+      "wikiaThumbnail": null
+    },
+    "Arca Plasmor": {
+      "name": "Arca Plasmor",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpShotgun/CrpShotgun",
+      "imageName": "arca-plasmor-22aeed29c6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ArcaPlasmor.png?a77f1"
+    },
+    "Arca Scisco": {
+      "name": "Arca Scisco",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/SniperPistol/CrpScopeGun",
+      "imageName": "arca-scisco-10a8f96db3.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ArcaScisco.png?8e4dd"
+    },
+    "Arca Titron": {
+      "name": "Arca Titron",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/Hammer/CorpusHammerWeapon",
+      "imageName": "arca-titron-b18e4d9e56.png",
+      "wikiaThumbnail": null
+    },
+    "Argo & Vel": {
+      "name": "Argo & Vel",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/SwordsAndBoards/DaxDuviriMaceShieldWeapon",
+      "imageName": "argo-&-vel-c520623cce.png",
+      "wikiaThumbnail": null
+    },
+    "Argonak": {
+      "name": "Argonak",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/LaserAimRifle/LaserAimRifle",
+      "imageName": "argonak-0823371815.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Argonak.png?cff62"
+    },
+    "Arum Spinosa": {
+      "name": "Arum Spinosa",
+      "uniqueName": "/Lotus/Weapons/Infested/Melee/InfWarfan/InfWarfanWeapon",
+      "imageName": "arum-spinosa-c004a6cfa1.png",
+      "wikiaThumbnail": null
+    },
+    "Astilla": {
+      "name": "Astilla",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnGlassShotgun/TnGlassShotgunGun",
+      "imageName": "astilla-c74cffb34c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Astilla.png?f85fd"
+    },
+    "Astilla Prime": {
+      "name": "Astilla Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeAstilla/AstillaPrimeWeapon",
+      "imageName": "astilla-prime-41ef61f4d6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AstillaPrime.png?7a8c1"
+    },
+    "Athodai": {
+      "name": "Athodai",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/TnJetTurbine/TnJetTurbinePistolWeapon",
+      "imageName": "athodai-88e24e43f3.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Athodai.png?5f25a"
+    },
+    "Atomos": {
+      "name": "Atomos",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun",
+      "imageName": "atomos-97563b3008.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Atomos.png?91d61"
+    },
+    "Atterax": {
+      "name": "Atterax",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrineerWhip/GrineerWhip",
+      "imageName": "atterax-a78c2ad927.png",
+      "wikiaThumbnail": null
+    },
+    "Attica": {
+      "name": "Attica",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnoPrmryXbow/TnoPrmryXbowWeapon",
+      "imageName": "attica-325c1cffcc.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Attica.png?6cad7"
+    },
+    "Ax-52": {
+      "name": "Ax-52",
+      "uniqueName": "/Lotus/Weapons/Lasria/AK47/TC2024AK47Weapon",
+      "imageName": "ax-52-7ebc7ac6cc.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/AX-52.png?5aa25"
+    },
+    "Azima": {
+      "name": "Azima",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/SundialGun/SundialPistol",
+      "imageName": "azima-7045ece43c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Azima.png?ab365"
+    },
+    "Azothane": {
+      "name": "Azothane",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/DaxDuviriTwoHandedKatana/DaxDuviriTwoHandedKatanaWeapon",
+      "imageName": "azothane-c72f98d997.png",
+      "wikiaThumbnail": null
+    },
+    "Balla": {
+      "name": "Balla",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Tip/TipOne",
+      "imageName": "balla-b6d6529af4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Balla.png?3df29"
+    },
+    "Ballistica": {
+      "name": "Ballistica",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/AutomaticHandCrossbow/AutoCrossBow",
+      "imageName": "ballistica-a88d0d1bea.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ballistica.png?dbef0"
+    },
+    "Ballistica Prime": {
+      "name": "Ballistica Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeBallistica/PrimeBallistica",
+      "imageName": "ballistica-prime-81feb66ef9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/BallisticaPrime.png?142e6"
+    },
+    "Basmu": {
+      "name": "Basmu",
+      "uniqueName": "/Lotus/Weapons/Sentients/SentRifleNewWar/SentRifleNewWarGun",
+      "imageName": "basmu-436ead3ef5.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Basmu.png?5c634"
+    },
+    "Battacor": {
+      "name": "Battacor",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpSentExperimentRifle/CrpSentExperimentRifle",
+      "imageName": "battacor-d2bf15dcde.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Battacor.png?8b844"
+    },
+    "Baza": {
+      "name": "Baza",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnSMG/TnSMGWeapon",
+      "imageName": "baza-288fcce16f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Baza.png?018da"
+    },
+    "Baza Prime": {
+      "name": "Baza Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeBaza/PrimeBazaGun",
+      "imageName": "baza-prime-a05bfd6bfc.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/BazaPrime.png?c1df2"
+    },
+    "Bo": {
+      "name": "Bo",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Staff/Staff",
+      "imageName": "bo-1f219ba48d.png",
+      "wikiaThumbnail": null
+    },
+    "Bo Prime": {
+      "name": "Bo Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Staff/PrimeBo/PrimeBoWeapon",
+      "imageName": "bo-prime-fa6bb7ec1b.png",
+      "wikiaThumbnail": null
+    },
+    "Boar": {
+      "name": "Boar",
+      "uniqueName": "/Lotus/Weapons/Tenno/Shotgun/FullAutoShotgun",
+      "imageName": "boar-8c3c569383.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Boar.png?f5d59"
+    },
+    "Boar Prime": {
+      "name": "Boar Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Shotgun/PrimeBoar",
+      "imageName": "boar-prime-d357b12d62.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/BoarPrime.png?a4f85"
+    },
+    "Boltace": {
+      "name": "Boltace",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Tonfa/Boltonfa/Boltonfa",
+      "imageName": "boltace-55d2605914.png",
+      "wikiaThumbnail": null
+    },
+    "Bolto": {
+      "name": "Bolto",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistol/CrossBow",
+      "imageName": "bolto-39106d806a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Bolto.png?5ba94"
+    },
+    "Boltor": {
+      "name": "Boltor",
+      "uniqueName": "/Lotus/Weapons/Tenno/Rifle/BoltoRifle",
+      "imageName": "boltor-4e53e6186d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Boltor.png?92b9c"
+    },
+    "Boltor Prime": {
+      "name": "Boltor Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeBoltor/PrimeBoltor",
+      "imageName": "boltor-prime-5340f53738.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/BoltorPrime.png?c7e19"
+    },
+    "Brakk": {
+      "name": "Brakk",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/GrineerHandShotgun/GrineerHandCannon",
+      "imageName": "brakk-251ecec36e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Brakk.png?624b1"
+    },
+    "Braton": {
+      "name": "Braton",
+      "uniqueName": "/Lotus/Weapons/Tenno/Rifle/Rifle",
+      "imageName": "braton-3e4617eb07.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Braton.png?95621"
+    },
+    "Braton Prime": {
+      "name": "Braton Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Rifle/BratonPrime",
+      "imageName": "braton-prime-f3ebb072cb.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/BratonPrime.png?c49e4"
+    },
+    "Braton Vandal": {
+      "name": "Braton Vandal",
+      "uniqueName": "/Lotus/Weapons/Tenno/Rifle/VIPRifle",
+      "imageName": "braton-vandal-ce1731f85a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/BratonVandal.png?b43a3"
+    },
+    "Broken Scepter": {
+      "name": "Broken Scepter",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrnQueenSceptre/GrnQueenSceptreWeapon",
+      "imageName": "broken-scepter-0d9d345a91.png",
+      "wikiaThumbnail": null
+    },
+    "Broken War": {
+      "name": "Broken War",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/StalkerTwo/StalkerTwoSmallSword",
+      "imageName": "broken-war-25efd4d746.png",
+      "wikiaThumbnail": null
+    },
+    "Bronco": {
+      "name": "Bronco",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistol/HandShotGun",
+      "imageName": "bronco-65d3eb546d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Bronco.png?6e7f7"
+    },
+    "Bronco Prime": {
+      "name": "Bronco Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistol/BroncoPrime",
+      "imageName": "bronco-prime-22492b5f01.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/BroncoPrime.png?a83e3"
+    },
+    "Bubonico": {
+      "name": "Bubonico",
+      "uniqueName": "/Lotus/Weapons/Infested/LongGuns/InfArmCannon/InfArmCannon",
+      "imageName": "bubonico-0b3130d7c8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Bubonico.png?e6eb9"
+    },
+    "Burston": {
+      "name": "Burston",
+      "uniqueName": "/Lotus/Weapons/Tenno/Rifle/BurstRifle",
+      "imageName": "burston-14c0cde636.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Burston.png?3e21c"
+    },
+    "Burston Prime": {
+      "name": "Burston Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston",
+      "imageName": "burston-prime-f8bc26c184.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/BurstonPrime.png?8fc05"
+    },
+    "Buzlok": {
+      "name": "Buzlok",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrnGorgSniperRifle/GrnGorgSniperRifle",
+      "imageName": "buzlok-e0a2b0d88f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Buzlok.png?32c00"
+    },
+    "Cadus": {
+      "name": "Cadus",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Staff/SingleStaff",
+      "imageName": "cadus-31f6896606.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cadus.png?bd981"
+    },
+    "Cantare": {
+      "name": "Cantare",
+      "uniqueName": "/Lotus/Weapons/Tenno/ThrowingWeapons/TnChoirframeKunai/TnChoirframeKunai",
+      "imageName": "cantare-480f4a6fc2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cantare.png?9e871"
+    },
+    "Carmine Penta": {
+      "name": "Carmine Penta",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/GrenadeLauncher/CarminePenta",
+      "imageName": "carmine-penta-7534ca6319.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CarminePenta.png?79c2a"
+    },
+    "Cassowar": {
+      "name": "Cassowar",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Polearms/TnHalberdPolearm/TnHalberdPolearmWeapon",
+      "imageName": "cassowar-ff3272dbfb.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cassowar.png?c342d"
+    },
+    "Castanas": {
+      "name": "Castanas",
+      "uniqueName": "/Lotus/Weapons/Tenno/ThrowingWeapons/StickyBomb/StickyBombs",
+      "imageName": "castanas-2fd0ffe61a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Castanas.png?328f9"
+    },
+    "Catabolyst": {
+      "name": "Catabolyst",
+      "uniqueName": "/Lotus/Weapons/Infested/Pistols/InfBeamPistol/InfBeamPistol",
+      "imageName": "catabolyst-6a7047b949.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Catabolyst.png?984d0"
+    },
+    "Caustacyst": {
+      "name": "Caustacyst",
+      "uniqueName": "/Lotus/Weapons/Infested/Melee/InfEmbolistScythe/InfestedScythe",
+      "imageName": "caustacyst-a2b014c8d4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Caustacyst.png?71317"
+    },
+    "Cedo": {
+      "name": "Cedo",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnAlchemistShotgun/TnAlchemistShotgun",
+      "imageName": "cedo-02506f3d01.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cedo.png?0aaf5"
+    },
+    "Cedo Prime": {
+      "name": "Cedo Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeCedo/PrimeCedoWeapon",
+      "imageName": "cedo-prime-348235f853.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CedoPrime.png?1d21b"
+    },
+    "Centaur": {
+      "name": "Centaur",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Melee/Archswordandshield/ArchSwordShield",
+      "imageName": "centaur-a00c7e4fd8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Centaur.png?ad3fd"
+    },
+    "Ceramic Dagger": {
+      "name": "Ceramic Dagger",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Dagger/CeramicDagger",
+      "imageName": "ceramic-dagger-d35a3d97fc.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CeramicDagger.png?063e0"
+    },
+    "Cerata": {
+      "name": "Cerata",
+      "uniqueName": "/Lotus/Weapons/Infested/Melee/Glaives/PunctureGlaive/PunctureGlaiveWeapon",
+      "imageName": "cerata-91a28a3937.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cerata.png?74108"
+    },
+    "Cernos": {
+      "name": "Cernos",
+      "uniqueName": "/Lotus/Weapons/Tenno/Bows/AntlerBow/AntlerBow",
+      "imageName": "cernos-c01dea74b2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cernos.png?8ac24"
+    },
+    "Cernos Prime": {
+      "name": "Cernos Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Bows/PrimeCernos/PrimeCernos",
+      "imageName": "cernos-prime-e0019e3c84.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CernosPrime.png?20e5e"
+    },
+    "Cestra": {
+      "name": "Cestra",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/CorpusMinigun",
+      "imageName": "cestra-de053fcf83.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cestra.png?302b1"
+    },
+    "Ceti Lacera": {
+      "name": "Ceti Lacera",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/StalkerMios/OperationsLacera",
+      "imageName": "ceti-lacera-c4a570c9b8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CetiLacera.png?55f56"
+    },
+    "Cinta": {
+      "name": "Cinta",
+      "uniqueName": "/Lotus/Weapons/Tenno/Bows/DaxDuviriAsymetricalBow/DaxDuviriAsymmetricalLongBowPlayerWeapon",
+      "imageName": "cinta-50b4c86898.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cinta.png?bac02"
+    },
+    "Cobra & Crane": {
+      "name": "Cobra & Crane",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/SwordsAndBoards/PacifistShieldAndSword/PacifistShieldSword",
+      "imageName": "cobra-&-crane-cf2d6b1c36.png",
+      "wikiaThumbnail": null
+    },
+    "Cobra & Crane Prime": {
+      "name": "Cobra & Crane Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/SwordsAndBoards/PrimeCobraAndCrane/PrimeCobraAndCraneWeapon",
+      "imageName": "cobra-&-crane-prime-bbca3fff77.png",
+      "wikiaThumbnail": null
+    },
+    "Coda Bassocyst": {
+      "name": "Coda Bassocyst",
+      "uniqueName": "/Lotus/Weapons/Infested/InfestedLich/LongGuns/1999InfShotgun/1999InfShotgunWeapon",
+      "imageName": "coda-bassocyst-90c0e70718.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CodaBassocyst.png?2407f"
+    },
+    "Coda Catabolyst": {
+      "name": "Coda Catabolyst",
+      "uniqueName": "/Lotus/Weapons/Infested/InfestedLich/Pistols/CodaCatabolyst",
+      "imageName": "coda-catabolyst-fc6b5e3e63.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CodaCatabolyst.png?2407f"
+    },
+    "Coda Caustacyst": {
+      "name": "Coda Caustacyst",
+      "uniqueName": "/Lotus/Weapons/Infested/InfestedLich/Melee/CodaCaustacyst/CodaCaustacyst",
+      "imageName": "coda-caustacyst-171c39f067.png",
+      "wikiaThumbnail": null
+    },
+    "Coda Hema": {
+      "name": "Coda Hema",
+      "uniqueName": "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaHema",
+      "imageName": "coda-hema-eda9bfa56a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CodaHema.png?f76ee"
+    },
+    "Coda Hirudo": {
+      "name": "Coda Hirudo",
+      "uniqueName": "/Lotus/Weapons/Infested/InfestedLich/Melee/CodaHirudo",
+      "imageName": "coda-hirudo-73fbceca3a.png",
+      "wikiaThumbnail": null
+    },
+    "Coda Mire": {
+      "name": "Coda Mire",
+      "uniqueName": "/Lotus/Weapons/Infested/InfestedLich/Melee/CodaMire",
+      "imageName": "coda-mire-f96b19fd27.png",
+      "wikiaThumbnail": null
+    },
+    "Coda Motovore": {
+      "name": "Coda Motovore",
+      "uniqueName": "/Lotus/Weapons/Infested/InfestedLich/Melee/InfestedHammer/InfLichHammerWeapon",
+      "imageName": "coda-motovore-d83db3cb18.png",
+      "wikiaThumbnail": null
+    },
+    "Coda Pathocyst": {
+      "name": "Coda Pathocyst",
+      "uniqueName": "/Lotus/Weapons/Infested/InfestedLich/Melee/CodaPathocyst/CodaPathocyst",
+      "imageName": "coda-pathocyst-44d3400c0d.png",
+      "wikiaThumbnail": null
+    },
+    "Coda Pox": {
+      "name": "Coda Pox",
+      "uniqueName": "/Lotus/Weapons/Infested/InfestedLich/Pistols/CodaPox",
+      "imageName": "coda-pox-9603c6b1e9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CodaPox.png?6edfb"
+    },
+    "Coda Sporothrix": {
+      "name": "Coda Sporothrix",
+      "uniqueName": "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaSporothrix",
+      "imageName": "coda-sporothrix-b0976a87f9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CodaSporothrix.png?6edfb"
+    },
+    "Coda Synapse": {
+      "name": "Coda Synapse",
+      "uniqueName": "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaSynapse",
+      "imageName": "coda-synapse-72028210ad.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CodaSynapse.png?6edfb"
+    },
+    "Coda Tysis": {
+      "name": "Coda Tysis",
+      "uniqueName": "/Lotus/Weapons/Infested/InfestedLich/Pistols/CodaTysis",
+      "imageName": "coda-tysis-674ee70828.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CodaTysis.png?09ea2"
+    },
+    "Convectrix": {
+      "name": "Convectrix",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpSplitLaser/CrpSplitLaser",
+      "imageName": "convectrix-32577a6926.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Convectrix.png?373e0"
+    },
+    "Corinth": {
+      "name": "Corinth",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnHeavyShotgun/TnHeavyShotgunGun",
+      "imageName": "corinth-cd2d0831f4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Corinth.png?951c8"
+    },
+    "Corinth Prime": {
+      "name": "Corinth Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeCorinth/PrimeCorinth",
+      "imageName": "corinth-prime-cacf3e9a9f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CorinthPrime.png?5c1bb"
+    },
+    "Cortege": {
+      "name": "Cortege",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/ThanoTechArchGun/ThanoTechArchGun",
+      "imageName": "cortege-9af4117990.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cortege.png?b7e25"
+    },
+    "Corufell": {
+      "name": "Corufell",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Melee/ExaltedArchScythe/ExaltedAWScytheWeapon",
+      "imageName": "corufell-d74a908016.png",
+      "wikiaThumbnail": null
+    },
+    "Corvas": {
+      "name": "Corvas",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/LaunchGrenade/ArchCannon",
+      "imageName": "corvas-13db9b551f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Corvas.png?2ae6a"
+    },
+    "Corvas Prime": {
+      "name": "Corvas Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/PrimeCorvas/PrimeCorvasWeapon",
+      "imageName": "corvas-prime-3a5514ae24.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/CorvasPrime.png?290fd"
+    },
+    "Cronus": {
+      "name": "Cronus",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/CronusSword/CronusLongSword",
+      "imageName": "cronus-f3879e63fb.png",
+      "wikiaThumbnail": null
+    },
+    "Cyanex": {
+      "name": "Cyanex",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpSentAmalgPistol/CrpSentAmalgPistol",
+      "imageName": "cyanex-1c118ccf60.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cyanex.png?56ba3"
+    },
+    "Cyath": {
+      "name": "Cyath",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Tip/TipFour",
+      "imageName": "cyath-6698c317a9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cyath.png?02b17"
+    },
+    "Cycron": {
+      "name": "Cycron",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpChargeGun/CrpChargeGun",
+      "imageName": "cycron-207a11874d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cycron.png?4e3db"
+    },
+    "Cyngas": {
+      "name": "Cyngas",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/ArchBurstGun/ArchBurstGun",
+      "imageName": "cyngas-842f5f0899.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Cyngas.png?1a357"
+    },
+    "Daikyu": {
+      "name": "Daikyu",
+      "uniqueName": "/Lotus/Weapons/Tenno/Bows/AsymetricalBow/AsymetricalBow",
+      "imageName": "daikyu-7d251e8941.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Daikyu.png?5dbd0"
+    },
+    "Daikyu Prime": {
+      "name": "Daikyu Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Bows/PrimeDaikyu/PrimeDaikyuBow",
+      "imageName": "daikyu-prime-f768625a93.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/DaikyuPrime.png?445ed"
+    },
+    "Dakra Prime": {
+      "name": "Dakra Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/CronusSword/PrimeCronusLongSword",
+      "imageName": "dakra-prime-69b3818b88.png",
+      "wikiaThumbnail": null
+    },
+    "Dark Dagger": {
+      "name": "Dark Dagger",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Dagger/DarkDagger",
+      "imageName": "dark-dagger-34cfc06ddf.png",
+      "wikiaThumbnail": null
+    },
+    "Dark Split-Sword": {
+      "name": "Dark Split-Sword",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/DarkSword/DarkSwordDaggerHybridWeapon",
+      "imageName": "dark-split-sword-5830682765.png",
+      "wikiaThumbnail": null
+    },
+    "Dark Sword": {
+      "name": "Dark Sword",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/DarkSword/DarkLongSword",
+      "imageName": "dark-sword-a8742e91fa.png",
+      "wikiaThumbnail": null
+    },
+    "Dehtat": {
+      "name": "Dehtat",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Tip/TipFive",
+      "imageName": "dehtat-0d89b212e5.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Dehtat.png?4999e"
+    },
+    "Dera": {
+      "name": "Dera",
+      "uniqueName": "/Lotus/Weapons/ClanTech/Energy/EnergyRifle",
+      "imageName": "dera-64d79d44e1.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Dera.png?54065"
+    },
+    "Dera Vandal": {
+      "name": "Dera Vandal",
+      "uniqueName": "/Lotus/Weapons/ClanTech/Energy/DeraVandal",
+      "imageName": "dera-vandal-fa64fda12e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/DeraVandal.png?91020"
+    },
+    "Despair": {
+      "name": "Despair",
+      "uniqueName": "/Lotus/Weapons/Tenno/ThrowingWeapons/StalkerKunai",
+      "imageName": "despair-abc763c0f4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Despair.png?14725"
+    },
+    "Destreza": {
+      "name": "Destreza",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/TnoRapier/TnoRapier",
+      "imageName": "destreza-237f0a5096.png",
+      "wikiaThumbnail": null
+    },
+    "Destreza Prime": {
+      "name": "Destreza Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/PRapier/DestrezaPrime",
+      "imageName": "destreza-prime-603ac6abce.png",
+      "wikiaThumbnail": null
+    },
+    "Detron": {
+      "name": "Detron",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CorpusHandShotgun/CorpusHandCannon",
+      "imageName": "detron-4fb4cc5584.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Detron.png?b201d"
+    },
+    "Dex Dakra": {
+      "name": "Dex Dakra",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/DexTheSecond/DexTheSecond",
+      "imageName": "dex-dakra-f39c2617fc.png",
+      "wikiaThumbnail": null
+    },
+    "Dex Furis": {
+      "name": "Dex Furis",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/DexFuris/DexFuris",
+      "imageName": "dex-furis-7f661820c6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/DexFuris.png?77f85"
+    },
+    "Dex Nikana": {
+      "name": "Dex Nikana",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/KatanaAndWakizashi/Dex2023Nikana/Dex2023Nikana",
+      "imageName": "dex-nikana-79f95a718c.png",
+      "wikiaThumbnail": null
+    },
+    "Dex Sybaris": {
+      "name": "Dex Sybaris",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/DexTheThird/DexTheThird",
+      "imageName": "dex-sybaris-e1be4d45a0.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/DexSybaris.png?cf8ee"
+    },
+    "Dokrahm": {
+      "name": "Dokrahm",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee02/Tip/TipEleven",
+      "imageName": "dokrahm-37b48a9e1e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Dokrahm.png?ca7fa"
+    },
+    "Dorrclave": {
+      "name": "Dorrclave",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/TnDagathBladeWhip/TnDagathBladeWhip",
+      "imageName": "dorrclave-44e8a639e2.png",
+      "wikiaThumbnail": null
+    },
+    "Dragon Nikana": {
+      "name": "Dragon Nikana",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/KatanaAndWakizashi/LowKatana",
+      "imageName": "dragon-nikana-df8b6ef90a.png",
+      "wikiaThumbnail": null
+    },
+    "Drakgoon": {
+      "name": "Drakgoon",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrineerFlakCannon/FlakCannon",
+      "imageName": "drakgoon-9da8bc59fb.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Drakgoon.png?805b5"
+    },
+    "Dread": {
+      "name": "Dread",
+      "uniqueName": "/Lotus/Weapons/Tenno/Bows/StalkerBow",
+      "imageName": "dread-ce937b379d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Dread.png?06d56"
+    },
+    "Dual Cestra": {
+      "name": "Dual Cestra",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/DualCorpusMinigun",
+      "imageName": "dual-cestra-04d7cc079c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/DualCestra.png?28e58"
+    },
+    "Dual Cleavers": {
+      "name": "Dual Cleavers",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrineerMachetteAndCleaver/DualCleaverWeapon",
+      "imageName": "dual-cleavers-7e804807c4.png",
+      "wikiaThumbnail": null
+    },
+    "Dual Coda Torxica": {
+      "name": "Dual Coda Torxica",
+      "uniqueName": "/Lotus/Weapons/Infested/InfestedLich/Pistols/1999InfSporePistol/1999InfSporePistolWeapon",
+      "imageName": "dual-coda-torxica-5efb171272.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/DualCodaTorxica.png?56d53"
+    },
+    "Dual Decurion": {
+      "name": "Dual Decurion",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/ArchwingHeavyPistols/ArchHeavyPistols",
+      "imageName": "dual-decurion-2c12e236ac.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/DualDecurion.png?9569b"
+    },
+    "Dual Ether": {
+      "name": "Dual Ether",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/DualShortSword/DualEtherSword",
+      "imageName": "dual-ether-70463837b6.png",
+      "wikiaThumbnail": null
+    },
+    "Dual Heat Swords": {
+      "name": "Dual Heat Swords",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/DualShortSword/DualHeatSwords",
+      "imageName": "dual-heat-swords-0e3c95de91.png",
+      "wikiaThumbnail": null
+    },
+    "Dual Ichor": {
+      "name": "Dual Ichor",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Axe/DualInfestedAxesWeapon",
+      "imageName": "dual-ichor-5c17bf66ce.png",
+      "wikiaThumbnail": null
+    },
+    "Dual Kamas": {
+      "name": "Dual Kamas",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/DualKamas/DualKamas",
+      "imageName": "dual-kamas-11a09f8cb1.png",
+      "wikiaThumbnail": null
+    },
+    "Dual Kamas Prime": {
+      "name": "Dual Kamas Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/PrimeDualKamas/PrimeDualKamas",
+      "imageName": "dual-kamas-prime-5f36995f5c.png",
+      "wikiaThumbnail": null
+    },
+    "Dual Keres": {
+      "name": "Dual Keres",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/QuillSword/QuillDualSwords",
+      "imageName": "dual-keres-b112e659a1.png",
+      "wikiaThumbnail": null
+    },
+    "Dual Keres Prime": {
+      "name": "Dual Keres Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/PrimeDualKeres/PrimeDualKeresWeapon",
+      "imageName": "dual-keres-prime-7665aa8acb.png",
+      "wikiaThumbnail": null
+    },
+    "Dual Raza": {
+      "name": "Dual Raza",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Soma/SomaDualKamas",
+      "imageName": "dual-raza-d9c1b54e7e.png",
+      "wikiaThumbnail": null
+    },
+    "Dual Skana": {
+      "name": "Dual Skana",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/DualShortSword/DualShortSword",
+      "imageName": "dual-skana-b1cf4bf47b.png",
+      "wikiaThumbnail": null
+    },
+    "Dual Toxocyst": {
+      "name": "Dual Toxocyst",
+      "uniqueName": "/Lotus/Weapons/Infested/Pistols/InfVomitGun/InfVomitGunWep",
+      "imageName": "dual-toxocyst-e89c00d6b5.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/DualToxocyst.png?13be4"
+    },
+    "Dual Viciss": {
+      "name": "Dual Viciss",
+      "uniqueName": "/Lotus/Weapons/Lasria/LasGooSickle/LasGooSicklePlayerWeapon",
+      "imageName": "dual-viciss-f3876a2528.png",
+      "wikiaThumbnail": null
+    },
+    "Dual Zoren": {
+      "name": "Dual Zoren",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Axe/DualAxeWeapon",
+      "imageName": "dual-zoren-bcbd4a2836.png",
+      "wikiaThumbnail": null
+    },
+    "Dual Zoren Prime": {
+      "name": "Dual Zoren Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Axe/PrimeZoren/PrimeZorenAxeWeapon",
+      "imageName": "dual-zoren-prime-e2bddd9954.png",
+      "wikiaThumbnail": null
+    },
+    "Edun": {
+      "name": "Edun",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Polearms/DaxDuviriPolearm/DaxDuviriPolearmWeapon",
+      "imageName": "edun-2204da8ba8.png",
+      "wikiaThumbnail": null
+    },
+    "Efv-5 Jupiter": {
+      "name": "Efv-5 Jupiter",
+      "uniqueName": "/Lotus/Weapons/Lasria/LasGooAK/LasGooAKPlayerWeapon",
+      "imageName": "efv-5-jupiter-e993642339.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/EFV-5Jupiter.png?be8ed"
+    },
+    "Efv-8 Mars": {
+      "name": "Efv-8 Mars",
+      "uniqueName": "/Lotus/Weapons/Lasria/LasGooPistol/LasGooPistolPlayerWeapon",
+      "imageName": "efv-8-mars-bda55bc38c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/EFV-8Mars.png?be8ed"
+    },
+    "Ekhein": {
+      "name": "Ekhein",
+      "uniqueName": "/Lotus/Weapons/Thanotech/EntSphereHammer/EntSphereHammer",
+      "imageName": "ekhein-abeaf39f7b.png",
+      "wikiaThumbnail": null
+    },
+    "Ekwana Ii Jai": {
+      "name": "Ekwana Ii Jai",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceSpeedIStatusII",
+      "imageName": "ekwana-ii-jai-c5361c4620.png",
+      "wikiaThumbnail": null
+    },
+    "Ekwana Ii Ruhang": {
+      "name": "Ekwana Ii Ruhang",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceDamageIStatusII",
+      "imageName": "ekwana-ii-ruhang-263840a491.png",
+      "wikiaThumbnail": null
+    },
+    "Ekwana Jai": {
+      "name": "Ekwana Jai",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceSpeedIStatusI",
+      "imageName": "ekwana-jai-5dd1e0aabe.png",
+      "wikiaThumbnail": null
+    },
+    "Ekwana Jai Ii": {
+      "name": "Ekwana Jai Ii",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceSpeedIIStatusI",
+      "imageName": "ekwana-jai-ii-7cdd0a08c0.png",
+      "wikiaThumbnail": null
+    },
+    "Ekwana Ruhang": {
+      "name": "Ekwana Ruhang",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceDamageIStatusI",
+      "imageName": "ekwana-ruhang-47efe1fcbb.png",
+      "wikiaThumbnail": null
+    },
+    "Ekwana Ruhang Ii": {
+      "name": "Ekwana Ruhang Ii",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceDamageIIStatusI",
+      "imageName": "ekwana-ruhang-ii-5e40256eb9.png",
+      "wikiaThumbnail": null
+    },
+    "Embolist": {
+      "name": "Embolist",
+      "uniqueName": "/Lotus/Weapons/Infested/Pistols/InfestedPistol",
+      "imageName": "embolist-2dcf599ad8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Embolist.png?a05c2"
+    },
+    "Endura": {
+      "name": "Endura",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/ThreeLeaf/ThreeLeaf",
+      "imageName": "endura-4831c42fc3.png",
+      "wikiaThumbnail": null
+    },
+    "Epitaph": {
+      "name": "Epitaph",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon",
+      "imageName": "epitaph-b49e30b4ec.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Epitaph.png?77a9d"
+    },
+    "Epitaph Prime": {
+      "name": "Epitaph Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeEpitaph/PrimeEpitaphSidearmWeapon",
+      "imageName": "epitaph-prime-dbe8d7bab0.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/EpitaphPrime.png?21ae3"
+    },
+    "Ether Daggers": {
+      "name": "Ether Daggers",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/DualDagger/DualEtherDagger",
+      "imageName": "ether-daggers-a10b7f667c.png",
+      "wikiaThumbnail": null
+    },
+    "Ether Reaper": {
+      "name": "Ether Reaper",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Scythe/EtherScytheWeapon",
+      "imageName": "ether-reaper-543ac0f467.png",
+      "wikiaThumbnail": null
+    },
+    "Ether Sword": {
+      "name": "Ether Sword",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/LongSword/EtherSword",
+      "imageName": "ether-sword-fb1067b033.png",
+      "wikiaThumbnail": null
+    },
+    "Euphona Prime": {
+      "name": "Euphona Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/AllNew1hSG/AllNew1hSG",
+      "imageName": "euphona-prime-258bec05a5.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/EuphonaPrime.png?08a88"
+    },
+    "Evensong": {
+      "name": "Evensong",
+      "uniqueName": "/Lotus/Weapons/Tenno/Bows/TnChoirBow/TnChoirBow",
+      "imageName": "evensong-d10f6a1e78.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Evensong.png?f9f28"
+    },
+    "Exergis": {
+      "name": "Exergis",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpShapeBlast/CrpShapeBlastShotgun",
+      "imageName": "exergis-1a341582c9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Exergis.png?63524"
+    },
+    "Falcor": {
+      "name": "Falcor",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/Glaive/CrpGlaive/CrpGlaive",
+      "imageName": "falcor-c9a665bc11.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Falcor.png?4acc7"
+    },
+    "Fang": {
+      "name": "Fang",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/DualDagger/DualDagger",
+      "imageName": "fang-db915abbe2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Fang.png?dbd6b"
+    },
+    "Fang Prime": {
+      "name": "Fang Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/DualDagger/FangPrimeDagger",
+      "imageName": "fang-prime-95fac4ad11.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/FangPrime.png?73eaa"
+    },
+    "Felarx": {
+      "name": "Felarx",
+      "uniqueName": "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun",
+      "imageName": "felarx-1df1ee184f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Felarx.png?4d866"
+    },
+    "Ferrox": {
+      "name": "Ferrox",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/Spears/Railgun/CorpusRailgun",
+      "imageName": "ferrox-43de4de20e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ferrox.png?9fe92"
+    },
+    "Fluctus": {
+      "name": "Fluctus",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/RocketArtillery/ArchRocketCrossbow",
+      "imageName": "fluctus-1e012e3298.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Fluctus.png?e32bf"
+    },
+    "Flux Rifle": {
+      "name": "Flux Rifle",
+      "uniqueName": "/Lotus/Weapons/ClanTech/Energy/CrpLaserRifle",
+      "imageName": "flux-rifle-79615a53ed.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/FluxRifle.png?8694d"
+    },
+    "Fragor": {
+      "name": "Fragor",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Hammer/HammerWeapon",
+      "imageName": "fragor-584740dddb.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Fragor.png?36f9b"
+    },
+    "Fragor Prime": {
+      "name": "Fragor Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/PrimeFragor/PrimeFragor",
+      "imageName": "fragor-prime-1cc2b31786.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/FragorPrime.png?e97e2"
+    },
+    "Fulmin": {
+      "name": "Fulmin",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnWispRifle/TnWispRifle",
+      "imageName": "fulmin-65c9477900.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Fulmin.png?4d4d0"
+    },
+    "Fulmin Prime": {
+      "name": "Fulmin Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeFulmin/PrimeFulmin",
+      "imageName": "fulmin-prime-15bc184b1c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/FulminPrime.png?00eea"
+    },
+    "Furax": {
+      "name": "Furax",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Fist/Fist",
+      "imageName": "furax-32b27ce63d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Furax.png?e515a"
+    },
+    "Furax Wraith": {
+      "name": "Furax Wraith",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Fist/FuraxWraith",
+      "imageName": "furax-wraith-feaf9ec875.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/FuraxWraith.png?ec8d7"
+    },
+    "Furis": {
+      "name": "Furis",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistol/AutoPistol",
+      "imageName": "furis-5bb7021b86.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Furis.png?a1a15"
+    },
+    "Fusilai": {
+      "name": "Fusilai",
+      "uniqueName": "/Lotus/Weapons/Tenno/ThrowingWeapons/GlassKunai/GlassKunaiWeapon",
+      "imageName": "fusilai-83082d8f95.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Fusilai.png?eb3f9"
+    },
+    "Galatine": {
+      "name": "Galatine",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/GreatSword/TennoGreatSword",
+      "imageName": "galatine-c2eeaf70f4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Galatine.png?ffdee"
+    },
+    "Galatine Prime": {
+      "name": "Galatine Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/PrimeGalatine/PrimeGalatine",
+      "imageName": "galatine-prime-2d040c4b48.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/GalatinePrime.png?3dd53"
+    },
+    "Galvacord": {
+      "name": "Galvacord",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/Whips/CrpShockGrip/CrpShockGripWhipWeapon",
+      "imageName": "galvacord-1685f13acf.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Galvacord.png?43869"
+    },
+    "Gammacor": {
+      "name": "Gammacor",
+      "uniqueName": "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSDroidArray",
+      "imageName": "gammacor-67eb299154.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Gammacor.png?a5120"
+    },
+    "Gazal Machete": {
+      "name": "Gazal Machete",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/PersianMachete/DjinnMachete",
+      "imageName": "gazal-machete-212e91edaa.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/GazalMachete.png?f75b4"
+    },
+    "Ghoulsaw": {
+      "name": "Ghoulsaw",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrnGhoulSaw/GrnGhoulSawPlayer",
+      "imageName": "ghoulsaw-62d778b801.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ghoulsaw.png?0ee00"
+    },
+    "Glaive": {
+      "name": "Glaive",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Glaives/LightGlaive/LightGlaiveWeapon",
+      "imageName": "glaive-7b19031fa7.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Glaive.png?a7f2a"
+    },
+    "Glaive Prime": {
+      "name": "Glaive Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Glaives/PrimeGlaive/PrimeGlaiveWeapon",
+      "imageName": "glaive-prime-170ccb6e9a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/GlaivePrime.png?fd8a2"
+    },
+    "Glaxion": {
+      "name": "Glaxion",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpFreezeRay/CrpFreezeRayRifle",
+      "imageName": "glaxion-0d0d150e30.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Glaxion.png?ce575"
+    },
+    "Glaxion Vandal": {
+      "name": "Glaxion Vandal",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpFreezeRay/Vandal/CrpFreezeRayVandalRifle",
+      "imageName": "glaxion-vandal-a688a13488.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/GlaxionVandal.png?f5763"
+    },
+    "Gorgon": {
+      "name": "Gorgon",
+      "uniqueName": "/Lotus/Weapons/Tenno/Rifle/HeavyRifle",
+      "imageName": "gorgon-71592be274.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Gorgon.png?e66de"
+    },
+    "Gorgon Wraith": {
+      "name": "Gorgon Wraith",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/WraithGorgon/WraithGorgon",
+      "imageName": "gorgon-wraith-c4203ce84d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/GorgonWraith.png?505bf"
+    },
+    "Gotva Prime": {
+      "name": "Gotva Prime",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrnOrokinRifle/GrnOrokinRifleWeapon",
+      "imageName": "gotva-prime-034c90b3d0.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/GotvaPrime.png?d08b7"
+    },
+    "Grakata": {
+      "name": "Grakata",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrineerAssaultRifle/GrnAssaultRifle",
+      "imageName": "grakata-217dd84e27.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Grakata.png?fb846"
+    },
+    "Gram": {
+      "name": "Gram",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/GreatSword/GreatSword",
+      "imageName": "gram-65f8494f8b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Gram.png?ff14e"
+    },
+    "Gram Prime": {
+      "name": "Gram Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/PrimeGram/PrimeGram",
+      "imageName": "gram-prime-b1c38c96e9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/GramPrime.png?89383"
+    },
+    "Grattler": {
+      "name": "Grattler",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/RepurposedGrineerAntiAircraftGun/ArchGRNAAGun",
+      "imageName": "grattler-ce089ce28a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Grattler.png?fa336"
+    },
+    "Grimoire": {
+      "name": "Grimoire",
+      "uniqueName": "/Lotus/Weapons/Tenno/Grimoire/TnGrimoire",
+      "imageName": "grimoire-32049e9432.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Grimoire.png?e8ce6"
+    },
+    "Grinlok": {
+      "name": "Grinlok",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrineerLeverActionRifle/GLARifle",
+      "imageName": "grinlok-5e66b615e9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Grinlok.png?41a55"
+    },
+    "Guandao": {
+      "name": "Guandao",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Polearms/TnGuandaoPolearm/TnGuandaoPolearmWeapon",
+      "imageName": "guandao-5afe05707e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Guandao.png?846dd"
+    },
+    "Guandao Prime": {
+      "name": "Guandao Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Polearms/PrimeGuandao/PrimeGuandaoWeapon",
+      "imageName": "guandao-prime-e89da97c23.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/GuandaoPrime.png?2a02e"
+    },
+    "Gunsen": {
+      "name": "Gunsen",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Warfan/WarfanWeapon",
+      "imageName": "gunsen-dea3aaced2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Gunsen.png?31e8a"
+    },
+    "Gunsen Prime": {
+      "name": "Gunsen Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Warfan/PrimeGunsen/PrimeGunsenWeapon",
+      "imageName": "gunsen-prime-c221b261c4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/GunsenPrime.png?3d9f9"
+    },
+    "Halikar": {
+      "name": "Halikar",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrnBoomerang/GrnBoomerang",
+      "imageName": "halikar-18416282db.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Halikar.png?99ebd"
+    },
+    "Halikar Wraith": {
+      "name": "Halikar Wraith",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrnBoomerang/HalikarWraithWeapon",
+      "imageName": "halikar-wraith-b7e582d4c7.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/HalikarWraith.png?ada65"
+    },
+    "Harmony": {
+      "name": "Harmony",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Scythe/TnChoirScythe/TnChoirScythe",
+      "imageName": "harmony-b5d6864210.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Harmony.png?30099"
+    },
+    "Harpak": {
+      "name": "Harpak",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrnHarpoonGun/GrnHarpoonGun",
+      "imageName": "harpak-c600486d27.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Harpak.png?f2a34"
+    },
+    "Hate": {
+      "name": "Hate",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Scythe/StalkerScytheWeapon",
+      "imageName": "hate-6a58027bc5.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Hate.png?bbaf9"
+    },
+    "Heat Dagger": {
+      "name": "Heat Dagger",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Dagger/Dagger",
+      "imageName": "heat-dagger-8c95ffceea.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/HeatDagger.png?179da"
+    },
+    "Heat Sword": {
+      "name": "Heat Sword",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/HeatSword/HeatLongSword",
+      "imageName": "heat-sword-63b607c569.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/HeatSword.png?4bd81"
+    },
+    "Hek": {
+      "name": "Hek",
+      "uniqueName": "/Lotus/Weapons/Tenno/Shotgun/QuadShotgun",
+      "imageName": "hek-2b2c31c1f4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Hek.png?6e042"
+    },
+    "Heliocor": {
+      "name": "Heliocor",
+      "uniqueName": "/Lotus/Weapons/Cephalon/Melee/Hammer/CephHammerWeapon",
+      "imageName": "heliocor-fa93b66510.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Heliocor.png?47879"
+    },
+    "Hema": {
+      "name": "Hema",
+      "uniqueName": "/Lotus/Weapons/Infested/LongGuns/InfWFAccompanyingPri/InfestedBurstRifle",
+      "imageName": "hema-6087206be7.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Hema.png?cd1ac"
+    },
+    "Hespar": {
+      "name": "Hespar",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/HeavyScythe/DuviriScythe/DuviriHeavyScytheWeapon",
+      "imageName": "hespar-a6d08a02b3.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Hespar.png?d6897"
+    },
+    "Higasa": {
+      "name": "Higasa",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/Gunbrella/ShrineMaidenGunbrellaWeapon",
+      "imageName": "higasa-a7bc564af2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Higasa.png?40efb"
+    },
+    "Hikou": {
+      "name": "Hikou",
+      "uniqueName": "/Lotus/Weapons/Tenno/ThrowingWeapons/TennoStars",
+      "imageName": "hikou-a08f2c85e2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Hikou.png?e3ccb"
+    },
+    "Hikou Prime": {
+      "name": "Hikou Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/ThrowingWeapons/PrimeThrowingStar/PrimeHikou",
+      "imageName": "hikou-prime-784b21f94c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/HikouPrime.png?4c978"
+    },
+    "Hind": {
+      "name": "Hind",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/BurstRifle/GrnBurstRifle",
+      "imageName": "hind-833c41d865.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Hind.png?4ba98"
+    },
+    "Hirudo": {
+      "name": "Hirudo",
+      "uniqueName": "/Lotus/Weapons/Infested/Melee/InfWFAccompanyingSparring/InfestedKogake",
+      "imageName": "hirudo-d7675353e1.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Hirudo.png?b7b83"
+    },
+    "Hystrix": {
+      "name": "Hystrix",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/QuillDartgun/QuillDartGunWeapon",
+      "imageName": "hystrix-9ceb9a9a5c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Hystrix.png?f96d3"
+    },
+    "Hystrix Prime": {
+      "name": "Hystrix Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeHystrix/PrimeHystrixWeapon",
+      "imageName": "hystrix-prime-234976e66a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/HystrixPrime.png?51199"
+    },
+    "Ignis": {
+      "name": "Ignis",
+      "uniqueName": "/Lotus/Weapons/ClanTech/Chemical/FlameThrower",
+      "imageName": "ignis-d9c0e80dba.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ignis.png?5e768"
+    },
+    "Ignis Wraith": {
+      "name": "Ignis Wraith",
+      "uniqueName": "/Lotus/Weapons/ClanTech/Chemical/FlameThrowerWraith",
+      "imageName": "ignis-wraith-5654d84ee2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/IgnisWraith.png?c3df1"
+    },
+    "Imperator": {
+      "name": "Imperator",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/FoldingMachineGun/ArchMachineGun",
+      "imageName": "imperator-06651a85cb.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Imperator.png?3a6f3"
+    },
+    "Imperator Vandal": {
+      "name": "Imperator Vandal",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/FoldingMachineGun/ArchMachineGunVandal",
+      "imageName": "imperator-vandal-11d120197b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ImperatorVandal.png?a8014"
+    },
+    "Innodem": {
+      "name": "Innodem",
+      "uniqueName": "/Lotus/Weapons/Tenno/Zariman/Melee/Dagger/ZarimanDaggerWeapon",
+      "imageName": "innodem-1a489bdc0e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Innodem.png?24109"
+    },
+    "Jai": {
+      "name": "Jai",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceSpeedI",
+      "imageName": "jai-7a47884ee7.png",
+      "wikiaThumbnail": null
+    },
+    "Jai Ii": {
+      "name": "Jai Ii",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceSpeedII",
+      "imageName": "jai-ii-a41b8b50ea.png",
+      "wikiaThumbnail": null
+    },
+    "Jat Kittag": {
+      "name": "Jat Kittag",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrineerJetPoweredPolearm/GrineerJetPolearm",
+      "imageName": "jat-kittag-fbaa83e63d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/JatKittag.png?23945"
+    },
+    "Jat Kusar": {
+      "name": "Jat Kusar",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrnKusarigama/GrnKusarigamaWeapon",
+      "imageName": "jat-kusar-ff6110cbdc.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/JatKusar.png?69aa5"
+    },
+    "Javlok": {
+      "name": "Javlok",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrnFlameSpear/GrnFlameSpear",
+      "imageName": "javlok-d5d80c28db.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Javlok.png?fe674"
+    },
+    "Jaw Sword": {
+      "name": "Jaw Sword",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/JawSword/JawLongSword",
+      "imageName": "jaw-sword-89eacb7922.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/JawSword.png?82748"
+    },
+    "Jayap": {
+      "name": "Jayap",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Handle/HandleFive",
+      "imageName": "jayap-3aae844297.png",
+      "wikiaThumbnail": null
+    },
+    "Kama": {
+      "name": "Kama",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/DualKamas/SingleKama",
+      "imageName": "kama-357d6bfd57.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kama.png?1f972"
+    },
+    "Karak": {
+      "name": "Karak",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrineerM16Homage/GrineerM16Rifle",
+      "imageName": "karak-fa5ee22d86.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Karak.png?6c90d"
+    },
+    "Karak Wraith": {
+      "name": "Karak Wraith",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrineerM16Homage/KarakWraith",
+      "imageName": "karak-wraith-d9830ab5ca.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KarakWraith.png?b3879"
+    },
+    "Karyst": {
+      "name": "Karyst",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/KrisDagger/KrisDagger",
+      "imageName": "karyst-cad187990c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Karyst.png?02c04"
+    },
+    "Karyst Prime": {
+      "name": "Karyst Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/PrimeKaryst/PrimeKrisDagger",
+      "imageName": "karyst-prime-230341b33d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KarystPrime.png?ba1c9"
+    },
+    "Kaszas": {
+      "name": "Kaszas",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Melee/ArchScythe/ArchScythe",
+      "imageName": "kaszas-fa004e9997.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kaszas.png?9fcb4"
+    },
+    "Keratinos": {
+      "name": "Keratinos",
+      "uniqueName": "/Lotus/Weapons/Infested/Melee/InfTransformClaw/InfTransformClawsWeapon",
+      "imageName": "keratinos-5879a3bd4d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Keratinos.png?be85c"
+    },
+    "Kesheg": {
+      "name": "Kesheg",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrineerHalberd/GrnHalberd",
+      "imageName": "kesheg-e418e25c28.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kesheg.png?53247"
+    },
+    "Kestrel": {
+      "name": "Kestrel",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Glaives/Boomerang/BoomerangWeapon",
+      "imageName": "kestrel-983bafcc46.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kestrel.png?d398c"
+    },
+    "Knell": {
+      "name": "Knell",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/TnPriestPistolScope/TnPriestPistolWeapon",
+      "imageName": "knell-c585400249.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Knell.png?b8147"
+    },
+    "Knell Prime": {
+      "name": "Knell Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeKnell/PrimeKnellWeapon",
+      "imageName": "knell-prime-f5518c4cac.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KnellPrime.png?08b42"
+    },
+    "Knux": {
+      "name": "Knux",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Melee/GrnArchHand/GrnArchHandWeapon",
+      "imageName": "knux-939cea4c86.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Knux.png?2d0e0"
+    },
+    "Kogake": {
+      "name": "Kogake",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/BrassKnuckles/BrassKnuckles",
+      "imageName": "kogake-06d8934498.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kogake.png?d2579"
+    },
+    "Kogake Prime": {
+      "name": "Kogake Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/PrimeKogake/KogakePrimeKnuckles",
+      "imageName": "kogake-prime-f7272c7662.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KogakePrime.png?ad6ea"
+    },
+    "Kohm": {
+      "name": "Kohm",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrnSpark/GrnSparkRifle",
+      "imageName": "kohm-4679277fd3.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kohm.png?45fe3"
+    },
+    "Kohmak": {
+      "name": "Kohmak",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/GrnKohmPistol/GrnKohmPistol",
+      "imageName": "kohmak-7d5125f399.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kohmak.png?2f892"
+    },
+    "Komorex": {
+      "name": "Komorex",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpSentAmlgSniper/CrpSentAmlgSniper",
+      "imageName": "komorex-1388959bc3.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Komorex.png?9dff4"
+    },
+    "Kompressa": {
+      "name": "Kompressa",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/TnYareliPistol/TnYareliPistolWeapon",
+      "imageName": "kompressa-c2ab392144.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kompressa.png?acdfa"
+    },
+    "Kompressa Prime": {
+      "name": "Kompressa Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeKompressa/PrimeKompressa",
+      "imageName": "kompressa-prime-2facb539ea.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KompressaPrime.png?bba71"
+    },
+    "Korb": {
+      "name": "Korb",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee02/Handle/HandleNine",
+      "imageName": "korb-f2a7529b43.png",
+      "wikiaThumbnail": null
+    },
+    "Korrudo": {
+      "name": "Korrudo",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrnSparring/GrnSpiderSparring/GrnSpiderSparring",
+      "imageName": "korrudo-a4cef6c307.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Korrudo.png?ab27b"
+    },
+    "Korumm": {
+      "name": "Korumm",
+      "uniqueName": "/Lotus/Weapons/Archon/Melee/Trident/ArchonTridentPlayerWep",
+      "imageName": "korumm-b9aef456d4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Korumm.png?96fd2"
+    },
+    "Kraken": {
+      "name": "Kraken",
+      "uniqueName": "/Lotus/Weapons/Grineer/GrineerPistol/GrnHeavyPistol",
+      "imageName": "kraken-0cda31a615.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kraken.png?619e6"
+    },
+    "Kreska": {
+      "name": "Kreska",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/CrpVenusHatchet/CrpVenusHatchet",
+      "imageName": "kreska-27eae4fcab.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kreska.png?fb4c9"
+    },
+    "Krohkur": {
+      "name": "Krohkur",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrnEgyptSwd/GrnEgyptSwdWeapon",
+      "imageName": "krohkur-a0244d9499.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Krohkur.png?eb7cd"
+    },
+    "Kronen": {
+      "name": "Kronen",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Tonfa/TonfaContestWinner/TennoTonfa",
+      "imageName": "kronen-ce428ae61d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kronen.png?03309"
+    },
+    "Kronen Prime": {
+      "name": "Kronen Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Tonfa/TonfaContestWinnerPrime/TonfaContestWinnerPrimeWeapon",
+      "imageName": "kronen-prime-255e32dd58.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KronenPrime.png?badf1"
+    },
+    "Kronsh": {
+      "name": "Kronsh",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Tip/TipSix",
+      "imageName": "kronsh-a3ddae365e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kronsh.png?8a416"
+    },
+    "Kroostra": {
+      "name": "Kroostra",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Handle/HandleSix",
+      "imageName": "kroostra-e74bcfc2ca.png",
+      "wikiaThumbnail": null
+    },
+    "Kulstar": {
+      "name": "Kulstar",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/GrnTorpedoPistol/GrnTorpedoPistol",
+      "imageName": "kulstar-d571661f73.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kulstar.png?c910a"
+    },
+    "Kunai": {
+      "name": "Kunai",
+      "uniqueName": "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai",
+      "imageName": "kunai-355eb5dcab.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kunai.png?0d29e"
+    },
+    "Kuva Ayanga": {
+      "name": "Kuva Ayanga",
+      "uniqueName": "/Lotus/Weapons/Grineer/HeavyWeapons/GrnHeavyGrenadeLauncher",
+      "imageName": "kuva-ayanga-191784ae00.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaAyanga.png?098c6"
+    },
+    "Kuva Brakk": {
+      "name": "Kuva Brakk",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Brakk/KuvaBrakk",
+      "imageName": "kuva-brakk-2e49f213ac.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaBrakk.png?1c1e5"
+    },
+    "Kuva Bramma": {
+      "name": "Kuva Bramma",
+      "uniqueName": "/Lotus/Weapons/Grineer/Bows/GrnBow/GrnBowWeapon",
+      "imageName": "kuva-bramma-71777b6b0f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaBramma.png?e3603"
+    },
+    "Kuva Chakkhurr": {
+      "name": "Kuva Chakkhurr",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrnKuvaLichRifle/GrnKuvaLichRifleWeapon",
+      "imageName": "kuva-chakkhurr-b047965182.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaChakkhurr.png?becac"
+    },
+    "Kuva Drakgoon": {
+      "name": "Kuva Drakgoon",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Drakgoon/KuvaDrakgoon",
+      "imageName": "kuva-drakgoon-fb643c315f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaDrakgoon.png?1b428"
+    },
+    "Kuva Grattler": {
+      "name": "Kuva Grattler",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/HeavyWeapons/Grattler/KuvaGrattler",
+      "imageName": "kuva-grattler-57e1150f75.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaGrattler.png?baf07"
+    },
+    "Kuva Hek": {
+      "name": "Kuva Hek",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hek/KuvaHekWeapon",
+      "imageName": "kuva-hek-66bf5f6bcf.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaHek.png?a27b6"
+    },
+    "Kuva Hind": {
+      "name": "Kuva Hind",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hind/KuvaHind",
+      "imageName": "kuva-hind-c616ac2f49.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaHind.png?a568a"
+    },
+    "Kuva Karak": {
+      "name": "Kuva Karak",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Karak/KuvaKarak",
+      "imageName": "kuva-karak-7e2d8b29a9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaKarak.png?df32b"
+    },
+    "Kuva Kohm": {
+      "name": "Kuva Kohm",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Kohm/KuvaKohm",
+      "imageName": "kuva-kohm-bc73fd8e3e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaKohm.png?a9f0f"
+    },
+    "Kuva Kraken": {
+      "name": "Kuva Kraken",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Kraken/KuvaKraken",
+      "imageName": "kuva-kraken-9e37ee7e99.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaKraken.png?6fa90"
+    },
+    "Kuva Nukor": {
+      "name": "Kuva Nukor",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Nukor/KuvaNukor",
+      "imageName": "kuva-nukor-59d60648d3.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaNukor.png?73f99"
+    },
+    "Kuva Ogris": {
+      "name": "Kuva Ogris",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Ogris/KuvaOgris",
+      "imageName": "kuva-ogris-bdcb7f621b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaOgris.png?e9ee4"
+    },
+    "Kuva Quartakk": {
+      "name": "Kuva Quartakk",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Quartakk/KuvaQuartakk",
+      "imageName": "kuva-quartakk-e5d77095e8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaQuartakk.png?e2838"
+    },
+    "Kuva Seer": {
+      "name": "Kuva Seer",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Seer/KuvaSeer",
+      "imageName": "kuva-seer-a827acd957.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaSeer.png?be10c"
+    },
+    "Kuva Shildeg": {
+      "name": "Kuva Shildeg",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrnKuvaLichScythe/GrnKuvaLichScytheWeapon",
+      "imageName": "kuva-shildeg-38c4910519.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaShildeg.png?4038c"
+    },
+    "Kuva Sobek": {
+      "name": "Kuva Sobek",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Sobek/KuvaSobek",
+      "imageName": "kuva-sobek-083b987193.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaSobek.png?94bd0"
+    },
+    "Kuva Tonkor": {
+      "name": "Kuva Tonkor",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Tonkor/KuvaTonkor",
+      "imageName": "kuva-tonkor-9ae9d48224.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaTonkor.png?e43aa"
+    },
+    "Kuva Twin Stubbas": {
+      "name": "Kuva Twin Stubbas",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Stubba/KuvaStubba",
+      "imageName": "kuva-twin-stubbas-d66662bcef.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaTwinStubbas.png?93b2f"
+    },
+    "Kuva Zarr": {
+      "name": "Kuva Zarr",
+      "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Zarr/KuvaZarr",
+      "imageName": "kuva-zarr-8d631dc1a1.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaZarr.png?53490"
+    },
+    "Kwath": {
+      "name": "Kwath",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Handle/HandleThree",
+      "imageName": "kwath-b513ea67e8.png",
+      "wikiaThumbnail": null
+    },
+    "Lacera": {
+      "name": "Lacera",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/StalkerMios/StalkerMios",
+      "imageName": "lacera-021f738271.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Lacera.png?2d024"
+    },
+    "Laetum": {
+      "name": "Laetum",
+      "uniqueName": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol",
+      "imageName": "laetum-d2ba8e800b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Laetum.png?b6a44"
+    },
+    "Laka": {
+      "name": "Laka",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Handle/HandleTwo",
+      "imageName": "laka-098b3b1be6.png",
+      "wikiaThumbnail": null
+    },
+    "Lanka": {
+      "name": "Lanka",
+      "uniqueName": "/Lotus/Weapons/ClanTech/Energy/Railgun",
+      "imageName": "lanka-49355e9fbb.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Lanka.png?b8db7"
+    },
+    "Larkspur": {
+      "name": "Larkspur",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/TnShieldframeArchGun/TnShieldFrameArchGun",
+      "imageName": "larkspur-75e75160ee.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Larkspur.png?15f51"
+    },
+    "Larkspur Prime": {
+      "name": "Larkspur Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/PrimeLarkspur/PrimeLarkspurWeapon",
+      "imageName": "larkspur-prime-2320f70a2f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/LarkspurPrime.png?fdc3a"
+    },
+    "Lato": {
+      "name": "Lato",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistol/Pistol",
+      "imageName": "lato-352acc2de0.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Lato.png?4f4b6"
+    },
+    "Lato Prime": {
+      "name": "Lato Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistol/LatoPrime",
+      "imageName": "lato-prime-184c228f25.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/LatoPrime.png?ec016"
+    },
+    "Lato Vandal": {
+      "name": "Lato Vandal",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistol/LatoVandal",
+      "imageName": "lato-vandal-7dcc9dde42.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/LatoVandal.png?6fc4a"
+    },
+    "Latron": {
+      "name": "Latron",
+      "uniqueName": "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle",
+      "imageName": "latron-19592d27da.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Latron.png?ed575"
+    },
+    "Latron Prime": {
+      "name": "Latron Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Rifle/LatronPrime",
+      "imageName": "latron-prime-aaf23a9b9f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/LatronPrime.png?38b80"
+    },
+    "Latron Wraith": {
+      "name": "Latron Wraith",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/WraithLatron/WraithLatron",
+      "imageName": "latron-wraith-f37270321b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/LatronWraith.png?ae9cf"
+    },
+    "Lecta": {
+      "name": "Lecta",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/Whip/CorpusWhipWeapon",
+      "imageName": "lecta-ab40fef450.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Lecta.png?90873"
+    },
+    "Lenz": {
+      "name": "Lenz",
+      "uniqueName": "/Lotus/Weapons/Corpus/Bow/Longbow/CrpBow",
+      "imageName": "lenz-3ae618622a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Lenz.png?31ae3"
+    },
+    "Lesion": {
+      "name": "Lesion",
+      "uniqueName": "/Lotus/Weapons/Infested/Melee/TipedoStaff/InfTipedoStaff",
+      "imageName": "lesion-f89ffbd07a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Lesion.png?5e555"
+    },
+    "Lex": {
+      "name": "Lex",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistol/HeavyPistol",
+      "imageName": "lex-815d312d76.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Lex.png?8c63b"
+    },
+    "Lex Prime": {
+      "name": "Lex Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex",
+      "imageName": "lex-prime-547afa0c65.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/LexPrime.png?422f9"
+    },
+    "Machete": {
+      "name": "Machete",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrineerMachetteAndCleaver/Machete",
+      "imageName": "machete-ce2a4a32d3.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Machete.png?0b037"
+    },
+    "Machete Wraith": {
+      "name": "Machete Wraith",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrineerMachetteAndCleaver/WraithMacheteWeapon",
+      "imageName": "machete-wraith-e2877da313.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/MacheteWraith.png?1c3b6"
+    },
+    "Magistar": {
+      "name": "Magistar",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Maces/PaladinMace/PaladinMaceWeapon",
+      "imageName": "magistar-6f00b4eedd.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Magistar.png?0fd31"
+    },
+    "Magnus": {
+      "name": "Magnus",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/Magnum/Magnum",
+      "imageName": "magnus-2726d45d02.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Magnus.png?ea7d4"
+    },
+    "Magnus Prime": {
+      "name": "Magnus Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeMagnus/PrimeMagnusWeapon",
+      "imageName": "magnus-prime-1700bfd0c2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/MagnusPrime.png?fe7c8"
+    },
+    "Mandonel": {
+      "name": "Mandonel",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/TnConcreteArchgun/TnConcreteArchgunWeapon",
+      "imageName": "mandonel-e7a5f57785.png",
+      "wikiaThumbnail": null
+    },
+    "Mara Detron": {
+      "name": "Mara Detron",
+      "uniqueName": "/Lotus/Weapons/VoidTrader/VTDetron",
+      "imageName": "mara-detron-2958414847.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/MaraDetron.png?ee5b8"
+    },
+    "Marelok": {
+      "name": "Marelok",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/GrineerLeverActionPistol/GLAPistol",
+      "imageName": "marelok-9bc76bd64a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Marelok.png?4bb88"
+    },
+    "Masseter": {
+      "name": "Masseter",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/TnChiselKanabo/TnChiselKanabo",
+      "imageName": "masseter-f54958d33d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Masseter.png?8e624"
+    },
+    "Masseter Prime": {
+      "name": "Masseter Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/PrimeMasseter/PrimeMasseter",
+      "imageName": "masseter-prime-f6e79a49d7.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/MasseterPrime.png?434ac"
+    },
+    "Mausolon": {
+      "name": "Mausolon",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/ThanoTechArchLongGun/ThanoTechLongGun",
+      "imageName": "mausolon-483fb60c57.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Mausolon.png?65300"
+    },
+    "Mewan": {
+      "name": "Mewan",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Tip/TipThree",
+      "imageName": "mewan-95653371f6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Mewan.png?c84ff"
+    },
+    "Mios": {
+      "name": "Mios",
+      "uniqueName": "/Lotus/Weapons/Infested/Melee/Swords/Mios/Mios",
+      "imageName": "mios-a9b0c46732.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Mios.png?98255"
+    },
+    "Mire": {
+      "name": "Mire",
+      "uniqueName": "/Lotus/Weapons/Infested/Melee/Swords/Mire/MireSword",
+      "imageName": "mire-dee1f2e457.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Mire.png?a4c1e"
+    },
+    "Miter": {
+      "name": "Miter",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrineerSawbladeGun/SawBladeGun",
+      "imageName": "miter-0e90938cdd.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Miter.png?23f64"
+    },
+    "Mk1-Bo": {
+      "name": "Mk1-Bo",
+      "uniqueName": "/Lotus/Weapons/MK1Series/MK1Bo",
+      "imageName": "mk1-bo-e603b58f1f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/MK1-Bo.png?19de3"
+    },
+    "Mk1-Braton": {
+      "name": "Mk1-Braton",
+      "uniqueName": "/Lotus/Weapons/Tenno/Rifle/StartingRifle",
+      "imageName": "mk1-braton-c0c71253c0.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Braton.png?95621"
+    },
+    "Mk1-Furax": {
+      "name": "Mk1-Furax",
+      "uniqueName": "/Lotus/Weapons/MK1Series/MK1Furax",
+      "imageName": "mk1-furax-14ba754126.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/MK1-Furax.png?0b91a"
+    },
+    "Mk1-Furis": {
+      "name": "Mk1-Furis",
+      "uniqueName": "/Lotus/Weapons/MK1Series/MK1Furis",
+      "imageName": "mk1-furis-0ae7df5a0f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Furis.png?a1a15"
+    },
+    "Mk1-Kunai": {
+      "name": "Mk1-Kunai",
+      "uniqueName": "/Lotus/Weapons/MK1Series/MK1Kunai",
+      "imageName": "mk1-kunai-0607aa3953.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Kunai.png?0d29e"
+    },
+    "Mk1-Paris": {
+      "name": "Mk1-Paris",
+      "uniqueName": "/Lotus/Weapons/MK1Series/MK1Paris",
+      "imageName": "mk1-paris-75283dc75d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Paris.png?50495"
+    },
+    "Mk1-Strun": {
+      "name": "Mk1-Strun",
+      "uniqueName": "/Lotus/Weapons/MK1Series/MK1Strun",
+      "imageName": "mk1-strun-5030224711.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Strun.png?c7981"
+    },
+    "Morgha": {
+      "name": "Morgha",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/ThanoTechGrenadeLaunch/ThanoTechGrenadeLauncher",
+      "imageName": "morgha-40068b33ff.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Morgha.png?fc121"
+    },
+    "Mutalist Cernos": {
+      "name": "Mutalist Cernos",
+      "uniqueName": "/Lotus/Weapons/Infested/Bow/InfCernosBow/InfCernos",
+      "imageName": "mutalist-cernos-9c41c757fc.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/MutalistCernos.png?c4259"
+    },
+    "Mutalist Quanta": {
+      "name": "Mutalist Quanta",
+      "uniqueName": "/Lotus/Weapons/Infested/LongGuns/InfCrpShockSwarm/InfCrpShockSwarmRifle",
+      "imageName": "mutalist-quanta-930c8241b7.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/MutalistQuanta.png?1ea7a"
+    },
+    "Nagantaka": {
+      "name": "Nagantaka",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/GarudaCrossbow/GarudaCrossbow",
+      "imageName": "nagantaka-8722c7da0f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Nagantaka.png?1a545"
+    },
+    "Nagantaka Prime": {
+      "name": "Nagantaka Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeNagantaka/PrimeNagantakaWeapon",
+      "imageName": "nagantaka-prime-3505ebdbfa.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/NagantakaPrime.png?8eb34"
+    },
+    "Nami Skyla": {
+      "name": "Nami Skyla",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/CutlassAndPoignard/CutlassPoignardSwords",
+      "imageName": "nami-skyla-331c35c7af.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/NamiSkyla.png?63a97"
+    },
+    "Nami Skyla Prime": {
+      "name": "Nami Skyla Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/PrimeNamiSkyla/PrimeNamiSkyla",
+      "imageName": "nami-skyla-prime-e0304be319.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/NamiSkylaPrime.png?93606"
+    },
+    "Nami Solo": {
+      "name": "Nami Solo",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/CutlassAndPoignard/TennoCutlass",
+      "imageName": "nami-solo-7d77796d46.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/NamiSolo.png?9b269"
+    },
+    "Nataruk": {
+      "name": "Nataruk",
+      "uniqueName": "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep",
+      "imageName": "nataruk-39097570a7.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Nataruk.png?4b210"
+    },
+    "Nepheri": {
+      "name": "Nepheri",
+      "uniqueName": "/Lotus/Weapons/Archon/Melee/DualDaggers/ArchonDualDaggersPlayerWep",
+      "imageName": "nepheri-1eec92c78e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Nepheri.png?24dbb"
+    },
+    "Nikana": {
+      "name": "Nikana",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/KatanaAndWakizashi/Katana",
+      "imageName": "nikana-f266948d7b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Nikana.png?b9996"
+    },
+    "Nikana Prime": {
+      "name": "Nikana Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/PrimeKatana/PrimeNikana",
+      "imageName": "nikana-prime-b28a0c7525.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/NikanaPrime.png?5dadf"
+    },
+    "Ninkondi": {
+      "name": "Ninkondi",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Nunchaku/Nunchaku/Nunchaku",
+      "imageName": "ninkondi-7756cbe3f1.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ninkondi.png?4caef"
+    },
+    "Ninkondi Prime": {
+      "name": "Ninkondi Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/PrimeNinkondi/PrimeNikondi",
+      "imageName": "ninkondi-prime-9876965440.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/NinkondiPrime.png?551b0"
+    },
+    "Nukor": {
+      "name": "Nukor",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/GrineerMicrowavegun/GrnMicrowavePistol",
+      "imageName": "nukor-b1882490d6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Nukor.png?3cfea"
+    },
+    "Obex": {
+      "name": "Obex",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/KickAndPunch/KickPunchWeapon",
+      "imageName": "obex-583d443f31.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Obex.png?78ef5"
+    },
+    "Ocucor": {
+      "name": "Ocucor",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpSentExperimentPistol/CrpSentExperimentPistol",
+      "imageName": "ocucor-92e124c6fb.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ocucor.png?af707"
+    },
+    "Ogris": {
+      "name": "Ogris",
+      "uniqueName": "/Lotus/Weapons/ClanTech/Chemical/RocketLauncher",
+      "imageName": "ogris-8133344510.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ogris.png?ffb4a"
+    },
+    "Ohma": {
+      "name": "Ohma",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/CrpTonfa/CrpTonfa",
+      "imageName": "ohma-41d6cc505b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ohma.png?a0d9c"
+    },
+    "Okina": {
+      "name": "Okina",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/TennoSai/TennoSais",
+      "imageName": "okina-ea7342e4e6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Okina.png?6bf0d"
+    },
+    "Okina Prime": {
+      "name": "Okina Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/PrimeOkina/PrimeOkina",
+      "imageName": "okina-prime-e65052d7fd.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/OkinaPrime.png?bf801"
+    },
+    "Onorix": {
+      "name": "Onorix",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Melee/Archaxe/ArchAxeWeapon",
+      "imageName": "onorix-cec1553bd5.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Onorix.png?f4784"
+    },
+    "Onos": {
+      "name": "Onos",
+      "uniqueName": "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon",
+      "imageName": "onos-8f623016f7.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Onos.png?2a4ee"
+    },
+    "Ooltha": {
+      "name": "Ooltha",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Tip/TipTwo",
+      "imageName": "ooltha-3463db17cc.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ooltha.png?2d710"
+    },
+    "Opticor": {
+      "name": "Opticor",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpBFG/CrpBFG",
+      "imageName": "opticor-167e48eb52.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Opticor.png?78ee2"
+    },
+    "Opticor Vandal": {
+      "name": "Opticor Vandal",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpBFG/Vandal/VandalCrpBFG",
+      "imageName": "opticor-vandal-303084c984.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/OpticorVandal.png?64244"
+    },
+    "Orthos": {
+      "name": "Orthos",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Polearms/PolearmWeapon",
+      "imageName": "orthos-f05ec1cb86.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Orthos.png?86c84"
+    },
+    "Orthos Prime": {
+      "name": "Orthos Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Polearms/PrimePolearmWeapon",
+      "imageName": "orthos-prime-7045c30205.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/OrthosPrime.png?c2a65"
+    },
+    "Orvius": {
+      "name": "Orvius",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Glaives/TeshinGlaive/TnTeshinGlaiveWep",
+      "imageName": "orvius-6d590f2633.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Orvius.png?d4116"
+    },
+    "Pandero": {
+      "name": "Pandero",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/TnBardPistol/TnBardPistolGun",
+      "imageName": "pandero-7c0ad54feb.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Pandero.png?73540"
+    },
+    "Pandero Prime": {
+      "name": "Pandero Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimePandero/PanderoPrimeWeapon",
+      "imageName": "pandero-prime-fad4842362.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PanderoPrime.png?a28a1"
+    },
+    "Pangolin Prime": {
+      "name": "Pangolin Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/PrimePangolinSword/PrimePangolinSword",
+      "imageName": "pangolin-prime-92db7d4fde.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PangolinPrime.png?51917"
+    },
+    "Pangolin Sword": {
+      "name": "Pangolin Sword",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/PangolinSword/PangolinLongSword",
+      "imageName": "pangolin-sword-11f0f4b147.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PangolinSword.png?a9948"
+    },
+    "Panthera": {
+      "name": "Panthera",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/Miter/TnoMiter",
+      "imageName": "panthera-59d06a174f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Panthera.png?2e956"
+    },
+    "Panthera Prime": {
+      "name": "Panthera Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimePanthera/PrimePanthera",
+      "imageName": "panthera-prime-02f5cc4156.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PantheraPrime.png?a55ec"
+    },
+    "Paracesis": {
+      "name": "Paracesis",
+      "uniqueName": "/Lotus/Weapons/Orokin/BallasSword/BallasSwordWeapon",
+      "imageName": "paracesis-5537fcd640.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Paracesis.png?f1231"
+    },
+    "Paracyst": {
+      "name": "Paracyst",
+      "uniqueName": "/Lotus/Weapons/Infested/LongGuns/QuantaFullyInfested/InfQuantaRifle",
+      "imageName": "paracyst-6ece783e5b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Paracyst.png?adc4b"
+    },
+    "Paris": {
+      "name": "Paris",
+      "uniqueName": "/Lotus/Weapons/Tenno/Bows/HuntingBow",
+      "imageName": "paris-236b0318e4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Paris.png?50495"
+    },
+    "Paris Prime": {
+      "name": "Paris Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow",
+      "imageName": "paris-prime-0423f3edf6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ParisPrime.png?3163e"
+    },
+    "Pathocyst": {
+      "name": "Pathocyst",
+      "uniqueName": "/Lotus/Weapons/Infested/Melee/InfBoomerang/InfBoomerangWeapon",
+      "imageName": "pathocyst-7c3a6d4c28.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Pathocyst.png?a51a6"
+    },
+    "Pennant": {
+      "name": "Pennant",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/TnRailjackGreatKatana/TnRailJackGreatKatanaWeapon",
+      "imageName": "pennant-b99390e91a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Pennant.png?e55f5"
+    },
+    "Penta": {
+      "name": "Penta",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/GrenadeLauncher/GrenadeLauncher",
+      "imageName": "penta-5329710362.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Penta.png?648ff"
+    },
+    "Perigale": {
+      "name": "Perigale",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnQuadSniper/TnQuadSniper",
+      "imageName": "perigale-ea7219b8d0.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Perigale.png?bded2"
+    },
+    "Peye": {
+      "name": "Peye",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Handle/HandleOne",
+      "imageName": "peye-c489dd9227.png",
+      "wikiaThumbnail": null
+    },
+    "Phaedra": {
+      "name": "Phaedra",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/ArchLongRifle/ArchLongRifle",
+      "imageName": "phaedra-629ac9ffc2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Phaedra.png?154a1"
+    },
+    "Phage": {
+      "name": "Phage",
+      "uniqueName": "/Lotus/Weapons/Infested/LongGuns/Tentacluster/InfestedShotgun",
+      "imageName": "phage-5cf65499b3.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Phage.png?10a4c"
+    },
+    "Phantasma": {
+      "name": "Phantasma",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/RevenantShotgun/RevenantShotgun",
+      "imageName": "phantasma-dccca8f9e5.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Phantasma.png?245de"
+    },
+    "Phantasma Prime": {
+      "name": "Phantasma Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimePhantasma/PhantasmaPrimeShotgun",
+      "imageName": "phantasma-prime-e76512a07d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PhantasmaPrime.png?1b4e1"
+    },
+    "Phenmor": {
+      "name": "Phenmor",
+      "uniqueName": "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle",
+      "imageName": "phenmor-a24d538533.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Phenmor.png?c36f7"
+    },
+    "Plague Akwin": {
+      "name": "Plague Akwin",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMeleeInfested/Handles/InfestedHandleOne",
+      "imageName": "plague-akwin-9002d44213.png",
+      "wikiaThumbnail": null
+    },
+    "Plague Bokwin": {
+      "name": "Plague Bokwin",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMeleeInfested/Handles/InfestedHandleTwo",
+      "imageName": "plague-bokwin-ad3a2b7d7e.png",
+      "wikiaThumbnail": null
+    },
+    "Plague Keewar": {
+      "name": "Plague Keewar",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMeleeInfested/Tips/PvPVariantInfestedTipTwo",
+      "imageName": "plague-keewar-b1263abc39.png",
+      "wikiaThumbnail": null
+    },
+    "Plague Kripath": {
+      "name": "Plague Kripath",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMeleeInfested/Tips/PvPVariantInfestedTipOne",
+      "imageName": "plague-kripath-278f02767f.png",
+      "wikiaThumbnail": null
+    },
+    "Plasma Sword": {
+      "name": "Plasma Sword",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/PlasmaSword/PlasmaLongSword",
+      "imageName": "plasma-sword-1c0e836f2e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PlasmaSword.png?a7944"
+    },
+    "Plinx": {
+      "name": "Plinx",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpSonificBlastor/CrpBlastorWeapon",
+      "imageName": "plinx-3134170f92.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Plinx.png?cf2e4"
+    },
+    "Pox": {
+      "name": "Pox",
+      "uniqueName": "/Lotus/Weapons/Infested/Pistols/InfProximityStars/InfProximityStars",
+      "imageName": "pox-b061c04510.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Pox.png?71e2b"
+    },
+    "Praedos": {
+      "name": "Praedos",
+      "uniqueName": "/Lotus/Weapons/Tenno/Zariman/Melee/Tonfas/ZarimanTonfaWeapon",
+      "imageName": "praedos-d131d8b126.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Praedos.png?217dc"
+    },
+    "Prisma Angstrum": {
+      "name": "Prisma Angstrum",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/PrismaAngstrum",
+      "imageName": "prisma-angstrum-57ba91885e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaAngstrum.png?33189"
+    },
+    "Prisma Dual Cleavers": {
+      "name": "Prisma Dual Cleavers",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrineerMachetteAndCleaver/PrismaDualCleavers",
+      "imageName": "prisma-dual-cleavers-275283f4ff.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaDualCleavers.png?20b93"
+    },
+    "Prisma Dual Decurions": {
+      "name": "Prisma Dual Decurions",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/ArchwingHeavyPistols/Prisma/PrismaArchHeavyPistols",
+      "imageName": "prisma-dual-decurions-e4d5a8cf9e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaDualDecurions.png?25327"
+    },
+    "Prisma Gorgon": {
+      "name": "Prisma Gorgon",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/VoidTraderGorgon/VTGorgon",
+      "imageName": "prisma-gorgon-b7bb39c89d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaGorgon.png?59620"
+    },
+    "Prisma Grakata": {
+      "name": "Prisma Grakata",
+      "uniqueName": "/Lotus/Weapons/VoidTrader/PrismaGrakata",
+      "imageName": "prisma-grakata-ae8f90655d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaGrakata.png?a1a5f"
+    },
+    "Prisma Grinlok": {
+      "name": "Prisma Grinlok",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrineerLeverActionRifle/PrismaGrinlokWeapon",
+      "imageName": "prisma-grinlok-3b093dd9b9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaGrinlok.png?def14"
+    },
+    "Prisma Lenz": {
+      "name": "Prisma Lenz",
+      "uniqueName": "/Lotus/Weapons/Corpus/Bow/Longbow/PrismaLenz/PrismaLenzWeapon",
+      "imageName": "prisma-lenz-ecf5cbfed0.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaLenz.png?ca162"
+    },
+    "Prisma Machete": {
+      "name": "Prisma Machete",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrineerMachetteAndCleaver/PrismaMachete",
+      "imageName": "prisma-machete-815878e5c8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaMachete.png?02d9d"
+    },
+    "Prisma Obex": {
+      "name": "Prisma Obex",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/KickAndPunch/PrismaObex",
+      "imageName": "prisma-obex-81fbc543a1.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaObex.png?ff26a"
+    },
+    "Prisma Ohma": {
+      "name": "Prisma Ohma",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/CrpTonfa/CrpPrismaTonfa",
+      "imageName": "prisma-ohma-269be62484.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaOhma.png?5eedd"
+    },
+    "Prisma Skana": {
+      "name": "Prisma Skana",
+      "uniqueName": "/Lotus/Weapons/VoidTrader/PrismaSkana",
+      "imageName": "prisma-skana-b262830d29.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaSkana.png?517e0"
+    },
+    "Prisma Tetra": {
+      "name": "Prisma Tetra",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CorpusUMP/PrismaCorpusUMP",
+      "imageName": "prisma-tetra-206f7886e9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaTetra.png?f36a2"
+    },
+    "Prisma Twin Gremlins": {
+      "name": "Prisma Twin Gremlins",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/GrineerBulbousSMG/Prisma/PrismaTwinGremlinsWeapon",
+      "imageName": "prisma-twin-gremlins-ee94faf3ba.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaTwinGremlins.png?95972"
+    },
+    "Prisma Veritux": {
+      "name": "Prisma Veritux",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Melee/VoidTraderArchsword/VTArchSwordWeapon",
+      "imageName": "prisma-veritux-b7348241ce.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PrismaVeritux.png?571f6"
+    },
+    "Proboscis Cernos": {
+      "name": "Proboscis Cernos",
+      "uniqueName": "/Lotus/Weapons/Tenno/Bows/PrimeDerelictCernos/DerelictCernos",
+      "imageName": "proboscis-cernos-9fa202f9e7.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ProboscisCernos.png?c4d63"
+    },
+    "Prova": {
+      "name": "Prova",
+      "uniqueName": "/Lotus/Weapons/ClanTech/Energy/ElectroProd",
+      "imageName": "prova-ecaec2190d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Prova.png?1e046"
+    },
+    "Prova Vandal": {
+      "name": "Prova Vandal",
+      "uniqueName": "/Lotus/Weapons/ClanTech/Energy/VandalElectroProd",
+      "imageName": "prova-vandal-b447c088c1.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ProvaVandal.png?8a8cb"
+    },
+    "Pulmonars": {
+      "name": "Pulmonars",
+      "uniqueName": "/Lotus/Weapons/Infested/Melee/Nunchaku/InfNunchuck/InfNunchuck",
+      "imageName": "pulmonars-69ee1580b8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Pulmonars.png?17ee7"
+    },
+    "Pupacyst": {
+      "name": "Pupacyst",
+      "uniqueName": "/Lotus/Weapons/Infested/Melee/Staff/InfStaff/InfStaff",
+      "imageName": "pupacyst-43e085006d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Pupacyst.png?dea83"
+    },
+    "Purgator 1": {
+      "name": "Purgator 1",
+      "uniqueName": "/Lotus/Weapons/Lasria/LasGrenadeLauncher/LasrianNoxPlayerWeapon",
+      "imageName": "purgator-1-75a267df15.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Purgator1.png?0d013"
+    },
+    "Pyrana": {
+      "name": "Pyrana",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/SawnOffShotgun/TennoHandShotgun",
+      "imageName": "pyrana-f2049c9ca6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Pyrana.png?d63ef"
+    },
+    "Pyrana Prime": {
+      "name": "Pyrana Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimePyrana/PrimePyranaPistol",
+      "imageName": "pyrana-prime-ecb8c95a9d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/PyranaPrime.png?1404a"
+    },
+    "Quanta": {
+      "name": "Quanta",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpShockRifle/CrpShockRifle",
+      "imageName": "quanta-be0abe2f6a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Quanta.png?1f3f4"
+    },
+    "Quanta Vandal": {
+      "name": "Quanta Vandal",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpShockRifle/QuantaVandal",
+      "imageName": "quanta-vandal-0afacef7c8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/QuantaVandal.png?6fa9f"
+    },
+    "Quartakk": {
+      "name": "Quartakk",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrnFourBarrelRifle/GrnFourBarrelRifleWeapon",
+      "imageName": "quartakk-a9f55e0df8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Quartakk.png?9817c"
+    },
+    "Quassus": {
+      "name": "Quassus",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Warfan/TnBrokenFrameWarfan/TnBrokenFrameWarfanWeapon",
+      "imageName": "quassus-7cdb09221f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Quassus.png?c5024"
+    },
+    "Quassus Prime": {
+      "name": "Quassus Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Warfan/PrimeQuassus/PrimeQuassusWeapon",
+      "imageName": "quassus-prime-f00d65b0fc.png",
+      "wikiaThumbnail": null
+    },
+    "Quatz": {
+      "name": "Quatz",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/GrnAmphisPistol/GrnAmphisPistol",
+      "imageName": "quatz-ef293ab5be.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Quatz.png?9e0a0"
+    },
+    "Quellor": {
+      "name": "Quellor",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnRailjackRifle/RailjackRifleGun",
+      "imageName": "quellor-18785323c2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Quellor.png?8f996"
+    },
+    "Rabvee": {
+      "name": "Rabvee",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee02/Tip/TipTen",
+      "imageName": "rabvee-0a58ffb572.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Rabvee.png?de34e"
+    },
+    "Rakta Ballistica": {
+      "name": "Rakta Ballistica",
+      "uniqueName": "/Lotus/Weapons/Syndicates/RedVeil/Pistols/RVBallistica",
+      "imageName": "rakta-ballistica-39303c333a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/RaktaBallistica.png?250be"
+    },
+    "Rakta Cernos": {
+      "name": "Rakta Cernos",
+      "uniqueName": "/Lotus/Weapons/Syndicates/RedVeil/Bows/RVCernos",
+      "imageName": "rakta-cernos-1f148e5ebd.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/RaktaCernos.png?49093"
+    },
+    "Rakta Dark Dagger": {
+      "name": "Rakta Dark Dagger",
+      "uniqueName": "/Lotus/Weapons/Syndicates/RedVeil/Melee/RVDarkDagger",
+      "imageName": "rakta-dark-dagger-e9aed7b23f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/RaktaDarkDagger.png?3d82b"
+    },
+    "Rathbone": {
+      "name": "Rathbone",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Melee/ArchHammer/ArchHammer",
+      "imageName": "rathbone-918424e099.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Rathbone.png?255ff"
+    },
+    "Rauta": {
+      "name": "Rauta",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PaxDuviricusShotgun/PaxDuviricusShotgun",
+      "imageName": "rauta-690de20bfb.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Rauta.png?84303"
+    },
+    "Reaper Prime": {
+      "name": "Reaper Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Scythe/ReaperWeapon",
+      "imageName": "reaper-prime-7029342b85.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ReaperPrime.png?95e53"
+    },
+    "Reconifex": {
+      "name": "Reconifex",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnBeltFedRifle/TnBeltFedRifleWeapon",
+      "imageName": "reconifex-ad08aef093.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Reconifex.png?f40f7"
+    },
+    "Redeemer": {
+      "name": "Redeemer",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Gunblade/TnoGunblade",
+      "imageName": "redeemer-9fc3eb744a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Redeemer.png?7a716"
+    },
+    "Redeemer Prime": {
+      "name": "Redeemer Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Gunblade/RedeemerPrime/RedeemerPrimeWep",
+      "imageName": "redeemer-prime-7dacec830a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/RedeemerPrime.png?aa29f"
+    },
+    "Riot-848": {
+      "name": "Riot-848",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/1999EntHybridPistolWeapon/1999EntHybridPistolWeapon",
+      "imageName": "riot-848-6f7d41c42c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Riot-848.png?eee6b"
+    },
+    "Ripkas": {
+      "name": "Ripkas",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrineerClaws/GrnClaws",
+      "imageName": "ripkas-c03790fe4d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ripkas.png?56db5"
+    },
+    "Rubico": {
+      "name": "Rubico",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/FiveShotSniper/FiveShotSniper",
+      "imageName": "rubico-d3c3d07208.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Rubico.png?b8a35"
+    },
+    "Rubico Prime": {
+      "name": "Rubico Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/RubicoPrime/RubicoPrimeWeapon",
+      "imageName": "rubico-prime-1ea479c379.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/RubicoPrime.png?d10e7"
+    },
+    "Ruhang": {
+      "name": "Ruhang",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceDamageI",
+      "imageName": "ruhang-8c9076606f.png",
+      "wikiaThumbnail": null
+    },
+    "Ruhang Ii": {
+      "name": "Ruhang Ii",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceDamageII",
+      "imageName": "ruhang-ii-7aec53bcfb.png",
+      "wikiaThumbnail": null
+    },
+    "Rumblejack": {
+      "name": "Rumblejack",
+      "uniqueName": "/Lotus/Weapons/Operator/Melee/DrifterTazer/DrifterTazerPlayerWep",
+      "imageName": "rumblejack-35af025562.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Rumblejack.png?867de"
+    },
+    "Ruvox": {
+      "name": "Ruvox",
+      "uniqueName": "/Lotus/Weapons/Thanotech/EntFistIncarnon/EntFistIncarnon",
+      "imageName": "ruvox-a985d9faa1.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Ruvox.png?01731"
+    },
+    "Sampotes": {
+      "name": "Sampotes",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Hammer/DaxDuviriHammer/DaxDuviriHammerWeapon",
+      "imageName": "sampotes-d2e3a43678.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sampotes.png?3d0bf"
+    },
+    "Sancti Castanas": {
+      "name": "Sancti Castanas",
+      "uniqueName": "/Lotus/Weapons/Syndicates/NewLoka/Pistols/NLCastanas",
+      "imageName": "sancti-castanas-3d6951c043.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SanctiCastanas.png?cd68b"
+    },
+    "Sancti Magistar": {
+      "name": "Sancti Magistar",
+      "uniqueName": "/Lotus/Weapons/Syndicates/NewLoka/Melee/NLMagistar",
+      "imageName": "sancti-magistar-2910f0ef82.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SanctiMagistar.png?7cde2"
+    },
+    "Sancti Tigris": {
+      "name": "Sancti Tigris",
+      "uniqueName": "/Lotus/Weapons/Syndicates/NewLoka/LongGuns/NLTigris",
+      "imageName": "sancti-tigris-2b0dd379b8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SanctiTigris.png?2e7f8"
+    },
+    "Sarofang": {
+      "name": "Sarofang",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Axe/WolfFrameAxeWeapon",
+      "imageName": "sarofang-53e9dcd58d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sarofang.png?ddb75"
+    },
+    "Sarpa": {
+      "name": "Sarpa",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Gunblade/GunbladeAutomatic/TnoGunbladeAutomatic",
+      "imageName": "sarpa-59e780991b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sarpa.png?5a43c"
+    },
+    "Scindo": {
+      "name": "Scindo",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Axe/AxeWeapon",
+      "imageName": "scindo-b0dbd8a58b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Scindo.png?12fd7"
+    },
+    "Scindo Prime": {
+      "name": "Scindo Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Axe/PrimeScindo/PrimeScindoWeapon",
+      "imageName": "scindo-prime-a415b305a5.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ScindoPrime.png?fefd2"
+    },
+    "Scoliac": {
+      "name": "Scoliac",
+      "uniqueName": "/Lotus/Weapons/Infested/Melee/Whip/InfestedWhip/InfestedWhipWeapon",
+      "imageName": "scoliac-a565f241e7.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Scoliac.png?857e0"
+    },
+    "Scourge": {
+      "name": "Scourge",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnPriestSpear/TnPriestSpearGun",
+      "imageName": "scourge-075d7af31e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Scourge.png?af7ad"
+    },
+    "Scourge Prime": {
+      "name": "Scourge Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeScourge/PrimeScourgeWeapon",
+      "imageName": "scourge-prime-6c0e894c91.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ScourgePrime.png?a0ef5"
+    },
+    "Scyotid": {
+      "name": "Scyotid",
+      "uniqueName": "/Lotus/Weapons/Tenno/ThrowingWeapons/TnOraxiaFlechette/TnOraxiaFlechette",
+      "imageName": "scyotid-367bd62ed6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Scyotid.png?d8a2e"
+    },
+    "Secura Dual Cestra": {
+      "name": "Secura Dual Cestra",
+      "uniqueName": "/Lotus/Weapons/Syndicates/PerrinSequence/Pistols/PSDualCestra",
+      "imageName": "secura-dual-cestra-810e479b60.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SecuraDualCestra.png?6a867"
+    },
+    "Secura Lecta": {
+      "name": "Secura Lecta",
+      "uniqueName": "/Lotus/Weapons/Syndicates/PerrinSequence/Melee/PSLecta",
+      "imageName": "secura-lecta-ca3385188e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SecuraLecta.png?d2e7c"
+    },
+    "Secura Penta": {
+      "name": "Secura Penta",
+      "uniqueName": "/Lotus/Weapons/Syndicates/PerrinSequence/LongGuns/PSPenta",
+      "imageName": "secura-penta-63168ca5a8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SecuraPenta.png?37a85"
+    },
+    "Seekalla": {
+      "name": "Seekalla",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Handle/HandleFour",
+      "imageName": "seekalla-d8b757e408.png",
+      "wikiaThumbnail": null
+    },
+    "Seer": {
+      "name": "Seer",
+      "uniqueName": "/Lotus/Weapons/Grineer/GrineerPistol/GrnScopedPistolPlayer",
+      "imageName": "seer-afdd75b43d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Seer.png?5f753"
+    },
+    "Sepfahn": {
+      "name": "Sepfahn",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee02/Tip/TipNine",
+      "imageName": "sepfahn-a6403cc3ff.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sepfahn.png?cc3e1"
+    },
+    "Sepulcrum": {
+      "name": "Sepulcrum",
+      "uniqueName": "/Lotus/Weapons/Thanotech/ThanoPistol/ThanotechPistol",
+      "imageName": "sepulcrum-3b8f358552.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sepulcrum.png?50ee9"
+    },
+    "Serro": {
+      "name": "Serro",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/Polearm/CorpusPolearm01/CorpusPolearmWeapon",
+      "imageName": "serro-4c2604b68a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Serro.png?44619"
+    },
+    "Shaku": {
+      "name": "Shaku",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Nunchaku/TnoNunchaku/TnoNunchaku",
+      "imageName": "shaku-dda85463f5.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Shaku.png?8bb96"
+    },
+    "Shedu": {
+      "name": "Shedu",
+      "uniqueName": "/Lotus/Weapons/Sentients/Shedu/SheduHeavyWeapon",
+      "imageName": "shedu-d2d1c0c38d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Shedu.png?173ce"
+    },
+    "Sheev": {
+      "name": "Sheev",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrineerCombatKnife/GrineerCombatKnife",
+      "imageName": "sheev-3606abced4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sheev.png?bd022"
+    },
+    "Shtung": {
+      "name": "Shtung",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee02/Handle/HandleTen",
+      "imageName": "shtung-66796b519a.png",
+      "wikiaThumbnail": null
+    },
+    "Sibear": {
+      "name": "Sibear",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Hammer/IceHammer/IceHammer",
+      "imageName": "sibear-395d9a6418.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sibear.png?a5886"
+    },
+    "Sicarus": {
+      "name": "Sicarus",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistol/BurstPistol",
+      "imageName": "sicarus-fc588c27f8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sicarus.png?017e9"
+    },
+    "Sicarus Prime": {
+      "name": "Sicarus Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeSicarus/PrimeSicarusPistol",
+      "imageName": "sicarus-prime-1447e9c80e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SicarusPrime.png?b6255"
+    },
+    "Sigma & Octantis": {
+      "name": "Sigma & Octantis",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/SwordsAndBoards/SundialSwordBoard/SundialBoardSword",
+      "imageName": "sigma-&-octantis-d0799061fb.png",
+      "wikiaThumbnail": null
+    },
+    "Silva & Aegis": {
+      "name": "Silva & Aegis",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/SwordsAndBoards/MeleeContestWinnerOne/TennoSwordShield",
+      "imageName": "silva-&-aegis-fefad3c272.png",
+      "wikiaThumbnail": null
+    },
+    "Silva & Aegis Prime": {
+      "name": "Silva & Aegis Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/PrimeSilvaAegis/PrimeSilvaAegis",
+      "imageName": "silva-&-aegis-prime-9a734db766.png",
+      "wikiaThumbnail": null
+    },
+    "Simulor": {
+      "name": "Simulor",
+      "uniqueName": "/Lotus/Weapons/Cephalon/Primary/CephPrimary/CephPrimary",
+      "imageName": "simulor-b5d00441df.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Simulor.png?aa24a"
+    },
+    "Sirocco": {
+      "name": "Sirocco",
+      "uniqueName": "/Lotus/Weapons/Operator/Pistols/DrifterPistol/DrifterPistolPlayerWeapon",
+      "imageName": "sirocco-5e978fb468.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sirocco.png?76b26"
+    },
+    "Skana": {
+      "name": "Skana",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/LongSword/LongSword",
+      "imageName": "skana-ea97e089d8.png",
+      "wikiaThumbnail": null
+    },
+    "Skana Prime": {
+      "name": "Skana Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/LongSword/SkanaPrime",
+      "imageName": "skana-prime-4afd3953b5.png",
+      "wikiaThumbnail": null
+    },
+    "Skiajati": {
+      "name": "Skiajati",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/UmbraKatana/UmbraKatana",
+      "imageName": "skiajati-c2a66032fe.png",
+      "wikiaThumbnail": null
+    },
+    "Slaytra": {
+      "name": "Slaytra",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrnSharbola/GrnSharbolaWeapon",
+      "imageName": "slaytra-10d5c4cc28.png",
+      "wikiaThumbnail": null
+    },
+    "Snipetron": {
+      "name": "Snipetron",
+      "uniqueName": "/Lotus/Weapons/Tenno/Rifle/SniperRifle",
+      "imageName": "snipetron-0f587c4490.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Snipetron.png?b2a01"
+    },
+    "Snipetron Vandal": {
+      "name": "Snipetron Vandal",
+      "uniqueName": "/Lotus/Weapons/Tenno/Rifle/VandalSniperRifle",
+      "imageName": "snipetron-vandal-883d7276fb.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SnipetronVandal.png?05e52"
+    },
+    "Sobek": {
+      "name": "Sobek",
+      "uniqueName": "/Lotus/Weapons/Tenno/Shotgun/DoubleBarrelShotgun",
+      "imageName": "sobek-61244846cd.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sobek.png?753a8"
+    },
+    "Soma": {
+      "name": "Soma",
+      "uniqueName": "/Lotus/Weapons/Tenno/Rifle/TennoAR",
+      "imageName": "soma-71f2434a0a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Soma.png?b2ba2"
+    },
+    "Soma Prime": {
+      "name": "Soma Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle",
+      "imageName": "soma-prime-16e75e3a35.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SomaPrime.png?4ae3f"
+    },
+    "Sonicor": {
+      "name": "Sonicor",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpAirPistol/CrpAirPistolArray",
+      "imageName": "sonicor-9245ce743a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sonicor.png?ee6d0"
+    },
+    "Spectra": {
+      "name": "Spectra",
+      "uniqueName": "/Lotus/Weapons/ClanTech/Energy/CrpLaserPistol",
+      "imageName": "spectra-d7a9a2ad92.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Spectra.png?ddeb8"
+    },
+    "Spectra Vandal": {
+      "name": "Spectra Vandal",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CorpusModularPistol/Vandal/CrpLaserPistolVandal",
+      "imageName": "spectra-vandal-8e11a25192.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SpectraVandal.png?6057b"
+    },
+    "Spinnerex": {
+      "name": "Spinnerex",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Whips/SpiderWhip/SpiderWhipWeapon",
+      "imageName": "spinnerex-cbb8de4920.png",
+      "wikiaThumbnail": null
+    },
+    "Spira": {
+      "name": "Spira",
+      "uniqueName": "/Lotus/Weapons/Tenno/ThrowingWeapons/LiDagger/LiDagger",
+      "imageName": "spira-35f294fde6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Spira.png?421cc"
+    },
+    "Spira Prime": {
+      "name": "Spira Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/ThrowingWeapons/PrimeLiDagger/PrimeLiDagger",
+      "imageName": "spira-prime-6c77a3d5b4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SpiraPrime.png?82a7f"
+    },
+    "Sporothrix": {
+      "name": "Sporothrix",
+      "uniqueName": "/Lotus/Weapons/Infested/LongGuns/InfSniperRifle/InfSniperRifle",
+      "imageName": "sporothrix-b7ac62464a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sporothrix.png?106dc"
+    },
+    "Stahlta": {
+      "name": "Stahlta",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpRubanRifle/CrpRubanRifle",
+      "imageName": "stahlta-c12c06b094.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Stahlta.png?c7c0d"
+    },
+    "Staticor": {
+      "name": "Staticor",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpElectroMag/CrpElectroMag",
+      "imageName": "staticor-2a2222aa2e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Staticor.png?ab6ac"
+    },
+    "Steflos": {
+      "name": "Steflos",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnoLotusPodShotgun/TnoLotusPodShotgun",
+      "imageName": "steflos-2444088d3f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Steflos.png?4a335"
+    },
+    "Stradavar": {
+      "name": "Stradavar",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TennoTommyGun/TennoTommyGunRifle",
+      "imageName": "stradavar-0ff7688b1f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Stradavar.png?bb33b"
+    },
+    "Stradavar Prime": {
+      "name": "Stradavar Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeStradavar/PrimeStradavarGun",
+      "imageName": "stradavar-prime-150ba6fb80.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/StradavarPrime.png?cbb56"
+    },
+    "Stropha": {
+      "name": "Stropha",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/Gunblade/CrpGunBlade/CrpGunbladeWeapon",
+      "imageName": "stropha-7e14214568.png",
+      "wikiaThumbnail": null
+    },
+    "Strun": {
+      "name": "Strun",
+      "uniqueName": "/Lotus/Weapons/Tenno/Shotgun/Shotgun",
+      "imageName": "strun-12937e9e52.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Strun.png?c7981"
+    },
+    "Strun Prime": {
+      "name": "Strun Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeStrun/PrimeStrunWeapon",
+      "imageName": "strun-prime-32870cfe57.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/StrunPrime.png?85980"
+    },
+    "Strun Wraith": {
+      "name": "Strun Wraith",
+      "uniqueName": "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal",
+      "imageName": "strun-wraith-1ec54edc8d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/StrunWraith.png?d9d6d"
+    },
+    "Stubba": {
+      "name": "Stubba",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/GrnUzi/GrnUziWeapon",
+      "imageName": "stubba-0d74e5294f.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Stubba.png?61d87"
+    },
+    "Stug": {
+      "name": "Stug",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/GrineerCrossbow/GrineerGooGun",
+      "imageName": "stug-aae9c4cb46.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Stug.png?67414"
+    },
+    "Sun & Moon": {
+      "name": "Sun & Moon",
+      "uniqueName": "/Lotus/Types/Friendly/PlayerControllable/Weapons/DuviriDualSwordsWeapon",
+      "imageName": "sun-&-moon-c729935257.png",
+      "wikiaThumbnail": null
+    },
+    "Supra": {
+      "name": "Supra",
+      "uniqueName": "/Lotus/Weapons/ClanTech/Energy/CrpHeavyRifle",
+      "imageName": "supra-02cc80bc5b.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Supra.png?7949d"
+    },
+    "Supra Vandal": {
+      "name": "Supra Vandal",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/Machinegun/SupraVandal",
+      "imageName": "supra-vandal-a1297d8609.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SupraVandal.png?b1f12"
+    },
+    "Syam": {
+      "name": "Syam",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/DaxDuviriKatana/DaxDuviriKatanaWeapon",
+      "imageName": "syam-d7ba378dae.png",
+      "wikiaThumbnail": null
+    },
+    "Sybaris": {
+      "name": "Sybaris",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle",
+      "imageName": "sybaris-af73df59a0.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Sybaris.png?896be"
+    },
+    "Sybaris Prime": {
+      "name": "Sybaris Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeSybaris/PrimeSybarisRifle",
+      "imageName": "sybaris-prime-42f220480d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SybarisPrime.png?369aa"
+    },
+    "Sydon": {
+      "name": "Sydon",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrnTrident/GrnTridentWeapon",
+      "imageName": "sydon-c0df9213ea.png",
+      "wikiaThumbnail": null
+    },
+    "Synapse": {
+      "name": "Synapse",
+      "uniqueName": "/Lotus/Weapons/Infested/LongGuns/InfestedRifle",
+      "imageName": "synapse-83cde9ed76.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Synapse.png?4e9a1"
+    },
+    "Synoid Gammacor": {
+      "name": "Synoid Gammacor",
+      "uniqueName": "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSSynoidGammacor",
+      "imageName": "synoid-gammacor-02823b6001.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SynoidGammacor.png?cc4e5"
+    },
+    "Synoid Heliocor": {
+      "name": "Synoid Heliocor",
+      "uniqueName": "/Lotus/Weapons/Syndicates/CephalonSuda/Melee/CSHeliocor",
+      "imageName": "synoid-heliocor-647b470e3d.png",
+      "wikiaThumbnail": null
+    },
+    "Synoid Simulor": {
+      "name": "Synoid Simulor",
+      "uniqueName": "/Lotus/Weapons/Syndicates/CephalonSuda/LongGuns/CSSimulor",
+      "imageName": "synoid-simulor-16a8baa8b0.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/SynoidSimulor.png?aa990"
+    },
+    "Tak & Lug": {
+      "name": "Tak & Lug",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/SwordsAndBoards/MortiforShieldAndSword/MortiforShieldAndSword",
+      "imageName": "tak-&-lug-c723efafd9.png",
+      "wikiaThumbnail": null
+    },
+    "Talons": {
+      "name": "Talons",
+      "uniqueName": "/Lotus/Weapons/Tenno/ThrowingWeapons/U18ThrowingKnives/U18throwingknives",
+      "imageName": "talons-25982555f3.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Talons.png?111e8"
+    },
+    "Tatsu": {
+      "name": "Tatsu",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/TnTwoHandedKatana/TnTwoHandedKatana",
+      "imageName": "tatsu-7f0f58e9f0.png",
+      "wikiaThumbnail": null
+    },
+    "Tatsu Prime": {
+      "name": "Tatsu Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/PrimeTatsu/PrimeTatsuWeapon",
+      "imageName": "tatsu-prime-3b2ad97000.png",
+      "wikiaThumbnail": null
+    },
+    "Tekko": {
+      "name": "Tekko",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Gauntlet/BrawlerKnuckles/BrawlerKnuckles",
+      "imageName": "tekko-2ceed95a9f.png",
+      "wikiaThumbnail": null
+    },
+    "Tekko Prime": {
+      "name": "Tekko Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/PrimeTekko/PrimeTekko",
+      "imageName": "tekko-prime-9fbefbb1e5.png",
+      "wikiaThumbnail": null
+    },
+    "Telos Akbolto": {
+      "name": "Telos Akbolto",
+      "uniqueName": "/Lotus/Weapons/Syndicates/ArbitersOfHexis/Pistols/AHAkbolto",
+      "imageName": "telos-akbolto-ef8aa48303.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TelosAkbolto.png?6ca02"
+    },
+    "Telos Boltace": {
+      "name": "Telos Boltace",
+      "uniqueName": "/Lotus/Weapons/Syndicates/ArbitersOfHexis/Melee/AHBoltace",
+      "imageName": "telos-boltace-61b5d71708.png",
+      "wikiaThumbnail": null
+    },
+    "Telos Boltor": {
+      "name": "Telos Boltor",
+      "uniqueName": "/Lotus/Weapons/Syndicates/ArbitersOfHexis/LongGuns/AHBoltor",
+      "imageName": "telos-boltor-111b9c4941.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TelosBoltor.png?4238c"
+    },
+    "Tenet Agendus": {
+      "name": "Tenet Agendus",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/ShieldAndSword/CrpHammerShield/CrpHammerShield",
+      "imageName": "tenet-agendus-cb4920171a.png",
+      "wikiaThumbnail": null
+    },
+    "Tenet Arca Plasmor": {
+      "name": "Tenet Arca Plasmor",
+      "uniqueName": "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEArcaPlasmor/CrpBEArcaPlasmor",
+      "imageName": "tenet-arca-plasmor-711b009551.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TenetArcaPlasmor.png?a6d9a"
+    },
+    "Tenet Cycron": {
+      "name": "Tenet Cycron",
+      "uniqueName": "/Lotus/Weapons/Corpus/BoardExec/Secondary/CrpBECycron/CrpBECycron",
+      "imageName": "tenet-cycron-2d3f1b3281.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TenetCycron.png?3a27e"
+    },
+    "Tenet Detron": {
+      "name": "Tenet Detron",
+      "uniqueName": "/Lotus/Weapons/Corpus/BoardExec/Secondary/CrpBEDetron/CrpBEDetron",
+      "imageName": "tenet-detron-b4d3acd4e1.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TenetDetron.png?0f208"
+    },
+    "Tenet Diplos": {
+      "name": "Tenet Diplos",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpBriefcaseAkimbo/CrpBriefcaseAkimboPistol",
+      "imageName": "tenet-diplos-48514b24c4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TenetDiplos.png?b553c"
+    },
+    "Tenet Envoy": {
+      "name": "Tenet Envoy",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpBriefcaseLauncher/CrpBriefcaseLauncher",
+      "imageName": "tenet-envoy-ac79f3d3e2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TenetEnvoy.png?9f00a"
+    },
+    "Tenet Exec": {
+      "name": "Tenet Exec",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/CrpBigSlash/CrpBigSlash",
+      "imageName": "tenet-exec-e8fac523ed.png",
+      "wikiaThumbnail": null
+    },
+    "Tenet Ferrox": {
+      "name": "Tenet Ferrox",
+      "uniqueName": "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEFerrox/CrpBEFerrox",
+      "imageName": "tenet-ferrox-011ccea0e2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TenetFerrox.png?170fa"
+    },
+    "Tenet Flux Rifle": {
+      "name": "Tenet Flux Rifle",
+      "uniqueName": "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEFluxRifle/CrpBEFluxRifle",
+      "imageName": "tenet-flux-rifle-0332ab5202.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TenetFluxRifle.png?a0124"
+    },
+    "Tenet Glaxion": {
+      "name": "Tenet Glaxion",
+      "uniqueName": "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEGlaxion/CrpBEGlaxion",
+      "imageName": "tenet-glaxion-7236ec1e72.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TenetGlaxion.png?d3aaa"
+    },
+    "Tenet Grigori": {
+      "name": "Tenet Grigori",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/CrpBriefcaseScythe/CrpBriefcaseScythe",
+      "imageName": "tenet-grigori-651d8ef65d.png",
+      "wikiaThumbnail": null
+    },
+    "Tenet Livia": {
+      "name": "Tenet Livia",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/CrpBriefcase2HKatana/CrpBriefcase2HKatana",
+      "imageName": "tenet-livia-fe7274bd29.png",
+      "wikiaThumbnail": null
+    },
+    "Tenet Plinx": {
+      "name": "Tenet Plinx",
+      "uniqueName": "/Lotus/Weapons/Corpus/BoardExec/Secondary/CrpBEPlinx/CrpBEPlinxWeapon",
+      "imageName": "tenet-plinx-6a1f29a3a6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TenetPlinx.png?d3d96"
+    },
+    "Tenet Spirex": {
+      "name": "Tenet Spirex",
+      "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpIgniterPistol/CrpIgniterPistol",
+      "imageName": "tenet-spirex-ac682cb56e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TenetSpirex.png?696b4"
+    },
+    "Tenet Tetra": {
+      "name": "Tenet Tetra",
+      "uniqueName": "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBETetra/CrpBETetra",
+      "imageName": "tenet-tetra-2659bb14a6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TenetTetra.png?a34b1"
+    },
+    "Tenora": {
+      "name": "Tenora",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnBardRifle/TnBardRifle",
+      "imageName": "tenora-0980845df3.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Tenora.png?9d913"
+    },
+    "Tenora Prime": {
+      "name": "Tenora Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeTenora/TenoraPrimeWeapon",
+      "imageName": "tenora-prime-88bf75873a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TenoraPrime.png?c7070"
+    },
+    "Tetra": {
+      "name": "Tetra",
+      "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CorpusUMP/CorpusUMP",
+      "imageName": "tetra-551b2b3792.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Tetra.png?030e4"
+    },
+    "Thalys": {
+      "name": "Thalys",
+      "uniqueName": "/Lotus/Weapons/Tenno/Zariman/Melee/HeavyScythe/ZarimanHeavyScythe/ZarimanHeavyScytheWeapon",
+      "imageName": "thalys-046b42a5ff.png",
+      "wikiaThumbnail": null
+    },
+    "Tiberon": {
+      "name": "Tiberon",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/DrakeRifle/DrakeRifle",
+      "imageName": "tiberon-9bea2c1863.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Tiberon.png?ef3d3"
+    },
+    "Tiberon Prime": {
+      "name": "Tiberon Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeTiberon/PrimeTiberonRifle",
+      "imageName": "tiberon-prime-5da4edf098.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TiberonPrime.png?68645"
+    },
+    "Tigris": {
+      "name": "Tigris",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/DoubleBarrelShotgun/TennoDoubleBarrelShotgun",
+      "imageName": "tigris-1f7521bba5.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Tigris.png?80648"
+    },
+    "Tigris Prime": {
+      "name": "Tigris Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeTigris/PrimeTigris",
+      "imageName": "tigris-prime-7f61d1abde.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TigrisPrime.png?0f2b3"
+    },
+    "Tipedo": {
+      "name": "Tipedo",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Staff/MonkSpade/TnoMonkStaff",
+      "imageName": "tipedo-939711dac4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Tipedo.png?3ee6e"
+    },
+    "Tipedo Prime": {
+      "name": "Tipedo Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Staff/TipedoPrime/TipedoPrimeWeapon",
+      "imageName": "tipedo-prime-d092468d18.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TipedoPrime.png?57cc6"
+    },
+    "Tonbo": {
+      "name": "Tonbo",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Polearms/FlowerPowerPolearm/FlowerPowerPolearmWep",
+      "imageName": "tonbo-fabec5b429.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Tonbo.png?e141d"
+    },
+    "Tonkkatt": {
+      "name": "Tonkkatt",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/Tonfa/GrnChainSawTonfa/GrnChainSawTonfaWeapon",
+      "imageName": "tonkkatt-b9790be36d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Tonkkatt.png?363a0"
+    },
+    "Tonkor": {
+      "name": "Tonkor",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrnGrenadeLauncher/GrnGrenadeLauncher",
+      "imageName": "tonkor-f6c37f3e23.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Tonkor.png?75c8c"
+    },
+    "Torid": {
+      "name": "Torid",
+      "uniqueName": "/Lotus/Weapons/ClanTech/Bio/BioWeapon",
+      "imageName": "torid-76f7af07f3.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Torid.png?74a4a"
+    },
+    "Trumna": {
+      "name": "Trumna",
+      "uniqueName": "/Lotus/Weapons/Thanotech/ThanoRifle/ThanotechRifle",
+      "imageName": "trumna-ed20f6dae6.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Trumna.png?13adf"
+    },
+    "Trumna Prime": {
+      "name": "Trumna Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeTrumna/PrimeTrumnaWeapon",
+      "imageName": "trumna-prime-7c10f9cb60.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TrumnaPrime.png?e7b4e"
+    },
+    "Twin Basolk": {
+      "name": "Twin Basolk",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrnDualFireAxe/GrnDualFireAxe",
+      "imageName": "twin-basolk-f27c8536d2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TwinBasolk.png?ad177"
+    },
+    "Twin Grakatas": {
+      "name": "Twin Grakatas",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrineerAssaultRifle/TwinGrakatas",
+      "imageName": "twin-grakatas-a5e2f5596e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TwinGrakatas.png?60e22"
+    },
+    "Twin Gremlins": {
+      "name": "Twin Gremlins",
+      "uniqueName": "/Lotus/Weapons/Grineer/GrineerPistol/GrineerAkimboPistol",
+      "imageName": "twin-gremlins-5cc8818865.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TwinGremlins.png?126ee"
+    },
+    "Twin Kohmak": {
+      "name": "Twin Kohmak",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/GrnDWUniques/GrnTwinKohmaks",
+      "imageName": "twin-kohmak-f66cb319da.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TwinKohmak.png?e4621"
+    },
+    "Twin Krohkur": {
+      "name": "Twin Krohkur",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GrnEgyptSwd/DualGrnEgyptSwdWeapon",
+      "imageName": "twin-krohkur-144b945fb3.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TwinKrohkur.png?9e026"
+    },
+    "Twin Rogga": {
+      "name": "Twin Rogga",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/GrnQueenGuardDualPistol/GrnQueenGuardDualPistols",
+      "imageName": "twin-rogga-7847594c64.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TwinRogga.png?12308"
+    },
+    "Twin Vipers": {
+      "name": "Twin Vipers",
+      "uniqueName": "/Lotus/Weapons/Tenno/Akimbo/AkimboViperPistols",
+      "imageName": "twin-vipers-dfb6f5c5e8.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TwinVipers.png?7ce4e"
+    },
+    "Twin Vipers Wraith": {
+      "name": "Twin Vipers Wraith",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/WraithTwinVipers/WraithTwinVipers",
+      "imageName": "twin-vipers-wraith-1e92e7cf25.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/TwinVipersWraith.png?d8de2"
+    },
+    "Tysis": {
+      "name": "Tysis",
+      "uniqueName": "/Lotus/Weapons/Infested/Pistols/InfestedDartPistol/InfestedDartPistol",
+      "imageName": "tysis-43b9b7c74a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Tysis.png?35fde"
+    },
+    "Vadarya Prime": {
+      "name": "Vadarya Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeLightningGun/PrimeLightningGun",
+      "imageName": "vadarya-prime-a3418fa9bb.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/VadaryaPrime.png?40feb"
+    },
+    "Vargeet Ii Jai": {
+      "name": "Vargeet Ii Jai",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceSpeedICritII",
+      "imageName": "vargeet-ii-jai-f92b870e32.png",
+      "wikiaThumbnail": null
+    },
+    "Vargeet Ii Ruhang": {
+      "name": "Vargeet Ii Ruhang",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceDamageICritII",
+      "imageName": "vargeet-ii-ruhang-55b5f0ac91.png",
+      "wikiaThumbnail": null
+    },
+    "Vargeet Jai": {
+      "name": "Vargeet Jai",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceSpeedICritI",
+      "imageName": "vargeet-jai-fb8680a3ed.png",
+      "wikiaThumbnail": null
+    },
+    "Vargeet Jai Ii": {
+      "name": "Vargeet Jai Ii",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceSpeedIICritI",
+      "imageName": "vargeet-jai-ii-c27048f259.png",
+      "wikiaThumbnail": null
+    },
+    "Vargeet Ruhang": {
+      "name": "Vargeet Ruhang",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceDamageICritI",
+      "imageName": "vargeet-ruhang-df37a83490.png",
+      "wikiaThumbnail": null
+    },
+    "Vargeet Ruhang Ii": {
+      "name": "Vargeet Ruhang Ii",
+      "uniqueName": "/Lotus/Weapons/Ostron/Melee/ModularMelee01/Balance/BalanceDamageIICritI",
+      "imageName": "vargeet-ruhang-ii-a934774072.png",
+      "wikiaThumbnail": null
+    },
+    "Vastilok": {
+      "name": "Vastilok",
+      "uniqueName": "/Lotus/Weapons/Grineer/Melee/GunBlade/GrnGunBlade/GrnGunblade",
+      "imageName": "vastilok-9dadf9c436.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Vastilok.png?fdf3e"
+    },
+    "Vasto": {
+      "name": "Vasto",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistol/RevolverPistol",
+      "imageName": "vasto-a67536402c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Vasto.png?98c12"
+    },
+    "Vasto Prime": {
+      "name": "Vasto Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/PrimeVastoPistol",
+      "imageName": "vasto-prime-7befca7ba9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/VastoPrime.png?2b77c"
+    },
+    "Vaykor Hek": {
+      "name": "Vaykor Hek",
+      "uniqueName": "/Lotus/Weapons/Syndicates/SteelMeridian/LongGuns/SMHek",
+      "imageName": "vaykor-hek-d30f841248.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/VaykorHek.png?1b6e2"
+    },
+    "Vaykor Marelok": {
+      "name": "Vaykor Marelok",
+      "uniqueName": "/Lotus/Weapons/Syndicates/SteelMeridian/Pistols/SMMarelok",
+      "imageName": "vaykor-marelok-92ed1486f5.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/VaykorMarelok.png?1c135"
+    },
+    "Vaykor Sydon": {
+      "name": "Vaykor Sydon",
+      "uniqueName": "/Lotus/Weapons/Syndicates/SteelMeridian/Melee/SMSydon",
+      "imageName": "vaykor-sydon-e298fb49c4.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/VaykorSydon.png?1524e"
+    },
+    "Vectis": {
+      "name": "Vectis",
+      "uniqueName": "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle",
+      "imageName": "vectis-81d8622164.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Vectis.png?403a3"
+    },
+    "Vectis Prime": {
+      "name": "Vectis Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle",
+      "imageName": "vectis-prime-2029f25b9e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/VectisPrime.png?12ec1"
+    },
+    "Veldt": {
+      "name": "Veldt",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/TnRevolverRifle/TnRevolverRifleGun",
+      "imageName": "veldt-f78c644647.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Veldt.png?21718"
+    },
+    "Velocitus": {
+      "name": "Velocitus",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Primary/Railgun/ArchRailgun",
+      "imageName": "velocitus-218fe8d40e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Velocitus.png?26b5b"
+    },
+    "Velox": {
+      "name": "Velox",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/TnOdaliskSmg/TnOdaliskSmgPistol",
+      "imageName": "velox-160999bb4a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Velox.png?3690a"
+    },
+    "Velox Prime": {
+      "name": "Velox Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeVelox/PrimeVeloxPistol",
+      "imageName": "velox-prime-de13b8c526.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/VeloxPrime.png?261a8"
+    },
+    "Venato": {
+      "name": "Venato",
+      "uniqueName": "/Lotus/Weapons/Sentients/SentJointedScythe/SentJointedScytheWeapon",
+      "imageName": "venato-54532048ec.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Venato.png?56f40"
+    },
+    "Venato Prime": {
+      "name": "Venato Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Scythe/PrimeVento/PrimeVentoScythe",
+      "imageName": "venato-prime-e72fcbb62a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/VenatoPrime.png?eb0e1"
+    },
+    "Venka": {
+      "name": "Venka",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Claws/TennoClaws",
+      "imageName": "venka-a750520352.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Venka.png?03dd1"
+    },
+    "Venka Prime": {
+      "name": "Venka Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/PrimeVenKa/PrimeVenkaClaws",
+      "imageName": "venka-prime-fbb661cdcf.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/VenkaPrime.png?7ea5c"
+    },
+    "Verdilac": {
+      "name": "Verdilac",
+      "uniqueName": "/Lotus/Weapons/Archon/Melee/Whip/ArchonWhipPlayerWep",
+      "imageName": "verdilac-fba86852fc.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Verdilac.png?6e3c1"
+    },
+    "Vericres": {
+      "name": "Vericres",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Warfan/TnMoonWarfan/MoonWarfanWeapon",
+      "imageName": "vericres-30b79546fe.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Vericres.png?bcc94"
+    },
+    "Veritux": {
+      "name": "Veritux",
+      "uniqueName": "/Lotus/Weapons/Tenno/Archwing/Melee/Archsword/ArchSwordWeapon",
+      "imageName": "veritux-a2d86d183e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Veritux.png?e0827"
+    },
+    "Vesper 77": {
+      "name": "Vesper 77",
+      "uniqueName": "/Lotus/Weapons/Lasria/LasSilencedPistol/LasSilencedPistolWeapon",
+      "imageName": "vesper-77-0136c923d7.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Vesper77.png?d4c30"
+    },
+    "Viper": {
+      "name": "Viper",
+      "uniqueName": "/Lotus/Weapons/Grineer/GrineerPistol/GrineerLightPistol",
+      "imageName": "viper-246ef55b5a.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Viper.png?52862"
+    },
+    "Viper Wraith": {
+      "name": "Viper Wraith",
+      "uniqueName": "/Lotus/Weapons/Grineer/Pistols/WraithSingleViper/WraithSingleViper",
+      "imageName": "viper-wraith-b08e022cf2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ViperWraith.png?e61ac"
+    },
+    "Vitrica": {
+      "name": "Vitrica",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/NWIIIOrokinSword/NWOrokinSword",
+      "imageName": "vitrica-d0a2b456bd.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Vitrica.png?54002"
+    },
+    "Volnus": {
+      "name": "Volnus",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Hammer/GlassHammer/GlassHammer",
+      "imageName": "volnus-54a591af3c.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Volnus.png?18bd9"
+    },
+    "Volnus Prime": {
+      "name": "Volnus Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/PrimeVolnus/VolnusPrimeWeapon",
+      "imageName": "volnus-prime-9c82528e61.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/VolnusPrime.png?34775"
+    },
+    "Vulkar": {
+      "name": "Vulkar",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/GrnSniperRifle",
+      "imageName": "vulkar-320bdad1d5.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Vulkar.png?28b30"
+    },
+    "Vulkar Wraith": {
+      "name": "Vulkar Wraith",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/VulkarWraith",
+      "imageName": "vulkar-wraith-00f7dafc90.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/VulkarWraith.png?581ef"
+    },
+    "War": {
+      "name": "War",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Swords/StalkerTwo/StalkerTwoGreatSword",
+      "imageName": "war-369ff36cf2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/War.png?42c4e"
+    },
+    "Wolf Sledge": {
+      "name": "Wolf Sledge",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/Hammer/ThrowingHammer",
+      "imageName": "wolf-sledge-3534a194eb.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/WolfSledge.png?02419"
+    },
+    "Xoris": {
+      "name": "Xoris",
+      "uniqueName": "/Lotus/Weapons/Corpus/Melee/Glaive/CrpGhostCatcherGlaive/CrpGhostCatcherGlaive",
+      "imageName": "xoris-92a3a5c63e.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Xoris.png?5c2e5"
+    },
+    "Zakti": {
+      "name": "Zakti",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/TnGuandoPistol/TnGuandoPistolGun",
+      "imageName": "zakti-30d7d92ba9.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Zakti.png?2807d"
+    },
+    "Zakti Prime": {
+      "name": "Zakti Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeZakti/PrimeZaktiPistol",
+      "imageName": "zakti-prime-c9e28219cd.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ZaktiPrime.png?48c9f"
+    },
+    "Zarr": {
+      "name": "Zarr",
+      "uniqueName": "/Lotus/Weapons/Grineer/LongGuns/GrnCannon/GrnCannonWeapon",
+      "imageName": "zarr-7e10b8897d.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Zarr.png?0bf8f"
+    },
+    "Zenistar": {
+      "name": "Zenistar",
+      "uniqueName": "/Lotus/Weapons/Tenno/Melee/SunDialAxe/SundialAxeWeapon",
+      "imageName": "zenistar-cbda6e59e2.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Zenistar.png?27d70"
+    },
+    "Zenith": {
+      "name": "Zenith",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/LoginPrimary/SundialRifle",
+      "imageName": "zenith-f5a930b480.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Zenith.png?88106"
+    },
+    "Zhuge": {
+      "name": "Zhuge",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/RepeatingCrossbow/RepeatingCrossbow",
+      "imageName": "zhuge-3d401a1901.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Zhuge.png?b38f3"
+    },
+    "Zhuge Prime": {
+      "name": "Zhuge Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeZhuge/PrimeZhugeCrossbow",
+      "imageName": "zhuge-prime-c282e9ce24.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ZhugePrime.png?56973"
+    },
+    "Zylok": {
+      "name": "Zylok",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/ConclaveLeverPistol/ConclaveLeverPistol",
+      "imageName": "zylok-68fee5c4dd.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Zylok.png?9a401"
+    },
+    "Zylok Prime": {
+      "name": "Zylok Prime",
+      "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeZylok/ZylokPrimePistol",
+      "imageName": "zylok-prime-8922964ebe.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/ZylokPrime.png?9c426"
+    },
+    "Zymos": {
+      "name": "Zymos",
+      "uniqueName": "/Lotus/Weapons/Infested/Pistols/InfUzi/InfUziWeapon",
+      "imageName": "zymos-b070770a75.png",
+      "wikiaThumbnail": "https://wiki.warframe.com/images/Zymos.png?6e643"
+    }
+  }
+}

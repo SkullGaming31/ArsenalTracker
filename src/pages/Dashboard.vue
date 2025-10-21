@@ -108,7 +108,17 @@ const wf = computed(() => collection.mergedWarframes)
 const wp = computed(() => collection.mergedWeapons)
 
 const totalWarframes = computed(() => wf.value.length)
-const totalWarframesMastered = computed(() => wf.value.filter((w: any) => w.is_mastered).length)
+
+// helpers to coerce various flag shapes into booleans
+const flagTrue = (v: any) => {
+  if (v === true) return true
+  if (v === false) return false
+  if (typeof v === 'string') return v.toLowerCase() === 'true'
+  if (typeof v === 'number') return v !== 0
+  return Boolean(v)
+}
+
+const totalWarframesMastered = computed(() => wf.value.filter((w: any) => flagTrue(w.is_mastered)).length)
 
 const total = computed(() => ({
   primary: wp.value.filter((w: any) => w.category === 'primary').length,
@@ -131,8 +141,9 @@ const isPrime = (typeStr: string) => {
 // Warframe prime/standard totals and completed (any parts collected)
 const wfPrimesTotal = computed(() => wf.value.filter((w: any) => isPrime(w.type)).length)
 const wfStandardsTotal = computed(() => wf.value.filter((w: any) => !isPrime(w.type)).length)
-const wfPrimesCompleted = computed(() => wf.value.filter((w: any) => isPrime(w.type) && (w.neuroptics_collected || w.chassis_collected || w.systems_collected || w.blueprint_collected)).length)
-const wfStandardsCompleted = computed(() => wf.value.filter((w: any) => !isPrime(w.type) && (w.neuroptics_collected || w.chassis_collected || w.systems_collected || w.blueprint_collected)).length)
+const partCollected = (w: any) => flagTrue(w.neuroptics_collected) || flagTrue(w.chassis_collected) || flagTrue(w.systems_collected) || flagTrue(w.blueprint_collected)
+const wfPrimesCompleted = computed(() => wf.value.filter((w: any) => isPrime(w.type) && partCollected(w)).length)
+const wfStandardsCompleted = computed(() => wf.value.filter((w: any) => !isPrime(w.type) && partCollected(w)).length)
 
 // Weapon category helper (use computed .value)
 const primesIn = (cat: string) => wp.value.filter((w: any) => w.category === cat && isPrime(w.type))
@@ -140,18 +151,18 @@ const standardsIn = (cat: string) => wp.value.filter((w: any) => w.category === 
 
 const primaryPrimesTotal = computed(() => primesIn('primary').length)
 const primaryStandardsTotal = computed(() => standardsIn('primary').length)
-const primaryPrimesCompleted = computed(() => primesIn('primary').filter((w: any) => w.is_crafted || w.is_mastered).length)
-const primaryStandardsCompleted = computed(() => standardsIn('primary').filter((w: any) => w.is_crafted || w.is_mastered).length)
+const primaryPrimesCompleted = computed(() => primesIn('primary').filter((w: any) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
+const primaryStandardsCompleted = computed(() => standardsIn('primary').filter((w: any) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
 
 const secondaryPrimesTotal = computed(() => primesIn('secondary').length)
 const secondaryStandardsTotal = computed(() => standardsIn('secondary').length)
-const secondaryPrimesCompleted = computed(() => primesIn('secondary').filter((w: any) => w.is_crafted || w.is_mastered).length)
-const secondaryStandardsCompleted = computed(() => standardsIn('secondary').filter((w: any) => w.is_crafted || w.is_mastered).length)
+const secondaryPrimesCompleted = computed(() => primesIn('secondary').filter((w: any) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
+const secondaryStandardsCompleted = computed(() => standardsIn('secondary').filter((w: any) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
 
 const meleePrimesTotal = computed(() => primesIn('melee').length)
 const meleeStandardsTotal = computed(() => standardsIn('melee').length)
-const meleePrimesCompleted = computed(() => primesIn('melee').filter((w: any) => w.is_crafted || w.is_mastered).length)
-const meleeStandardsCompleted = computed(() => standardsIn('melee').filter((w: any) => w.is_crafted || w.is_mastered).length)
+const meleePrimesCompleted = computed(() => primesIn('melee').filter((w: any) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
+const meleeStandardsCompleted = computed(() => standardsIn('melee').filter((w: any) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
 
 // (collection already initialized above)
 

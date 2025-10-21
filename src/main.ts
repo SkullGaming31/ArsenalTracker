@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
+// global theme variables
+import './styles/theme.css'
 
 // PrimeVue
 import PrimeVue from 'primevue/config'

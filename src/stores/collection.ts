@@ -57,17 +57,39 @@ export const useCollectionStore = defineStore('collection', () => {
 
   // derived: merged view of static data + overrides
   const mergedWarframes = computed(() => {
-    return warframes.value.map(w => {
-      const ov = overrides.value[w.name] || {}
-      return { ...w, ...ov }
-    })
+    // merge overrides but deduplicate by name (keep first occurrence)
+    const map = new Map<string, any>()
+    for (const w of warframes.value) {
+      if (!map.has(w.name)) {
+        const ov = overrides.value[w.name] || {}
+        map.set(w.name, { ...w, ...ov })
+      } else {
+        // if there's an override for a later duplicate, merge it in
+        const ov = overrides.value[w.name]
+        if (ov && typeof ov === 'object') {
+          const existing = map.get(w.name) || {}
+          map.set(w.name, { ...existing, ...ov })
+        }
+      }
+    }
+    return Array.from(map.values())
   })
 
   const mergedWeapons = computed(() => {
-    return weapons.value.map(w => {
-      const ov = overrides.value[w.name] || {}
-      return { ...w, ...ov }
-    })
+    const map = new Map<string, any>()
+    for (const w of weapons.value) {
+      if (!map.has(w.name)) {
+        const ov = overrides.value[w.name] || {}
+        map.set(w.name, { ...w, ...ov })
+      } else {
+        const ov = overrides.value[w.name]
+        if (ov && typeof ov === 'object') {
+          const existing = map.get(w.name) || {}
+          map.set(w.name, { ...existing, ...ov })
+        }
+      }
+    }
+    return Array.from(map.values())
   })
 
   function setOverride(name: string, partial: WarframeOverride) {
@@ -105,10 +127,30 @@ export const useCollectionStore = defineStore('collection', () => {
     return false
   }
 
-  // persist overrides when they change
+  // persist overrides when they change — debounce to avoid blocking UI during rapid updates
+  let saveTimer: any = null
+  const saveDelay = 200 // ms
+  function scheduleSave() {
+    if (saveTimer) clearTimeout(saveTimer)
+    saveTimer = setTimeout(() => {
+      saveToStorage()
+      saveTimer = null
+    }, saveDelay)
+  }
+
   watch(overrides, () => {
-    saveToStorage()
+    scheduleSave()
   }, { deep: true })
+
+  // ensure we flush pending saves on page unload
+  if (typeof window !== 'undefined' && window.addEventListener) {
+    window.addEventListener('beforeunload', () => {
+      if (saveTimer) {
+        clearTimeout(saveTimer)
+        saveToStorage()
+      }
+    })
+  }
 
   return {
     warframes,

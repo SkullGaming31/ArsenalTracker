@@ -14,6 +14,12 @@
         </select>
       </label>
 
+      <label class="toggle" style="display:inline-flex; align-items:center; gap:8px">
+        <input type="checkbox" v-model="hideCompleted" />
+        <span class="slider" aria-hidden></span>
+        <span class="toggle-label">Hide completed</span>
+      </label>
+
       <label>
         Crafted
         <select v-model="craftedFilter">
@@ -68,6 +74,7 @@ const collection = useCollectionStore()
 const all = computed<Weapon[]>(() => collection.mergedWeapons as Weapon[])
 
 const query = ref('')
+const hideCompleted = ref(false)
 const selectedType = ref('all')
 const craftedFilter = ref('all') // all | crafted | not-crafted
 
@@ -76,9 +83,19 @@ const types = computed(() => {
   return Array.from(set).sort()
 })
 
+const flagTrue = (v: any) => {
+  if (v === true) return true
+  if (v === false) return false
+  if (typeof v === 'string') return v.toLowerCase() === 'true'
+  if (typeof v === 'number') return v !== 0
+  return Boolean(v)
+}
+
+const isCompleted = (w: Weapon) => flagTrue((w as any).is_crafted) || flagTrue((w as any).is_mastered)
+
 const filtered = computed(() => {
   const q = query.value.trim().toLowerCase()
-  return all.value.filter(w => {
+  let list = all.value.filter(w => {
     if (selectedType.value !== 'all' && (w.type || 'standard') !== selectedType.value) return false
     if (craftedFilter.value !== 'all') {
       const wantsCrafted = craftedFilter.value === 'crafted'
@@ -87,6 +104,8 @@ const filtered = computed(() => {
     if (!q) return true
     return w.name.toLowerCase().includes(q)
   })
+  if (hideCompleted.value) list = list.filter(w => !isCompleted(w))
+  return list
 })
 
 const primaries = computed(() => filtered.value.filter(w => w.category === 'primary'))
@@ -110,4 +129,12 @@ section h3 { margin-top:18px }
 .toolbar input { flex:1; padding:8px; border-radius:6px; border:1px solid #2b2f33; background:#0b0c0d; color:#eee }
 .toolbar select { padding:6px 8px; border-radius:6px; background:#0b0c0d; color:#eee; border:1px solid #2b2f33 }
 .results { margin-left:auto; color:#9fb8a6 }
+
+/* toggle switch (shared) */
+.toggle input { position: absolute; opacity: 0; width: 0; height: 0 }
+.toggle .slider { width:40px; height:22px; background: #fff; border-radius: 999px; position: relative; transition: background .12s ease }
+.toggle .slider::after { content: ''; position: absolute; left: 3px; top: 3px; width:16px; height:16px; background: var(--toggle-knob, #0b0c0d); border-radius:50%; transition: transform .12s ease }
+.toggle input:checked + .slider { background: var(--accent-green, #2bb673) }
+.toggle input:checked + .slider::after { transform: translateX(18px); background: #fff }
+.toggle .toggle-label { color: var(--muted); font-size:0.95rem }
 </style>

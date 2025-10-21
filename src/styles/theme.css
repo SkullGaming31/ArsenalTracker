@@ -1,0 +1,30 @@
+:root {
+  /* Palette inspired by the provided screenshot */
+  --bg-900: #061018; /* deep navy */
+  --bg-800: linear-gradient(180deg, #071018 0%, #04121a 100%); /* header gradient */
+  --panel: #0f1720; /* card background */
+  --muted: #9fb8a6; /* soft green for subtle text */
+  --accent-purple: #9b5cff; /* prime accent */
+  --accent-gold: #ffd54a; /* badge/gold */
+  --accent-green: #2bb673; /* default accent */
+  --card-border: rgba(255,255,255,0.03);
+  --glass: rgba(255,255,255,0.03);
+  --glass-strong: rgba(255,255,255,0.06);
+}
+
+/* Global page surface */
+html,body,#app { background: var(--bg-900); color: #e8f6ee; }
+
+/* Nav header */
+.site-nav { background: var(--bg-800); color: #e8f7ee; box-shadow: 0 2px 8px rgba(0,0,0,0.45); }
+
+/* Cards */
+.theme-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid var(--card-border); }
+.theme-badge { background: var(--glass-strong); color: var(--accent-gold); }
+
+/* Accent helpers */
+.accent-purple { background: var(--accent-purple) !important }
+.accent-green { background: var(--accent-green) !important }
+
+/* subtle input background */
+input, select, textarea { background: #0b0c0d; color: #eee; border: 1px solid #2b2f33 }
