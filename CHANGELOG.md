@@ -24,3 +24,24 @@ These changes were made to diagnose and resolve intermittent test failures where
 	- Deleted `.github/workflows/pages-deploy.yml`, `.github/workflows/pages.yml`, and `.github/workflows/post-changelog-discord.yml`.
 	- Rationale: consolidate deployment strategy and avoid deprecated action usage; Pages deployment can be reintroduced with a single consolidated workflow when ready.
 
+
+## 2025-10-22 - Data: weapons parts merge + CDN probe
+
+- Added utilities and data updates to improve weapon/parts data quality:
+	- `scripts/apply-merge-weapons.cjs` — merges component/parts data from `src/data/weapons.api.json` into `src/data/weapons.json` by matching weapon names (case-insensitive).
+	- `scripts/check-cdn-coverage.cjs` — probes `https://cdn.warframestat.us/img/*` URLs to check image availability for weapons and component parts; emits `tmp-cdn-coverage.csv` and `tmp-cdn-coverage-summary.json`.
+
+- Applied merge run (local):
+	- `src/data/weapons.json` overwritten with merged data for weapons present in the original file.
+	- Total weapons in the file after merge: 347.
+	- Parts populated for 292 weapons; 55 weapons remained unmatched (their `parts` arrays left empty) due to naming variations between datasets.
+
+- CDN probe results (local run):
+	- Probed 974 distinct CDN URLs (weapon images and component images).
+	- 238 URLs returned OK; 736 were missing or returned non-2xx responses.
+	- Generated artifacts: `tmp-cdn-coverage.csv`, `tmp-cdn-coverage-summary.json`.
+
+- Notes & recommended follow-ups:
+	- The canonical source `src/data/weapons.api.json` still contains 621 weapons; the merge preserved the existing `weapons.json` records and populated parts where names matched.
+	- Consider running a name-normalization pass or appending missing API weapons into `src/data/weapons.json` to reach full coverage.
+	- If you want the current merged `weapons.json` committed, run `git add src/data/weapons.json && git commit -m "chore(data): populate weapons.parts from weapons.api.json"`.
