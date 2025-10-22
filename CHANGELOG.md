@@ -17,3 +17,10 @@
 
 These changes were made to diagnose and resolve intermittent test failures where Playwright sometimes failed to create browser contexts (timeout), and to make the import/export flow deterministic under test.
 
+
+## 2025-10-22 - CI / Pages housekeeping
+
+- Removed GitHub Pages deployment workflows and the Discord CHANGELOG poster from the repository:
+	- Deleted `.github/workflows/pages-deploy.yml`, `.github/workflows/pages.yml`, and `.github/workflows/post-changelog-discord.yml`.
+	- Rationale: consolidate deployment strategy and avoid deprecated action usage; Pages deployment can be reintroduced with a single consolidated workflow when ready.
+
