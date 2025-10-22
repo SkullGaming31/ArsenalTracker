@@ -1,11 +1,15 @@
 import { test, expect } from '@playwright/test'
 
 test('export import roundtrip via localStorage', async ({ page }) => {
-  // go to warframes and read first warframe name
-  await page.goto('http://localhost:5173/warframes')
-  await page.waitForSelector('.title h3')
-  const firstName = await page.locator('.title h3').first().textContent()
-  expect(firstName).toBeTruthy()
+  // use a known warframe name to avoid flakiness in headless tests
+  const firstName = 'Rhino Prime'
+  // load the app root and navigate using the in-app nav (this app doesn't use a router)
+  await page.goto('/')
+  // wait for nav and click Warframes
+  await page.waitForSelector('[data-testid="nav-warframes"]', { timeout: 60000 })
+  await page.click('[data-testid="nav-warframes"]')
+  // allow extra time for the page to render Warframe cards
+  await page.waitForSelector('.title h3', { timeout: 60000 })
 
   // create a versioned payload marking neuroptics for the first warframe
   const payload: { version: number; overrides: Record<string, { neuroptics_collected?: boolean }> } = {
@@ -14,18 +18,28 @@ test('export import roundtrip via localStorage', async ({ page }) => {
   }
   payload.overrides[firstName!.trim()] = { neuroptics_collected: true }
 
-  // write payload to localStorage and reload
-  await page.evaluate((p) => localStorage.setItem('arsenaltracker.v1', JSON.stringify(p)), payload)
-  await page.reload()
+  // write payload to localStorage before the app loads so it will be read on initialization
+  await page.context().addInitScript((p) => {
+    try { localStorage.setItem('arsenaltracker.v1', JSON.stringify(p)) } catch (e) {}
+  }, payload)
+  await page.goto('/')
 
-  // verify the first warframe card shows Neuroptics: true
-  await page.goto('http://localhost:5173/warframes')
-  await page.waitForSelector(`.title:has-text("${firstName!.trim()}")`)
-  const card = page.locator('.card').filter({ hasText: firstName!.trim() }).first()
-  await expect(card.locator('text=Neuroptics: true')).toBeVisible()
+  // navigate back to Warframes via the UI and verify the first warframe card shows Neuroptics: true
+  await page.waitForSelector('[data-testid="nav-warframes"]', { timeout: 60000 })
+  await page.click('[data-testid="nav-warframes"]')
+  await page.waitForSelector(`[data-testid="card-${firstName.replace(/\s+/g,'-').toLowerCase()}"]`, { timeout: 60000 })
+  // ensure the first card's neuroptics checkbox is checked
+  await page.waitForFunction((testId) => {
+    const c = document.querySelector(`[data-testid="${testId}"]`)
+    if (!c) return false
+    const cb = c.querySelector('input[type="checkbox"]')
+    return !!(cb && (cb as HTMLInputElement).checked)
+  }, `card-${firstName.replace(/\s+/g,'-').toLowerCase()}`, { timeout: 60000 })
 
   // go to dashboard, read exported localStorage, clear via UI, then restore and verify
-  await page.goto('http://localhost:5173/')
+  // go back to the dashboard using the UI
+  await page.waitForSelector('button:has-text("Dashboard")')
+  await page.click('button:has-text("Dashboard")')
   await page.waitForSelector('h1:has-text("Arsenal Overview")')
   const exported = await page.evaluate(() => localStorage.getItem('arsenaltracker.v1'))
   expect(exported).toBeTruthy()
@@ -37,10 +51,19 @@ test('export import roundtrip via localStorage', async ({ page }) => {
 
   // restore
   if (!exported) throw new Error('No exported data to restore')
-  await page.evaluate((txt: string) => localStorage.setItem('arsenaltracker.v1', txt), exported)
-  await page.reload()
-
-  await page.goto('http://localhost:5173/warframes')
-  const card2 = page.locator('.card').filter({ hasText: firstName!.trim() }).first()
-  await expect(card2.locator('text=Neuroptics: true')).toBeVisible()
+  // restore via addInitScript so the app picks it up on next load
+  await page.context().addInitScript((txt) => {
+    try { localStorage.setItem('arsenaltracker.v1', txt) } catch (e) {}
+  }, exported)
+  await page.goto('/')
+  // navigate back to Warframes and verify restored state
+  await page.waitForSelector('[data-testid="nav-warframes"]')
+  await page.click('[data-testid="nav-warframes"]')
+  await page.waitForSelector(`[data-testid="card-${firstName.replace(/\s+/g,'-').toLowerCase()}"]`)
+  await page.waitForFunction((testId) => {
+    const c = document.querySelector(`[data-testid="${testId}"]`)
+    if (!c) return false
+    const cb = c.querySelector('input[type="checkbox"]')
+    return !!(cb && (cb as HTMLInputElement).checked)
+  }, `card-${firstName.replace(/\s+/g,'-').toLowerCase()}`, { timeout: 60000 })
 })

@@ -2,12 +2,12 @@
   <aside class="sidebar">
   <!-- brand removed: title moved to top center in App.vue -->
     <nav class="links">
-      <button @click="navigate('dashboard')">Dashboard</button>
-      <button @click="navigate('warframes')">Warframes</button>
-      <button @click="navigate('weapons')">All Weapons</button>
-      <button @click="navigate('primary')">Primary</button>
-      <button @click="navigate('secondary')">Secondary</button>
-      <button @click="navigate('melee')">Melee</button>
+  <button data-testid="nav-dashboard" @click="navigate('dashboard')">Dashboard</button>
+  <button data-testid="nav-warframes" @click="navigate('warframes')">Warframes</button>
+  <button data-testid="nav-weapons" @click="navigate('weapons')">All Weapons</button>
+  <button data-testid="nav-primary" @click="navigate('primary')">Primary</button>
+  <button data-testid="nav-secondary" @click="navigate('secondary')">Secondary</button>
+  <button data-testid="nav-melee" @click="navigate('melee')">Melee</button>
     </nav>
       <div class="debug">Last: {{ last }}</div>
       <div class="nav-socials">

@@ -1,5 +1,5 @@
 <template>
-  <div :class="['card', 'p-card', 'theme-card', { collected: isFullyCollected, prime: isPrime }]" ref="root">
+  <div :class="['card', 'p-card', 'theme-card', { collected: isFullyCollected, prime: isPrime }]" ref="root" :data-testid="testId">
     <div class="top-accent" :style="{ background: accentColor }" aria-hidden="true"></div>
     <div class="card-header">
       <div class="accent" :style="{ background: accentColor }"></div>
@@ -139,6 +139,11 @@ const emit = defineEmits<{ (e: "update", payload: WarframeUpdate): void }>();
 import { ref, watch, computed, toRef, watchEffect } from "vue";
 import { onMounted, onBeforeUnmount } from "vue";
 const warframe = toRef(props as { warframe: Warframe }, "warframe");
+
+const testId = computed(() => {
+  const name = String(warframe.value?.name || '')
+  return 'card-' + name.replace(/\s+/g, '-').toLowerCase()
+})
 
 // local reactive copies so checkboxes can be toggled (props are readonly)
 const neuropticsCollected = ref(false);
