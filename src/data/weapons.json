@@ -5,7 +5,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -14,7 +31,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Nitain Extract",
+                "count": 2
+            },
+            {
+                "name": "War Blade",
+                "count": 2
+            },
+            {
+                "name": "War Hilt",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -23,7 +61,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 700
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 850
+            },
+            {
+                "name": "Morphics",
+                "count": 4
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -32,7 +91,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -41,7 +121,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -50,7 +151,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -59,7 +177,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Hilt",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -68,7 +203,12 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -77,7 +217,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Hexenon",
+                "count": 200
+            },
+            {
+                "name": "Nano Spores",
+                "count": 8000
+            },
+            {
+                "name": "Neurodes",
+                "count": 4
+            },
+            {
+                "name": "Plastids",
+                "count": 925
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -86,7 +247,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -95,7 +277,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 3
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 9000
+            },
+            {
+                "name": "Fieldron",
+                "count": 8
+            },
+            {
+                "name": "Plastids",
+                "count": 600
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -104,7 +307,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Control Module",
+                "count": 25
+            },
+            {
+                "name": "Cryotic",
+                "count": 925
+            },
+            {
+                "name": "Fieldron",
+                "count": 5
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -113,7 +337,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Hexenon",
+                "count": 200
+            },
+            {
+                "name": "Nano Spores",
+                "count": 8000
+            },
+            {
+                "name": "Neurodes",
+                "count": 4
+            },
+            {
+                "name": "Plastids",
+                "count": 925
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -122,7 +367,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -131,7 +397,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 3
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 9000
+            },
+            {
+                "name": "Fieldron",
+                "count": 8
+            },
+            {
+                "name": "Plastids",
+                "count": 600
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -140,7 +427,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Control Module",
+                "count": 25
+            },
+            {
+                "name": "Cryotic",
+                "count": 925
+            },
+            {
+                "name": "Fieldron",
+                "count": 5
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -149,7 +457,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 9950
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Detonite Injector",
+                "count": 5
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Plastids",
+                "count": 700
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -158,7 +487,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 800
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 2
+            },
+            {
+                "name": "Rubedo",
+                "count": 200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -167,7 +517,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 4300
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Cryotic",
+                "count": 575
+            },
+            {
+                "name": "Ferrite",
+                "count": 3500
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -176,7 +547,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -185,7 +577,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Fieldron",
+                "count": 10
+            },
+            {
+                "name": "Heart Noctrul",
+                "count": 25
+            },
+            {
+                "name": "Tepa Nodule",
+                "count": 40
+            },
+            {
+                "name": "Tromyzon Entroplasma",
+                "count": 20
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -194,7 +607,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 900
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 6
+            },
+            {
+                "name": "Plastids",
+                "count": 900
+            },
+            {
+                "name": "Salvage",
+                "count": 750
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -203,7 +637,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -212,7 +667,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -221,7 +697,12 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -230,7 +711,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -239,7 +741,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -248,7 +767,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 150
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 600
+            },
+            {
+                "name": "Morphics",
+                "count": 1
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 400
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -257,7 +797,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -266,7 +827,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 1750
+            },
+            {
+                "name": "Gallium",
+                "count": 3
+            },
+            {
+                "name": "Plastids",
+                "count": 700
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 600
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -275,7 +857,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Grip",
+                "count": 1
+            },
+            {
+                "name": "Lower Limb",
+                "count": 1
+            },
+            {
+                "name": "String",
+                "count": 1
+            },
+            {
+                "name": "Upper Limb",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -284,7 +887,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Neurodes",
+                "count": 2
+            },
+            {
+                "name": "Rubedo",
+                "count": 300
+            },
+            {
+                "name": "Salvage",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -293,7 +917,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 600
+            },
+            {
+                "name": "Ferrite",
+                "count": 4500
+            },
+            {
+                "name": "Fieldron",
+                "count": 2
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -302,7 +947,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -311,7 +973,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 950
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 1100
+            },
+            {
+                "name": "Morphics",
+                "count": 5
+            },
+            {
+                "name": "Nano Spores",
+                "count": 5500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -320,7 +1003,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 900
+            },
+            {
+                "name": "Morphics",
+                "count": 6
+            },
+            {
+                "name": "Plastids",
+                "count": 900
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 750
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -329,7 +1033,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 30000
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Fieldron",
+                "count": 5
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Salvage",
+                "count": 35000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -338,7 +1063,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Hexenon",
+                "count": 350
+            },
+            {
+                "name": "Nano Spores",
+                "count": 7500
+            },
+            {
+                "name": "Rubedo",
+                "count": 2100
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -347,7 +1093,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -356,7 +1123,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 550
+            },
+            {
+                "name": "Cryotic",
+                "count": 2500
+            },
+            {
+                "name": "Fieldron",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -374,7 +1162,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 400
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Neurodes",
+                "count": 2
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 100
+            },
+            {
+                "name": "Salvage",
+                "count": 900
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -392,7 +1201,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Detonite Injector",
+                "count": 2
+            },
+            {
+                "name": "Ferrite",
+                "count": 5000
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 5000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -401,7 +1231,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 5
+            },
+            {
+                "name": "Nano Spores",
+                "count": 6000
+            },
+            {
+                "name": "Rubedo",
+                "count": 3600
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -410,7 +1261,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 900
+            },
+            {
+                "name": "Neurodes",
+                "count": 5
+            },
+            {
+                "name": "Rubedo",
+                "count": 1000
+            },
+            {
+                "name": "Salvage",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -428,7 +1300,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Detonite Injector",
+                "count": 2
+            },
+            {
+                "name": "Ferrite",
+                "count": 5000
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Nano Spores",
+                "count": 5000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -437,7 +1330,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 3
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Detonite Injector",
+                "count": 5
+            },
+            {
+                "name": "Ferrite",
+                "count": 10000
+            },
+            {
+                "name": "Rubedo",
+                "count": 5000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -446,7 +1360,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 400
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Neurodes",
+                "count": 2
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 100
+            },
+            {
+                "name": "Salvage",
+                "count": 900
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -455,7 +1390,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -464,7 +1416,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Cryotic",
+                "count": 500
+            },
+            {
+                "name": "Oxium",
+                "count": 500
+            },
+            {
+                "name": "Salvage",
+                "count": 2500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -473,7 +1446,12 @@
         "type": "kuva",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -482,7 +1460,12 @@
         "type": "kuva",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -491,7 +1474,12 @@
         "type": "kuva",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -500,7 +1488,12 @@
         "type": "kuva",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -509,7 +1502,12 @@
         "type": "kuva",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -518,7 +1516,12 @@
         "type": "kuva",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -527,7 +1530,12 @@
         "type": "kuva",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -536,7 +1544,12 @@
         "type": "kuva",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -545,7 +1558,12 @@
         "type": "kuva",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -554,7 +1572,12 @@
         "type": "kuva",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -563,7 +1586,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 1000
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 5
+            },
+            {
+                "name": "Plastids",
+                "count": 800
+            },
+            {
+                "name": "Salvage",
+                "count": 900
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -572,7 +1616,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -581,7 +1646,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -590,7 +1672,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 8200
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Cryotic",
+                "count": 2400
+            },
+            {
+                "name": "Fieldron",
+                "count": 10
+            },
+            {
+                "name": "Nitain Extract",
+                "count": 3
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -599,7 +1702,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Chassis",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -635,7 +1759,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Cernos",
+                "count": 1
+            },
+            {
+                "name": "Cryotic",
+                "count": 1200
+            },
+            {
+                "name": "Nano Spores",
+                "count": 2300
+            },
+            {
+                "name": "Plastids",
+                "count": 1400
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -644,7 +1789,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 4
+            },
+            {
+                "name": "Nano Spores",
+                "count": 3000
+            },
+            {
+                "name": "Neurodes",
+                "count": 3
+            },
+            {
+                "name": "Rubedo",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -653,7 +1819,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -662,7 +1849,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 600
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Detonite Injector",
+                "count": 5
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Salvage",
+                "count": 5000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -671,7 +1879,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Cryotic",
+                "count": 600
+            },
+            {
+                "name": "Fieldron",
+                "count": 5
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 20
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -689,7 +1918,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 3
+            },
+            {
+                "name": "Nano Spores",
+                "count": 2000
+            },
+            {
+                "name": "Plastids",
+                "count": 600
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 700
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -698,7 +1948,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Grip",
+                "count": 1
+            },
+            {
+                "name": "Lower Limb",
+                "count": 1
+            },
+            {
+                "name": "String",
+                "count": 1
+            },
+            {
+                "name": "Upper Limb",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -707,7 +1978,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Eidolon Shard",
+                "count": 5
+            },
+            {
+                "name": "Galatine",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            },
+            {
+                "name": "Orokin Ducats",
+                "count": 1000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -716,7 +2008,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 400
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 1000
+            },
+            {
+                "name": "Control Module",
+                "count": 3
+            },
+            {
+                "name": "Ferrite",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -752,7 +2065,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 1000
+            },
+            {
+                "name": "Fieldron",
+                "count": 7
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Salvage",
+                "count": 7000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -770,7 +2104,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Fersteel Alloy",
+                "count": 15
+            },
+            {
+                "name": "Grokdrul",
+                "count": 75
+            },
+            {
+                "name": "Neural Sensors",
+                "count": 5
+            },
+            {
+                "name": "Salvage",
+                "count": 12450
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -779,7 +2134,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 1300
+            },
+            {
+                "name": "Rubedo",
+                "count": 900
+            },
+            {
+                "name": "Salvage",
+                "count": 3800
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -788,7 +2164,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -806,7 +2203,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 2500
+            },
+            {
+                "name": "Nitain Extract",
+                "count": 2
+            },
+            {
+                "name": "Oxium",
+                "count": 350
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 2500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -815,7 +2233,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -824,7 +2263,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 7
+            },
+            {
+                "name": "Plastids",
+                "count": 850
+            },
+            {
+                "name": "Rubedo",
+                "count": 1200
+            },
+            {
+                "name": "Salvage",
+                "count": 8000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -833,7 +2293,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -851,7 +2332,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 900
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 5
+            },
+            {
+                "name": "Plastids",
+                "count": 900
+            },
+            {
+                "name": "Salvage",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -860,7 +2362,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -869,7 +2388,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 15000
+            },
+            {
+                "name": "Neural Sensors",
+                "count": 3
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 8000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -878,7 +2418,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -896,7 +2457,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -905,7 +2487,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -914,7 +2513,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 1000
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Fieldron",
+                "count": 7
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Salvage",
+                "count": 7000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -932,7 +2552,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 2
+            },
+            {
+                "name": "Rubedo",
+                "count": 200
+            },
+            {
+                "name": "Salvage",
+                "count": 800
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -941,7 +2582,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -959,7 +2621,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Neurodes",
+                "count": 5
+            },
+            {
+                "name": "Rubedo",
+                "count": 4000
+            },
+            {
+                "name": "Salvage",
+                "count": 15000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -968,7 +2651,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -977,7 +2681,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 400
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Control Module",
+                "count": 2
+            },
+            {
+                "name": "Ferrite",
+                "count": 900
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 100
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -986,7 +2711,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Latron",
+                "count": 1
+            },
+            {
+                "name": "Plastids",
+                "count": 650
+            },
+            {
+                "name": "Rubedo",
+                "count": 600
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -995,7 +2741,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1004,7 +2771,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 900
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 3
+            },
+            {
+                "name": "Rubedo",
+                "count": 1200
+            },
+            {
+                "name": "Salvage",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1013,7 +2801,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1022,7 +2831,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Cryotic",
+                "count": 800
+            },
+            {
+                "name": "Oxium",
+                "count": 200
+            },
+            {
+                "name": "Salvage",
+                "count": 1500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1031,7 +2861,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 600
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Mutagen Mass",
+                "count": 2
+            },
+            {
+                "name": "Salvage",
+                "count": 4500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1040,7 +2891,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Seriglass Shard",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1049,7 +2921,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Cryotic",
+                "count": 600
+            },
+            {
+                "name": "Ferrite",
+                "count": 7250
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 10
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1058,7 +2951,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Nano Spores",
+                "count": 3000
+            },
+            {
+                "name": "Neurodes",
+                "count": 4
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 4
+            },
+            {
+                "name": "Rubedo",
+                "count": 2500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1067,7 +2981,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1076,7 +3011,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 800
+            },
+            {
+                "name": "Morphics",
+                "count": 5
+            },
+            {
+                "name": "Plastids",
+                "count": 800
+            },
+            {
+                "name": "Salvage",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1094,7 +3050,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 2400
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Drakgoon",
+                "count": 1
+            },
+            {
+                "name": "Kuva",
+                "count": 1800
+            },
+            {
+                "name": "Salvage",
+                "count": 5500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1103,7 +3080,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 450
+            },
+            {
+                "name": "Morphics",
+                "count": 4
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 500
+            },
+            {
+                "name": "Salvage",
+                "count": 2750
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1112,7 +3110,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Mutagen Mass",
+                "count": 5
+            },
+            {
+                "name": "Nano Spores",
+                "count": 5000
+            },
+            {
+                "name": "Salvage",
+                "count": 6000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1121,7 +3140,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Furis",
+                "count": 1
+            },
+            {
+                "name": "Furis",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1130,7 +3166,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Link",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1139,7 +3192,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Bolto",
+                "count": 1
+            },
+            {
+                "name": "Bolto",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1148,7 +3218,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Link",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1157,7 +3244,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Bronco",
+                "count": 1
+            },
+            {
+                "name": "Bronco",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1166,7 +3270,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Bronco Prime",
+                "count": 1
+            },
+            {
+                "name": "Bronco Prime",
+                "count": 1
+            },
+            {
+                "name": "Link",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1175,7 +3296,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Akbolto",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Dual Skana",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1184,7 +3322,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Link",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1202,7 +3361,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Akstiletto",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Cryotic",
+                "count": 200
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1211,7 +3387,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Link",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1220,7 +3413,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 200
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 2
+            },
+            {
+                "name": "Salvage",
+                "count": 800
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1229,7 +3443,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Link",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1238,7 +3469,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 2
+            },
+            {
+                "name": "Vasto",
+                "count": 1
+            },
+            {
+                "name": "Vasto",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1247,7 +3495,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Link",
+                "count": 1
+            },
+            {
+                "name": "Vasto Prime",
+                "count": 1
+            },
+            {
+                "name": "Vasto Prime",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1256,7 +3521,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 2
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 1000
+            },
+            {
+                "name": "Salvage",
+                "count": 1500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1265,7 +3551,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 600
+            },
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 400
+            },
+            {
+                "name": "Salvage",
+                "count": 900
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1274,7 +3581,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 1300
+            },
+            {
+                "name": "Rubedo",
+                "count": 800
+            },
+            {
+                "name": "Salvage",
+                "count": 1500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1283,7 +3611,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 4
+            },
+            {
+                "name": "Nano Spores",
+                "count": 3000
+            },
+            {
+                "name": "Neurodes",
+                "count": 3
+            },
+            {
+                "name": "Rubedo",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1292,7 +3641,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Lower Limb",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "String",
+                "count": 1
+            },
+            {
+                "name": "Upper Limb",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1301,7 +3671,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Lato",
+                "count": 1
+            },
+            {
+                "name": "Neurodes",
+                "count": 2
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 2
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 800
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1310,7 +3701,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1319,7 +3727,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 1200
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 700
+            },
+            {
+                "name": "Neurodes",
+                "count": 2
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 800
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1328,7 +3757,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1337,7 +3783,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 200
+            },
+            {
+                "name": "Control Module",
+                "count": 2
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Salvage",
+                "count": 800
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1346,7 +3813,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 4
+            },
+            {
+                "name": "Nano Spores",
+                "count": 3000
+            },
+            {
+                "name": "Neurodes",
+                "count": 2
+            },
+            {
+                "name": "Rubedo",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1355,7 +3843,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1400,7 +3905,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 1200
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Mutagen Mass",
+                "count": 5
+            },
+            {
+                "name": "Salvage",
+                "count": 15000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1409,7 +3935,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 5
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1418,7 +3961,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 300
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 750
+            },
+            {
+                "name": "Neurodes",
+                "count": 4
+            },
+            {
+                "name": "Salvage",
+                "count": 400
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1427,7 +3991,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 2500
+            },
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 400
+            },
+            {
+                "name": "Plastids",
+                "count": 650
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1454,7 +4039,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 5
+            },
+            {
+                "name": "Plastids",
+                "count": 500
+            },
+            {
+                "name": "Rubedo",
+                "count": 600
+            },
+            {
+                "name": "Salvage",
+                "count": 4000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1463,7 +4069,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 8
+            },
+            {
+                "name": "Pouch",
+                "count": 2
+            },
+            {
+                "name": "Stars",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1472,7 +4095,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Bolto",
+                "count": 1
+            },
+            {
+                "name": "Control Module",
+                "count": 15
+            },
+            {
+                "name": "Ferrite",
+                "count": 9750
+            },
+            {
+                "name": "Viper",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1481,7 +4125,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1490,7 +4151,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Cryotic",
+                "count": 3800
+            },
+            {
+                "name": "Rubedo",
+                "count": 5200
+            },
+            {
+                "name": "Salvage",
+                "count": 20000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1499,7 +4181,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 5
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1508,7 +4207,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Detonite Injector",
+                "count": 2
+            },
+            {
+                "name": "Ferrite",
+                "count": 5000
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Plastids",
+                "count": 5000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1517,7 +4237,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 200
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Neurodes",
+                "count": 2
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 120
+            },
+            {
+                "name": "Salvage",
+                "count": 750
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1526,7 +4267,12 @@
         "type": "kuva",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1535,7 +4281,12 @@
         "type": "kuva",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1544,7 +4295,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Cryotic",
+                "count": 4800
+            },
+            {
+                "name": "Kraken",
+                "count": 1
+            },
+            {
+                "name": "Plastids",
+                "count": 3600
+            },
+            {
+                "name": "Tellurium",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1553,7 +4325,12 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1571,7 +4348,20 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1589,7 +4379,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1598,7 +4405,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 400
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 100
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 2
+            },
+            {
+                "name": "Salvage",
+                "count": 900
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1607,7 +4435,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1616,7 +4461,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Detonite Injector",
+                "count": 2
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 5000
+            },
+            {
+                "name": "Salvage",
+                "count": 5000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1670,7 +4536,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Detonite Injector",
+                "count": 2
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 2
+            },
+            {
+                "name": "Salvage",
+                "count": 5500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1679,7 +4566,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Charamote Sagan Module",
+                "count": 20
+            },
+            {
+                "name": "Fieldron",
+                "count": 10
+            },
+            {
+                "name": "Thermal Sludge",
+                "count": 40
+            },
+            {
+                "name": "Venerdo Alloy",
+                "count": 55
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1688,7 +4596,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 4500
+            },
+            {
+                "name": "Cryotic",
+                "count": 5500
+            },
+            {
+                "name": "Salvage",
+                "count": 25000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1697,7 +4626,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1706,7 +4652,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 200
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Control Module",
+                "count": 2
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Salvage",
+                "count": 800
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1715,7 +4682,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1751,7 +4735,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 2
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1769,7 +4770,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1778,7 +4796,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 6500
+            },
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Oxium",
+                "count": 600
+            },
+            {
+                "name": "Plastids",
+                "count": 2600
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1787,7 +4826,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 700
+            },
+            {
+                "name": "Ferrite",
+                "count": 5000
+            },
+            {
+                "name": "Fieldron",
+                "count": 3
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1796,7 +4856,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 2500
+            },
+            {
+                "name": "Gallium",
+                "count": 5
+            },
+            {
+                "name": "Plastids",
+                "count": 800
+            },
+            {
+                "name": "Salvage",
+                "count": 4000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1805,7 +4886,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 8
+            },
+            {
+                "name": "Pouch",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1814,7 +4912,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 1200
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 4
+            },
+            {
+                "name": "Neurodes",
+                "count": 3
+            },
+            {
+                "name": "Salvage",
+                "count": 3000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1823,7 +4942,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Coprite Alloy",
+                "count": 25
+            },
+            {
+                "name": "Ferrite",
+                "count": 4485
+            },
+            {
+                "name": "Grokdrul",
+                "count": 45
+            },
+            {
+                "name": "Neurodes",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1868,7 +5008,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Nano Spores",
+                "count": 900
+            },
+            {
+                "name": "Neurodes",
+                "count": 2
+            },
+            {
+                "name": "Plastids",
+                "count": 400
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 100
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1877,7 +5038,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 900
+            },
+            {
+                "name": "Neurodes",
+                "count": 5
+            },
+            {
+                "name": "Rubedo",
+                "count": 1200
+            },
+            {
+                "name": "Salvage",
+                "count": 1500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1886,7 +5068,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Kohmak",
+                "count": 1
+            },
+            {
+                "name": "Kohmak",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1895,7 +5094,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 1
+            },
+            {
+                "name": "Viper",
+                "count": 1
+            },
+            {
+                "name": "Viper",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1904,7 +5120,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrels",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Link",
+                "count": 1
+            },
+            {
+                "name": "Receivers",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1913,7 +5146,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 1200
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 700
+            },
+            {
+                "name": "Neurodes",
+                "count": 4
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 1000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1922,7 +5176,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1931,7 +5202,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 600
+            },
+            {
+                "name": "Morphics",
+                "count": 1
+            },
+            {
+                "name": "Nano Spores",
+                "count": 900
+            },
+            {
+                "name": "Salvage",
+                "count": 300
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1949,7 +5241,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 6500
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Control Module",
+                "count": 8
+            },
+            {
+                "name": "Nano Spores",
+                "count": 5000
+            },
+            {
+                "name": "Plastids",
+                "count": 350
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1958,7 +5271,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1976,7 +5306,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Cryotic",
+                "count": 3300
+            },
+            {
+                "name": "Detonite Injector",
+                "count": 5
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Salvage",
+                "count": 7500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1985,7 +5336,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 600
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 600
+            },
+            {
+                "name": "Neurodes",
+                "count": 2
+            },
+            {
+                "name": "Salvage",
+                "count": 500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -1994,7 +5366,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 200
+            },
+            {
+                "name": "Gallium",
+                "count": 2
+            },
+            {
+                "name": "Morphics",
+                "count": 4
+            },
+            {
+                "name": "Salvage",
+                "count": 800
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2003,7 +5396,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 450
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 600
+            },
+            {
+                "name": "Nano Spores",
+                "count": 900
+            },
+            {
+                "name": "Salvage",
+                "count": 900
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2012,7 +5426,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gauntlet",
+                "count": 2
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2021,7 +5452,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 2150
+            },
+            {
+                "name": "Gallium",
+                "count": 6
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2030,7 +5482,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 800
+            },
+            {
+                "name": "Rubedo",
+                "count": 200
+            },
+            {
+                "name": "Salvage",
+                "count": 1500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2039,7 +5512,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 150
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 600
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 1
+            },
+            {
+                "name": "Salvage",
+                "count": 900
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2048,7 +5542,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Ornament",
+                "count": 2
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2057,7 +5568,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Nitain Extract",
+                "count": 2
+            },
+            {
+                "name": "War Blade",
+                "count": 2
+            },
+            {
+                "name": "War Hilt",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2075,7 +5607,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 15000
+            },
+            {
+                "name": "Mutagen Mass",
+                "count": 10
+            },
+            {
+                "name": "Nitain Extract",
+                "count": 5
+            },
+            {
+                "name": "Plastids",
+                "count": 4000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2084,7 +5637,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 500
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 500
+            },
+            {
+                "name": "Gallium",
+                "count": 4
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 600
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2102,7 +5676,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2111,7 +5702,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 500
+            },
+            {
+                "name": "Neurodes",
+                "count": 2
+            },
+            {
+                "name": "Plastids",
+                "count": 500
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 300
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2120,7 +5732,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Dual Skana",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Mutagen Mass",
+                "count": 10
+            },
+            {
+                "name": "Rubedo",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2129,7 +5762,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 800
+            },
+            {
+                "name": "Neurodes",
+                "count": 2
+            },
+            {
+                "name": "Plastids",
+                "count": 200
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 75
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2138,7 +5792,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 10000
+            },
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Nitain Extract",
+                "count": 5
+            },
+            {
+                "name": "Plastids",
+                "count": 1700
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2147,7 +5822,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2156,7 +5848,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Nikana",
+                "count": 1
+            },
+            {
+                "name": "Oxium",
+                "count": 75
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2165,7 +5874,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 1200
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 5
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 800
+            },
+            {
+                "name": "Salvage",
+                "count": 1000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2174,7 +5904,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 850
+            },
+            {
+                "name": "Morphics",
+                "count": 3
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 800
+            },
+            {
+                "name": "Salvage",
+                "count": 900
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2183,7 +5934,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 1000
+            },
+            {
+                "name": "Morphics",
+                "count": 2
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 700
+            },
+            {
+                "name": "Salvage",
+                "count": 900
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2192,7 +5964,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 1200
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Mutagen Mass",
+                "count": 4
+            },
+            {
+                "name": "Salvage",
+                "count": 15000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2210,7 +6003,20 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2219,7 +6025,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 300
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 850
+            },
+            {
+                "name": "Morphics",
+                "count": 2
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 300
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2228,7 +6055,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 800
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 1100
+            },
+            {
+                "name": "Morphics",
+                "count": 4
+            },
+            {
+                "name": "Salvage",
+                "count": 900
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2237,7 +6085,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 600
+            },
+            {
+                "name": "Morphics",
+                "count": 5
+            },
+            {
+                "name": "Nano Spores",
+                "count": 1200
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 600
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2246,7 +6115,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 1000
+            },
+            {
+                "name": "Morphics",
+                "count": 10
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 1000
+            },
+            {
+                "name": "Rubedo",
+                "count": 1000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2255,7 +6145,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 700
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 900
+            },
+            {
+                "name": "Morphics",
+                "count": 4
+            },
+            {
+                "name": "Rubedo",
+                "count": 700
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2264,7 +6175,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 600
+            },
+            {
+                "name": "Morphics",
+                "count": 1
+            },
+            {
+                "name": "Nano Spores",
+                "count": 900
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 600
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2273,7 +6205,20 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2282,7 +6227,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 80
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 3
+            },
+            {
+                "name": "Rubedo",
+                "count": 300
+            },
+            {
+                "name": "Salvage",
+                "count": 750
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2291,7 +6257,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Head",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2300,7 +6283,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 500
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 600
+            },
+            {
+                "name": "Nano Spores",
+                "count": 1000
+            },
+            {
+                "name": "Salvage",
+                "count": 900
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2309,7 +6313,20 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Left Gauntlet",
+                "count": 1
+            },
+            {
+                "name": "Right Gauntlet",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2318,7 +6335,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 200
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 4
+            },
+            {
+                "name": "Rubedo",
+                "count": 500
+            },
+            {
+                "name": "Salvage",
+                "count": 750
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2327,7 +6365,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2336,7 +6391,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 1900
+            },
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Plastids",
+                "count": 1400
+            },
+            {
+                "name": "Salvage",
+                "count": 2600
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2345,7 +6421,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 5000
+            },
+            {
+                "name": "Morphics",
+                "count": 10
+            },
+            {
+                "name": "Nano Spores",
+                "count": 6000
+            },
+            {
+                "name": "Salvage",
+                "count": 4500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2354,7 +6451,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Disc",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2363,7 +6477,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 80
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 3
+            },
+            {
+                "name": "Rubedo",
+                "count": 300
+            },
+            {
+                "name": "Salvage",
+                "count": 750
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2372,7 +6507,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2381,7 +6533,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 2500
+            },
+            {
+                "name": "Gallium",
+                "count": 3
+            },
+            {
+                "name": "Oxium",
+                "count": 65
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 750
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2390,7 +6563,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2399,7 +6589,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 4800
+            },
+            {
+                "name": "Nano Spores",
+                "count": 5000
+            },
+            {
+                "name": "Oxium",
+                "count": 500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2417,7 +6628,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 150
+            },
+            {
+                "name": "Ferrite",
+                "count": 500
+            },
+            {
+                "name": "Neural Sensors",
+                "count": 1
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 75
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2426,7 +6658,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 300
+            },
+            {
+                "name": "Ferrite",
+                "count": 500
+            },
+            {
+                "name": "Neurodes",
+                "count": 1
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 300
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2435,7 +6688,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gammacor",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 1
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 700
+            },
+            {
+                "name": "Rubedo",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2444,7 +6718,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Kogake",
+                "count": 1
+            },
+            {
+                "name": "Nano Spores",
+                "count": 4600
+            },
+            {
+                "name": "Nitain Extract",
+                "count": 3
+            },
+            {
+                "name": "Plastids",
+                "count": 1100
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2453,7 +6748,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 500
+            },
+            {
+                "name": "Morphics",
+                "count": 1
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 75
+            },
+            {
+                "name": "Rubedo",
+                "count": 300
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2462,7 +6778,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Detonite Injector",
+                "count": 5
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Rubedo",
+                "count": 600
+            },
+            {
+                "name": "Salvage",
+                "count": 5000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2471,7 +6808,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Detonite Injector",
+                "count": 7
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Rubedo",
+                "count": 2000
+            },
+            {
+                "name": "Salvage",
+                "count": 7500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2480,7 +6838,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 900
+            },
+            {
+                "name": "Ferrite",
+                "count": 1200
+            },
+            {
+                "name": "Neural Sensors",
+                "count": 5
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2489,7 +6868,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Oxium",
+                "count": 100
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 800
+            },
+            {
+                "name": "Salvage",
+                "count": 1500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2498,7 +6898,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2507,7 +6924,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 8000
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Detonite Injector",
+                "count": 5
+            },
+            {
+                "name": "Ferrite",
+                "count": 6000
+            },
+            {
+                "name": "Kuva",
+                "count": 1400
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2516,7 +6954,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 500
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 1200
+            },
+            {
+                "name": "Morphics",
+                "count": 3
+            },
+            {
+                "name": "Rubedo",
+                "count": 400
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2525,7 +6984,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Boot",
+                "count": 2
+            },
+            {
+                "name": "Gauntlet",
+                "count": 2
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2534,7 +7010,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 4375
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 8
+            },
+            {
+                "name": "Oxium",
+                "count": 125
+            },
+            {
+                "name": "Tellurium",
+                "count": 5
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2543,7 +7040,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 1500
+            },
+            {
+                "name": "Nano Spores",
+                "count": 2000
+            },
+            {
+                "name": "Plastids",
+                "count": 1000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2552,7 +7070,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 2
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2561,7 +7096,12 @@
         "type": "kuva",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2570,7 +7110,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 20
+            },
+            {
+                "name": "Morphics",
+                "count": 2
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 4200
+            },
+            {
+                "name": "Rubedo",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2579,7 +7140,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 1000
+            },
+            {
+                "name": "Morphics",
+                "count": 2
+            },
+            {
+                "name": "Neural Sensors",
+                "count": 3
+            },
+            {
+                "name": "Salvage",
+                "count": 900
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2588,7 +7170,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Nano Spores",
+                "count": 2300
+            },
+            {
+                "name": "Neurodes",
+                "count": 4
+            },
+            {
+                "name": "Plastids",
+                "count": 1400
+            },
+            {
+                "name": "Tipedo",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2597,7 +7200,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 900
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 4
+            },
+            {
+                "name": "Plastids",
+                "count": 800
+            },
+            {
+                "name": "Salvage",
+                "count": 750
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2615,7 +7239,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 80
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 750
+            },
+            {
+                "name": "Gallium",
+                "count": 3
+            },
+            {
+                "name": "Rubedo",
+                "count": 300
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2633,7 +7278,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Mutagen Mass",
+                "count": 4
+            },
+            {
+                "name": "Nano Spores",
+                "count": 15000
+            },
+            {
+                "name": "Plastids",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2669,7 +7335,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 10
+            },
+            {
+                "name": "Neurodes",
+                "count": 2
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 800
+            },
+            {
+                "name": "Rubedo",
+                "count": 200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2678,7 +7365,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 2
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2687,7 +7391,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 1500
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 800
+            },
+            {
+                "name": "Rubedo",
+                "count": 200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2696,7 +7421,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 200
+            },
+            {
+                "name": "Argon Crystal",
+                "count": 3
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Oxium",
+                "count": 75
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2705,7 +7451,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Hilt",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2714,7 +7477,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 4000
+            },
+            {
+                "name": "Plastids",
+                "count": 800
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2723,7 +7507,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Chain",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 2
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2732,7 +7533,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 300
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 650
+            },
+            {
+                "name": "Ferrite",
+                "count": 700
+            },
+            {
+                "name": "Salvage",
+                "count": 900
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2741,7 +7563,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 4200
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Oxium",
+                "count": 1800
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 3400
+            },
+            {
+                "name": "Tellurium",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2750,7 +7593,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 700
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 850
+            },
+            {
+                "name": "Morphics",
+                "count": 4
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 500
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2759,7 +7623,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2768,7 +7649,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 80
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 300
+            },
+            {
+                "name": "Control Module",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 750
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2777,7 +7679,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Neurodes",
+                "count": 5
+            },
+            {
+                "name": "Subcortex",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2786,7 +7705,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 500
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 1
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 50
+            },
+            {
+                "name": "Salvage",
+                "count": 450
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2795,7 +7735,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 300
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Fieldron",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Salvage",
+                "count": 1000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2822,7 +7783,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Dual Skana",
+                "count": 1
+            },
+            {
+                "name": "Vasto",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2831,7 +7809,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2840,7 +7835,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2849,7 +7861,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Ankyros",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Dual Cleavers",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Tellurium",
+                "count": 2
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2858,7 +7891,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Akstiletto",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Control Module",
+                "count": 2
+            },
+            {
+                "name": "Cryotic",
+                "count": 3300
+            },
+            {
+                "name": "Plastids",
+                "count": 1000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2867,7 +7921,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 500
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 300
+            },
+            {
+                "name": "Gallium",
+                "count": 3
+            },
+            {
+                "name": "Salvage",
+                "count": 750
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2876,7 +7951,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2885,7 +7977,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Mutagen Mass",
+                "count": 4
+            },
+            {
+                "name": "Nano Spores",
+                "count": 15000
+            },
+            {
+                "name": "Plastids",
+                "count": 1200
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2903,7 +8016,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Heatsink",
+                "count": 1
+            },
+            {
+                "name": "Hilt",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2912,7 +8042,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 10
+            },
+            {
+                "name": "Ninkondi",
+                "count": 1
+            },
+            {
+                "name": "Plastids",
+                "count": 1100
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2921,7 +8072,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 50000
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Cryotic",
+                "count": 30000
+            },
+            {
+                "name": "Magistar",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2930,7 +8098,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 450
+            },
+            {
+                "name": "Morphics",
+                "count": 4
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 500
+            },
+            {
+                "name": "Salvage",
+                "count": 2750
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2939,7 +8128,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 600
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Ferrite",
+                "count": 1200
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 3
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2948,7 +8158,28 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Guard",
+                "count": 1
+            },
+            {
+                "name": "Hilt",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 10
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2957,7 +8188,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 1100
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Morphics",
+                "count": 3
+            },
+            {
+                "name": "Plastids",
+                "count": 500
+            },
+            {
+                "name": "Salvage",
+                "count": 750
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2975,7 +8227,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Barrel",
+                "count": 1
+            },
+            {
+                "name": "Blade",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Receiver",
+                "count": 1
+            },
+            {
+                "name": "Stock",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2984,7 +8257,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Ankyros",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 5
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 3300
+            },
+            {
+                "name": "Rubedo",
+                "count": 700
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -2993,7 +8287,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blade",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gauntlet",
+                "count": 2
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -3002,7 +8313,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Bo",
+                "count": 1
+            },
+            {
+                "name": "Kunai",
+                "count": 1
+            },
+            {
+                "name": "Neural Sensors",
+                "count": 2
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 1600
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -3011,7 +8343,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Ornament",
+                "count": 2
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -3020,7 +8369,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Control Module",
+                "count": 2
+            },
+            {
+                "name": "Ferrite",
+                "count": 2000
+            },
+            {
+                "name": "Oxium",
+                "count": 100
+            },
+            {
+                "name": "Plastids",
+                "count": 800
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -3029,7 +8399,24 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Atomos",
+                "count": 1
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Control Module",
+                "count": 2
+            },
+            {
+                "name": "Dual Zoren",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -3038,7 +8425,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Detonite Injector",
+                "count": 5
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Krohkur",
+                "count": 1
+            },
+            {
+                "name": "Krohkur",
+                "count": 1
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -3056,7 +8464,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Forma",
+                "count": 1
+            },
+            {
+                "name": "Gallium",
+                "count": 4
+            },
+            {
+                "name": "Plastids",
+                "count": 500
+            },
+            {
+                "name": "Salvage",
+                "count": 1000
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -3065,7 +8494,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blades",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Gauntlet",
+                "count": 2
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -3074,7 +8520,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            },
+            {
+                "name": "Oxium",
+                "count": 925
+            },
+            {
+                "name": "Purified Heciphron",
+                "count": 10
+            },
+            {
+                "name": "Tempered Bapholite",
+                "count": 60
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -3083,7 +8550,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Alloy Plate",
+                "count": 11000
+            },
+            {
+                "name": "Argon Crystal",
+                "count": 2
+            },
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Cryotic",
+                "count": 875
+            },
+            {
+                "name": "Oxium",
+                "count": 225
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -3092,7 +8580,24 @@
         "type": "prime",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Head",
+                "count": 1
+            },
+            {
+                "name": "Orokin Cell",
+                "count": 15
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -3101,7 +8606,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Broken War",
+                "count": 1
+            },
+            {
+                "name": "Nitain Extract",
+                "count": 5
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 2300
+            },
+            {
+                "name": "Rubedo",
+                "count": 1400
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -3110,7 +8636,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Handle",
+                "count": 1
+            },
+            {
+                "name": "Head",
+                "count": 1
+            },
+            {
+                "name": "Motor",
+                "count": 1
+            },
+            {
+                "name": "Nitain Extract",
+                "count": 5
+            }
+        ],
         "main_blueprint_resources": []
     },
     {
@@ -3119,7 +8666,28 @@
         "type": "standard",
         "is_crafted": false,
         "is_mastered": false,
-        "parts": [],
+        "parts": [
+            {
+                "name": "Blueprint",
+                "count": 1
+            },
+            {
+                "name": "Circuits",
+                "count": 450
+            },
+            {
+                "name": "Morphics",
+                "count": 4
+            },
+            {
+                "name": "Polymer Bundle",
+                "count": 500
+            },
+            {
+                "name": "Salvage",
+                "count": 2750
+            }
+        ],
         "main_blueprint_resources": []
     }
 ]
