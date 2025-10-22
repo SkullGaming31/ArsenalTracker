@@ -1,0 +1,50 @@
+name: Post Changelog to Discord
+
+on:
+  push:
+    paths:
+      - 'CHANGELOG.md'
+  workflow_dispatch:
+
+jobs:
+  post-changelog:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read CHANGELOG
+        id: changelog
+        run: |
+          echo "CONTENT<<'EOF'" >> changelog.txt
+          sed -n '1,2000p' CHANGELOG.md >> changelog.txt
+          echo "EOF" >> changelog.txt
+          # Print a truncated preview for logs
+          echo "--- CHANGELOG preview ---"
+          sed -n '1,80p' CHANGELOG.md
+          echo "--- end preview ---"
+          # Save to output for later steps
+          echo "content<<EOF" >> $GITHUB_ENV
+          sed -n '1,4000p' CHANGELOG.md >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Post to Discord webhook
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+            echo "DISCORD_WEBHOOK_URL secret is not set. Skipping Discord post.";
+            exit 0;
+          fi
+
+          # Read and truncate the changelog to avoid hitting Discord limits
+          CONTENT_RAW=$(sed -n '1,500p' CHANGELOG.md | sed ':a;N;$!ba;s/"/\\"/g')
+          CONTENT_TRUNC=$(echo "$CONTENT_RAW" | cut -c1-1900)
+
+          # Build JSON payload (simple content field)
+          JSON_PAYLOAD="{\"username\":\"ArsenalTracker Bot\",\"content\":\"${CONTENT_TRUNC}\"}"
+
+          # Post to Discord
+          curl -s -H "Content-Type: application/json" -X POST -d "$JSON_PAYLOAD" "$DISCORD_WEBHOOK_URL"
