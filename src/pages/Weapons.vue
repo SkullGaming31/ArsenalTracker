@@ -10,7 +10,7 @@
         Type
         <select v-model="selectedType">
           <option value="all">All</option>
-          <option v-for="t in types" :key="t" :value="t">{{ t }}</option>
+          <option v-for="t in types" :key="t" :value="t" :disabled="!(typeCount(t) > 0)">{{ t }}</option>
         </select>
       </label>
 
@@ -31,6 +31,16 @@
 
       <div class="results">Showing {{ filtered.length }} results</div>
     </div>
+    
+    <section>
+      <h3>All weapons</h3>
+      <div class="grid">
+        <WeaponCard v-for="w in allSorted" :key="w.name" :weapon="w" @update="handleUpdate" />
+      </div>
+      <div class="names"><strong>All weapons list:</strong>
+        <ul><li v-for="w in allSorted" :key="w.name">{{ w.name }}</li></ul>
+      </div>
+    </section>
 
     <section>
       <h3>Primary</h3>
@@ -65,10 +75,12 @@
 </template>
 
 <script setup lang="ts">
+// give component a multi-word name to satisfy eslint vue/multi-word-component-names
+defineOptions({ name: 'WeaponsPage' })
 import { computed, ref } from 'vue'
 import WeaponCard from '../components/WeaponCard.vue'
 import { useCollectionStore } from '../stores/collection'
-import type { Weapon } from '../types/weapon'
+import type { Weapon, Part, PartWithCollected } from '../types/weapon'
 
 const collection = useCollectionStore()
 const all = computed<Weapon[]>(() => collection.mergedWeapons as Weapon[])
@@ -78,12 +90,33 @@ const hideCompleted = ref(false)
 const selectedType = ref('all')
 const craftedFilter = ref('all') // all | crafted | not-crafted
 
+// canonical type order provided by game taxonomy
+const typeOrder: string[] = ['standard', 'prime', 'kuva', 'tenet', 'prisma', 'vandal', 'wraith', 'dex', 'nightwatch']
+
 const types = computed(() => {
+  // include the full canonical list first, then any extra types from data
   const set = new Set(all.value.map(w => w.type || 'standard'))
-  return Array.from(set).sort()
+  const extras = Array.from(set).filter(t => !typeOrder.includes(t))
+  extras.sort()
+  return [...typeOrder, ...extras]
 })
 
-const flagTrue = (v: any) => {
+// counts of weapons per type (used to grey-out empty types)
+const typeCounts = computed<Record<string, number>>(() => {
+  const counts: Record<string, number> = {}
+  all.value.forEach(w => {
+    const t = w.type || 'standard'
+    counts[t] = (counts[t] || 0) + 1
+  })
+  return counts
+})
+
+// safe accessor for template to avoid "possibly undefined" when indexing
+const typeCount = (t: string): number => {
+  return typeCounts.value[t] ?? 0
+}
+
+const flagTrue = (v: unknown): boolean => {
   if (v === true) return true
   if (v === false) return false
   if (typeof v === 'string') return v.toLowerCase() === 'true'
@@ -91,7 +124,31 @@ const flagTrue = (v: any) => {
   return Boolean(v)
 }
 
-const isCompleted = (w: Weapon) => flagTrue((w as any).is_crafted) || flagTrue((w as any).is_mastered)
+// Determine whether a weapon should be considered "crafted" based on parts
+function isCrafted(w: Weapon): boolean {
+  const partsArr = (w.parts || []) as Part[]
+  // If there are no parts, fall back to explicit flag
+  if (!partsArr || partsArr.length === 0) return Boolean(w.is_crafted)
+
+  // Collect persisted override names (parts_collected or collected_parts)
+  const rawCollected = w.parts_collected ?? w.collected_parts
+  const collectedOverride: string[] = Array.isArray(rawCollected) ? rawCollected : []
+  const collectedSet = new Set(collectedOverride)
+
+  // A part is considered collected if either the part object has `collected: true`
+  // or its name appears in the persisted override list.
+  const allCollected = partsArr.every(p => {
+    const name = typeof p === 'string' ? p : p.name
+    const byPart = Boolean(((p as PartWithCollected) && (p as PartWithCollected).collected))
+    const byOverride = collectedSet.has(name)
+    return byPart || byOverride
+  })
+
+  if (allCollected) return true
+  return Boolean(w.is_crafted)
+}
+
+const isCompleted = (w: Weapon) => isCrafted(w) || flagTrue(w.is_mastered)
 
 const filtered = computed(() => {
   const q = query.value.trim().toLowerCase()
@@ -99,7 +156,7 @@ const filtered = computed(() => {
     if (selectedType.value !== 'all' && (w.type || 'standard') !== selectedType.value) return false
     if (craftedFilter.value !== 'all') {
       const wantsCrafted = craftedFilter.value === 'crafted'
-      if ((w.is_crafted || false) !== wantsCrafted) return false
+      if (isCrafted(w) !== wantsCrafted) return false
     }
     if (!q) return true
     return w.name.toLowerCase().includes(q)
@@ -108,16 +165,26 @@ const filtered = computed(() => {
   return list
 })
 
-const primaries = computed(() => filtered.value.filter(w => w.category === 'primary'))
-const secondaries = computed(() => filtered.value.filter(w => w.category === 'secondary'))
-const melees = computed(() => filtered.value.filter(w => w.category === 'melee'))
+const primaries = computed(() => filtered.value.filter(w => w.category === 'primary').slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
+const secondaries = computed(() => filtered.value.filter(w => w.category === 'secondary').slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
+const melees = computed(() => filtered.value.filter(w => w.category === 'melee').slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
 
-// expose length for results display
-const filteredLen = computed(() => filtered.value.length)
+// combined alphabetized list of all filtered weapons
+const allSorted = computed(() => filtered.value.slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
 
-function handleUpdate(payload: any) {
-  if (!payload || !payload.name) return
-  collection.setOverride(payload.name, payload)
+// payload shape when WeaponCard emits updates
+interface UpdatePayload {
+  name: string
+  parts_collected?: string[]
+  is_mastered?: boolean
+  parts?: Part[]
+}
+
+function handleUpdate(payload: unknown) {
+  if (typeof payload !== 'object' || payload === null) return
+  const p = payload as Partial<UpdatePayload>
+  if (!p.name) return
+  collection.setOverride(p.name, p as UpdatePayload)
 }
 </script>
 

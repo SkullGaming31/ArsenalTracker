@@ -45,3 +45,22 @@ These changes were made to diagnose and resolve intermittent test failures where
 	- The canonical source `src/data/weapons.api.json` still contains 621 weapons; the merge preserved the existing `weapons.json` records and populated parts where names matched.
 	- Consider running a name-normalization pass or appending missing API weapons into `src/data/weapons.json` to reach full coverage.
 	- If you want the current merged `weapons.json` committed, run `git add src/data/weapons.json && git commit -m "chore(data): populate weapons.parts from weapons.api.json"`.
+	-More work done on Weapons data quality
+
+	## Unreleased - 2025-10-25
+
+	- UX & persistence improvements
+		- Weapon cards: show market/purchase info for market-only weapons and add a visible market badge.
+		- Parts collection and Mastered state now persist via local overrides (parts_collected / is_mastered). Child cards emit updates and the collection store saves them to localStorage.
+		- Dashboard: clarified counts by labeling the large numbers as "Mastered" for easier reading.
+
+	- Performance
+		- Fixed a UI freeze when toggling many Warframe part checkboxes by reducing reactive churn: switched broad watchEffect usage to targeted watchers and changed the store override update to mutate a single override key (avoids replacing the whole overrides object).
+
+	- Data cleanup
+		- Removed `resources` / `main_blueprint_resources` from Prime weapon entries in `src/data/weapons.json` via a maintenance script (backup created at `src/data/weapons.json.bak`).
+
+	- Misc
+		- Added a combined "All weapons" view and enforced alphabetical ordering across weapon lists.
+		- Canonicalized type filter ordering and disabled type options with zero weapons.
+

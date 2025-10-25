@@ -82,7 +82,7 @@ export function mapRowsToOverrides(rows: ParsedRow[]) {
             const key = h.toLowerCase().includes('neuro') ? 'neuroptics_resources' : h.toLowerCase().includes('chassis') ? 'chassis_resources' : h.toLowerCase().includes('system') ? 'systems_resources' : h.toLowerCase().includes('blueprint') ? 'blueprint_resources' : null
             if (key) entry[key] = parsed
           }
-        } catch (e) {
+        } catch {
           // ignore JSON parse errors
         }
       }

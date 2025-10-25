@@ -20,7 +20,7 @@ test('export import roundtrip via localStorage', async ({ page }) => {
 
   // write payload to localStorage before the app loads so it will be read on initialization
   await page.context().addInitScript((p) => {
-    try { localStorage.setItem('arsenaltracker.v1', JSON.stringify(p)) } catch (e) {}
+    try { localStorage.setItem('arsenaltracker.v1', JSON.stringify(p)) } catch { }
   }, payload)
   await page.goto('/')
 
@@ -53,7 +53,7 @@ test('export import roundtrip via localStorage', async ({ page }) => {
   if (!exported) throw new Error('No exported data to restore')
   // restore via addInitScript so the app picks it up on next load
   await page.context().addInitScript((txt) => {
-    try { localStorage.setItem('arsenaltracker.v1', txt) } catch (e) {}
+    try { localStorage.setItem('arsenaltracker.v1', txt) } catch { }
   }, exported)
   await page.goto('/')
   // navigate back to Warframes and verify restored state

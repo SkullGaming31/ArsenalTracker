@@ -1,4 +1,4 @@
-import { ref, computed, watch } from 'vue'
+import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import Fuse from 'fuse.js'
 import type { Warframe } from '../types/warframe'

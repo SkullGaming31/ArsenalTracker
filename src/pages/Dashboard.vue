@@ -12,7 +12,7 @@
         </div>
         <div class="stat-body">
           <h4>Warframes</h4>
-          <div class="big">{{ totalWarframesMastered }} <small class="muted">/ {{ totalWarframes }}</small></div>
+          <div class="big"><small class="muted">Mastered:</small> {{ totalWarframesMastered }} <small class="muted">/ {{ totalWarframes }}</small></div>
           <div class="muted small-row">Primes: {{ wfPrimesCompleted }} / {{ wfPrimesTotal }} · Standard: {{ wfStandardsCompleted }} / {{ wfStandardsTotal }}</div>
           <div class="progress-small"><div class="fill" :style="{ width: Math.round((totalWarframesMastered/Math.max(1,totalWarframes))*100) + '%' }"></div></div>
         </div>
@@ -26,7 +26,7 @@
         </div>
         <div class="stat-body">
           <h4>Primaries</h4>
-          <div class="big">{{ mastered.primary }} <small class="muted">/ {{ total.primary }}</small></div>
+          <div class="big"><small class="muted">Mastered:</small> {{ mastered.primary }} <small class="muted">/ {{ total.primary }}</small></div>
           <div class="muted small-row">Primes: {{ primaryPrimesCompleted }} / {{ primaryPrimesTotal }} · Standard: {{ primaryStandardsCompleted }} / {{ primaryStandardsTotal }}</div>
           <div class="progress-small"><div class="fill" :style="{ width: Math.round((mastered.primary/Math.max(1,total.primary))*100) + '%' , background:'#ffd54a' }"></div></div>
         </div>
@@ -40,7 +40,7 @@
         </div>
         <div class="stat-body">
           <h4>Secondaries</h4>
-          <div class="big">{{ mastered.secondary }} <small class="muted">/ {{ total.secondary }}</small></div>
+          <div class="big"><small class="muted">Mastered:</small> {{ mastered.secondary }} <small class="muted">/ {{ total.secondary }}</small></div>
           <div class="muted small-row">Primes: {{ secondaryPrimesCompleted }} / {{ secondaryPrimesTotal }} · Standard: {{ secondaryStandardsCompleted }} / {{ secondaryStandardsTotal }}</div>
           <div class="progress-small"><div class="fill" :style="{ width: Math.round((mastered.secondary/Math.max(1,total.secondary))*100) + '%' , background:'#9b5cff' }"></div></div>
         </div>
@@ -54,7 +54,7 @@
         </div>
         <div class="stat-body">
           <h4>Melee</h4>
-          <div class="big">{{ mastered.melee }} <small class="muted">/ {{ total.melee }}</small></div>
+          <div class="big"><small class="muted">Mastered:</small> {{ mastered.melee }} <small class="muted">/ {{ total.melee }}</small></div>
           <div class="muted small-row">Primes: {{ meleePrimesCompleted }} / {{ meleePrimesTotal }} · Standard: {{ meleeStandardsCompleted }} / {{ meleeStandardsTotal }}</div>
           <div class="progress-small"><div class="fill" :style="{ width: Math.round((mastered.melee/Math.max(1,total.melee))*100) + '%' , background:'#2bb673' }"></div></div>
         </div>

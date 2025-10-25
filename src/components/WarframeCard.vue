@@ -1,5 +1,5 @@
 <template>
-  <div :class="['card', 'p-card', 'theme-card', { collected: isFullyCollected, prime: isPrime }]" ref="root" :data-testid="testId">
+  <div :class="['card', 'p-card', 'theme-card', { collected: isFullyCollected, prime: isPrime, gold: isGold }]" ref="root" :data-testid="testId">
     <div class="top-accent" :style="{ background: accentColor }" aria-hidden="true"></div>
     <div class="card-header">
       <div class="accent" :style="{ background: accentColor }"></div>
@@ -296,19 +296,55 @@ onBeforeUnmount(() => {
 });
 
 // initialize local state when `warframe` prop arrives/changes
-watchEffect(() => {
-  const w = warframe.value || ({} as Warframe);
-  neuropticsCollected.value = Boolean(w.neuroptics_collected);
-  chassisCollected.value = Boolean(w.chassis_collected);
-  systemsCollected.value = Boolean(w.systems_collected);
-  blueprintCollected.value = Boolean(w.blueprint_collected);
-  isMastered.value = Boolean(w.is_mastered);
+// Use per-field watchers instead of a broad watchEffect so unrelated prop updates
+// (e.g. other warframe overrides) don't cause every card to re-clone data and run
+// expensive operations. This prevents UI freezes when many cards are rendered.
+watch(
+  () => warframe.value && warframe.value.neuroptics_collected,
+  (v) => (neuropticsCollected.value = Boolean(v)),
+  { immediate: true }
+);
+watch(
+  () => warframe.value && warframe.value.chassis_collected,
+  (v) => (chassisCollected.value = Boolean(v)),
+  { immediate: true }
+);
+watch(
+  () => warframe.value && warframe.value.systems_collected,
+  (v) => (systemsCollected.value = Boolean(v)),
+  { immediate: true }
+);
+watch(
+  () => warframe.value && warframe.value.blueprint_collected,
+  (v) => (blueprintCollected.value = Boolean(v)),
+  { immediate: true }
+);
+watch(
+  () => warframe.value && warframe.value.is_mastered,
+  (v) => (isMastered.value = Boolean(v)),
+  { immediate: true }
+);
 
-  neuropticsResources.value = (w.neuroptics_resources || []).map((r) => ({ ...r }));
-  chassisResources.value = (w.chassis_resources || []).map((r) => ({ ...r }));
-  systemsResources.value = (w.systems_resources || []).map((r) => ({ ...r }));
-  blueprintResources.value = (w.blueprint_resources || []).map((r) => ({ ...r }));
-});
+watch(
+  () => (warframe.value && warframe.value.neuroptics_resources) || [],
+  (v) => (neuropticsResources.value = (v || []).map((r: Resource) => ({ ...r }))),
+  { immediate: true }
+);
+watch(
+  () => (warframe.value && warframe.value.chassis_resources) || [],
+  (v) => (chassisResources.value = (v || []).map((r: Resource) => ({ ...r }))),
+  { immediate: true }
+);
+watch(
+  () => (warframe.value && warframe.value.systems_resources) || [],
+  (v) => (systemsResources.value = (v || []).map((r: Resource) => ({ ...r }))),
+  { immediate: true }
+);
+watch(
+  () => (warframe.value && warframe.value.blueprint_resources) || [],
+  (v) => (blueprintResources.value = (v || []).map((r: Resource) => ({ ...r }))),
+  { immediate: true }
+);
 
 // when any toggle changes, emit an update with the new state (parent can listen)
 watch(
@@ -368,7 +404,7 @@ const typeParts = computed(() => {
   // normalize common non-prime forms so they remain a single token
   raw = raw.replace(/\bnon[-\s]*prime\b/gi, (m) => m.replace(/\s+/g, "-"));
   // common delimiters between types; we've already normalized non-prime so it won't split on '-'
-  const parts = raw.split(/\s*[|,\\\+]\s*|\s+and\s+/i).filter(Boolean);
+  const parts = raw.split(/\s*[|,\\+]\s*|\s+and\s+/i).filter(Boolean);
   if (parts.length === 0) return [""];
   if (parts.length === 1) return [parts[0]];
   // if more than 2, show first as top and rest joined as bottom
@@ -422,6 +458,17 @@ const isFullyCollected = computed(() =>
   (systemsCollected.value || systemsAllResourcesCollected.value) &&
   (blueprintCollected.value || blueprintAllResourcesCollected.value)
 )
+
+// whether the four parts are all collected (either via explicit flag or via resources)
+const isAllPartsCollected = computed(() =>
+  (neuropticsCollected.value || neuropticsAllResourcesCollected.value) &&
+  (chassisCollected.value || chassisAllResourcesCollected.value) &&
+  (systemsCollected.value || systemsAllResourcesCollected.value) &&
+  (blueprintCollected.value || blueprintAllResourcesCollected.value)
+)
+
+// gold state: all parts collected AND mastery checked
+const isGold = computed(() => isAllPartsCollected.value && Boolean(isMastered.value))
 
 watch(neuropticsAllResourcesCollected, (val) => {
   if (val && !neuropticsCollected.value) neuropticsCollected.value = true;

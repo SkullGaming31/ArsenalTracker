@@ -11,7 +11,7 @@
       <div class="results">Showing {{ filtered.length }} results</div>
     </div>
     <div class="grid">
-      <WeaponCard v-for="w in filtered" :key="w.name" :weapon="w" />
+  <WeaponCard v-for="w in filtered" :key="w.name" :weapon="w" @update="handleUpdate" />
     </div>
     <div class="names"><ul><li v-for="w in filtered" :key="w.name">{{ w.name }}</li></ul></div>
   </div>
@@ -43,8 +43,14 @@ const filtered = computed(() => {
   const q = query.value.trim().toLowerCase()
   let list = all.value.filter(w => w.category === 'melee' && (!q || w.name.toLowerCase().includes(q)))
   if (hideCompleted.value) list = list.filter(w => !isCompleted(w))
-  return list
+  // sort alphabetically
+  return list.slice().sort((a, b) => (a.name || '').localeCompare(b.name || ''))
 })
+
+function handleUpdate(payload: any) {
+  if (!payload || !payload.name) return
+  collection.setOverride(payload.name, payload)
+}
 </script>
 
 <style scoped>

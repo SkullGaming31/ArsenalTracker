@@ -93,7 +93,11 @@ export const useCollectionStore = defineStore('collection', () => {
   })
 
   function setOverride(name: string, partial: WarframeOverride) {
-    overrides.value = { ...overrides.value, [name]: { ...(overrides.value[name] || {}), ...partial } }
+    // Mutate the overrides map in-place instead of replacing the whole object.
+    // This reduces reactive churn and avoids recreating the top-level object
+    // which can cause downstream computed consumers to re-run for every item.
+    const existing = overrides.value[name] || {}
+    overrides.value[name] = { ...existing, ...partial }
   }
 
   function clearOverrides() {

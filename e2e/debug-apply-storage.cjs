@@ -1,4 +1,4 @@
-const { chromium } = require('playwright');
+import { chromium } from 'playwright';
 
 (async () => {
   const browser = await chromium.launch({ headless: false });
@@ -8,7 +8,7 @@ const { chromium } = require('playwright');
     try {
       const payload = { version: 1, overrides: { 'Rhino Prime': { neuroptics_collected: true } } };
       localStorage.setItem('arsenaltracker.v1', JSON.stringify(payload));
-    } catch (e) { }
+    } catch { }
   });
   const page = await context.newPage();
   await page.goto('http://localhost:5173');

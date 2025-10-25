@@ -94,7 +94,7 @@ const filteredPrimeWarframes = computed<Warframe[]>(() => {
   const names = new Set(search.results.map((r: any) => r.item.name))
   let list = !q ? primeWarframes.value : primeWarframes.value.filter(w => names.has(w.name))
   if (hideCompleted.value) list = list.filter(w => !isCompleted(w))
-  return list
+  return list.slice().sort((a,b) => (a.name||'').localeCompare(b.name||''))
 })
 
 const filteredNonPrimeWarframes = computed<Warframe[]>(() => {
@@ -102,7 +102,7 @@ const filteredNonPrimeWarframes = computed<Warframe[]>(() => {
   const names = new Set(search.results.map((r: any) => r.item.name))
   let list = !q ? nonPrimeWarframes.value : nonPrimeWarframes.value.filter(w => names.has(w.name))
   if (hideCompleted.value) list = list.filter(w => !isCompleted(w))
-  return list
+  return list.slice().sort((a,b) => (a.name||'').localeCompare(b.name||''))
 })
 
 function handleUpdate(payload: any) {

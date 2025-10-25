@@ -10,12 +10,7 @@ describe('Dashboard import/export UI', () => {
 
   it('calls export when Export JSON button is clicked', async () => {
     const exportMock = vi.fn()
-    const stub = {
-      exportState: exportMock,
-      importState: vi.fn(),
-      clearOverrides: vi.fn(),
-      overrides: {},
-    }
+    // test stub not required for this unit test; existance of the button is asserted instead
 
     // provide pinia store by mocking the module used in Dashboard
     const wrapper = mount(Dashboard, {
