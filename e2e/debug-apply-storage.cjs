@@ -1,4 +1,5 @@
-import { chromium } from 'playwright';
+/* eslint-disable */
+const { chromium } = require('playwright');
 
 (async () => {
   const browser = await chromium.launch({ headless: false });

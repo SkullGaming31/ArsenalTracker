@@ -1,12 +1,7 @@
 <template>
   <div class="warframes">
     <div class="toolbar">
-      <input v-model="query" placeholder="Search warframes..." class="search" />
-      <label class="toggle" style="margin-left:12px; display:inline-flex; align-items:center; gap:8px">
-        <input type="checkbox" v-model="hideCompleted" aria-label="Hide completed warframes" />
-        <span class="slider" aria-hidden></span>
-        <span class="toggle-label">Hide completed</span>
-      </label>
+      <!-- Search and Hide Completed moved to global header -->
     </div>
     <section class="section">
       <h3>Prime</h3>
@@ -26,15 +21,18 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+// give component a multi-word name to satisfy eslint vue/multi-word-component-names
+defineOptions({ name: 'WarframesPage' })
+import { computed, watch } from 'vue'
 import WarframeCard from '../components/WarframeCard.vue'
 import { useCollectionStore } from '../stores/collection'
 import { useSearchStore } from '../stores/search'
 import type { Warframe } from '../types/warframe'
 
 const collection = useCollectionStore()
-const query = ref<string>('')
-const hideCompleted = ref<boolean>(false)
+const props = defineProps<{ query?: string; hideCompleted?: boolean }>()
+const query = computed(() => props.query ?? '')
+const hideCompleted = computed(() => Boolean(props.hideCompleted))
 const search = useSearchStore()
 
 const warframesAll = computed<Warframe[]>(() => collection.mergedWarframes as Warframe[])
@@ -58,7 +56,7 @@ const nonPrimeWarframes = computed<Warframe[]>(() =>
 )
 
 // helper to coerce flags
-const flagTrue = (v: any) => {
+const flagTrue = (v: unknown): boolean => {
   if (v === true) return true
   if (v === false) return false
   if (typeof v === 'string') return v.toLowerCase() === 'true'
@@ -68,8 +66,8 @@ const flagTrue = (v: any) => {
 
 const isCompleted = (w: Warframe) => {
   // mastered OR all parts collected
-  const mastered = flagTrue((w as any).is_mastered)
-  const partsAll = flagTrue((w as any).neuroptics_collected) && flagTrue((w as any).chassis_collected) && flagTrue((w as any).systems_collected) && flagTrue((w as any).blueprint_collected)
+  const mastered = flagTrue(w.is_mastered)
+  const partsAll = flagTrue(w.neuroptics_collected) && flagTrue(w.chassis_collected) && flagTrue(w.systems_collected) && flagTrue(w.blueprint_collected)
   return mastered || partsAll
 }
 
@@ -79,8 +77,8 @@ watch(warframesAll, (val) => {
 }, { immediate: true })
 
 // debounce query -> call search
-let queryTimeout: any = null
-watch(query, (q) => {
+let queryTimeout: number | null = null
+watch(() => query.value, (q) => {
   if (queryTimeout) clearTimeout(queryTimeout)
   queryTimeout = setTimeout(() => {
     search.query = q
@@ -90,8 +88,7 @@ watch(query, (q) => {
 
 const filteredPrimeWarframes = computed<Warframe[]>(() => {
   const q = String(query.value || '').trim()
-  const base = !q ? primeWarframes.value : primeWarframes.value
-  const names = new Set(search.results.map((r: any) => r.item.name))
+  const names = new Set(search.results.map(r => r.item.name))
   let list = !q ? primeWarframes.value : primeWarframes.value.filter(w => names.has(w.name))
   if (hideCompleted.value) list = list.filter(w => !isCompleted(w))
   return list.slice().sort((a,b) => (a.name||'').localeCompare(b.name||''))
@@ -99,15 +96,28 @@ const filteredPrimeWarframes = computed<Warframe[]>(() => {
 
 const filteredNonPrimeWarframes = computed<Warframe[]>(() => {
   const q = String(query.value || '').trim()
-  const names = new Set(search.results.map((r: any) => r.item.name))
+  const names = new Set(search.results.map(r => r.item.name))
   let list = !q ? nonPrimeWarframes.value : nonPrimeWarframes.value.filter(w => names.has(w.name))
   if (hideCompleted.value) list = list.filter(w => !isCompleted(w))
   return list.slice().sort((a,b) => (a.name||'').localeCompare(b.name||''))
 })
 
-function handleUpdate(payload: any) {
-  if (!payload || !payload.name) return
-  collection.setOverride(payload.name, payload)
+interface WFUpdatePayload {
+  name: string
+  neuroptics_collected?: boolean
+  chassis_collected?: boolean
+  systems_collected?: boolean
+  blueprint_collected?: boolean
+  is_mastered?: boolean
+}
+
+function handleUpdate(payload: unknown) {
+  if (typeof payload !== 'object' || payload === null) return
+  const p = payload as Partial<WFUpdatePayload>
+  if (!p.name) return
+  // collection.setOverride expects a Partial<Record<string, unknown>>; cast the payload
+  // so TypeScript is satisfied while preserving the typed shape locally.
+  collection.setOverride(p.name, p as Partial<Record<string, unknown>>)
 }
 </script>
 

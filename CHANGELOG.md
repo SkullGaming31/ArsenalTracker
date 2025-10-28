@@ -47,20 +47,21 @@ These changes were made to diagnose and resolve intermittent test failures where
 	- If you want the current merged `weapons.json` committed, run `git add src/data/weapons.json && git commit -m "chore(data): populate weapons.parts from weapons.api.json"`.
 	-More work done on Weapons data quality
 
-	## Unreleased - 2025-10-25
+## Unreleased - 2025-10-27
 
-	- UX & persistence improvements
-		- Weapon cards: show market/purchase info for market-only weapons and add a visible market badge.
-		- Parts collection and Mastered state now persist via local overrides (parts_collected / is_mastered). Child cards emit updates and the collection store saves them to localStorage.
-		- Dashboard: clarified counts by labeling the large numbers as "Mastered" for easier reading.
+- Tests & coverage
+  - Added focused unit tests for `App.vue` and expanded `Dashboard` import/export tests to assert exact import/apply flows.
+  - Added multiple store and importer unit tests to exercise edge-cases (migration, debounce/save timing, beforeunload flush, duplicate merges).
+  - Re-ran the test suite with coverage and adjusted `vitest` coverage config to exclude non-runtime files so reports focus on `src/` runtime code.
 
-	- Performance
-		- Fixed a UI freeze when toggling many Warframe part checkboxes by reducing reactive churn: switched broad watchEffect usage to targeted watchers and changed the store override update to mutate a single override key (avoids replacing the whole overrides object).
+- Lint & minor fixes
+  - Fixed several test files to remove unused imports/duplicate blocks and made assertions more specific (`toHaveBeenCalledWith` / `expect.any(String)` where appropriate).
+  - Addressed a few lint false-positives by narrowing test imports and adjusting an ad-hoc e2e debug script to avoid ESLint import/require confusion.
 
-	- Data cleanup
-		- Removed `resources` / `main_blueprint_resources` from Prime weapon entries in `src/data/weapons.json` via a maintenance script (backup created at `src/data/weapons.json.bak`).
+- UX / persistence
+  - Continued polishing persistence and UI: header extraction into `AppHeader.vue`, per-key overrides mutation to reduce reactive churn, and Dashboard import/CSV preview flows.
 
-	- Misc
-		- Added a combined "All weapons" view and enforced alphabetical ordering across weapon lists.
-		- Canonicalized type filter ordering and disabled type options with zero weapons.
+Notes:
+- This commit includes many test additions and small lint/test fixes. A broader typing sweep (replace remaining `any` usages) is tracked separately and will be addressed in follow-up work.
+
 

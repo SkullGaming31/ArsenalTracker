@@ -4,20 +4,12 @@
     <div class="counts">Total weapons: {{ all.length }}</div>
 
     <div class="toolbar">
-      <input v-model="query" placeholder="Search weapons..." />
-
       <label>
         Type
         <select v-model="selectedType">
           <option value="all">All</option>
           <option v-for="t in types" :key="t" :value="t" :disabled="!(typeCount(t) > 0)">{{ t }}</option>
         </select>
-      </label>
-
-      <label class="toggle" style="display:inline-flex; align-items:center; gap:8px">
-        <input type="checkbox" v-model="hideCompleted" />
-        <span class="slider" aria-hidden></span>
-        <span class="toggle-label">Hide completed</span>
       </label>
 
       <label>
@@ -85,8 +77,9 @@ import type { Weapon, Part, PartWithCollected } from '../types/weapon'
 const collection = useCollectionStore()
 const all = computed<Weapon[]>(() => collection.mergedWeapons as Weapon[])
 
-const query = ref('')
-const hideCompleted = ref(false)
+const props = defineProps<{ query?: string; hideCompleted?: boolean }>()
+const query = computed(() => props.query ?? '')
+const hideCompleted = computed(() => Boolean(props.hideCompleted))
 const selectedType = ref('all')
 const craftedFilter = ref('all') // all | crafted | not-crafted
 
@@ -184,7 +177,9 @@ function handleUpdate(payload: unknown) {
   if (typeof payload !== 'object' || payload === null) return
   const p = payload as Partial<UpdatePayload>
   if (!p.name) return
-  collection.setOverride(p.name, p as UpdatePayload)
+  // collection.setOverride expects a Partial<Record<string, unknown>>; cast the payload
+  // so TypeScript is satisfied while preserving the typed shape locally.
+  collection.setOverride(p.name, p as Partial<Record<string, unknown>>)
 }
 </script>
 

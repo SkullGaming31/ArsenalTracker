@@ -2,16 +2,18 @@ import { ref, computed, watch } from 'vue'
 import { defineStore } from 'pinia'
 import warframesData from '../data/warframes.json'
 import weaponsData from '../data/weapons.json'
+import type { Warframe } from '../types/warframe'
+import type { Weapon } from '../types/weapon'
 
 export const STORAGE_KEY = 'arsenaltracker.v1'
 const CURRENT_VERSION = 1
 
-type WarframeOverride = Partial<Record<string, any>>
+type WarframeOverride = Partial<Record<string, unknown>>
 
 export const useCollectionStore = defineStore('collection', () => {
   // underlying static data (source-of-truth from project files)
-  const warframes = ref<any[]>(warframesData as any[])
-  const weapons = ref<any[]>(weaponsData as any[])
+  const warframes = ref<Warframe[]>(warframesData as Warframe[])
+  const weapons = ref<Weapon[]>(weaponsData as Weapon[])
 
   // overrides persisted in localStorage keyed by warframe/weapon name
   const overrides = ref<Record<string, WarframeOverride>>({})
@@ -37,7 +39,6 @@ export const useCollectionStore = defineStore('collection', () => {
       }
     } catch (e) {
       // ignore parse errors
-      // eslint-disable-next-line no-console
       console.error('[collection] failed to load persistence', e)
     }
   }
@@ -47,7 +48,6 @@ export const useCollectionStore = defineStore('collection', () => {
       const payload = { version: CURRENT_VERSION, overrides: overrides.value }
       localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
     } catch (e) {
-      // eslint-disable-next-line no-console
       console.error('[collection] failed to save persistence', e)
     }
   }
@@ -58,7 +58,7 @@ export const useCollectionStore = defineStore('collection', () => {
   // derived: merged view of static data + overrides
   const mergedWarframes = computed(() => {
     // merge overrides but deduplicate by name (keep first occurrence)
-    const map = new Map<string, any>()
+    const map = new Map<string, unknown>()
     for (const w of warframes.value) {
       if (!map.has(w.name)) {
         const ov = overrides.value[w.name] || {}
@@ -67,7 +67,7 @@ export const useCollectionStore = defineStore('collection', () => {
         // if there's an override for a later duplicate, merge it in
         const ov = overrides.value[w.name]
         if (ov && typeof ov === 'object') {
-          const existing = map.get(w.name) || {}
+          const existing = (map.get(w.name) || {}) as Record<string, unknown>
           map.set(w.name, { ...existing, ...ov })
         }
       }
@@ -76,7 +76,7 @@ export const useCollectionStore = defineStore('collection', () => {
   })
 
   const mergedWeapons = computed(() => {
-    const map = new Map<string, any>()
+    const map = new Map<string, unknown>()
     for (const w of weapons.value) {
       if (!map.has(w.name)) {
         const ov = overrides.value[w.name] || {}
@@ -84,7 +84,7 @@ export const useCollectionStore = defineStore('collection', () => {
       } else {
         const ov = overrides.value[w.name]
         if (ov && typeof ov === 'object') {
-          const existing = map.get(w.name) || {}
+          const existing = (map.get(w.name) || {}) as Record<string, unknown>
           map.set(w.name, { ...existing, ...ov })
         }
       }
@@ -125,18 +125,17 @@ export const useCollectionStore = defineStore('collection', () => {
         }
       }
     } catch (e) {
-      // eslint-disable-next-line no-console
       console.error('[collection] failed to import state', e)
     }
     return false
   }
 
   // persist overrides when they change — debounce to avoid blocking UI during rapid updates
-  let saveTimer: any = null
+  let saveTimer: number | null = null
   const saveDelay = 200 // ms
   function scheduleSave() {
-    if (saveTimer) clearTimeout(saveTimer)
-    saveTimer = setTimeout(() => {
+    if (saveTimer) window.clearTimeout(saveTimer)
+    saveTimer = window.setTimeout(() => {
       saveToStorage()
       saveTimer = null
     }, saveDelay)
@@ -145,7 +144,7 @@ export const useCollectionStore = defineStore('collection', () => {
   watch(overrides, () => {
     // In unit tests we want immediate persistence so tests can assert on localStorage.
     // Use globalThis to avoid referencing Node's `process` symbol directly which is not defined in browser TS libs.
-    const env = (globalThis as any)?.process?.env?.NODE_ENV
+    const env = (globalThis as unknown as { process?: { env?: { NODE_ENV?: string } } })?.process?.env?.NODE_ENV
     if (env === 'test') {
       saveToStorage()
     } else {

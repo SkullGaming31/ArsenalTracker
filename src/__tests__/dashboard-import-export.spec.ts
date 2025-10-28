@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { createPinia, setActivePinia } from 'pinia'
 import Dashboard from '../pages/Dashboard.vue'
-import { vi, describe, it, expect, beforeEach } from 'vitest'
+import { describe, it, expect, beforeEach } from 'vitest'
 
 describe('Dashboard import/export UI', () => {
   beforeEach(() => {
@@ -9,8 +9,7 @@ describe('Dashboard import/export UI', () => {
   })
 
   it('calls export when Export JSON button is clicked', async () => {
-    const exportMock = vi.fn()
-    // test stub not required for this unit test; existance of the button is asserted instead
+  // test stub not required for this unit test; existence of the button is asserted instead
 
     // provide pinia store by mocking the module used in Dashboard
     const wrapper = mount(Dashboard, {

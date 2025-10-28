@@ -9,13 +9,17 @@
   <button data-testid="nav-secondary" @click="navigate('secondary')">Secondary</button>
   <button data-testid="nav-melee" @click="navigate('melee')">Melee</button>
     </nav>
-      <div class="debug">Last: {{ last }}</div>
       <div class="nav-socials">
         <div class="social-links">
     <a class="icon-link discord" href="https://discord.com/invite/6TGV75sDjW" target="_blank" rel="noreferrer" aria-label="Discord">
-      <!-- Official Discord mark (glyph only) -->
-      <svg width="20" height="20" viewBox="0 0 71 55" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <!-- Discord mark with eye cutouts to avoid solid blob rendering -->
+      <svg width="30" height="30" viewBox="0 0 71 55" xmlns="http://www.w3.org/2000/svg" aria-hidden>
         <path fill="#5865F2" d="M60.104 4.552A58.648 58.648 0 0046.852.75a41.979 41.979 0 00-1.98 4.1 55.6 55.6 0 00-14.74 0 41.548 41.548 0 00-1.9-4.1 58.87 58.87 0 00-13.26 3.8C6.98 17.3 4.9 29.2 6.66 40.7 20.36 46 33.2 47.9 46.14 47.4c.1-.14.2-.28.3-.42.03 0 .06.01.09.01 13 0 25-1.5 39.3-6.9 1.76-11.6-.32-23.6-10.32-36.44z"/>
+        <!-- refined eye shapes and subtle mouth to avoid 'blob with two eyes' appearance -->
+        <ellipse cx="22" cy="22" rx="4.2" ry="5.2" fill="#fff" transform="rotate(-8 22 22)" />
+        <ellipse cx="48" cy="22" rx="4.2" ry="5.2" fill="#fff" transform="rotate(8 48 22)" />
+        <!-- small smiling curve for the mouth to improve legibility at small sizes -->
+        <path d="M26 31c3 2 10 2 14 0" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.95" />
       </svg>
     </a>
     <a class="icon-link instagram" href="https://www.instagram.com/skullgaminghq1" target="_blank" rel="noreferrer" aria-label="Instagram">
@@ -43,24 +47,19 @@
     </a>
         </div>
       </div>
+      
   </aside>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
 const emit = defineEmits<{
   (e: 'navigate', view: 'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee'): void
 }>()
 
-const last = ref<string>('none')
-
 function navigate(view: 'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee') {
   // log for debug to confirm clicks
-  // eslint-disable-next-line no-console
   console.log('[NavBar] navigate ->', view)
   emit('navigate', view)
-  last.value = view
 }
 </script>
 
@@ -82,11 +81,26 @@ function navigate(view: 'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|
 .links { display:flex; flex-direction:column; gap:8px }
 .links button { text-align:left; padding:8px 12px; border-radius:8px; background:transparent; color:inherit; border:1px solid rgba(255,255,255,0.03); cursor:pointer }
 .links button:hover { background: rgba(255,255,255,0.02) }
-.debug { margin-top:auto; font-size:0.8rem; color:var(--muted) }
-.nav-socials { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,1); }
+.nav-socials {
+  /* Pin socials to the bottom-left of the viewport so they remain visible on every page.
+     Using fixed positioning avoids layout quirks that hid the element on non-dashboard pages. */
+  position: fixed;
+  left: 18px; /* align with sidebar padding */
+  bottom: 18px;
+  padding: 8px 10px 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: rgba(11,12,13,0.6);
+  z-index: 60;
+  backdrop-filter: blur(4px);
+}
 .nav-socials .social-links { display:flex; gap:8px; margin-top:8px }
 .nav-socials .icon-link { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:8px; background:transparent }
 .nav-socials .icon-link svg { display:block }
 .nav-socials .icon-link:hover { background: rgba(255,255,255,0.02) }
 .nav-socials .icon-link { pointer-events: auto }
+/* Hide fixed socials on narrow screens where the layout may change */
+@media (max-width: 720px) {
+  .nav-socials { display: none }
+}
 </style>
