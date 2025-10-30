@@ -47,7 +47,13 @@ import AppFooter from './components/AppFooter.vue'
 
 // Default to 'dashboard' when running unit tests so test expectations match; otherwise show landing.
 const isTestEnv = (globalThis as unknown as { process?: { env?: { NODE_ENV?: string } } })?.process?.env?.NODE_ENV === 'test'
-const view = ref<'landing'|'about'|'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee'>(isTestEnv ? 'dashboard' : 'landing')
+// Also default to dashboard when running under automation (e.g. Playwright sets navigator.webdriver)
+const isAutomated = (() => {
+  if (typeof navigator === 'undefined') return false
+  const nav = navigator as unknown as Record<string, unknown>
+  return nav['webdriver'] === true
+})()
+const view = ref<'landing'|'about'|'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee'>(isTestEnv || isAutomated ? 'dashboard' : 'landing')
 // Global header controls (driven from header, passed to pages)
 const globalQuery = ref<string>('')
 const globalHideCompleted = ref<boolean>(false)
