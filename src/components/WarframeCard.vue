@@ -387,7 +387,7 @@ watch(
       blueprint_resources: blueprintResources.value.map((r) => ({ ...r })),
     });
   },
-  { deep: true, flush: "sync" },
+  { deep: true },
 );
 
 // computed visual stats

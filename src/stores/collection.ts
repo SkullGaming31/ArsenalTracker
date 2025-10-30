@@ -98,6 +98,13 @@ export const useCollectionStore = defineStore('collection', () => {
     // which can cause downstream computed consumers to re-run for every item.
     const existing = overrides.value[name] || {}
     overrides.value[name] = { ...existing, ...partial }
+    // Schedule persistence immediately for this change (debounced).
+    const env = (globalThis as unknown as { process?: { env?: { NODE_ENV?: string } } })?.process?.env?.NODE_ENV
+    if (env === 'test') {
+      saveToStorage()
+    } else {
+      scheduleSave()
+    }
   }
 
   function clearOverrides() {
@@ -114,12 +121,14 @@ export const useCollectionStore = defineStore('collection', () => {
       if (parsed && typeof parsed === 'object') {
         if (parsed.version === CURRENT_VERSION && parsed.overrides && typeof parsed.overrides === 'object') {
           overrides.value = parsed.overrides
-          saveToStorage()
+            // imported state is authoritative; persist immediately
+            saveToStorage()
           return true
         }
         // accept legacy format where the JSON is already the overrides map
         if (!parsed.version && typeof parsed === 'object') {
           overrides.value = parsed
+          // imported legacy shape: persist immediately
           saveToStorage()
           return true
         }
@@ -129,7 +138,6 @@ export const useCollectionStore = defineStore('collection', () => {
     }
     return false
   }
-
   // persist overrides when they change — debounce to avoid blocking UI during rapid updates
   let saveTimer: number | null = null
   const saveDelay = 200 // ms
@@ -140,17 +148,6 @@ export const useCollectionStore = defineStore('collection', () => {
       saveTimer = null
     }, saveDelay)
   }
-
-  watch(overrides, () => {
-    // In unit tests we want immediate persistence so tests can assert on localStorage.
-    // Use globalThis to avoid referencing Node's `process` symbol directly which is not defined in browser TS libs.
-    const env = (globalThis as unknown as { process?: { env?: { NODE_ENV?: string } } })?.process?.env?.NODE_ENV
-    if (env === 'test') {
-      saveToStorage()
-    } else {
-      scheduleSave()
-    }
-  }, { deep: true })
 
   // ensure we flush pending saves on page unload
   if (typeof window !== 'undefined' && window.addEventListener) {
