@@ -77,7 +77,7 @@ watch(warframesAll, (val) => {
 }, { immediate: true })
 
 // debounce query -> call search
-let queryTimeout: number | null = null
+let queryTimeout: ReturnType<typeof setTimeout> | null = null
 watch(() => query.value, (q) => {
   if (queryTimeout) clearTimeout(queryTimeout)
   queryTimeout = setTimeout(() => {

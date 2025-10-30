@@ -1,4 +1,4 @@
-/* eslint-disable */
+ 
 const { chromium } = require('playwright');
 
 (async () => {

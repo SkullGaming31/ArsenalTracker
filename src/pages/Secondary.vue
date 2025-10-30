@@ -1,13 +1,9 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="page">
     <h2>Secondary Weapons</h2>
     <div class="toolbar">
-      <input v-model="query" placeholder="Search secondaries..." />
-      <label class="toggle" style="margin-left:12px; display:inline-flex; align-items:center; gap:8px">
-        <input type="checkbox" v-model="hideCompleted" />
-        <span class="slider" aria-hidden></span>
-        <span class="toggle-label">Hide completed</span>
-      </label>
+      <!-- Search and Hide Completed moved to global header -->
       <div class="results">Showing {{ filtered.length }} results</div>
     </div>
     <div class="grid">
@@ -18,7 +14,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+// give component a multi-word name to satisfy eslint vue/multi-word-component-names
+defineOptions({ name: 'SecondaryPage' } as const)
+import { computed } from 'vue'
 import WeaponCard from '../components/WeaponCard.vue'
 import { useCollectionStore } from '../stores/collection'
 import type { Weapon } from '../types/weapon'
@@ -26,10 +24,11 @@ import type { Weapon } from '../types/weapon'
 const collection = useCollectionStore()
 const all = computed<Weapon[]>(() => collection.mergedWeapons as Weapon[])
 
-const query = ref('')
-const hideCompleted = ref(false)
+const props = defineProps<{ query?: string; hideCompleted?: boolean }>()
+const query = computed(() => props.query ?? '')
+const hideCompleted = computed(() => Boolean(props.hideCompleted))
 
-const flagTrue = (v: any) => {
+const flagTrue = (v: unknown): boolean => {
   if (v === true) return true
   if (v === false) return false
   if (typeof v === 'string') return v.toLowerCase() === 'true'
@@ -37,19 +36,21 @@ const flagTrue = (v: any) => {
   return Boolean(v)
 }
 
-const isCompleted = (w: Weapon) => flagTrue((w as any).is_crafted) || flagTrue((w as any).is_mastered)
+const isCompleted = (w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)
 
 const filtered = computed(() => {
-  const q = query.value.trim().toLowerCase()
+  const q = String(query.value || '').trim().toLowerCase()
   let list = all.value.filter(w => w.category === 'secondary' && (!q || w.name.toLowerCase().includes(q)))
   if (hideCompleted.value) list = list.filter(w => !isCompleted(w))
   // sort alphabetically
   return list.slice().sort((a, b) => (a.name || '').localeCompare(b.name || ''))
 })
 
-function handleUpdate(payload: any) {
-  if (!payload || !payload.name) return
-  collection.setOverride(payload.name, payload)
+function handleUpdate(payload: unknown) {
+  if (typeof payload !== 'object' || payload === null) return
+  const p = payload as Partial<Record<string, unknown>> & { name?: string }
+  if (!p.name) return
+  collection.setOverride(p.name, p)
 }
 </script>
 

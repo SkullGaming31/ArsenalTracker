@@ -31,4 +31,20 @@ export default defineConfigWithVueTs(
     files: ['e2e/**/*.{test,spec}.{js,ts,jsx,tsx}'],
   },
   ...pluginOxlint.configs['flat/recommended'],
+  // Reduce noise from generated/minified assets and Node utility scripts.
+  // Docs assets are compiled/minified and will trigger many `no-unused-expression` errors.
+  {
+    files: ['docs/assets/**'],
+    rules: {
+      '@typescript-eslint/no-unused-expressions': 'off',
+      'no-unused-expressions': 'off',
+    },
+  },
+  // Allow CommonJS in scripts and e2e helpers (these are Node utilities, not browser code)
+  {
+    files: ['scripts/**', 'e2e/**'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off'
+    },
+  },
 )

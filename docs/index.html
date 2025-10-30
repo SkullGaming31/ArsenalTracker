@@ -17,11 +17,62 @@
   <body>
     <header>
       <div class="card">
-        <h1>Arsenal Tracker</h1>
-        <p class="lead">A lightweight Vue + TypeScript app to track Warframe warframes & weapons — collection status, mastery progress, and quick dashboard stats.</p>
-        <p>Developer notes: this is a minimal landing page used by GitHub Pages. For the full app sources, run locally with <code>npm install</code> and <code>npm run dev</code>, or see the repository on GitHub.</p>
-        <a class="btn" href="https://github.com/SkullGaming31/ArsenalTracker" target="_blank" rel="noopener">View repository on GitHub</a>
-      </div>
+          <h1>Arsenal Tracker</h1>
+          <p class="lead">A lightweight Vue + TypeScript app to track Warframe warframes & weapons — collection status, mastery progress, and quick dashboard stats.</p>
+          <p>Developer notes: this is a minimal landing page used by GitHub Pages. For the full app sources, run locally with <code>npm install</code> and <code>npm run dev</code>, or see the repository on GitHub.</p>
+          <a class="btn" href="https://github.com/SkullGaming31/ArsenalTracker" target="_blank" rel="noopener">View repository on GitHub</a>
+        </div>
+        <div style="margin-top:1rem; max-width:900px;">
+          <div class="card">
+            <h2 style="margin-top:0">Developer / Maintainer notes</h2>
+            <ul>
+              <li>Active working branch: <code>enhancement/tests-lint-2025-10-27</code> — contains recent typing, unit tests and lint fixes.</li>
+              <li>Local persistence: the app stores overrides in <code>localStorage</code> under the key <code>arsenaltracker.v1</code>. There is a migration path handled in <code>src/stores/collection.ts</code>.</li>
+              <li>Debounced save: overrides are persisted with a ~200ms debounce to avoid UI freezes when toggling many items. In test environments persistence is immediate.</li>
+              <li>Tests & linting: use the project scripts to run checks locally:<pre style="margin:0;">npm run lint
+  npm run test:unit</pre></li>
+              <li>ESLint notes: generated/minified files in <code>docs/assets</code> and Node utility scripts in <code>scripts/</code> commonly produce lint warnings (commonjs <code>require()</code> usage and minified expression noise). It's recommended to add targeted ESLint overrides for <code>docs/assets/**</code> and set <code>env: node</code> for <code>scripts/**</code> to avoid noisy errors.</li>
+              <li>Next recommended improvements (high-impact):
+                <ol>
+                  <li>Type the importer (<code>src/lib/importer.ts</code>) and <code>WarframeCard.vue</code> to remove remaining <code>@typescript-eslint/no-explicit-any</code> issues.</li>
+                  <li>Apply small ESLint overrides for non-runtime/generated files so linting focuses on app code.</li>
+                  <li>Run the test suite and fix any remaining vitest lint rule failures that request exact-argument assertions (use <code>toHaveBeenCalledWith(...)</code> or <code>expect.any(...)</code> where appropriate).</li>
+                </ol>
+              </li>
+              <li>Changelog: see <code>CHANGELOG.md</code> at the repository root for a summary of recent changes.</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top:1rem; max-width:900px;">
+          <div class="card">
+            <h2 style="margin-top:0">Chat / Bot usage</h2>
+            <p class="lead">If you're interacting with this repository through a chat bot (for example to request code edits, tests, or explanations), the following guidance will help the bot provide useful and safe changes.</p>
+            <ul>
+              <li>Scope your request: tell the bot the exact file(s) to change or the feature to implement (e.g., "Update <code>src/lib/importer.ts</code> to use a typed ParsedRow").</li>
+              <li>Include the branch context if relevant: e.g., <code>enhancement/tests-lint-2025-10-27</code> — the bot can commit changes to that branch.</li>
+              <li>Testing: ask the bot to run linters and unit tests after edits. Example: "run ESLint and Vitest and report failures" — the bot will run commands and return results.</li>
+              <li>Example prompts:
+                <pre style="margin:0">- "Convert all remaining any types in src/lib/importer.ts to concrete types and run tsc --noEmit"
+                - "Add an ESLint override for scripts/** to allow Node-style require() and re-run lint"
+                - "Update docs/index.html to include bot usage guidance"</pre>
+              </li>
+              <li>What the bot can do for you:
+                <ul>
+                  <li>Make small code edits and run quick tests (unit/lint/typecheck).</li>
+                  <li>Add or update tests and type definitions.</li>
+                  <li>Propose configuration changes (ESLint, Vitest) and apply low-risk updates.</li>
+                </ul>
+              </li>
+              <li>Tips for reliable responses:
+                <ol>
+                  <li>Provide a clear single objective per request (smaller commits are easier to verify).</li>
+                  <li>When asking for code changes, prefer to identify the precise file and a short description of the desired behavior.</li>
+                  <li>Ask the bot to run failing commands (lint/tests) and include the output when requesting follow-ups — this speeds debugging.</li>
+                </ol>
+              </li>
+            </ul>
+          </div>
+        </div>
       <footer>
         <p>If the Pages site doesn't appear immediately, go to the repo Settings → Pages and set source to <strong>main</strong> branch and <strong>/docs</strong> folder, then save. Provisioning may take a few minutes.</p>
       </footer>

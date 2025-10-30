@@ -20,6 +20,16 @@ Code style and checks
 npx vue-tsc --noEmit
 ```
 
+Linting expectations (short)
+- Run ESLint and fix reported issues in `src/` and test files before opening a PR.
+- The repository intentionally relaxes a small set of lint rules for generated or Node-only helpers:
+	- `docs/assets/**` contains compiled/minified build assets and is excluded from some rules that catch minified expressions.
+	- `scripts/**` and `e2e/**` contain Node utilities and test helpers where CommonJS `require()` usage is allowed.
+
+Local storage / backup key
+- The application persists user overrides to `localStorage` under the key `arsenaltracker.v1`.
+- When editing persistence code, prefer to keep compatibility with the versioned payload shape so users' saved data migrates cleanly.
+
 Pull request checklist
 - [ ] My branch is up to date with `main`.
 - [ ] I ran the tests locally and they pass.

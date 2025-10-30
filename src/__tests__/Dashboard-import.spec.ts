@@ -41,12 +41,12 @@ describe('Dashboard import/export interactions', () => {
     Object.defineProperty(input.element, 'files', { value: [file] })
     await input.trigger('change')
 
-  expect(parseSpy).toHaveBeenCalledWith(expect.any(String))
-  expect(importSpy).toHaveBeenCalledWith(JSON.stringify(parsed.payload))
-    expect(alertSpy).toHaveBeenCalledWith('Import successful')
+  expect(parseSpy).toHaveBeenCalledExactlyOnceWith(expect.any(String))
+  expect(importSpy).toHaveBeenCalledExactlyOnceWith(JSON.stringify(parsed.payload))
+    expect(alertSpy).toHaveBeenCalledExactlyOnceWith('Import successful')
 
     // restore FileReader
-    ;(FileReader.prototype as any).readAsText = origRead
+  ;(FileReader.prototype as unknown as { readAsText?: (b?: Blob) => void }).readAsText = origRead
   })
 
   it('shows CSV preview and applies overrides on confirm', async () => {
@@ -80,10 +80,10 @@ describe('Dashboard import/export interactions', () => {
     expect(confirm).toBeTruthy()
     await confirm!.trigger('click')
 
-  expect(setSpy).toHaveBeenCalledWith('Excalibur', { neuroptics_collected: true })
-    expect(alertSpy).toHaveBeenCalledWith('Import applied')
+  expect(setSpy).toHaveBeenCalledExactlyOnceWith('Excalibur', { neuroptics_collected: true })
+    expect(alertSpy).toHaveBeenCalledExactlyOnceWith('Import applied')
 
-    ;(FileReader.prototype as any).readAsText = origRead
+  ;(FileReader.prototype as unknown as { readAsText?: (b?: Blob) => void }).readAsText = origRead
   })
 
   it('clears overrides when user confirms', async () => {
@@ -96,8 +96,8 @@ describe('Dashboard import/export interactions', () => {
     expect(clearBtn).toBeTruthy()
     await clearBtn!.trigger('click')
 
-  expect(confirmSpy).toHaveBeenCalledWith('Clear all local overrides? This cannot be undone.')
-  expect(clearSpy).toHaveBeenCalledWith()
-    expect(alertSpy).toHaveBeenCalledWith('Local overrides cleared')
+  expect(confirmSpy).toHaveBeenCalledExactlyOnceWith('Clear all local overrides? This cannot be undone.')
+  expect(clearSpy).toHaveBeenCalledExactlyOnceWith()
+    expect(alertSpy).toHaveBeenCalledExactlyOnceWith('Local overrides cleared')
   })
 })

@@ -25,8 +25,9 @@ describe('collection store - edge cases', () => {
     const store = useCollectionStore()
     expect(store).toBeTruthy()
 
-    // we should have logged an error during load
-    expect(spy).toHaveBeenCalled()
+  // we should have logged an error during load
+  expect(spy).toHaveBeenCalledTimes(1)
+  expect(spy).toHaveBeenCalledExactlyOnceWith('[collection] failed to load persistence', expect.any(Error))
   })
 
   it('importState returns false for invalid JSON and logs error', () => {
@@ -34,8 +35,9 @@ describe('collection store - edge cases', () => {
     const spy = vi.spyOn(console, 'error').mockImplementation(() => {})
 
     const ok = store.importState('this is not json')
-    expect(ok).toBe(false)
-    expect(spy).toHaveBeenCalled()
+  expect(ok).toBe(false)
+  expect(spy).toHaveBeenCalledTimes(1)
+  expect(spy).toHaveBeenCalledExactlyOnceWith('[collection] failed to import state', expect.any(Error))
   })
 
   it('debounced save writes to localStorage after delay when not in test env', async () => {

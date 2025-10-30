@@ -30,7 +30,7 @@ describe('collection store save error handling', () => {
   const ok = store.importState(payload)
 
   // saveToStorage should have attempted to stringify the payload and then logged the error
-  expect(spy).toHaveBeenCalled()
+  expect(spy).toHaveBeenCalledExactlyOnceWith('[collection] failed to save persistence', expect.any(Error))
   // since saveToStorage swallows the error, importState will still return true
   expect(ok).toBe(true)
   jsonSpy.mockRestore()

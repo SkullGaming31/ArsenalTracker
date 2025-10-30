@@ -1,4 +1,6 @@
 import { describe, it, expect } from 'vitest'
+import type { Warframe } from '../types/warframe'
+import type { Weapon } from '../types/weapon'
 import { mount } from '@vue/test-utils'
 import { setActivePinia, createPinia } from 'pinia'
 import Dashboard from '../pages/Dashboard.vue'
@@ -14,7 +16,7 @@ describe('Dashboard', () => {
   const collection = useCollectionStore()
 
   const totalWarframes = String(collection.mergedWarframes.length)
-  const totalWarframesMastered = String(collection.mergedWarframes.filter((w: any) => w.is_mastered).length)
+  const totalWarframesMastered = String((collection.mergedWarframes as unknown as Warframe[]).filter(w => Boolean(w.is_mastered)).length)
 
     // assert the rendered text contains the totals
     const text = wrapper.text()
@@ -22,9 +24,9 @@ describe('Dashboard', () => {
     expect(text).toContain(totalWarframesMastered)
 
     // check weapon totals present (primary/secondary/melee)
-  const totalPrimary = String(collection.mergedWeapons.filter((w: any) => w.category === 'primary').length)
-  const totalSecondary = String(collection.mergedWeapons.filter((w: any) => w.category === 'secondary').length)
-  const totalMelee = String(collection.mergedWeapons.filter((w: any) => w.category === 'melee').length)
+  const totalPrimary = String((collection.mergedWeapons as unknown as Weapon[]).filter(w => w.category === 'primary').length)
+  const totalSecondary = String((collection.mergedWeapons as unknown as Weapon[]).filter(w => w.category === 'secondary').length)
+  const totalMelee = String((collection.mergedWeapons as unknown as Weapon[]).filter(w => w.category === 'melee').length)
 
     expect(text).toContain(totalPrimary)
     expect(text).toContain(totalSecondary)

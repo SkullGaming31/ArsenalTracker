@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="dashboard">
     <h1>Arsenal Overview</h1>
@@ -99,18 +100,23 @@
 </template>
 
 <script setup lang="ts">
+// give this component a multi-word name to satisfy `vue/multi-word-component-names`
+// (uses the <script setup> compiler macro)
+defineOptions({ name: 'DashboardPage' } as const)
 import { useCollectionStore } from '../stores/collection'
 import { ref, computed } from 'vue'
-import { parseImportFile, mapRowsToOverrides, exportOverridesToCSV } from '../lib/importer'
+import { parseImportFile, mapRowsToOverrides, exportOverridesToCSV, type ParsedRow } from '../lib/importer'
+import type { Warframe } from '../types/warframe'
+import type { Weapon } from '../types/weapon'
 
 const collection = useCollectionStore()
-const wf = computed(() => collection.mergedWarframes)
-const wp = computed(() => collection.mergedWeapons)
+const wf = computed<Warframe[]>(() => collection.mergedWarframes as unknown as Warframe[])
+const wp = computed<Weapon[]>(() => collection.mergedWeapons as unknown as Weapon[])
 
 const totalWarframes = computed(() => wf.value.length)
 
 // helpers to coerce various flag shapes into booleans
-const flagTrue = (v: any) => {
+const flagTrue = (v: unknown): boolean => {
   if (v === true) return true
   if (v === false) return false
   if (typeof v === 'string') return v.toLowerCase() === 'true'
@@ -118,18 +124,18 @@ const flagTrue = (v: any) => {
   return Boolean(v)
 }
 
-const totalWarframesMastered = computed(() => wf.value.filter((w: any) => flagTrue(w.is_mastered)).length)
+const totalWarframesMastered = computed(() => wf.value.filter((w: Warframe) => flagTrue(w.is_mastered)).length)
 
 const total = computed(() => ({
-  primary: wp.value.filter((w: any) => w.category === 'primary').length,
-  secondary: wp.value.filter((w: any) => w.category === 'secondary').length,
-  melee: wp.value.filter((w: any) => w.category === 'melee').length,
+  primary: wp.value.filter((w: Weapon) => w.category === 'primary').length,
+  secondary: wp.value.filter((w: Weapon) => w.category === 'secondary').length,
+  melee: wp.value.filter((w: Weapon) => w.category === 'melee').length,
 }))
 
 const mastered = computed(() => ({
-  primary: wp.value.filter((w: any) => w.category === 'primary' && w.is_mastered).length,
-  secondary: wp.value.filter((w: any) => w.category === 'secondary' && w.is_mastered).length,
-  melee: wp.value.filter((w: any) => w.category === 'melee' && w.is_mastered).length,
+  primary: wp.value.filter((w: Weapon) => w.category === 'primary' && !!w.is_mastered).length,
+  secondary: wp.value.filter((w: Weapon) => w.category === 'secondary' && !!w.is_mastered).length,
+  melee: wp.value.filter((w: Weapon) => w.category === 'melee' && !!w.is_mastered).length,
 }))
 
 // helper to identify prime vs non-prime
@@ -139,35 +145,35 @@ const isPrime = (typeStr: string) => {
 }
 
 // Warframe prime/standard totals and completed (any parts collected)
-const wfPrimesTotal = computed(() => wf.value.filter((w: any) => isPrime(w.type)).length)
-const wfStandardsTotal = computed(() => wf.value.filter((w: any) => !isPrime(w.type)).length)
-const partCollected = (w: any) => flagTrue(w.neuroptics_collected) || flagTrue(w.chassis_collected) || flagTrue(w.systems_collected) || flagTrue(w.blueprint_collected)
-const wfPrimesCompleted = computed(() => wf.value.filter((w: any) => isPrime(w.type) && partCollected(w)).length)
-const wfStandardsCompleted = computed(() => wf.value.filter((w: any) => !isPrime(w.type) && partCollected(w)).length)
+const wfPrimesTotal = computed(() => wf.value.filter((w: Warframe) => isPrime(w.type)).length)
+const wfStandardsTotal = computed(() => wf.value.filter((w: Warframe) => !isPrime(w.type)).length)
+const partCollected = (w: Warframe) => flagTrue(w.neuroptics_collected) || flagTrue(w.chassis_collected) || flagTrue(w.systems_collected) || flagTrue(w.blueprint_collected)
+const wfPrimesCompleted = computed(() => wf.value.filter((w: Warframe) => isPrime(w.type) && partCollected(w)).length)
+const wfStandardsCompleted = computed(() => wf.value.filter((w: Warframe) => !isPrime(w.type) && partCollected(w)).length)
 
 // Weapon category helper (use computed .value)
-const primesIn = (cat: string) => wp.value.filter((w: any) => w.category === cat && isPrime(w.type))
-const standardsIn = (cat: string) => wp.value.filter((w: any) => w.category === cat && !isPrime(w.type))
+const primesIn = (cat: string) => wp.value.filter((w: Weapon) => w.category === cat && isPrime(w.type))
+const standardsIn = (cat: string) => wp.value.filter((w: Weapon) => w.category === cat && !isPrime(w.type))
 
 const primaryPrimesTotal = computed(() => primesIn('primary').length)
 const primaryStandardsTotal = computed(() => standardsIn('primary').length)
-const primaryPrimesCompleted = computed(() => primesIn('primary').filter((w: any) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
-const primaryStandardsCompleted = computed(() => standardsIn('primary').filter((w: any) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
+const primaryPrimesCompleted = computed(() => primesIn('primary').filter((w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
+const primaryStandardsCompleted = computed(() => standardsIn('primary').filter((w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
 
 const secondaryPrimesTotal = computed(() => primesIn('secondary').length)
 const secondaryStandardsTotal = computed(() => standardsIn('secondary').length)
-const secondaryPrimesCompleted = computed(() => primesIn('secondary').filter((w: any) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
-const secondaryStandardsCompleted = computed(() => standardsIn('secondary').filter((w: any) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
+const secondaryPrimesCompleted = computed(() => primesIn('secondary').filter((w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
+const secondaryStandardsCompleted = computed(() => standardsIn('secondary').filter((w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
 
 const meleePrimesTotal = computed(() => primesIn('melee').length)
 const meleeStandardsTotal = computed(() => standardsIn('melee').length)
-const meleePrimesCompleted = computed(() => primesIn('melee').filter((w: any) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
-const meleeStandardsCompleted = computed(() => standardsIn('melee').filter((w: any) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
+const meleePrimesCompleted = computed(() => primesIn('melee').filter((w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
+const meleeStandardsCompleted = computed(() => standardsIn('melee').filter((w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
 
 // (collection already initialized above)
 
 const fileInput = ref<HTMLInputElement | null>(null)
-const previewRows = ref<any[] | null>(null)
+const previewRows = ref<ParsedRow[] | null>(null)
 const previewHeaders = ref<string[]>([])
 
 function onExportCSV() {
@@ -215,8 +221,9 @@ function onFileChange(e: Event) {
     }
     if (parsed.type === 'csv' || parsed.type === 'json') {
       // show preview and keep rows for confirmation
-      previewRows.value = parsed.rows as any[] || []
-      previewHeaders.value = previewRows.value && previewRows.value.length ? Object.keys(previewRows.value[0]) : []
+      previewRows.value = (parsed.rows as ParsedRow[]) || []
+  const first = previewRows.value![0] as ParsedRow
+  previewHeaders.value = previewRows.value && previewRows.value.length ? Object.keys(first) : []
       return
     }
     alert('Import failed — unsupported file format')
@@ -228,11 +235,15 @@ function onFileChange(e: Event) {
 
 function applyPreview() {
   if (!previewRows.value || previewRows.value.length === 0) return
-  const overrides = mapRowsToOverrides(previewRows.value as any[])
+  const overrides = mapRowsToOverrides(previewRows.value as ParsedRow[])
   // apply overrides into store
   // merge into existing overrides
   Object.keys(overrides).forEach(name => {
-    collection.setOverride(name, overrides[name])
+    const ov = overrides[name]
+    if (ov && typeof ov === 'object') {
+      // cast to the store's expected partial shape
+      collection.setOverride(name, ov as Partial<Record<string, unknown>>)
+    }
   })
   // clear preview
   previewRows.value = null
