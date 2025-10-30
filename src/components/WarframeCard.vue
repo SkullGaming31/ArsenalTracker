@@ -136,7 +136,7 @@ type WarframeUpdate = {
 };
 const emit = defineEmits<{ (e: "update", payload: WarframeUpdate): void }>();
 // keep `warframe` as a reactive ref so updates from parent propagate
-import { ref, watch, computed, toRef, watchEffect } from "vue";
+import { ref, watch, computed, toRef } from "vue";
 import { onMounted, onBeforeUnmount } from "vue";
 const warframe = toRef(props as { warframe: Warframe }, "warframe");
 
@@ -167,21 +167,33 @@ const showBlueprint = ref(false);
 // thumbnail state
 const imgSrc = ref<string | null>(null);
 let observer: IntersectionObserver | null = null;
-let manifestCache: any = null;
+
+interface AssetsManifest {
+  warframes?: Record<string, { imageName?: string; wikiaThumbnail?: string }>;
+  weapons?: Record<string, unknown>;
+}
+
+let manifestCache: AssetsManifest | null = null;
 const root = ref<HTMLElement | null>(null)
 
-async function loadAssetsManifest() {
+async function loadAssetsManifest(): Promise<AssetsManifest> {
   if (manifestCache) return manifestCache;
   try {
-    const res = await fetch("/assets/manifest.api.json");
+    const res = await fetch('/assets/manifest.api.json');
     if (!res.ok) return (manifestCache = { warframes: {}, weapons: {} });
     const json = await res.json();
-    manifestCache = json || { warframes: {}, weapons: {} };
+    manifestCache = (json || { warframes: {}, weapons: {} }) as AssetsManifest;
     return manifestCache;
-  } catch (e) {
+  } catch {
     manifestCache = { warframes: {}, weapons: {} };
     return manifestCache;
   }
+}
+
+function getWikiaThumbnail(wf?: Warframe | null): string | undefined {
+  if (!wf) return undefined
+  const meta = wf as unknown as { wikiaThumbnail?: unknown }
+  return typeof meta.wikiaThumbnail === 'string' ? meta.wikiaThumbnail : undefined
 }
 
 // probe an image URL by attempting to load it — more reliable than fetch HEAD for cross-origin images
@@ -191,12 +203,14 @@ async function probeImage(url: string) {
     return await new Promise<boolean>((resolve) => {
       const img = new Image()
       // allow cross-origin images to load where permitted
-      try { img.crossOrigin = 'anonymous' } catch (e) {}
+      try { img.crossOrigin = 'anonymous' } catch {
+        // ignore
+      }
       img.onload = () => resolve(true)
       img.onerror = () => resolve(false)
       img.src = url
     })
-  } catch (e) {
+  } catch {
     return false
   }
 }
@@ -210,10 +224,10 @@ function startObserving(el: Element | null) {
       for (const entry of entries) {
         if (!entry.isIntersecting) continue;
 
-        // attempt to load thumbnail from manifest
-        const m = (await loadAssetsManifest()) || { warframes: {} };
-        const name = String(warframe.value?.name || "");
-        const wf = (m as any).warframes && (m as any).warframes[name];
+  // attempt to load thumbnail from manifest
+  const m = await loadAssetsManifest();
+  const name = String(warframe.value?.name || '');
+  const wf = m.warframes ? m.warframes[name] : undefined;
 
         // Helper to try CDN fallback using image probe
         const tryCdn = async (n: string) => {
@@ -232,18 +246,18 @@ function startObserving(el: Element | null) {
             } else if (wf.wikiaThumbnail) {
               imgSrc.value = wf.wikiaThumbnail;
             } else {
-              const cdn = await tryCdn(name);
-              if (cdn) imgSrc.value = cdn;
-              else if (warframe.value && (warframe.value as any).wikiaThumbnail) imgSrc.value = (warframe.value as any).wikiaThumbnail;
+              const cdnLocal = await tryCdn(name);
+              if (cdnLocal) imgSrc.value = cdnLocal;
+              else if (getWikiaThumbnail(warframe.value)) imgSrc.value = getWikiaThumbnail(warframe.value)!;
             }
-          } catch (e) {
+          } catch {
             if (wf.wikiaThumbnail) imgSrc.value = wf.wikiaThumbnail;
-            else if (warframe.value && (warframe.value as any).wikiaThumbnail) imgSrc.value = (warframe.value as any).wikiaThumbnail;
+            else if (getWikiaThumbnail(warframe.value)) imgSrc.value = getWikiaThumbnail(warframe.value)!;
           }
         } else if (wf && wf.wikiaThumbnail) {
           imgSrc.value = wf.wikiaThumbnail;
-        } else if (warframe.value && (warframe.value as any).wikiaThumbnail) {
-          imgSrc.value = (warframe.value as any).wikiaThumbnail;
+        } else if (getWikiaThumbnail(warframe.value)) {
+          imgSrc.value = getWikiaThumbnail(warframe.value)!;
         } else {
           // final fallback: try CDN directly for the warframe name
           const cdn = await tryCdn(name);
@@ -271,23 +285,23 @@ onMounted(() => {
     try {
       const m = await loadAssetsManifest()
       const name = String(warframe.value?.name || '')
-      const wf = (m as any).warframes && (m as any).warframes[name]
+      const wf = m.warframes ? m.warframes[name] : undefined
       if (wf && wf.wikiaThumbnail) imgSrc.value = wf.wikiaThumbnail
-      else if (warframe.value && (warframe.value as any).wikiaThumbnail) imgSrc.value = (warframe.value as any).wikiaThumbnail
+      else if (getWikiaThumbnail(warframe.value)) imgSrc.value = getWikiaThumbnail(warframe.value)!
       else {
         // try warframestat CDN as a final fallback
-        try {
+          try {
           const nameSlug = encodeURIComponent(name.replace(/\s+/g, '-').toLowerCase())
           const cdnUrl = `https://cdn.warframestat.us/img/${nameSlug}.png`
           const head = await fetch(cdnUrl, { method: 'HEAD' })
           if (head.ok) imgSrc.value = cdnUrl
-        } catch (e) {
+          } catch {
           // ignore
         }
       }
-    } catch (e) {
-      if (warframe.value && (warframe.value as any).wikiaThumbnail) imgSrc.value = (warframe.value as any).wikiaThumbnail
-    }
+      } catch {
+        if (getWikiaThumbnail(warframe.value)) imgSrc.value = getWikiaThumbnail(warframe.value)!
+      }
   }, 400)
 });
 
@@ -373,7 +387,7 @@ watch(
       blueprint_resources: blueprintResources.value.map((r) => ({ ...r })),
     });
   },
-  { deep: true, flush: "sync" },
+  { deep: true },
 );
 
 // computed visual stats
@@ -417,7 +431,7 @@ const isPrime = computed(() => String(warframe.value?.type || "").toLowerCase().
 // highlightedName: if props.highlight provided, wrap the first occurrence in a <mark>
 const highlightedName = computed(() => {
   const name = String(warframe.value?.name || "");
-  const hl = (props as any).highlight || "";
+  const hl = props.highlight || "";
   if (!hl) return name;
   try {
     const idx = name.toLowerCase().indexOf(String(hl).toLowerCase());
@@ -426,7 +440,7 @@ const highlightedName = computed(() => {
     const match = name.slice(idx, idx + hl.length);
     const after = name.slice(idx + hl.length);
     return `${before}<mark>${match}</mark>${after}`;
-  } catch (e) {
+  } catch {
     return name;
   }
 });

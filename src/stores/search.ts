@@ -2,12 +2,13 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import Fuse from 'fuse.js'
 import type { Warframe } from '../types/warframe'
+import type { FuseResult } from '../types/search'
 
 export const useSearchStore = defineStore('search', () => {
   const query = ref('')
-  // Use broader types to avoid depending on fuse.js type exports in devDependencies
-  const results = ref<Array<{ item: Warframe; matches?: any }>>([])
-  const fuseRef = ref<any | null>(null)
+  // Use a small typed shape for Fuse results to avoid `any` usage
+  const results = ref<FuseResult<Warframe>[]>([])
+  const fuseRef = ref<Fuse<Warframe> | null>(null)
 
   function createFuse(list: Warframe[]) {
     fuseRef.value = new Fuse(list, {
@@ -27,7 +28,7 @@ export const useSearchStore = defineStore('search', () => {
     const r = String(q || '').trim()
     if (!r) return results.value = []
   const res = fuseRef.value.search(r, { limit: 200 })
-  results.value = res.map((resItem: any) => ({ item: resItem.item, matches: resItem.matches }))
+  results.value = res.map((resItem) => ({ item: resItem.item, matches: resItem.matches }))
   }
 
   return {

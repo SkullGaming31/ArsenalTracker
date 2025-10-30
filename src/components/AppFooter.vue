@@ -1,6 +1,6 @@
 <template>
   <footer class="app-footer">
-    <div class="inner">
+    <div :class="['inner', { centered: centered }]">
       <div></div>
       <div class="copy">© {{ year }} SkullGamingHQ — All rights reserved.</div>
     </div>
@@ -8,12 +8,14 @@
 </template>
 
 <script setup lang="ts">
+const { centered = false } = defineProps<{ centered?: boolean }>()
 const year = new Date().getFullYear()
 </script>
 
 <style scoped>
 .app-footer { border-top: 1px solid rgba(255,255,255,0.03); padding: 18px 12px; background: #071013; color: #cfeadf; margin-top: 0 }
 .app-footer .inner { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between }
+.app-footer .inner.centered { justify-content:center }
 .app-footer .links a { margin-right:12px; color:inherit; text-decoration:none }
 .app-footer .copy { color:#9fb8a6 }
   .app-footer .links { display:flex; align-items:center }

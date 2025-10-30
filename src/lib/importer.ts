@@ -1,6 +1,27 @@
 // Minimal CSV/JSON parser and mapping utilities for Warframe export imports
 export type ParsedRow = Record<string, string>
 
+export interface ImportOverride {
+  neuroptics_collected?: boolean
+  chassis_collected?: boolean
+  systems_collected?: boolean
+  blueprint_collected?: boolean
+  is_mastered?: boolean
+  neuroptics_resources?: unknown[]
+  chassis_resources?: unknown[]
+  systems_resources?: unknown[]
+  blueprint_resources?: unknown[]
+  [key: string]: unknown
+}
+
+export type ImportOverridesMap = Record<string, ImportOverride>
+
+export type ParseResult =
+  | { type: 'csv'; rows: ParsedRow[] }
+  | { type: 'json'; rows: ParsedRow[] }
+  | { type: 'versioned'; payload: { version: number; overrides: ImportOverridesMap } }
+  | { type: 'unknown' }
+
 function parseCSV(text: string): ParsedRow[] {
   const rows: ParsedRow[] = []
   // naive but robust CSV parser supporting quoted fields
@@ -21,7 +42,7 @@ function parseCSV(text: string): ParsedRow[] {
   return rows
 }
 
-function splitCSVLine(line: string | undefined) {
+function splitCSVLine(line: string | undefined): string[] {
   if (!line) return []
   const cols: string[] = []
   let cur = ''
@@ -43,6 +64,16 @@ function parseJSON(text: string) {
   try { return JSON.parse(text) } catch { return null }
 }
 
+function objToParsedRow(obj: unknown): ParsedRow {
+  const out: ParsedRow = {}
+  if (obj && typeof obj === 'object') {
+    for (const [k, v] of Object.entries(obj as Record<string, unknown>)) {
+      out[k] = v === undefined || v === null ? '' : String(v)
+    }
+  }
+  return out
+}
+
 function normalizeBool(val: string): boolean {
   if (val === undefined || val === null) return false
   const s = String(val).trim().toLowerCase()
@@ -50,8 +81,8 @@ function normalizeBool(val: string): boolean {
 }
 
 // Map parsed rows to overrides by name. Best-effort mapping using header keywords.
-export function mapRowsToOverrides(rows: ParsedRow[]) {
-  const overrides: Record<string, any> = {}
+export function mapRowsToOverrides(rows: ParsedRow[]): ImportOverridesMap {
+  const overrides: ImportOverridesMap = {}
   if (!rows || rows.length === 0) return overrides
   const headers = rows[0] ? Object.keys(rows[0]) : []
   // find name column
@@ -63,15 +94,15 @@ export function mapRowsToOverrides(rows: ParsedRow[]) {
   const masteredKey = headers.find(h => /master|mastered/i.test(h))
 
   for (const r of rows) {
-  const nameRaw = nameKey ? r[nameKey] : undefined
-  const name = (nameRaw || '').trim()
+    const nameRaw = nameKey ? r[nameKey] : undefined
+    const name = (nameRaw || '').trim()
     if (!name) continue
-    const entry: any = {}
-  if (neuroKey && r[neuroKey] !== undefined) entry.neuroptics_collected = normalizeBool(String(r[neuroKey]))
-  if (chassisKey && r[chassisKey] !== undefined) entry.chassis_collected = normalizeBool(String(r[chassisKey]))
-  if (systemsKey && r[systemsKey] !== undefined) entry.systems_collected = normalizeBool(String(r[systemsKey]))
-  if (blueprintKey && r[blueprintKey] !== undefined) entry.blueprint_collected = normalizeBool(String(r[blueprintKey]))
-  if (masteredKey && r[masteredKey] !== undefined) entry.is_mastered = normalizeBool(String(r[masteredKey]))
+    const entry: ImportOverride = {}
+    if (neuroKey && r[neuroKey] !== undefined) entry.neuroptics_collected = normalizeBool(String(r[neuroKey]))
+    if (chassisKey && r[chassisKey] !== undefined) entry.chassis_collected = normalizeBool(String(r[chassisKey]))
+    if (systemsKey && r[systemsKey] !== undefined) entry.systems_collected = normalizeBool(String(r[systemsKey]))
+    if (blueprintKey && r[blueprintKey] !== undefined) entry.blueprint_collected = normalizeBool(String(r[blueprintKey]))
+    if (masteredKey && r[masteredKey] !== undefined) entry.is_mastered = normalizeBool(String(r[masteredKey]))
     // try parse resources JSON if provided in resource-like columns
     headers.forEach(h => {
       if (/resources/i.test(h) && r[h]) {
@@ -80,7 +111,7 @@ export function mapRowsToOverrides(rows: ParsedRow[]) {
           // attach to a reasonable property name if it matches
           if (Array.isArray(parsed)) {
             const key = h.toLowerCase().includes('neuro') ? 'neuroptics_resources' : h.toLowerCase().includes('chassis') ? 'chassis_resources' : h.toLowerCase().includes('system') ? 'systems_resources' : h.toLowerCase().includes('blueprint') ? 'blueprint_resources' : null
-            if (key) entry[key] = parsed
+            if (key) entry[key] = parsed as unknown[]
           }
         } catch {
           // ignore JSON parse errors
@@ -93,15 +124,22 @@ export function mapRowsToOverrides(rows: ParsedRow[]) {
 }
 
 // Accept raw text (CSV or JSON). Returns { type: 'csv'|'json'|'versioned', rows?, payload? }
-export function parseImportFile(text: string) {
+export function parseImportFile(text: string): ParseResult {
   const maybeJson = parseJSON(text)
   if (maybeJson) {
     // If this is a versioned payload with overrides, return directly
-    if (maybeJson.version && maybeJson.overrides) return { type: 'versioned', payload: maybeJson }
+    if (maybeJson && typeof maybeJson === 'object') {
+      const obj = maybeJson as Record<string, unknown>
+      if ('version' in obj && 'overrides' in obj) {
+        const version = typeof obj.version === 'number' ? obj.version : Number(obj.version)
+        const overrides = obj.overrides as ImportOverridesMap
+        return { type: 'versioned', payload: { version, overrides } }
+      }
+    }
     // if it's an array of items (warframe export), map to rows
-    if (Array.isArray(maybeJson)) return { type: 'json', rows: maybeJson.map((o: any) => o) }
+    if (Array.isArray(maybeJson)) return { type: 'json', rows: maybeJson.map(o => objToParsedRow(o)) }
     // else unknown object shape
-    return { type: 'json', rows: [maybeJson] }
+    return { type: 'json', rows: [objToParsedRow(maybeJson)] }
   }
   // try CSV
   const rows = parseCSV(text)
@@ -110,17 +148,18 @@ export function parseImportFile(text: string) {
 }
 
 // Export overrides map to CSV string (simple flatten: name + fields)
-export function exportOverridesToCSV(overrides: Record<string, any>) {
+export function exportOverridesToCSV(overrides: ImportOverridesMap) {
   const rows = [] as string[]
   const headers = new Set<string>()
   Object.values(overrides).forEach(o => Object.keys(o || {}).forEach(k => headers.add(k)))
   const headerList = ['name', ...Array.from(headers)]
   rows.push(headerList.join(','))
   for (const name of Object.keys(overrides)) {
-    const o = overrides[name]
+    const o = overrides[name] ?? {}
+    const obj = o as Record<string, unknown>
     const vals = headerList.map(h => {
       if (h === 'name') return quoteCSV(name)
-      const v = o[h]
+      const v = obj[h]
       if (v === undefined) return ''
       if (typeof v === 'object') return quoteCSV(JSON.stringify(v))
       return quoteCSV(String(v))

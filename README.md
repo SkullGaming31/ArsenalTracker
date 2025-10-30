@@ -94,3 +94,12 @@ npm run test:e2e -- --debug
 ```sh
 npm run lint
 ```
+
+### ESLint overrides and why some paths are excluded
+
+This repository intentionally excludes a few generated or Node-only paths from some strict ESLint rules to keep developer-facing lint output actionable:
+
+- `docs/assets/**` — compiled/minified vendor and build assets live here; they can trigger rules like `no-unused-expressions` (minified code) and are not maintained by hand.
+- `scripts/**` and `e2e/**` — utility and test helper scripts are Node-focused and sometimes use CommonJS `require()` for convenient scripting. The lint config disables the `no-require-imports` rule for these paths.
+
+If you need to run the linter across these paths for a specific reason, you can temporarily enable rules or run `eslint` directly against the files. The CI/linting setup focuses on the `src/` code, tests, and Vue components which are the primary targets for type and style enforcement.

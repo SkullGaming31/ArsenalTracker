@@ -47,20 +47,47 @@ These changes were made to diagnose and resolve intermittent test failures where
 	- If you want the current merged `weapons.json` committed, run `git add src/data/weapons.json && git commit -m "chore(data): populate weapons.parts from weapons.api.json"`.
 	-More work done on Weapons data quality
 
-	## Unreleased - 2025-10-25
+## Unreleased - 2025-10-27
 
-	- UX & persistence improvements
-		- Weapon cards: show market/purchase info for market-only weapons and add a visible market badge.
-		- Parts collection and Mastered state now persist via local overrides (parts_collected / is_mastered). Child cards emit updates and the collection store saves them to localStorage.
-		- Dashboard: clarified counts by labeling the large numbers as "Mastered" for easier reading.
+- Tests & coverage
+  - Added focused unit tests for `App.vue` and expanded `Dashboard` import/export tests to assert exact import/apply flows.
+  - Added multiple store and importer unit tests to exercise edge-cases (migration, debounce/save timing, beforeunload flush, duplicate merges).
+  - Re-ran the test suite with coverage and adjusted `vitest` coverage config to exclude non-runtime files so reports focus on `src/` runtime code.
 
-	- Performance
-		- Fixed a UI freeze when toggling many Warframe part checkboxes by reducing reactive churn: switched broad watchEffect usage to targeted watchers and changed the store override update to mutate a single override key (avoids replacing the whole overrides object).
+- Lint & minor fixes
+  - Fixed several test files to remove unused imports/duplicate blocks and made assertions more specific (`toHaveBeenCalledWith` / `expect.any(String)` where appropriate).
+  - Addressed a few lint false-positives by narrowing test imports and adjusting an ad-hoc e2e debug script to avoid ESLint import/require confusion.
 
-	- Data cleanup
-		- Removed `resources` / `main_blueprint_resources` from Prime weapon entries in `src/data/weapons.json` via a maintenance script (backup created at `src/data/weapons.json.bak`).
+- UX / persistence
+  - Continued polishing persistence and UI: header extraction into `AppHeader.vue`, per-key overrides mutation to reduce reactive churn, and Dashboard import/CSV preview flows.
 
-	- Misc
-		- Added a combined "All weapons" view and enforced alphabetical ordering across weapon lists.
-		- Canonicalized type filter ordering and disabled type options with zero weapons.
+Notes:
+- This commit includes many test additions and small lint/test fixes. A broader typing sweep (replace remaining `any` usages) is tracked separately and will be addressed in follow-up work.
 
+
+## Unreleased - 2025-10-30
+
+- Landing page & visuals
+	- Increased landing particle density and switched to continuous spawn while the landing page is mounted (capped to avoid unbounded DOM growth).
+	- Each particle now animates along a random vector (per-particle CSS variables --dx/--dy), with inline styles and global keyframes so dynamically-created nodes animate correctly across browsers.
+	- Tuned particle size, color palette, opacity, duration, and glow for a denser, more dynamic hero effect.
+
+- Global background and Dashboard
+	- Introduced a Warframe-inspired animated background using layered CSS gradients and blurred "energy veins".
+	- Moved the background visuals from `src/pages/Dashboard.vue` into the main layout (`src/App.vue`) so the effect is visible across the app.
+	- Added subtle blurred energy orbs and slow-moving vein animation to provide a moody, sci-fi backdrop without shipping image assets.
+
+- Navigation & header
+	- Redesigned `src/components/NavBar.vue` to a translucent, Warframe-inspired navigation panel with inline SVG glyphs, per-button accent colors, hover glow and a clear active indicator.
+	- Wired `App.vue` to pass `:activeView="view"` into `NavBar` so the active page is highlighted (improves discoverability).
+
+- About page (user-focused)
+	- Redesigned `src/pages/About.vue` for end-users: hero, clear usage steps, backup & restore guidance, privacy/local-storage notes (key: `arsenaltracker.v1`), troubleshooting tips, and support CTA (Discord).
+	- Replaced developer/GitHub-first CTA with user-facing actions: Get Started, How it works (scrolls to features), and Help & Support (opens Discord).
+
+- Miscellaneous
+	- Updated local todo/tracking entries in the repository for these visual and UX changes.
+	- Fixed small TypeScript/ESLint lints triggered by the edits (removed unused bindings, narrowed catch parameter, adjusted style tag mismatches during refactors).
+
+Notes:
+- These UI changes are intentionally implemented with CSS (gradients, blur, transforms) to avoid extra assets and to keep runtime cost moderate. Consider adding a "reduce motion" or "low-power" toggle for users on low-end devices or with accessibility needs.
