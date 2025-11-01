@@ -229,12 +229,23 @@ function startObserving(el: Element | null) {
   const name = String(warframe.value?.name || '');
   const wf = m.warframes ? m.warframes[name] : undefined;
 
-        // Helper to try CDN fallback using image probe
-        const tryCdn = async (n: string) => {
+        // Helper to try CDN fallback using image probe. Try imageName (if present) first,
+        // then fall back to slug-based names and common ampersand->and variant.
+        const tryCdn = async (n: string, imageName?: string) => {
+          const candidates: string[] = []
+          if (imageName) candidates.push(`https://cdn.warframestat.us/img/${encodeURIComponent(imageName)}`)
           const nameSlug = encodeURIComponent(n.replace(/\s+/g, '-').toLowerCase());
-          const cdnUrl = `https://cdn.warframestat.us/img/${nameSlug}.png`;
-          const ok = await probeImage(cdnUrl);
-          return ok ? cdnUrl : null;
+          candidates.push(`https://cdn.warframestat.us/img/${nameSlug}.png`)
+          if (n.includes('&')) candidates.push(`https://cdn.warframestat.us/img/${encodeURIComponent(n.replace(/&/g, 'and').replace(/\s+/g, '-').toLowerCase())}.png`)
+          for (const cdnUrl of candidates) {
+            try {
+              const ok = await probeImage(cdnUrl)
+              if (ok) return cdnUrl
+            } catch {
+              // ignore and try next
+            }
+          }
+          return null
         };
 
         if (wf && wf.imageName) {
@@ -246,7 +257,7 @@ function startObserving(el: Element | null) {
             } else if (wf.wikiaThumbnail) {
               imgSrc.value = wf.wikiaThumbnail;
             } else {
-              const cdnLocal = await tryCdn(name);
+              const cdnLocal = await tryCdn(name, wf.imageName);
               if (cdnLocal) imgSrc.value = cdnLocal;
               else if (getWikiaThumbnail(warframe.value)) imgSrc.value = getWikiaThumbnail(warframe.value)!;
             }
@@ -259,7 +270,7 @@ function startObserving(el: Element | null) {
         } else if (getWikiaThumbnail(warframe.value)) {
           imgSrc.value = getWikiaThumbnail(warframe.value)!;
         } else {
-          // final fallback: try CDN directly for the warframe name
+          // final fallback: try CDN directly for the warframe name (no local imageName available)
           const cdn = await tryCdn(name);
           if (cdn) imgSrc.value = cdn;
         }

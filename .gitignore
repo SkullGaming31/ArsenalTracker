@@ -1,5 +1,6 @@
 ﻿node_modules/
 dist/
+dist.zip
 .env
 .DS_Store
 .vscode/
@@ -22,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 /scripts/*
 NOTES.txt
+tmp-cdn-coverage-summary.json
+tmp-cdn-coverage.csv
