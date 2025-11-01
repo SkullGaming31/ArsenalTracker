@@ -31,7 +31,7 @@ jobs:
         run: npm run type-check
 
       - name: Run unit tests (Vitest)
-        run: npm run test:unit -- --run
+        run: npm run test -- --run
 
       - name: Build production bundle
         run: npm run build
