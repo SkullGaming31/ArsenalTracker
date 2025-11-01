@@ -26,11 +26,16 @@
     
     <section>
       <h3>All weapons</h3>
-      <div class="grid">
-        <WeaponCard v-for="w in allSorted" :key="w.name" :weapon="w" @update="handleUpdate" />
+      <!-- Virtualized scroller for large lists: only renders visible WeaponCard items -->
+      <div ref="scrollRef" class="virtual-scroll" style="height:70vh; overflow:auto;">
+        <div :style="{ height: totalHeight + 'px', position: 'relative' }">
+            <div v-for="vi in virtualRenderItems" :key="vi.item.name" :style="{ position: 'absolute', top: vi.start + 'px', left: 0, right: 0 }">
+              <WeaponCard :weapon="vi.item" @update="handleUpdate" />
+            </div>
+        </div>
       </div>
-      <div class="names"><strong>All weapons list:</strong>
-        <ul><li v-for="w in allSorted" :key="w.name">{{ w.name }}</li></ul>
+      <div class="names" style="margin-top:12px"><strong>All weapons list (full):</strong>
+        <ul style="max-height:200px; overflow:auto"><li v-for="w in allSorted" :key="w.name">{{ w.name }}</li></ul>
       </div>
     </section>
 
@@ -69,8 +74,10 @@
 <script setup lang="ts">
 // give component a multi-word name to satisfy eslint vue/multi-word-component-names
 defineOptions({ name: 'WeaponsPage' })
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted, watch } from 'vue'
 import WeaponCard from '../components/WeaponCard.vue'
+// virtualizer
+// no external virtualizer: use a lightweight windowing implementation
 import { useCollectionStore } from '../stores/collection'
 import type { Weapon, Part, PartWithCollected } from '../types/weapon'
 
@@ -164,6 +171,56 @@ const melees = computed(() => filtered.value.filter(w => w.category === 'melee')
 
 // combined alphabetized list of all filtered weapons
 const allSorted = computed(() => filtered.value.slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
+
+// Virtualizer setup
+const scrollRef = ref<HTMLElement | null>(null)
+const itemSize = 320
+type VirtualItem = { index: number; start: number; size: number }
+const virtualItems = computed(() => {
+  const items: VirtualItem[] = []
+  const start = visibleRange.value.start
+  const end = visibleRange.value.end
+  for (let i = start; i < end; i++) items.push({ index: i, start: i * itemSize, size: itemSize })
+  return items
+})
+
+// Map virtualItems to actual weapon items (non-undefined) for template use
+const virtualRenderItems = computed(() => {
+  return virtualItems.value
+    .map(vi => {
+      const item = allSorted.value[vi.index]
+      if (!item) return null
+      return { item, start: vi.start }
+    })
+    .filter(Boolean) as { item: Weapon; start: number }[]
+})
+
+const totalHeight = computed(() => allSorted.value.length * itemSize)
+
+const visibleRange = ref({ start: 0, end: Math.min(allSorted.value.length, 10) })
+const overscan = 5
+
+function recompute() {
+  const el = scrollRef.value
+  if (!el) return
+  const scrollTop = el.scrollTop
+  const clientHeight = el.clientHeight || 600
+  const start = Math.floor(scrollTop / itemSize) - overscan
+  const end = Math.ceil((scrollTop + clientHeight) / itemSize) + overscan
+  visibleRange.value.start = Math.max(0, start)
+  visibleRange.value.end = Math.min(allSorted.value.length, end)
+}
+
+onMounted(() => {
+  const el = scrollRef.value
+  if (el) {
+    el.addEventListener('scroll', recompute)
+  }
+  // recompute when list changes
+  watch(allSorted, () => recompute())
+  // initial compute
+  setTimeout(recompute, 0)
+})
 
 // payload shape when WeaponCard emits updates
 interface UpdatePayload {
