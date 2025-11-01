@@ -26,6 +26,19 @@
     
     <section>
       <h3>All weapons</h3>
+      <div class="pager" style="display:flex; gap:8px; align-items:center; margin-bottom:8px">
+        <label>
+          Per page
+          <select v-model.number="pageSize">
+            <option :value="50">50</option>
+            <option :value="100">100</option>
+            <option :value="200">200</option>
+          </select>
+        </label>
+        <button @click="prevPage" :disabled="currentPage === 0">Prev</button>
+        <div>Page {{ currentPage + 1 }} / {{ totalPages }}</div>
+        <button @click="nextPage" :disabled="currentPage >= totalPages - 1">Next</button>
+      </div>
       <!-- Virtualized scroller for large lists: only renders visible WeaponCard items -->
       <div ref="scrollRef" class="virtual-scroll" style="height:70vh; overflow:auto;">
         <div :style="{ height: totalHeight + 'px', position: 'relative' }">
@@ -172,10 +185,22 @@ const melees = computed(() => filtered.value.filter(w => w.category === 'melee')
 // combined alphabetized list of all filtered weapons
 const allSorted = computed(() => filtered.value.slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
 
-// Virtualizer setup
+// Virtualizer + simple pagination setup
 const scrollRef = ref<HTMLElement | null>(null)
 const itemSize = 320
 type VirtualItem = { index: number; start: number; size: number }
+
+// Pagination: allow quick capping of rendered list while diagnosing memory issues
+// pageSize = -1 means "All" (no pagination). This preserves previous behavior for tests.
+const pageSize = ref(-1)
+const currentPage = ref(0)
+const totalPages = computed(() => (pageSize.value < 0 ? 1 : Math.max(1, Math.ceil(allSorted.value.length / pageSize.value))))
+const pagedAllSorted = computed(() => {
+  if (pageSize.value < 0) return allSorted.value
+  const start = currentPage.value * pageSize.value
+  return allSorted.value.slice(start, start + pageSize.value)
+})
+
 const virtualItems = computed(() => {
   const items: VirtualItem[] = []
   const start = visibleRange.value.start
@@ -188,16 +213,16 @@ const virtualItems = computed(() => {
 const virtualRenderItems = computed(() => {
   return virtualItems.value
     .map(vi => {
-      const item = allSorted.value[vi.index]
+      const item = pagedAllSorted.value[vi.index]
       if (!item) return null
       return { item, start: vi.start }
     })
     .filter(Boolean) as { item: Weapon; start: number }[]
 })
 
-const totalHeight = computed(() => allSorted.value.length * itemSize)
+const totalHeight = computed(() => pagedAllSorted.value.length * itemSize)
 
-const visibleRange = ref({ start: 0, end: Math.min(allSorted.value.length, 10) })
+const visibleRange = ref({ start: 0, end: Math.min(pagedAllSorted.value.length, 10) })
 const overscan = 5
 
 function recompute() {
@@ -208,8 +233,22 @@ function recompute() {
   const start = Math.floor(scrollTop / itemSize) - overscan
   const end = Math.ceil((scrollTop + clientHeight) / itemSize) + overscan
   visibleRange.value.start = Math.max(0, start)
-  visibleRange.value.end = Math.min(allSorted.value.length, end)
+  visibleRange.value.end = Math.min(pagedAllSorted.value.length, end)
 }
+
+function prevPage() {
+  if (currentPage.value > 0) currentPage.value--
+}
+function nextPage() {
+  if (currentPage.value < totalPages.value - 1) currentPage.value++
+}
+
+// keep currentPage valid if pageSize or allSorted length changes
+watch([pageSize, allSorted], () => {
+  if (currentPage.value >= totalPages.value) currentPage.value = Math.max(0, totalPages.value - 1)
+  // reset visibleRange for new page
+  visibleRange.value = { start: 0, end: Math.min(pagedAllSorted.value.length, 10) }
+})
 
 onMounted(() => {
   const el = scrollRef.value

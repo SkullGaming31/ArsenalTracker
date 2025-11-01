@@ -18,7 +18,9 @@ const emit = defineEmits<{
 }>()
 
 const root = ref<HTMLElement | null>(null)
+// particle pooling to avoid unbounded DOM growth and repeated allocations
 const particles: HTMLElement[] = []
+const particlePool: HTMLElement[] = []
 let spawnInterval: number | null = null
 
 function onGetStarted() {
@@ -31,58 +33,93 @@ function onLearnMore() {
 
 function createParticle(container: HTMLElement) {
   const colors = ['#00ffff', '#00bfff', '#7c4dff', '#6ee7b7']
-  const p = document.createElement('div')
+  // reuse from pool when available
+  let p: HTMLElement | undefined = particlePool.pop()
   const size = Math.random() * 6 + 2 // size range: 2 - 8px
   const color = colors[Math.floor(Math.random() * colors.length)] ?? '#00ffff'
   const opacity = (Math.random() * 0.35 + 0.15).toFixed(2) // 0.15 - 0.5
   const duration = (6 + Math.random() * 12).toFixed(2) // 6 - 18s
-  p.className = 'particle'
-  // Inline styles ensure dynamically-created elements are visible and animated
-  p.style.position = 'absolute'
+
+  if (!p) {
+    p = document.createElement('div')
+    p.className = 'particle'
+    p.style.position = 'absolute'
+    p.style.borderRadius = '50%'
+    p.style.willChange = 'transform, opacity'
+    p.style.zIndex = '0'
+    p.style.pointerEvents = 'none'
+    container.appendChild(p)
+    // newly created elements should be tracked as active
+    particles.push(p)
+  } else {
+    // reused from pool: mark as active
+    if (!particles.includes(p)) particles.push(p)
+  }
+
+  // compute random vector
+  const angle = Math.random() * Math.PI * 2
+  const maxDim = Math.max(window.innerWidth, window.innerHeight)
+  const distance = maxDim * (0.6 + Math.random() * 1.4)
+  const dx = Math.cos(angle) * distance
+  const dy = Math.sin(angle) * distance
+
+  // apply styles to reuse element
   p.style.width = `${size}px`
   p.style.height = `${size}px`
   p.style.left = `${Math.random() * 100}vw`
   p.style.top = `${Math.random() * 100}vh`
   p.style.background = color
-  p.style.borderRadius = '50%'
   p.style.opacity = String(opacity)
-  // compute a random movement vector so particles travel in arbitrary directions
-  const angle = Math.random() * Math.PI * 2
-  const maxDim = Math.max(window.innerWidth, window.innerHeight)
-  const distance = maxDim * (0.6 + Math.random() * 1.4) // ensures movement reaches off-screen
-  const dx = Math.cos(angle) * distance
-  const dy = Math.sin(angle) * distance
   p.style.setProperty('--dx', `${dx}px`)
   p.style.setProperty('--dy', `${dy}px`)
-  p.style.willChange = 'transform, opacity'
   p.style.animationName = 'float'
   p.style.animationTimingFunction = 'linear'
   p.style.animationIterationCount = 'infinite'
   p.style.animationDelay = `${Math.random() * 10}s`
   p.style.animationDuration = `${duration}s`
-  // subtle glow based on size and color
   p.style.boxShadow = `0 0 ${Math.max(6, size * 2)}px ${color}55`
-  p.style.zIndex = '0'
-  p.style.pointerEvents = 'none'
-  container.appendChild(p)
-  particles.push(p)
+
   return p
 }
 
 onMounted(() => {
   const container = root.value ?? document.body
-  // base initial burst, then spawn continuously while mounted
-  const initialCount = Math.min(1200, Math.max(200, Math.floor((window.innerWidth * window.innerHeight) / 3000)))
-  const maxParticles = Math.max(initialCount, 1600)
+  // base initial burst, but cap aggressively to avoid OOM on low-memory devices
+  const viewportArea = Math.max(800, window.innerWidth) * Math.max(600, window.innerHeight)
+  const initialCount = Math.min(300, Math.max(50, Math.floor(viewportArea / 20000)))
+  const maxParticles = Math.max(initialCount, 400)
 
-  for (let i = 0; i < initialCount; i++) createParticle(container)
+  // create initial pool up to maxParticles but only attach initialCount visible ones
+  for (let i = 0; i < maxParticles; i++) {
+    const el = document.createElement('div')
+    el.className = 'particle'
+    el.style.position = 'absolute'
+    el.style.borderRadius = '50%'
+    el.style.willChange = 'transform, opacity'
+    el.style.zIndex = '0'
+    el.style.pointerEvents = 'none'
+    container.appendChild(el)
+    particlePool.push(el)
+  }
 
-  // spawn a few particles frequently to maintain density without unbounded growth
+  // populate initial visible particles by reusing from pool
+  for (let i = 0; i < initialCount; i++) {
+    createParticle(container)
+  }
+
+  // spawn a few particles less frequently to maintain density without unbounded growth
   spawnInterval = window.setInterval(() => {
-    // small batch spawn to keep movement feeling organic
-    const batch = 6
+    const batch = 2
     for (let i = 0; i < batch && particles.length < maxParticles; i++) createParticle(container)
-  }, 250)
+    // occasionally recycle oldest particles back into the pool to avoid growth
+    if (particles.length > maxParticles) {
+      const removeCount = particles.length - maxParticles
+      for (let r = 0; r < removeCount; r++) {
+        const rem = particles.shift()
+        if (rem) particlePool.push(rem)
+      }
+    }
+  }, 750)
 })
 
 onUnmounted(() => {
@@ -90,8 +127,11 @@ onUnmounted(() => {
     window.clearInterval(spawnInterval)
     spawnInterval = null
   }
+  // remove active particles and clear pool
   for (const p of particles) p.remove()
   particles.length = 0
+  for (const p of particlePool) p.remove()
+  particlePool.length = 0
 })
 </script>
 

@@ -5,8 +5,8 @@
       <div class="accent" :style="{ background: accentColor }"></div>
 
       <div class="thumb">
-        <img v-if="imgSrc" :src="imgSrc" :alt="warframe.name || 'thumbnail'" class="thumb-img" />
-        <img v-else :alt="warframe.name || 'placeholder'" src="/icons/icon-192.svg" class="thumb-img" />
+        <img v-if="imgSrc" :src="imgSrc" :alt="warframe.name || 'thumbnail'" class="thumb-img" loading="lazy" />
+        <img v-else :alt="warframe.name || 'placeholder'" src="/icons/icon-192.svg" class="thumb-img" loading="lazy" />
       </div>
 
       <div class="title">
@@ -138,6 +138,7 @@ const emit = defineEmits<{ (e: "update", payload: WarframeUpdate): void }>();
 // keep `warframe` as a reactive ref so updates from parent propagate
 import { ref, watch, computed, toRef } from "vue";
 import { onMounted, onBeforeUnmount } from "vue";
+import { probeImage } from '../lib/imageProbe'
 const warframe = toRef(props as { warframe: Warframe }, "warframe");
 
 const testId = computed(() => {
@@ -196,24 +197,7 @@ function getWikiaThumbnail(wf?: Warframe | null): string | undefined {
   return typeof meta.wikiaThumbnail === 'string' ? meta.wikiaThumbnail : undefined
 }
 
-// probe an image URL by attempting to load it — more reliable than fetch HEAD for cross-origin images
-async function probeImage(url: string) {
-  try {
-    if (typeof Image === 'undefined') return false
-    return await new Promise<boolean>((resolve) => {
-      const img = new Image()
-      // allow cross-origin images to load where permitted
-      try { img.crossOrigin = 'anonymous' } catch {
-        // ignore
-      }
-      img.onload = () => resolve(true)
-      img.onerror = () => resolve(false)
-      img.src = url
-    })
-  } catch {
-    return false
-  }
-}
+// image probing is handled by src/lib/imageProbe.ts which throttles concurrent Image loads
 
 function startObserving(el: Element | null) {
 
