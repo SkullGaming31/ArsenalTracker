@@ -56,19 +56,39 @@ npm run test:unit
 ## Local storage / backup key
 
 The app persists local overrides in localStorage under the key `arsenaltracker.v1`.
-The payload format is JSON with the shape:
+The persisted payload is a versioned JSON object. Example (representative, fields are flexible):
 
 ```
 {
   "version": 1,
   "overrides": {
-    "Warframe Name": { "crafted": true, "blueprint": false },
-    "Weapon Name": { "parts": [ ... ] }
+    "Rhino Prime": {
+      "neuroptics_collected": true,
+      "chassis_collected": false,
+      "systems_collected": false,
+      "blueprint_collected": false,
+      "is_mastered": false,
+      "neuroptics_resources": [
+        { "name": "Credits", "quantity": 15000, "collected": true },
+        { "name": "Alloy Plate", "quantity": 150, "collected": false }
+      ]
+    },
+    "Braton Prime": {
+      "parts_collected": ["Barrel", "Receiver"],
+      "is_mastered": false
+    }
   }
 }
 ```
 
-Older versions used to store the overrides map directly (no version). The store will automatically migrate that legacy shape into the versioned payload on load.
+Notes:
+- The top-level `version` is used for migrations; current version is `1` and should remain present in exported backups.
+- `overrides` is a map keyed by the item name (warframe or weapon). Each override object is a partial set of the fields that appear on the original data; the store merges overrides onto the static data at runtime.
+- Typical warframe override fields: `neuroptics_collected`, `chassis_collected`, `systems_collected`, `blueprint_collected`, `is_mastered`, and optional per-part resource arrays (e.g. `neuroptics_resources`).
+- Typical weapon override fields: `parts_collected` (array of part names), `is_mastered`, or `parts` (detailed part shapes).
+- You can export the current payload from the Dashboard (Export JSON) which uses the same versioned shape; importing accepts both the versioned shape and the legacy unversioned overrides map and will migrate automatically.
+
+Be careful when editing backups by hand: the store expects JSON and will merge whatever keys you provide into the in-memory merged data. Prefer using the app's Export/Import workflow to create and restore backups.
 
 ### Run End-to-End Tests with [Playwright](https://playwright.dev)
 
