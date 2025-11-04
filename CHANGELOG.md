@@ -107,5 +107,7 @@ Notes:
 	- Added extra bottom padding to weapon cards to reduce cramped UI at the bottom of the card.
 	- Removed the long textual "All weapons list (full)" under the virtualized weapons view to declutter the page.
 
+	- Adjusted virtualized weapons row height and added vertical padding to each virtual cell so cards are not flush against each other (top/bottom spacing).
+
 Notes:
 - These changes are intended to improve layout and perceived performance for large lists. If desired, follow-ups can include measuring actual card heights to drive virtualization sizing or migrating the grid to a responsive CSS layout tied to viewport breakpoints.
