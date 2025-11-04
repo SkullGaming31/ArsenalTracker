@@ -97,7 +97,25 @@ export const useCollectionStore = defineStore('collection', () => {
     // This reduces reactive churn and avoids recreating the top-level object
     // which can cause downstream computed consumers to re-run for every item.
     const existing = overrides.value[name] || {}
-    overrides.value[name] = { ...existing, ...partial }
+    // Clone incoming partial to ensure we only store plain serializable data.
+    // This avoids accidentally persisting Vue reactive proxies or functions which
+    // can lead to circular references or serialization errors in production builds.
+    let plainPartial: WarframeOverride = {}
+    try {
+      const g = globalThis as unknown as { structuredClone?: (v: unknown) => unknown }
+      if (typeof g.structuredClone === 'function') {
+        plainPartial = g.structuredClone(partial) as WarframeOverride
+      } else {
+        // Fallback: JSON round-trip to strip non-serializable values
+        plainPartial = JSON.parse(JSON.stringify(partial)) as WarframeOverride
+      }
+    } catch (e) {
+      // If cloning fails, fall back to shallow merge of the partial to avoid blocking the UI.
+      console.warn('[collection] failed to deep-clone override payload, using shallow merge', e)
+      plainPartial = { ...partial }
+    }
+
+    overrides.value[name] = { ...existing, ...plainPartial }
     // Schedule persistence immediately for this change (debounced).
     const env = (globalThis as unknown as { process?: { env?: { NODE_ENV?: string } } })?.process?.env?.NODE_ENV
     if (env === 'test') {
