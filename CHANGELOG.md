@@ -104,6 +104,14 @@ Notes:
 	- Added robust image fallbacks: probe CDN candidates and use manifest wikia thumbnails when local assets are missing, plus an image @error handler to attempt fallbacks and avoid stuck broken images.
 	- Weapon cards now immediately load thumbnails when rendered in non-scroll grids (Primary / Secondary / Melee pages). Previously thumbnails sometimes appeared only in the virtualized "All weapons" view; the thumbnail loader now falls back to immediate-load when no scroll parent is detected. (2025-11-03)
 
+- Fix: Warframe part selection crash (recursive updates) — 2025-11-04
+	- Fixed a production-only crash that occurred when selecting Warframe parts which produced "Maximum recursive updates exceeded". The root cause was reactive churn: the page handler was writing identical override payloads back into the `collection` store which caused a feedback loop in production builds.
+	- Mitigation and fixes applied:
+	  - Short-circuit identical overrides in `src/pages/Warframes.vue` (don't call `collection.setOverride` when the incoming payload equals the existing override), preventing unnecessary store mutations and recursive watcher triggers. (commit: e14fe56)
+	  - Added defensive diagnostics and safer persistence in `src/stores/collection.ts` around `saveToStorage()` to detect and log non-serializable override entries (saved to `sessionStorage['arsenaltracker.debug_failed_save']` when encountered).
+	  - Defensive deep-clone of incoming override payloads before merging into the store to avoid persisting Vue reactive proxies or circular structures.
+	  - Issues #5 and #9 were closed by an empty commit referencing the fix (commit: db1e29a).
+
 - Weapons card UX
 	- Added extra bottom padding to weapon cards to reduce cramped UI at the bottom of the card.
 	- Removed the long textual "All weapons list (full)" under the virtualized weapons view to declutter the page.
