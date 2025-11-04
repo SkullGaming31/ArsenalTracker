@@ -219,6 +219,11 @@ function rarityColor(rarity: string){
   margin: 8px;
 }
 
+/* extra bottom padding specifically for weapon cards to avoid cramped actions */
+.weapon-card {
+  padding-bottom: 18px;
+}
+
 .type {
   display: flex;
   flex-direction: column;

@@ -91,3 +91,21 @@ Notes:
 
 Notes:
 - These UI changes are intentionally implemented with CSS (gradients, blur, transforms) to avoid extra assets and to keep runtime cost moderate. Consider adding a "reduce motion" or "low-power" toggle for users on low-end devices or with accessibility needs.
+
+
+## Unreleased - 2025-11-03
+
+- UI / Virtualization
+	- Converted Warframes and Weapons virtualized lists to render as a 4-column grid (rows of 4) to prevent cards stretching full width and to present cards side-by-side.
+	- Constrained each card with a centered wrapper and max-width so cards maintain a consistent width in the grid.
+
+- Images / lazy-load
+	- Fixed Warframe card thumbnail lazy-loading when cards are rendered inside the virtual scroller by using the nearest scrollable ancestor as the IntersectionObserver root.
+	- Added robust image fallbacks: probe CDN candidates and use manifest wikia thumbnails when local assets are missing, plus an image @error handler to attempt fallbacks and avoid stuck broken images.
+
+- Weapons card UX
+	- Added extra bottom padding to weapon cards to reduce cramped UI at the bottom of the card.
+	- Removed the long textual "All weapons list (full)" under the virtualized weapons view to declutter the page.
+
+Notes:
+- These changes are intended to improve layout and perceived performance for large lists. If desired, follow-ups can include measuring actual card heights to drive virtualization sizing or migrating the grid to a responsive CSS layout tied to viewport breakpoints.

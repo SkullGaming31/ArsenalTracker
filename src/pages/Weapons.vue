@@ -30,26 +30,32 @@
         <label>
           Per page
           <select v-model.number="pageSize">
+            <option :value="20">20</option>
             <option :value="50">50</option>
             <option :value="100">100</option>
             <option :value="200">200</option>
+            <option :value="-1">All</option>
           </select>
         </label>
         <button @click="prevPage" :disabled="currentPage === 0">Prev</button>
         <div>Page {{ currentPage + 1 }} / {{ totalPages }}</div>
         <button @click="nextPage" :disabled="currentPage >= totalPages - 1">Next</button>
       </div>
-      <!-- Virtualized scroller for large lists: only renders visible WeaponCard items -->
+      <!-- Virtualized scroller for large lists: renders rows of 4 cards side-by-side -->
       <div ref="scrollRef" class="virtual-scroll" style="height:70vh; overflow:auto;">
         <div :style="{ height: totalHeight + 'px', position: 'relative' }">
-            <div v-for="vi in virtualRenderItems" :key="vi.item.name" :style="{ position: 'absolute', top: vi.start + 'px', left: 0, right: 0 }">
-              <WeaponCard :weapon="vi.item" @update="handleUpdate" />
+          <div style="max-width:1200px; margin:0 auto; position:relative;">
+            <div v-for="vi in virtualRenderItems" :key="vi.item.name" :style="{ position: 'absolute', top: vi.start + 'px', left: (vi.col * (100/columns)) + '%', width: (100/columns) + '%' }">
+              <div style="padding:8px; display:flex; justify-content:center;">
+                <div style="width:100%; max-width:300px;">
+                  <WeaponCard :weapon="vi.item" @update="handleUpdate" />
+                </div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
-      <div class="names" style="margin-top:12px"><strong>All weapons list (full):</strong>
-        <ul style="max-height:200px; overflow:auto"><li v-for="w in allSorted" :key="w.name">{{ w.name }}</li></ul>
-      </div>
+      
     </section>
 
     <section>
@@ -188,7 +194,8 @@ const allSorted = computed(() => filtered.value.slice().sort((a, b) => (a.name |
 // Virtualizer + simple pagination setup
 const scrollRef = ref<HTMLElement | null>(null)
 const itemSize = 320
-type VirtualItem = { index: number; start: number; size: number }
+type VirtualRow = { row: number; start: number; size: number }
+const columns = 4
 
 // Pagination: allow quick capping of rendered list while diagnosing memory issues
 // pageSize = -1 means "All" (no pagination). This preserves previous behavior for tests.
@@ -201,28 +208,30 @@ const pagedAllSorted = computed(() => {
   return allSorted.value.slice(start, start + pageSize.value)
 })
 
+const totalRows = computed(() => Math.ceil(pagedAllSorted.value.length / columns))
+const visibleRange = ref({ start: 0, end: Math.min(totalRows.value, 10) })
 const virtualItems = computed(() => {
-  const items: VirtualItem[] = []
+  const items: VirtualRow[] = []
   const start = visibleRange.value.start
   const end = visibleRange.value.end
-  for (let i = start; i < end; i++) items.push({ index: i, start: i * itemSize, size: itemSize })
+  for (let r = start; r < end; r++) items.push({ row: r, start: r * itemSize, size: itemSize })
   return items
 })
 
-// Map virtualItems to actual weapon items (non-undefined) for template use
 const virtualRenderItems = computed(() => {
-  return virtualItems.value
-    .map(vi => {
-      const item = pagedAllSorted.value[vi.index]
-      if (!item) return null
-      return { item, start: vi.start }
-    })
-    .filter(Boolean) as { item: Weapon; start: number }[]
+  const out: { item: Weapon; start: number; col: number }[] = []
+  virtualItems.value.forEach((vr) => {
+    for (let c = 0; c < columns; c++) {
+      const idx = vr.row * columns + c
+      const item = pagedAllSorted.value[idx]
+      if (!item) continue
+      out.push({ item, start: vr.start, col: c })
+    }
+  })
+  return out
 })
 
-const totalHeight = computed(() => pagedAllSorted.value.length * itemSize)
-
-const visibleRange = ref({ start: 0, end: Math.min(pagedAllSorted.value.length, 10) })
+const totalHeight = computed(() => totalRows.value * itemSize)
 const overscan = 5
 
 function recompute() {
@@ -233,7 +242,7 @@ function recompute() {
   const start = Math.floor(scrollTop / itemSize) - overscan
   const end = Math.ceil((scrollTop + clientHeight) / itemSize) + overscan
   visibleRange.value.start = Math.max(0, start)
-  visibleRange.value.end = Math.min(pagedAllSorted.value.length, end)
+  visibleRange.value.end = Math.min(totalRows.value, end)
 }
 
 function prevPage() {
@@ -246,8 +255,8 @@ function nextPage() {
 // keep currentPage valid if pageSize or allSorted length changes
 watch([pageSize, allSorted], () => {
   if (currentPage.value >= totalPages.value) currentPage.value = Math.max(0, totalPages.value - 1)
-  // reset visibleRange for new page
-  visibleRange.value = { start: 0, end: Math.min(pagedAllSorted.value.length, 10) }
+  // reset visibleRange for new page (rows)
+  visibleRange.value = { start: 0, end: Math.min(totalRows.value, 10) }
 })
 
 onMounted(() => {

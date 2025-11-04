@@ -5,7 +5,7 @@
       <div class="accent" :style="{ background: accentColor }"></div>
 
       <div class="thumb">
-        <img v-if="imgSrc" :src="imgSrc" :alt="warframe.name || 'thumbnail'" class="thumb-img" loading="lazy" />
+        <img v-if="imgSrc" :src="imgSrc" :alt="warframe.name || 'thumbnail'" class="thumb-img" loading="lazy" @error="onImgError" />
         <img v-else :alt="warframe.name || 'placeholder'" src="/icons/icon-192.svg" class="thumb-img" loading="lazy" />
       </div>
 
@@ -176,6 +176,63 @@ interface AssetsManifest {
 
 let manifestCache: AssetsManifest | null = null;
 const root = ref<HTMLElement | null>(null)
+const _failedImgUrls = new Set<string>()
+
+async function findCdn(n: string, imageName?: string) {
+  const candidates: string[] = []
+  if (imageName) candidates.push(`https://cdn.warframestat.us/img/${encodeURIComponent(imageName)}`)
+  const nameSlug = encodeURIComponent(n.replace(/\s+/g, '-').toLowerCase())
+  candidates.push(`https://cdn.warframestat.us/img/${nameSlug}.png`)
+  if (n.includes('&')) candidates.push(`https://cdn.warframestat.us/img/${encodeURIComponent(n.replace(/&/g, 'and').replace(/\s+/g, '-').toLowerCase())}.png`)
+  for (const cdnUrl of candidates) {
+    try {
+      const ok = await probeImage(cdnUrl)
+      if (ok) return cdnUrl
+    } catch {
+      // ignore and try next
+    }
+  }
+  return null
+}
+
+async function onImgError(e: Event) {
+  try {
+    const img = e.target as HTMLImageElement | null
+    if (!img) return
+    const src = img.currentSrc || img.src
+    if (!src) return
+    if (_failedImgUrls.has(src)) {
+      // already tried this URL, stop and show placeholder
+      imgSrc.value = null
+      return
+    }
+    _failedImgUrls.add(src)
+
+    // attempt fallbacks: manifest wikiaThumbnail, CDN probe
+    const m = await loadAssetsManifest()
+    const name = String(warframe.value?.name || '')
+    const wf = m.warframes ? m.warframes[name] : undefined
+    if (wf && wf.wikiaThumbnail && wf.wikiaThumbnail !== src) {
+      imgSrc.value = wf.wikiaThumbnail
+      return
+    }
+    if (getWikiaThumbnail(warframe.value) && getWikiaThumbnail(warframe.value) !== src) {
+      imgSrc.value = getWikiaThumbnail(warframe.value)!
+      return
+    }
+    // try CDN candidates
+  const cdn = await findCdn(name, wf && wf.imageName)
+    if (cdn && cdn !== src) {
+      imgSrc.value = cdn
+      return
+    }
+
+    // no fallback found; clear to show placeholder
+    imgSrc.value = null
+  } catch {
+    imgSrc.value = null
+  }
+}
 
 async function loadAssetsManifest(): Promise<AssetsManifest> {
   if (manifestCache) return manifestCache;
@@ -203,6 +260,23 @@ function startObserving(el: Element | null) {
 
   // start observing the element for lazy-load
   if (!el || typeof IntersectionObserver === "undefined") return;
+
+  // Find the nearest scrollable ancestor and use it as the observer root so
+  // intersection checks work correctly when cards are inside a scrolling
+  // container (our virtual scroller). Fallback to viewport when none found.
+  const findScrollParent = (node: Element | null): Element | null => {
+    let parent = node && node.parentElement
+    while (parent && parent !== document.body) {
+      const cs = getComputedStyle(parent)
+      const overflowY = cs.overflowY || cs.overflow
+      if (overflowY === 'auto' || overflowY === 'scroll' || overflowY === 'overlay') return parent
+      parent = parent.parentElement
+    }
+    return null
+  }
+
+  const root = findScrollParent(el) || null
+
   observer = new IntersectionObserver(
     async (entries) => {
       for (const entry of entries) {
@@ -213,24 +287,7 @@ function startObserving(el: Element | null) {
   const name = String(warframe.value?.name || '');
   const wf = m.warframes ? m.warframes[name] : undefined;
 
-        // Helper to try CDN fallback using image probe. Try imageName (if present) first,
-        // then fall back to slug-based names and common ampersand->and variant.
-        const tryCdn = async (n: string, imageName?: string) => {
-          const candidates: string[] = []
-          if (imageName) candidates.push(`https://cdn.warframestat.us/img/${encodeURIComponent(imageName)}`)
-          const nameSlug = encodeURIComponent(n.replace(/\s+/g, '-').toLowerCase());
-          candidates.push(`https://cdn.warframestat.us/img/${nameSlug}.png`)
-          if (n.includes('&')) candidates.push(`https://cdn.warframestat.us/img/${encodeURIComponent(n.replace(/&/g, 'and').replace(/\s+/g, '-').toLowerCase())}.png`)
-          for (const cdnUrl of candidates) {
-            try {
-              const ok = await probeImage(cdnUrl)
-              if (ok) return cdnUrl
-            } catch {
-              // ignore and try next
-            }
-          }
-          return null
-        };
+        // Use shared findCdn helper to probe CDN candidates
 
         if (wf && wf.imageName) {
           const localPath = `/assets/${wf.imageName}`;
@@ -241,7 +298,7 @@ function startObserving(el: Element | null) {
             } else if (wf.wikiaThumbnail) {
               imgSrc.value = wf.wikiaThumbnail;
             } else {
-              const cdnLocal = await tryCdn(name, wf.imageName);
+              const cdnLocal = await findCdn(name, wf.imageName);
               if (cdnLocal) imgSrc.value = cdnLocal;
               else if (getWikiaThumbnail(warframe.value)) imgSrc.value = getWikiaThumbnail(warframe.value)!;
             }
@@ -255,7 +312,7 @@ function startObserving(el: Element | null) {
           imgSrc.value = getWikiaThumbnail(warframe.value)!;
         } else {
           // final fallback: try CDN directly for the warframe name (no local imageName available)
-          const cdn = await tryCdn(name);
+          const cdn = await findCdn(name);
           if (cdn) imgSrc.value = cdn;
         }
 
@@ -266,7 +323,7 @@ function startObserving(el: Element | null) {
         }
       }
     },
-    { rootMargin: '200px' },
+    { root, rootMargin: '200px' },
   );
   observer.observe(el);
 }

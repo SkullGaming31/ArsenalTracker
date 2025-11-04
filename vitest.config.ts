@@ -13,7 +13,12 @@ export default mergeConfig(
         provider: 'v8',
         reporter: ['text', 'html', 'lcov'],
         all: true,
-        // exclude non-runtime and third-party/generated folders to make coverage focused on `src/`
+        thresholds: {
+          statements: 50,
+          branches: 50,
+          functions: 50,
+          lines: 50,
+        },
         exclude: [
           'src/__tests__/**',
           'src/main.ts',
