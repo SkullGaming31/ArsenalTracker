@@ -300,7 +300,28 @@ function handleUpdate(payload: unknown) {
   const p = payload as Partial<WFUpdatePayload>
   if (!p.name) return
   // collection.setOverride expects a Partial<Record<string, unknown>>; cast the payload
-  // so TypeScript is satisfied while preserving the typed shape locally.
+  // but first avoid mutating the store if the incoming partial matches the existing override
+  // to prevent reactive churn that can cause recursive update loops in production.
+  try {
+    const name = p.name
+    const existing = collection.overrides && (collection.overrides as Record<string, unknown>)[name]
+    // Compare via JSON when possible; if stringify fails, fall back to always writing
+    if (existing !== undefined) {
+      try {
+        const existingJson = JSON.stringify(existing)
+        const incomingJson = JSON.stringify(p)
+        if (existingJson === incomingJson) {
+          // no-op: nothing changed
+          return
+        }
+      } catch {
+        // ignore stringify errors and proceed to set override
+      }
+    }
+  } catch {
+    // defensive: fall through and set override
+  }
+
   collection.setOverride(p.name, p as Partial<Record<string, unknown>>)
 }
 </script>
