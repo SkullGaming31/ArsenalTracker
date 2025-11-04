@@ -45,10 +45,10 @@
       <div ref="scrollRef" class="virtual-scroll" style="height:70vh; overflow:auto;">
         <div :style="{ height: totalHeight + 'px', position: 'relative' }">
           <div style="max-width:1200px; margin:0 auto; position:relative;">
-            <div v-for="vi in virtualRenderItems" :key="vi.item.name" :style="{ position: 'absolute', top: vi.start + 'px', left: (vi.col * (100/columns)) + '%', width: (100/columns) + '%' }">
-              <div style="padding:8px; display:flex; justify-content:center;">
+            <div v-for="vi in virtualRenderItems" :key="vi.item.name" :style="{ position: 'absolute', top: vi.start + 'px', left: (vi.col * (100/columns)) + '%', width: (100/columns) + '%', height: itemSize + 'px' }">
+              <div style="padding:12px 8px; display:flex; align-items:flex-start; justify-content:center; height:100%; box-sizing:border-box;">
                 <div style="width:100%; max-width:300px;">
-                  <WeaponCard :weapon="vi.item" @update="handleUpdate" />
+                  <WeaponCard class="weapon-card" :weapon="vi.item" @update="handleUpdate" />
                 </div>
               </div>
             </div>
@@ -63,9 +63,7 @@
       <div class="grid">
         <WeaponCard v-for="w in primaries" :key="w.name" :weapon="w" />
       </div>
-      <div class="names"><strong>Primary list:</strong>
-        <ul><li v-for="w in primaries" :key="w.name">{{ w.name }}</li></ul>
-      </div>
+      
     </section>
 
     <section>
@@ -73,9 +71,7 @@
       <div class="grid">
         <WeaponCard v-for="w in secondaries" :key="w.name" :weapon="w" />
       </div>
-      <div class="names"><strong>Secondary list:</strong>
-        <ul><li v-for="w in secondaries" :key="w.name">{{ w.name }}</li></ul>
-      </div>
+      
     </section>
 
     <section>
@@ -83,9 +79,7 @@
       <div class="grid">
         <WeaponCard v-for="w in melees" :key="w.name" :weapon="w" />
       </div>
-      <div class="names"><strong>Melee list:</strong>
-        <ul><li v-for="w in melees" :key="w.name">{{ w.name }}</li></ul>
-      </div>
+      
     </section>
   </div>
 </template>
