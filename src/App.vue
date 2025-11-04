@@ -7,14 +7,7 @@
     <div class="layout-grid">
   <NavBar v-if="view !== 'landing'" class="site-nav" :activeView="view" @navigate="onNavigate" />
       <div class="content-area">
-        <!-- Known issue alert: visible site-wide (except landing) until dismissed by the user -->
-  <div v-if="showKnownIssue && view !== 'landing'" class="known-issue" role="alert" aria-live="assertive" aria-atomic="true">
-          <div class="known-issue-inner">
-            <strong>Known issue:</strong>
-            <span> Selecting parts can cause the site to crash. We're investigating — please avoid selecting parts until this is resolved.</span>
-          </div>
-          <button class="known-issue-dismiss" @click="dismissKnownIssue" aria-label="Dismiss">Dismiss</button>
-        </div>
+        <!-- known-issue banner removed -->
         <AppHeader
           v-if="view !== 'landing'"
           v-model:query="globalQuery"
@@ -40,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed } from 'vue'
 import Dashboard from './pages/Dashboard.vue'
 import Landing from './pages/Landing.vue'
 import About from './pages/About.vue'
@@ -90,24 +83,7 @@ const pageSubtitle = computed(() => {
   }
 })
 
-// show/dismiss known issue banner; persisted per-user so they can dismiss it
-const showKnownIssue = ref(true)
-function dismissKnownIssue() {
-  try {
-    localStorage.setItem('arsenal_known_issue.dismissed', '1')
-  } catch {
-    // ignore storage errors
-  }
-  showKnownIssue.value = false
-}
-onMounted(() => {
-  try {
-    const d = localStorage.getItem('arsenal_known_issue.dismissed')
-    if (d === '1') showKnownIssue.value = false
-  } catch {
-    // ignore
-  }
-})
+// known-issue banner removed
 </script>
 
 <style scoped>
@@ -170,27 +146,5 @@ onMounted(() => {
 .main-energy-orb.orb-a { left: 4%; top: 6%; background: radial-gradient(circle at 30% 30%, rgba(124,77,255,0.95), rgba(124,77,255,0.08)); animation-duration: 12s }
 .main-energy-orb.orb-b { right: 6%; bottom: 6%; background: radial-gradient(circle at 60% 40%, rgba(110,231,183,0.95), rgba(110,231,183,0.06)); animation-duration: 14s }
 .main-energy-orb.orb-c { left: 42%; top: 54%; background: radial-gradient(circle at 50% 50%, rgba(0,191,255,0.9), rgba(0,191,255,0.06)); animation-duration: 11s }
-/* Known-issue banner styles */
-.known-issue {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  background: rgba(0,0,0,0.85);
-  color: #fff;
-  padding: 10px 12px;
-  border-radius: 8px;
-  margin: 12px 16px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-}
-.known-issue-inner { display:flex; gap:10px; align-items:center }
-.known-issue-dismiss {
-  background: #000;
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 6px 10px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.known-issue-dismiss:hover { background: #0b0b0b }
+/* Known-issue banner removed */
 </style>
