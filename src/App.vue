@@ -8,7 +8,7 @@
   <NavBar v-if="view !== 'landing'" class="site-nav" :activeView="view" @navigate="onNavigate" />
       <div class="content-area">
         <!-- Known issue alert: visible site-wide (except landing) until dismissed by the user -->
-        <div v-if="showKnownIssue && view !== 'landing'" class="known-issue" role="alert">
+  <div v-if="showKnownIssue && view !== 'landing'" class="known-issue" role="alert" aria-live="assertive" aria-atomic="true">
           <div class="known-issue-inner">
             <strong>Known issue:</strong>
             <span> Selecting parts can cause the site to crash. We're investigating — please avoid selecting parts until this is resolved.</span>

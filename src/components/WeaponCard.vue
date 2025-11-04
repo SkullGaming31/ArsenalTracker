@@ -1,7 +1,11 @@
 <template>
-  <div :class="['card', 'p-card', 'weapon-card', { collected: isAllPartsCollected, gold: isGold }]">
+  <div ref="root" :class="['card', 'p-card', 'weapon-card', { collected: isAllPartsCollected, gold: isGold }]">
     <div class="card-header">
         <div class="accent" :style="{ background: accentColor }"></div>
+        <div class="thumb">
+          <img v-if="imgSrc" :src="imgSrc" :alt="weapon.name || 'thumbnail'" class="thumb-img" loading="lazy" @error="onImgError" />
+          <img v-else :alt="weapon.name || 'placeholder'" src="/icons/icon-192.svg" class="thumb-img" loading="lazy" />
+        </div>
         <div class="title">
           <h3>{{ weapon.name }}</h3>
           <div class="meta">
@@ -72,7 +76,8 @@
 
 <script lang="ts" setup>
 import type { Weapon, Part, PartWithCollected } from '../types/weapon'
-import { ref, computed, watchEffect, watch } from 'vue'
+import { ref, computed, watchEffect, watch, onMounted, onBeforeUnmount } from 'vue'
+import { probeImage } from '../lib/imageProbe'
 
 const props = defineProps<{ weapon: Weapon }>()
 const emit = defineEmits<{
@@ -120,6 +125,112 @@ const isAllPartsCollected = computed(() => parts.value.length > 0 && collected.v
 // gold state: mastered -> gold regardless of part collection. If you want gold only when
 // both mastered and all parts collected, change this to use && instead of simple check.
 const isGold = computed(() => Boolean(isMastered.value))
+
+// thumbnail support for weapons (lazy-load + fallbacks)
+const imgSrc = ref<string | null>(null)
+let observer: IntersectionObserver | null = null
+const root = ref<HTMLElement | null>(null)
+
+async function loadAssetsManifest(): Promise<Record<string, { imageName?: string; wikiaThumbnail?: string }>> {
+  try {
+    const res = await fetch('/assets/manifest.api.json')
+    if (!res.ok) return {}
+    const json = await res.json()
+    return (json && json.weapons) || {}
+  } catch {
+    return {}
+  }
+}
+
+const findScrollParent = (node: Element | null): Element | null => {
+  let parent = node && node.parentElement
+  while (parent && parent !== document.body) {
+    const cs = getComputedStyle(parent)
+    const overflowY = cs.overflowY || cs.overflow
+    if (overflowY === 'auto' || overflowY === 'scroll' || overflowY === 'overlay') return parent
+    parent = parent.parentElement
+  }
+  return null
+}
+
+async function findCdn(name: string, imageName?: string) {
+  const candidates: string[] = []
+  if (imageName) candidates.push(`https://cdn.warframestat.us/img/${encodeURIComponent(imageName)}`)
+  const nameSlug = encodeURIComponent(name.replace(/\s+/g, '-').toLowerCase())
+  candidates.push(`https://cdn.warframestat.us/img/${nameSlug}.png`)
+  if (name.includes('&')) candidates.push(`https://cdn.warframestat.us/img/${encodeURIComponent(name.replace(/&/g, 'and').replace(/\s+/g, '-').toLowerCase())}.png`)
+  for (const cdnUrl of candidates) {
+    try {
+      const ok = await probeImage(cdnUrl)
+      if (ok) return cdnUrl
+    } catch {
+      // ignore
+    }
+  }
+  return null
+}
+
+function startObserving(el: Element | null) {
+  if (!el || typeof IntersectionObserver === 'undefined') return
+  const rootEl = findScrollParent(el) || null
+
+  const tryLoad = async () => {
+    const m = await loadAssetsManifest()
+    const w = (m && (m as Record<string, { imageName?: string; wikiaThumbnail?: string }>)[weapon.name]) || undefined
+    if (w && w.imageName) {
+      const localPath = `/assets/${w.imageName}`
+      try {
+        const head = await fetch(localPath, { method: 'HEAD' })
+        if (head.ok) { imgSrc.value = localPath }
+        else if (w.wikiaThumbnail) imgSrc.value = w.wikiaThumbnail
+        else {
+          const cdn = await findCdn(weapon.name, w.imageName)
+          if (cdn) imgSrc.value = cdn
+        }
+      } catch {
+        if (w.wikiaThumbnail) imgSrc.value = w.wikiaThumbnail
+      }
+    } else if (w && w.wikiaThumbnail) {
+      imgSrc.value = w.wikiaThumbnail
+    } else {
+      const cdn = await findCdn(weapon.name)
+      if (cdn) imgSrc.value = cdn
+    }
+  }
+
+  observer = new IntersectionObserver(async (entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue
+      await tryLoad()
+      if (observer) { observer.disconnect(); observer = null }
+    }
+  }, { root: rootEl, rootMargin: '200px' })
+
+  // If there is no scroll parent (i.e. normal grid pages), attempt load immediately
+  if (!rootEl) {
+    void tryLoad()
+  }
+
+  observer.observe(el)
+}
+
+async function onImgError(e: Event) {
+  try {
+    const img = e.target as HTMLImageElement | null
+    if (!img) return
+    imgSrc.value = null
+  const m = await loadAssetsManifest()
+  const w = (m && (m as Record<string, { imageName?: string; wikiaThumbnail?: string }>)[weapon.name]) || undefined
+    if (w && w.wikiaThumbnail) { imgSrc.value = w.wikiaThumbnail; return }
+    const cdn = await findCdn(weapon.name, w && w.imageName)
+    if (cdn) imgSrc.value = cdn
+  } catch {
+    imgSrc.value = null
+  }
+}
+
+onMounted(() => startObserving(root.value))
+onBeforeUnmount(() => { if (observer) observer.disconnect() })
 
 const typeParts = computed(() => {
   let raw = String(weapon.type || '')
@@ -252,6 +363,21 @@ function rarityColor(rarity: string){
   width: 6px;
   border-radius: 6px 0 0 6px;
   margin-right: 12px;
+}
+
+.thumb {
+  width: 64px;
+  flex: 0 0 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.thumb-img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .title h3 {

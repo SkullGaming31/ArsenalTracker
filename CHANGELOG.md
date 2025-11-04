@@ -102,6 +102,7 @@ Notes:
 - Images / lazy-load
 	- Fixed Warframe card thumbnail lazy-loading when cards are rendered inside the virtual scroller by using the nearest scrollable ancestor as the IntersectionObserver root.
 	- Added robust image fallbacks: probe CDN candidates and use manifest wikia thumbnails when local assets are missing, plus an image @error handler to attempt fallbacks and avoid stuck broken images.
+	- Weapon cards now immediately load thumbnails when rendered in non-scroll grids (Primary / Secondary / Melee pages). Previously thumbnails sometimes appeared only in the virtualized "All weapons" view; the thumbnail loader now falls back to immediate-load when no scroll parent is detected. (2025-11-03)
 
 - Weapons card UX
 	- Added extra bottom padding to weapon cards to reduce cramped UI at the bottom of the card.
