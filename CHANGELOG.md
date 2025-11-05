@@ -120,3 +120,22 @@ Notes:
 
 Notes:
 - These changes are intended to improve layout and perceived performance for large lists. If desired, follow-ups can include measuring actual card heights to drive virtualization sizing or migrating the grid to a responsive CSS layout tied to viewport breakpoints.
+
+
+## Unreleased - 2025-11-05
+
+- UI / PrimeVue
+	- Converted Warframe and Weapon cards to use PrimeVue `PCard` (see `src/components/WarframeCard.vue` and `src/components/WeaponCard.vue`). Imported `PCard` locally in these components so unit tests can mount them in isolation.
+
+- Fixes
+	- Fixed an IntersectionObserver runtime error by resolving Vue component refs to their DOM node (`$el`) before observing.
+	- Updated `src/lib/imageProbe.ts` to avoid setting `Image.crossOrigin` for cross-origin CDN probes to prevent CORS-related false negatives.
+	- Resolved virtual-scroller row overlap by removing inner card margins and ensuring card wrappers fill row height; increased weapons virtual row `itemSize` to give cards more vertical space.
+	- Restored the Mastered checkbox visibility and behavior: moved mastery control into the `PCard` footer, pinned the footer only for cards that have parts, adjusted z-index and bottom padding to avoid clipping, and allowed mastering for weapons that have no parts.
+	- Removed leftover debug logging from `WarframeCard.vue`.
+
+- Tests
+	- A local test run (prior to some later runs) showed 47 passing unit tests; please run the CI test suite (`npm run test:ci`) before merging to verify there are no regressions.
+
+- Notes
+	- Files touched by these changes include: `src/components/WarframeCard.vue`, `src/components/WeaponCard.vue`, `src/pages/Weapons.vue`, and `src/lib/imageProbe.ts`.
