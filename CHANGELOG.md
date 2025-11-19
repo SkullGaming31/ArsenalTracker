@@ -1,51 +1,49 @@
 ## 2025-10-22 16:40 - E2E stability and test fixes
 
 - Updated Playwright configuration (`playwright.config.ts`) to improve test stability:
-	- Increased global test timeout to 120s and expect timeout to 10s.
-	- Set `workers: 1` to avoid browser startup contention during local runs.
-	- Kept `retries` unchanged for CI.
+  - Increased global test timeout to 120s and expect timeout to 10s.
+  - Set `workers: 1` to avoid browser startup contention during local runs.
+  - Kept `retries` unchanged for CI.
 
 - Hardened import/export E2E test (`e2e/import-export.spec.ts`):
-	- Navigate via in-app nav buttons rather than directly visiting SPA routes.
-	- Use Playwright `context.addInitScript` to seed `localStorage` before the app loads so persisted overrides are read on initialization.
-	- Added stable selectors (data-testid) for nav buttons and Warframe cards to reduce selector flakiness.
-	- Improved assertions to check the actual checkbox state for Neuroptics instead of brittle text-match assertions.
+  - Navigate via in-app nav buttons rather than directly visiting SPA routes.
+  - Use Playwright `context.addInitScript` to seed `localStorage` before the app loads so persisted overrides are read on initialization.
+  - Added stable selectors (data-testid) for nav buttons and Warframe cards to reduce selector flakiness.
+  - Improved assertions to check the actual checkbox state for Neuroptics instead of brittle text-match assertions.
 
 - Added helpers and debug scripts under `e2e/` to assist local troubleshooting:
-	- `e2e/debug-print.cjs` — prints card DOM and checkbox states for a given card.
-	- `e2e/debug-apply-storage.cjs` — launches Playwright and applies localStorage before loading the app to validate persistence behavior.
+  - `e2e/debug-print.cjs` — prints card DOM and checkbox states for a given card.
+  - `e2e/debug-apply-storage.cjs` — launches Playwright and applies localStorage before loading the app to validate persistence behavior.
 
 These changes were made to diagnose and resolve intermittent test failures where Playwright sometimes failed to create browser contexts (timeout), and to make the import/export flow deterministic under test.
-
 
 ## 2025-10-22 - CI / Pages housekeeping
 
 - Removed GitHub Pages deployment workflows and the Discord CHANGELOG poster from the repository:
-	- Deleted `.github/workflows/pages-deploy.yml`, `.github/workflows/pages.yml`, and `.github/workflows/post-changelog-discord.yml`.
-	- Rationale: consolidate deployment strategy and avoid deprecated action usage; Pages deployment can be reintroduced with a single consolidated workflow when ready.
-
+  - Deleted `.github/workflows/pages-deploy.yml`, `.github/workflows/pages.yml`, and `.github/workflows/post-changelog-discord.yml`.
+  - Rationale: consolidate deployment strategy and avoid deprecated action usage; Pages deployment can be reintroduced with a single consolidated workflow when ready.
 
 ## 2025-10-22 - Data: weapons parts merge + CDN probe
 
 - Added utilities and data updates to improve weapon/parts data quality:
-	- `scripts/apply-merge-weapons.cjs` — merges component/parts data from `src/data/weapons.api.json` into `src/data/weapons.json` by matching weapon names (case-insensitive).
-	- `scripts/check-cdn-coverage.cjs` — probes `https://cdn.warframestat.us/img/*` URLs to check image availability for weapons and component parts; emits `tmp-cdn-coverage.csv` and `tmp-cdn-coverage-summary.json`.
+  - `scripts/apply-merge-weapons.cjs` — merges component/parts data from `src/data/weapons.api.json` into `src/data/weapons.json` by matching weapon names (case-insensitive).
+  - `scripts/check-cdn-coverage.cjs` — probes `https://cdn.warframestat.us/img/*` URLs to check image availability for weapons and component parts; emits `tmp-cdn-coverage.csv` and `tmp-cdn-coverage-summary.json`.
 
 - Applied merge run (local):
-	- `src/data/weapons.json` overwritten with merged data for weapons present in the original file.
-	- Total weapons in the file after merge: 347.
-	- Parts populated for 292 weapons; 55 weapons remained unmatched (their `parts` arrays left empty) due to naming variations between datasets.
+  - `src/data/weapons.json` overwritten with merged data for weapons present in the original file.
+  - Total weapons in the file after merge: 347.
+  - Parts populated for 292 weapons; 55 weapons remained unmatched (their `parts` arrays left empty) due to naming variations between datasets.
 
 - CDN probe results (local run):
-	- Probed 974 distinct CDN URLs (weapon images and component images).
-	- 238 URLs returned OK; 736 were missing or returned non-2xx responses.
-	- Generated artifacts: `tmp-cdn-coverage.csv`, `tmp-cdn-coverage-summary.json`.
+  - Probed 974 distinct CDN URLs (weapon images and component images).
+  - 238 URLs returned OK; 736 were missing or returned non-2xx responses.
+  - Generated artifacts: `tmp-cdn-coverage.csv`, `tmp-cdn-coverage-summary.json`.
 
 - Notes & recommended follow-ups:
-	- The canonical source `src/data/weapons.api.json` still contains 621 weapons; the merge preserved the existing `weapons.json` records and populated parts where names matched.
-	- Consider running a name-normalization pass or appending missing API weapons into `src/data/weapons.json` to reach full coverage.
-	- If you want the current merged `weapons.json` committed, run `git add src/data/weapons.json && git commit -m "chore(data): populate weapons.parts from weapons.api.json"`.
-	-More work done on Weapons data quality
+  - The canonical source `src/data/weapons.api.json` still contains 621 weapons; the merge preserved the existing `weapons.json` records and populated parts where names matched.
+  - Consider running a name-normalization pass or appending missing API weapons into `src/data/weapons.json` to reach full coverage.
+  - If you want the current merged `weapons.json` committed, run `git add src/data/weapons.json && git commit -m "chore(data): populate weapons.parts from weapons.api.json"`.
+ -More work done on Weapons data quality
 
 ## Unreleased - 2025-10-27
 
@@ -62,61 +60,79 @@ These changes were made to diagnose and resolve intermittent test failures where
   - Continued polishing persistence and UI: header extraction into `AppHeader.vue`, per-key overrides mutation to reduce reactive churn, and Dashboard import/CSV preview flows.
 
 Notes:
-- This commit includes many test additions and small lint/test fixes. A broader typing sweep (replace remaining `any` usages) is tracked separately and will be addressed in follow-up work.
 
+- This commit includes many test additions and small lint/test fixes. A broader typing sweep (replace remaining `any` usages) is tracked separately and will be addressed in follow-up work.
 
 ## Unreleased - 2025-10-30
 
 - Landing page & visuals
-	- Increased landing particle density and switched to continuous spawn while the landing page is mounted (capped to avoid unbounded DOM growth).
-	- Each particle now animates along a random vector (per-particle CSS variables --dx/--dy), with inline styles and global keyframes so dynamically-created nodes animate correctly across browsers.
-	- Tuned particle size, color palette, opacity, duration, and glow for a denser, more dynamic hero effect.
+  - Increased landing particle density and switched to continuous spawn while the landing page is mounted (capped to avoid unbounded DOM growth).
+  - Each particle now animates along a random vector (per-particle CSS variables --dx/--dy), with inline styles and global keyframes so dynamically-created nodes animate correctly across browsers.
+  - Tuned particle size, color palette, opacity, duration, and glow for a denser, more dynamic hero effect.
 
 - Global background and Dashboard
-	- Introduced a Warframe-inspired animated background using layered CSS gradients and blurred "energy veins".
-	- Moved the background visuals from `src/pages/Dashboard.vue` into the main layout (`src/App.vue`) so the effect is visible across the app.
-	- Added subtle blurred energy orbs and slow-moving vein animation to provide a moody, sci-fi backdrop without shipping image assets.
+  - Introduced a Warframe-inspired animated background using layered CSS gradients and blurred "energy veins".
+  - Moved the background visuals from `src/pages/Dashboard.vue` into the main layout (`src/App.vue`) so the effect is visible across the app.
+  - Added subtle blurred energy orbs and slow-moving vein animation to provide a moody, sci-fi backdrop without shipping image assets.
 
 - Navigation & header
-	- Redesigned `src/components/NavBar.vue` to a translucent, Warframe-inspired navigation panel with inline SVG glyphs, per-button accent colors, hover glow and a clear active indicator.
-	- Wired `App.vue` to pass `:activeView="view"` into `NavBar` so the active page is highlighted (improves discoverability).
+  - Redesigned `src/components/NavBar.vue` to a translucent, Warframe-inspired navigation panel with inline SVG glyphs, per-button accent colors, hover glow and a clear active indicator.
+  - Wired `App.vue` to pass `:activeView="view"` into `NavBar` so the active page is highlighted (improves discoverability).
 
 - About page (user-focused)
-	- Redesigned `src/pages/About.vue` for end-users: hero, clear usage steps, backup & restore guidance, privacy/local-storage notes (key: `arsenaltracker.v1`), troubleshooting tips, and support CTA (Discord).
-	- Replaced developer/GitHub-first CTA with user-facing actions: Get Started, How it works (scrolls to features), and Help & Support (opens Discord).
+  - Redesigned `src/pages/About.vue` for end-users: hero, clear usage steps, backup & restore guidance, privacy/local-storage notes (key: `arsenaltracker.v1`), troubleshooting tips, and support CTA (Discord).
+  - Replaced developer/GitHub-first CTA with user-facing actions: Get Started, How it works (scrolls to features), and Help & Support (opens Discord).
 
 - Miscellaneous
-	- Updated local todo/tracking entries in the repository for these visual and UX changes.
-	- Fixed small TypeScript/ESLint lints triggered by the edits (removed unused bindings, narrowed catch parameter, adjusted style tag mismatches during refactors).
+  - Updated local todo/tracking entries in the repository for these visual and UX changes.
+  - Fixed small TypeScript/ESLint lints triggered by the edits (removed unused bindings, narrowed catch parameter, adjusted style tag mismatches during refactors).
 
 Notes:
-- These UI changes are intentionally implemented with CSS (gradients, blur, transforms) to avoid extra assets and to keep runtime cost moderate. Consider adding a "reduce motion" or "low-power" toggle for users on low-end devices or with accessibility needs.
 
+- These UI changes are intentionally implemented with CSS (gradients, blur, transforms) to avoid extra assets and to keep runtime cost moderate. Consider adding a "reduce motion" or "low-power" toggle for users on low-end devices or with accessibility needs.
 
 ## Unreleased - 2025-11-03
 
-- UI / Virtualization
-	- Converted Warframes and Weapons virtualized lists to render as a 4-column grid (rows of 4) to prevent cards stretching full width and to present cards side-by-side.
-	- Constrained each card with a centered wrapper and max-width so cards maintain a consistent width in the grid.
+UI / Virtualization
+ Converted Warframes and Weapons virtualized lists to render as a 4-column grid (rows of 4) to prevent cards stretching full width and to present cards side-by-side.
+ Constrained each card with a centered wrapper and max-width so cards maintain a consistent width in the grid.
 
-- Images / lazy-load
-	- Fixed Warframe card thumbnail lazy-loading when cards are rendered inside the virtual scroller by using the nearest scrollable ancestor as the IntersectionObserver root.
-	- Added robust image fallbacks: probe CDN candidates and use manifest wikia thumbnails when local assets are missing, plus an image @error handler to attempt fallbacks and avoid stuck broken images.
-	- Weapon cards now immediately load thumbnails when rendered in non-scroll grids (Primary / Secondary / Melee pages). Previously thumbnails sometimes appeared only in the virtualized "All weapons" view; the thumbnail loader now falls back to immediate-load when no scroll parent is detected. (2025-11-03)
+Images / lazy-load
+ Fixed Warframe card thumbnail lazy-loading when cards are rendered inside the virtual scroller by using the nearest scrollable ancestor as the IntersectionObserver root.
+ Added robust image fallbacks: probe CDN candidates and use manifest wikia thumbnails when local assets are missing, plus an image @error handler to attempt fallbacks and avoid stuck broken images.
+ Weapon cards now immediately load thumbnails when rendered in non-scroll grids (Primary / Secondary / Melee pages). Previously thumbnails sometimes appeared only in the virtualized "All weapons" view; the thumbnail loader now falls back to immediate-load when no scroll parent is detected. (2025-11-03)
 
 - Fix: Warframe part selection crash (recursive updates) — 2025-11-04
-	- Fixed a production-only crash that occurred when selecting Warframe parts which produced "Maximum recursive updates exceeded". The root cause was reactive churn: the page handler was writing identical override payloads back into the `collection` store which caused a feedback loop in production builds.
-	- Mitigation and fixes applied:
-	  - Short-circuit identical overrides in `src/pages/Warframes.vue` (don't call `collection.setOverride` when the incoming payload equals the existing override), preventing unnecessary store mutations and recursive watcher triggers. (commit: e14fe56)
-	  - Added defensive diagnostics and safer persistence in `src/stores/collection.ts` around `saveToStorage()` to detect and log non-serializable override entries (saved to `sessionStorage['arsenaltracker.debug_failed_save']` when encountered).
-	  - Defensive deep-clone of incoming override payloads before merging into the store to avoid persisting Vue reactive proxies or circular structures.
-	  - Issues #5 and #9 were closed by an empty commit referencing the fix (commit: db1e29a).
+  - Fixed a production-only crash that occurred when selecting Warframe parts which produced "Maximum recursive updates exceeded". The root cause was reactive churn: the page handler was writing identical override payloads back into the `collection` store which caused a feedback loop in production builds.
+  - Mitigation and fixes applied:
+    - Short-circuit identical overrides in `src/pages/Warframes.vue` (don't call `collection.setOverride` when the incoming payload equals the existing override), preventing unnecessary store mutations and recursive watcher triggers. (commit: e14fe56)
+    - Added defensive diagnostics and safer persistence in `src/stores/collection.ts` around `saveToStorage()` to detect and log non-serializable override entries (saved to `sessionStorage['arsenaltracker.debug_failed_save']` when encountered).
+    - Defensive deep-clone of incoming override payloads before merging into the store to avoid persisting Vue reactive proxies or circular structures.
+    - Issues #5 and #9 were closed by an empty commit referencing the fix (commit: db1e29a).
 
-- Weapons card UX
-	- Added extra bottom padding to weapon cards to reduce cramped UI at the bottom of the card.
-	- Removed the long textual "All weapons list (full)" under the virtualized weapons view to declutter the page.
+Weapons card UX:
+ Added extra bottom padding to weapon cards to reduce cramped UI at the bottom of the card.
+ Removed the long textual "All weapons list (full)" under the virtualized weapons view to declutter the page.
 
-	- Adjusted virtualized weapons row height and added vertical padding to each virtual cell so cards are not flush against each other (top/bottom spacing).
+- Adjusted virtualized weapons row height and added vertical padding to each virtual cell so cards are not flush against each other (top/bottom spacing).
 
 Notes:
-- These changes are intended to improve layout and perceived performance for large lists. If desired, follow-ups can include measuring actual card heights to drive virtualization sizing or migrating the grid to a responsive CSS layout tied to viewport breakpoints.
+These changes are intended to improve layout and perceived performance for large lists. If desired, follow-ups can include measuring actual card heights to drive virtualization sizing or migrating the grid to a responsive CSS layout tied to viewport breakpoints.
+
+## Unreleased - 2025-11-05
+
+- UI / PrimeVue
+  - Converted Warframe and Weapon cards to use PrimeVue `PCard` (see `src/components/WarframeCard.vue` and `src/components/WeaponCard.vue`). Imported `PCard` locally in these components so unit tests can mount them in isolation.
+
+- Fixes
+  - Fixed an IntersectionObserver runtime error by resolving Vue component refs to their DOM node (`$el`) before observing.
+  - Updated `src/lib/imageProbe.ts` to avoid setting `Image.crossOrigin` for cross-origin CDN probes to prevent CORS-related false negatives.
+  - Resolved virtual-scroller row overlap by removing inner card margins and ensuring card wrappers fill row height; increased weapons virtual row `itemSize` to give cards more vertical space.
+  - Restored the Mastered checkbox visibility and behavior: moved mastery control into the `PCard` footer, pinned the footer only for cards that have parts, adjusted z-index and bottom padding to avoid clipping, and allowed mastering for weapons that have no parts.
+  - Removed leftover debug logging from `WarframeCard.vue`.
+
+- Tests
+  - A local test run (prior to some later runs) showed 47 passing unit tests; please run the CI test suite (`npm run test:ci`) before merging to verify there are no regressions.
+
+- Notes
+  - Files touched by these changes include: `src/components/WarframeCard.vue`, `src/components/WeaponCard.vue`, `src/pages/Weapons.vue`, and `src/lib/imageProbe.ts`.

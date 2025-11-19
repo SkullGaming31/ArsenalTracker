@@ -23,7 +23,15 @@ export function probeImage(url: string): Promise<boolean> {
           return
         }
         const img = new Image()
-        try { img.crossOrigin = 'anonymous' } catch {}
+        try {
+          const parsed = new URL(url, window.location.href)
+          if (parsed.origin === window.location.origin) {
+            // safe to request anonymously when same-origin
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            img.crossOrigin = 'anonymous'
+          }
+        } catch {}
         const cleanup = () => {
           // allow GC to collect the image object
           img.onload = null

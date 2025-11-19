@@ -12,11 +12,16 @@ import Button from 'primevue/button'
 import Badge from 'primevue/badge'
 import ProgressBar from 'primevue/progressbar'
 import Ripple from 'primevue/ripple'
+// Quasar
+import { Quasar } from 'quasar'
+import 'quasar/dist/quasar.css'
+import '@quasar/extras/material-icons/material-icons.css'
 
 const app = createApp(App)
 
 app.use(createPinia())
 app.use(PrimeVue)
+app.use(Quasar, {})
 app.directive('ripple', Ripple)
 app.component('PCard', Card)
 app.component('PCheckbox', Checkbox)

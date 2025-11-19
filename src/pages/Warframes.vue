@@ -3,6 +3,7 @@
     <div class="toolbar">
       <!-- Search and Hide Completed moved to global header -->
     </div>
+      <!-- dev debug panel removed -->
     <section class="section">
       <h3>Prime</h3>
       <div class="pager" style="display:flex; gap:8px; align-items:center; margin-bottom:8px">
@@ -20,13 +21,13 @@
         <button @click="primeNext" :disabled="primeCurrent >= primeTotalPages - 1">Next</button>
       </div>
       <!-- virtualized prime list -->
-      <div ref="primeScrollRef" style="height:60vh; overflow:auto;">
+  <div ref="primeScrollRef" class="virtual-scroll" style="height:60vh; overflow:auto;">
         <div :style="{ height: primeTotalHeight + 'px', position: 'relative' }">
           <!-- center and constrain the inner column so cards don't stretch full page width -->
           <div style="max-width:1200px; margin:0 auto; position:relative;">
             <div v-for="vi in primeVirtualRenderItems" :key="vi.item.name" :style="{ position: 'absolute', top: vi.start + 'px', left: (vi.col * (100/columns)) + '%', width: (100/columns) + '%' }">
               <div style="padding:8px; display:flex; justify-content:center;">
-                <div style="width:100%; max-width:300px;">
+                <div class="card-wrap">
                   <WarframeCard :warframe="vi.item" :highlight="query" @update="handleUpdate" />
                 </div>
               </div>
@@ -53,13 +54,13 @@
         <button @click="nonPrimeNext" :disabled="nonPrimeCurrent >= nonPrimeTotalPages - 1">Next</button>
       </div>
       <!-- virtualized non-prime list -->
-      <div ref="nonPrimeScrollRef" style="height:60vh; overflow:auto;">
+  <div ref="nonPrimeScrollRef" class="virtual-scroll" style="height:60vh; overflow:auto;">
         <div :style="{ height: nonPrimeTotalHeight + 'px', position: 'relative' }">
           <!-- center and constrain the inner column so cards don't stretch full page width -->
           <div style="max-width:1200px; margin:0 auto; position:relative;">
             <div v-for="vi in nonPrimeVirtualRenderItems" :key="vi.item.name" :style="{ position: 'absolute', top: vi.start + 'px', left: (vi.col * (100/columns)) + '%', width: (100/columns) + '%' }">
               <div style="padding:8px; display:flex; justify-content:center;">
-                <div style="width:100%; max-width:300px;">
+                <div class="card-wrap">
                   <WarframeCard :warframe="vi.item" :highlight="query" @update="handleUpdate" />
                 </div>
               </div>
@@ -75,7 +76,7 @@
 <script setup lang="ts">
 // give component a multi-word name to satisfy eslint vue/multi-word-component-names
 defineOptions({ name: 'WarframesPage' })
-import { computed, watch, ref, onMounted } from 'vue'
+import { computed, watch, ref, onMounted, onBeforeUnmount } from 'vue'
 import WarframeCard from '../components/WarframeCard.vue'
 import { useCollectionStore } from '../stores/collection'
 import { useSearchStore } from '../stores/search'
@@ -88,6 +89,11 @@ const hideCompleted = computed(() => Boolean(props.hideCompleted))
 const search = useSearchStore()
 
 const warframesAll = computed<Warframe[]>(() => collection.mergedWarframes as Warframe[])
+
+// debug: log base list to confirm collection provides data
+// removed debug logging of full warframes list
+// keep a no-op watcher so any necessary reactivity runs but avoid logging
+watch(warframesAll, () => {}, { immediate: true })
 
 const primeWarframes = computed<Warframe[]>(() =>
   warframesAll.value.filter((w: Warframe) => {
@@ -154,14 +160,30 @@ const filteredNonPrimeWarframes = computed<Warframe[]>(() => {
   return list.slice().sort((a,b) => (a.name||'').localeCompare(b.name||''))
 })
 
-// --- Virtualization for prime and non-prime lists ---
-// itemSize is the assumed height (px) for each rendered row. Increase this
-// if cards appear clipped/stretched due to content being taller than the
-// virtual row size. For a 4-column grid each "row" contains up to 4 cards.
+// --- Virtualization for prime and non-prime lists (responsive) ---
+// itemSize is the assumed height (px) for each rendered row. We make this
+// responsive so cards fit better on narrow screens.
 type VirtualRow = { row: number; start: number; size: number }
-const itemSize = 400
-// number of columns per row (user requested "rows of 4")
-const columns = 4
+const itemSize = ref(400)
+// responsive columns: 1 (mobile), 2 (tablet), 4 (desktop)
+const columns = ref(4)
+
+function updateLayoutForWidth(w: number) {
+  if (w <= 640) {
+    columns.value = 1
+    itemSize.value = 360
+  } else if (w <= 900) {
+    columns.value = 2
+    itemSize.value = 380
+  } else {
+    columns.value = 4
+    itemSize.value = 400
+  }
+}
+
+function onResize() {
+  updateLayoutForWidth(window.innerWidth)
+}
 
 // Prime
 const primeScrollRef = ref<HTMLElement | null>(null)
@@ -176,21 +198,21 @@ const pagedPrime = computed(() => {
   return filteredPrimeWarframes.value.slice(start, start + primePageSize.value)
 })
 
-const primeTotalRows = computed(() => Math.ceil(pagedPrime.value.length / columns))
+const primeTotalRows = computed(() => Math.ceil(pagedPrime.value.length / columns.value))
 const primeVisibleRange = ref({ start: 0, end: Math.min(primeTotalRows.value, 10) })
 const primeVirtualItems = computed(() => {
   const items: VirtualRow[] = []
   const start = primeVisibleRange.value.start
   const end = primeVisibleRange.value.end
-  for (let r = start; r < end; r++) items.push({ row: r, start: r * itemSize, size: itemSize })
+  for (let r = start; r < end; r++) items.push({ row: r, start: r * itemSize.value, size: itemSize.value })
   return items
 })
 // expand each visible row into up to `columns` render cells with column index
 const primeVirtualRenderItems = computed(() => {
   const out: { item: Warframe; start: number; col: number }[] = []
   primeVirtualItems.value.forEach((vr) => {
-    for (let c = 0; c < columns; c++) {
-      const idx = vr.row * columns + c
+    for (let c = 0; c < columns.value; c++) {
+      const idx = vr.row * columns.value + c
       const item = pagedPrime.value[idx]
       if (!item) continue
       out.push({ item, start: vr.start, col: c })
@@ -198,24 +220,35 @@ const primeVirtualRenderItems = computed(() => {
   })
   return out
 })
-const primeTotalHeight = computed(() => primeTotalRows.value * itemSize)
+const primeTotalHeight = computed(() => primeTotalRows.value * itemSize.value)
 
 function recomputePrime() {
   const el = primeScrollRef.value
   if (!el) return
   const scrollTop = el.scrollTop
   const clientHeight = el.clientHeight || 600
-  const start = Math.floor(scrollTop / itemSize) - 5
-  const end = Math.ceil((scrollTop + clientHeight) / itemSize) + 5
+  const start = Math.floor(scrollTop / itemSize.value) - 5
+  const end = Math.ceil((scrollTop + clientHeight) / itemSize.value) + 5
   primeVisibleRange.value.start = Math.max(0, start)
   primeVisibleRange.value.end = Math.min(primeTotalRows.value, end)
 }
 
 onMounted(() => {
+  updateLayoutForWidth(window.innerWidth)
+  window.addEventListener('resize', onResize)
   const el = primeScrollRef.value
   if (el) el.addEventListener('scroll', recomputePrime)
   watch(filteredPrimeWarframes, () => recomputePrime())
   setTimeout(recomputePrime, 0)
+})
+
+// debug: log virtual items to help trace missing data
+// removed debug logging of virtual render items
+// no-op watcher preserved for reactivity
+watch(primeVirtualRenderItems, () => {}, { immediate: true })
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', onResize)
 })
 
 // Non-prime
@@ -230,20 +263,20 @@ const pagedNonPrime = computed(() => {
   return filteredNonPrimeWarframes.value.slice(start, start + nonPrimePageSize.value)
 })
 
-const nonPrimeTotalRows = computed(() => Math.ceil(pagedNonPrime.value.length / columns))
+const nonPrimeTotalRows = computed(() => Math.ceil(pagedNonPrime.value.length / columns.value))
 const nonPrimeVisibleRange = ref({ start: 0, end: Math.min(nonPrimeTotalRows.value, 10) })
 const nonPrimeVirtualItems = computed(() => {
   const items: VirtualRow[] = []
   const start = nonPrimeVisibleRange.value.start
   const end = nonPrimeVisibleRange.value.end
-  for (let r = start; r < end; r++) items.push({ row: r, start: r * itemSize, size: itemSize })
+  for (let r = start; r < end; r++) items.push({ row: r, start: r * itemSize.value, size: itemSize.value })
   return items
 })
 const nonPrimeVirtualRenderItems = computed(() => {
   const out: { item: Warframe; start: number; col: number }[] = []
   nonPrimeVirtualItems.value.forEach((vr) => {
-    for (let c = 0; c < columns; c++) {
-      const idx = vr.row * columns + c
+    for (let c = 0; c < columns.value; c++) {
+      const idx = vr.row * columns.value + c
       const item = pagedNonPrime.value[idx]
       if (!item) continue
       out.push({ item, start: vr.start, col: c })
@@ -251,15 +284,15 @@ const nonPrimeVirtualRenderItems = computed(() => {
   })
   return out
 })
-const nonPrimeTotalHeight = computed(() => nonPrimeTotalRows.value * itemSize)
+const nonPrimeTotalHeight = computed(() => nonPrimeTotalRows.value * itemSize.value)
 
 function recomputeNonPrime() {
   const el = nonPrimeScrollRef.value
   if (!el) return
   const scrollTop = el.scrollTop
   const clientHeight = el.clientHeight || 600
-  const start = Math.floor(scrollTop / itemSize) - 5
-  const end = Math.ceil((scrollTop + clientHeight) / itemSize) + 5
+  const start = Math.floor(scrollTop / itemSize.value) - 5
+  const end = Math.ceil((scrollTop + clientHeight) / itemSize.value) + 5
   nonPrimeVisibleRange.value.start = Math.max(0, start)
   nonPrimeVisibleRange.value.end = Math.min(nonPrimeTotalRows.value, end)
 }
@@ -355,5 +388,12 @@ function handleUpdate(payload: unknown) {
 .toggle input:checked + .slider { background: var(--accent-green, #2bb673) }
 .toggle input:checked + .slider::after { transform: translateX(18px); background: #fff }
 .toggle .toggle-label { color: var(--muted); font-size:0.95rem }
+.card-wrap { width:100%; max-width:300px }
+@media (max-width: 640px) {
+  .card-wrap { max-width: 92% }
+}
+
+/* touch-friendly virtual scroller */
+.virtual-scroll { -webkit-overflow-scrolling: touch; touch-action: pan-y }
 </style>
 
