@@ -1,5 +1,7 @@
 <template>
   <div class="app-shell">
+    <!-- skip link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <!-- global decorative energy orbs for main layout -->
     <div class="main-energy-orb orb-a" aria-hidden></div>
     <div class="main-energy-orb orb-b" aria-hidden></div>
@@ -7,7 +9,6 @@
     <div class="layout-grid">
   <NavBar v-if="view !== 'landing'" class="site-nav" :activeView="view" @navigate="onNavigate" />
       <div class="content-area">
-        <!-- known-issue banner removed -->
         <AppHeader
           v-if="view !== 'landing'"
           v-model:query="globalQuery"
@@ -15,10 +16,10 @@
           :pageSubtitle="pageSubtitle"
           :showControls="view==='warframes' || view==='weapons' || view==='primary' || view==='secondary' || view==='melee'"
         />
-        <main>
-              <Landing v-if="view==='landing'" @navigate="onNavigate" />
-              <About v-else-if="view==='about'" @navigate="onNavigate" />
-              <Dashboard v-else-if="view==='dashboard'" />
+  <main id="main-content">
+          <Landing v-if="view==='landing'" @navigate="onNavigate" />
+          <About v-else-if="view==='about'" @navigate="onNavigate" />
+          <Dashboard v-else-if="view==='dashboard'" />
           <Warframes v-else-if="view==='warframes'" v-model:query="globalQuery" v-model:hideCompleted="globalHideCompleted" />
           <Weapons v-else-if="view==='weapons'" v-model:query="globalQuery" v-model:hideCompleted="globalHideCompleted" />
           <Primary v-else-if="view==='primary'" v-model:query="globalQuery" v-model:hideCompleted="globalHideCompleted" />
@@ -82,8 +83,6 @@ const pageSubtitle = computed(() => {
     default: return 'Welcome to the Arsenal Tracker'
   }
 })
-
-// known-issue banner removed
 </script>
 
 <style scoped>
@@ -141,6 +140,34 @@ const pageSubtitle = computed(() => {
   0% { transform: translateY(0) scale(1); opacity: 0.06 }
   50% { transform: translateY(-16px) scale(1.03); opacity: 0.11 }
   100% { transform: translateY(0) scale(1); opacity: 0.06 }
+}
+
+/* skip link styles */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.app-shell main { padding: 48px 18px }
+
+@media (max-width: 900px) {
+  .layout-grid { flex-direction: column }
+  .app-shell main { padding: 20px 12px }
+}
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  z-index: 9999;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
 }
 
 .main-energy-orb.orb-a { left: 4%; top: 6%; background: radial-gradient(circle at 30% 30%, rgba(124,77,255,0.95), rgba(124,77,255,0.08)); animation-duration: 12s }

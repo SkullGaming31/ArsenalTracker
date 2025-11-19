@@ -1,6 +1,7 @@
 <template>
-  <div ref="root" :class="['card', 'p-card', 'weapon-card', { collected: isAllPartsCollected, gold: isGold }]">
-    <div class="card-header">
+  <PCard :class="['card', 'weapon-card', { collected: isAllPartsCollected, gold: isGold, 'has-parts': parts.length > 0 }]" ref="root">
+    <template #title>
+      <div class="card-header">
         <div class="accent" :style="{ background: accentColor }"></div>
         <div class="thumb">
           <img v-if="imgSrc" :src="imgSrc" :alt="weapon.name || 'thumbnail'" class="thumb-img" loading="lazy" @error="onImgError" />
@@ -17,67 +18,76 @@
           </div>
         </div>
       </div>
+    </template>
 
-    <div class="type">
-      <div class="type-top">{{ typeParts[0] }}</div>
-      <div class="type-bottom" v-if="typeParts.length > 1">{{ typeParts[1] }}</div>
-    </div>
+    <template #content>
+      <div class="content-scroll">
+        <div class="type">
+          <div class="type-top">{{ typeParts[0] }}</div>
+          <div class="type-bottom" v-if="typeParts.length > 1">{{ typeParts[1] }}</div>
+        </div>
 
-    <div class="progress">
-      <div class="progress-bar">
-        <!-- bind width only; color is now fixed via CSS to be purple -->
-        <div class="progress-fill" :style="{ width: progressPercent + '%' }"></div>
-      </div>
-    </div>
-
-    <div class="checks">
-      <div v-for="(p, idx) in parts" :key="p.name + idx">
-        <div class="check-row">
-          <div class="part-left">
-            <strong>{{ p.name }}</strong>
-            <div class="small" v-if="p.relics && p.relics.length">{{ p.relics.length }} relics</div>
-            <div class="small" v-else-if="(p.resources || []).length">{{ (p.resources || []).length }} resources</div>
-            <div class="small" v-else-if="p.count">×{{ p.count }}</div>
-          </div>
-          <div class="row-actions">
-            <!-- use v-model so Vue updates collected[idx] before change handler runs -->
-            <input type="checkbox" v-model="collected[idx]" @change="toggleCollected" />
-            <button v-if="(p.resources || []).length || (p.relics || []).length" class="toggle-res" @click="toggles[idx] = !toggles[idx]">▾</button>
+        <div class="progress">
+          <div class="progress-bar">
+            <!-- bind width only; color is now fixed via CSS to be purple -->
+            <div class="progress-fill" :style="{ width: progressPercent + '%' }"></div>
           </div>
         </div>
 
-        <div class="resources" v-if="toggles[idx]">
-          <div v-if="p.relics && p.relics.length" class="relics">
-            <div v-for="(r, ridx) in p.relics" :key="r.relicName + ridx" class="resource-row relic-row">
-              <div class="relic-main">
-                <strong class="relic-name">{{ r.relicName }}</strong>
-                <span class="relic-badge" :style="{ background: rarityColor(r.rarity) }">{{ r.rarity }}</span>
+        <div class="checks">
+          <div v-for="(p, idx) in parts" :key="p.name + idx">
+            <div class="check-row">
+              <div class="part-left">
+                <strong>{{ p.name }}</strong>
+                <div class="small" v-if="p.relics && p.relics.length">{{ p.relics.length }} relics</div>
+                <div class="small" v-else-if="(p.resources || []).length">{{ (p.resources || []).length }} resources</div>
+                <div class="small" v-else-if="p.count">×{{ p.count }}</div>
               </div>
-              <div class="relic-versions">
-                <span v-for="(v, vi) in r.versions" :key="v + vi" class="relic-version">{{ v }}</span>
+              <div class="row-actions">
+                <!-- use v-model so Vue updates collected[idx] before change handler runs -->
+                <input type="checkbox" v-model="collected[idx]" @change="toggleCollected" />
+                <button v-if="(p.resources || []).length || (p.relics || []).length" class="toggle-res" @click="toggles[idx] = !toggles[idx]">▾</button>
               </div>
             </div>
-          </div>
 
-          <div v-if="p.resources && p.resources.length" class="bp-res">
-            <div v-for="(r, i) in p.resources" :key="r.name + i" class="resource-row">
-              <div>{{ r.name }} <small>×{{ r.quantity }}</small></div>
+            <div class="resources" v-if="toggles[idx]">
+              <div v-if="p.relics && p.relics.length" class="relics">
+                <div v-for="(r, ridx) in p.relics" :key="r.relicName + ridx" class="resource-row relic-row">
+                  <div class="relic-main">
+                    <strong class="relic-name">{{ r.relicName }}</strong>
+                    <span class="relic-badge" :style="{ background: rarityColor(r.rarity) }">{{ r.rarity }}</span>
+                  </div>
+                  <div class="relic-versions">
+                    <span v-for="(v, vi) in r.versions" :key="v + vi" class="relic-version">{{ v }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div v-if="p.resources && p.resources.length" class="bp-res">
+                <div v-for="(r, i) in p.resources" :key="r.name + i" class="resource-row">
+                  <div>{{ r.name }} <small>×{{ r.quantity }}</small></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+  <!-- footer inside the scrollable content but sticky to the bottom so it
+             remains visible while parts scroll. This avoids absolute positioning
+             and ensures consistent placement across cards. -->
+        <div class="check-row footer" style="margin-top:8px">
+          <span>Mastered: {{ isMastered ? 'true' : 'false' }}</span>
+          <input type="checkbox" v-model="isMastered" @change="emitMastered" :disabled="!canMaster" :title="masteredTitle" />
+        </div>
       </div>
-    </div>
-    <div class="check-row" style="margin-top:8px">
-      <span>Mastered: {{ isMastered ? 'true' : 'false' }}</span>
-  <input type="checkbox" v-model="isMastered" @change="emitMastered" :disabled="!canMaster" :title="masteredTitle" />
-    </div>
-  </div>
+    </template>
+  </PCard>
 </template>
 
 <script lang="ts" setup>
 import type { Weapon, Part, PartWithCollected } from '../types/weapon'
 import { ref, computed, watchEffect, watch, onMounted, onBeforeUnmount } from 'vue'
 import { probeImage } from '../lib/imageProbe'
+import PCard from 'primevue/card'
 
 const props = defineProps<{ weapon: Weapon }>()
 const emit = defineEmits<{
@@ -129,7 +139,10 @@ const isGold = computed(() => Boolean(isMastered.value))
 // thumbnail support for weapons (lazy-load + fallbacks)
 const imgSrc = ref<string | null>(null)
 let observer: IntersectionObserver | null = null
-const root = ref<HTMLElement | null>(null)
+// `root` may receive a DOM element or a component instance (PCard). Use
+// `unknown` and a runtime type guard so we avoid using `any` and satisfy
+// stricter linting rules.
+const root = ref<unknown>(null)
 
 async function loadAssetsManifest(): Promise<Record<string, { imageName?: string; wikiaThumbnail?: string }>> {
   try {
@@ -170,9 +183,18 @@ async function findCdn(name: string, imageName?: string) {
   return null
 }
 
-function startObserving(el: Element | null) {
+function isComponentWithEl(x: unknown): x is { $el: Element } {
+  const rec = x as Record<string, unknown>
+  return !!x && typeof x === 'object' && '$el' in rec && rec['$el'] instanceof Element
+}
+
+function startObserving(el: unknown) {
   if (!el || typeof IntersectionObserver === 'undefined') return
-  const rootEl = findScrollParent(el) || null
+  // If a Vue component instance is passed (e.g. PCard ref), resolve to its
+  // root DOM element via `$el`. Otherwise assume `el` is already an Element.
+  const target: Element | null = isComponentWithEl(el) ? el.$el : (el as Element | null)
+  if (!target || !(target instanceof Element)) return
+  const rootEl = findScrollParent(target) || null
 
   const tryLoad = async () => {
     const m = await loadAssetsManifest()
@@ -211,7 +233,7 @@ function startObserving(el: Element | null) {
     void tryLoad()
   }
 
-  observer.observe(el)
+  observer.observe(target)
 }
 
 async function onImgError(e: Event) {
@@ -285,13 +307,15 @@ function emitMastered() {
   emit('update', { name: weapon.name, is_mastered: isMastered.value })
 }
 
-// Allow mastered for market-only weapons which have no parts. Compute whether
-// the Mastered checkbox should be enabled.
+
+// Compute whether the Mastered checkbox should be enabled.
+// If the weapon has parts, require all parts collected. If it has no parts,
+// allow mastering (some weapons are "market-only" but others simply have no parts
+// and should still be markable as mastered).
 const canMaster = computed(() => {
-  // if there are parts, require all collected; if there are no parts, allow
-  // mastering only when this weapon is purchasable from the market.
   if ((parts.value || []).length > 0) return isAllPartsCollected.value
-  return Boolean(marketInfo.value)
+  // allow mastering when there are no parts
+  return true
 })
 
 const masteredTitle = computed(() => {
@@ -327,13 +351,37 @@ function rarityColor(rarity: string){
   padding: 12px;
   background: #1a1a1a;
   color: #eee;
-  margin: 8px;
+  margin: 0;
 }
+
+
+.card, .p-card.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.p-card.card .p-card-body,
+.p-card.card .p-card-content {
+  /* keep the PrimeVue body as a column so inner .content-scroll can
+     become the scrollable region; avoid forcing height:100% here because
+     that would push the footer out of view. */
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto;
+  min-height: 0; /* allow flex child to not force parent's height */
+}
+
+/* ensure the card itself can shrink properly inside the flex cell and clip overflow */
+.card { min-height: 0; overflow: hidden }
 
 /* extra bottom padding specifically for weapon cards to avoid cramped actions */
 .weapon-card {
   padding-bottom: 18px;
 }
+
+/* Scrollable content area inside the card — keeps footer (mastery) visible */
+.content-scroll { flex: 1 1 auto; overflow: auto; min-height: 0 }
 
 .type {
   display: flex;
@@ -426,14 +474,17 @@ function rarityColor(rarity: string){
 .progress-bar { background: rgba(255,255,255,0.03); height: 8px; border-radius: 6px; overflow: hidden }
 .progress-fill { height: 100%; transition: width .25s ease; background: #9b5cff }
 
+/* compact parts list */
 .checks { display: flex; flex-direction: column; gap: 8px }
-.check-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; background: rgba(255,255,255,0.02); border-radius: 8px }
+/* Remove internal padding for part rows so parts appear compact */
+.check-row { display: flex; justify-content: space-between; align-items: center; padding: 0; background: rgba(255,255,255,0.02); border-radius: 8px }
 .check-row span { color: #cfe8d6 }
 
 .row-actions { display:flex; gap:8px; align-items:center }
 .toggle-res { background: transparent; border: none; color: #9fb8a6; cursor: pointer; font-size: 0.9rem }
-.resources { padding: 8px 10px 10px 10px; background: rgba(255,255,255,0.01); border-radius: 6px; margin-top: 6px }
-.resource-row { padding: 6px 4px; display:flex; align-items:center }
+/* Resource lists should also be compact — remove extra padding */
+.resources { padding: 0; background: rgba(255,255,255,0.01); border-radius: 6px; margin-top: 6px }
+.resource-row { padding: 0; display:flex; align-items:center }
 .resource-row label { color: #d6eede }
 .resource-row small { color: #9fb8a6; margin-left: 8px }
 
@@ -448,12 +499,37 @@ function rarityColor(rarity: string){
 .p-card.card .p-card-subtitle { color: inherit !important }
 .p-badge { background: rgba(255,255,255,0.06) !important; color: #ffd54a !important }
 
+/* Footer area for PCard: keep visible and separated from scrollable body */
+.p-card.card.has-parts .p-card-footer {
+  border-top: 1px solid rgba(255,255,255,0.03);
+  padding: 8px 12px;
+  background: rgba(0,0,0,0.02);
+  /* make footer visible even when body scrolls: pin to bottom of card */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  z-index: 3; /* ensure footer sits above the scrollable content */
+  /* give a fixed height and center contents to avoid partial clipping */
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ensure card root can position footer absolutely */
+.p-card.card.has-parts { position: relative; }
+
+/* add bottom padding so scrollable content doesn't hide under the footer */
+.p-card.card.has-parts .content-scroll { padding-bottom: 84px; position: relative; z-index: 1 }
+
 .part-left .small { font-size:0.85rem; color:#9fb8a6 }
 .resource-row label { color:#d6eede }
 .bp-title { margin-top:8px; font-weight:600 }
 .progress-bar { background: rgba(255,255,255,0.03); height:8px; border-radius:6px; overflow:hidden }
 .progress-fill { height:100%; transition: width .25s; background: #9b5cff }
-.check-row { display:flex; justify-content:space-between; align-items:center; padding:8px; background:rgba(255,255,255,0.02); border-radius:8px; margin-top:6px }
+.check-row { display:flex; justify-content:space-between; align-items:center; padding:0; background:rgba(255,255,255,0.02); border-radius:8px; margin-top:6px }
 .row-actions { display:flex; gap:8px; align-items:center }
 .toggle-res { background:transparent; border:none; cursor:pointer; color:#9fb8a6 }
 

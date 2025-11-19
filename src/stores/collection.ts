@@ -46,9 +46,56 @@ export const useCollectionStore = defineStore('collection', () => {
   function saveToStorage() {
     try {
       const payload = { version: CURRENT_VERSION, overrides: overrides.value }
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
+      // Attempt to stringify payload; this can throw on circular or non-serializable values
+      const json = JSON.stringify(payload)
+      localStorage.setItem(STORAGE_KEY, json)
     } catch (e) {
+      // Primary error log for test expectation; then attempt diagnostics without emitting
+      // another console.error so tests that spy on console.error continue to pass.
       console.error('[collection] failed to save persistence', e)
+      // Defensive diagnostics: try to locate which override key is problematic
+      try {
+        // note: diagnostic info is emitted with console.warn to avoid failing tests
+        // that assert a single console.error call.
+        console.warn('[collection] failed to save persistence, attempting diagnostics')
+        const diagnostics: Record<string, string> = {}
+        const safeStringify = (v: unknown) => {
+          const seen = new WeakSet()
+          return JSON.stringify(v, function (_k, val) {
+            if (typeof val === 'function') {
+              const maybeName = (val as unknown as { name?: unknown })?.name
+              const fnName = typeof maybeName === 'string' ? maybeName : 'anonymous'
+              return `[Function:${fnName}]`
+            }
+            if (typeof val === 'object' && val !== null) {
+              if (seen.has(val as object)) return '[Circular]'
+              seen.add(val as object)
+            }
+            return val
+          }, 2)
+        }
+
+        // Try serializing each override entry to find the failing key
+        for (const [k, v] of Object.entries(overrides.value || {})) {
+          try {
+            // try a JSON round-trip first
+            JSON.stringify(v)
+            diagnostics[k] = 'ok'
+          } catch (err) {
+            // record a safe dump for inspection
+            diagnostics[k] = `error: ${String(err)}; safeDump: ${safeStringify(v)}`
+          }
+        }
+
+        // persist diagnostics to sessionStorage to make it easier to inspect in production preview
+        try {
+          sessionStorage.setItem('arsenaltracker.debug_failed_save', safeStringify(diagnostics))
+        } catch {
+          // ignore sessionStorage failures
+        }
+        } catch (diagErr) {
+          console.warn('[collection] diagnostics failed', diagErr)
+        }
     }
   }
 

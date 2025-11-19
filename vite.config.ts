@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import { quasar } from '@quasar/vite-plugin'
 import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
@@ -11,6 +12,8 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
+    // Quasar Vite plugin - enables Quasar components and styles
+    quasar({ sassVariables: 'src/quasar-variables.sass' }),
     vueDevTools(),
     VitePWA({
       registerType: 'autoUpdate',

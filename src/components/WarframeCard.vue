@@ -1,121 +1,140 @@
 <template>
-  <div :class="['card', 'p-card', 'theme-card', { collected: isFullyCollected, prime: isPrime, gold: isGold }]" ref="root" :data-testid="testId">
-    <div class="top-accent" :style="{ background: accentColor }" aria-hidden="true"></div>
-    <div class="card-header">
-      <div class="accent" :style="{ background: accentColor }"></div>
+  <PCard :class="['card', 'theme-card', { collected: isFullyCollected, prime: isPrime, gold: isGold }]" ref="root" :data-testid="testId">
+    <template #title>
+      <div class="top-accent" :style="{ background: accentColor }" aria-hidden="true"></div>
+      <div class="card-header">
+        <div class="accent" :style="{ background: accentColor }"></div>
 
-      <div class="thumb">
-        <img v-if="imgSrc" :src="imgSrc" :alt="warframe.name || 'thumbnail'" class="thumb-img" loading="lazy" @error="onImgError" />
-        <img v-else :alt="warframe.name || 'placeholder'" src="/icons/icon-192.svg" class="thumb-img" loading="lazy" />
-      </div>
-
-      <div class="title">
-        <h3 v-html="highlightedName"></h3>
-        <div class="meta">
-          <span class="badge theme-badge">{{ typeParts[0] }}</span>
-          <span class="crafted">{{ craftedCount }}/4 crafted</span>
+        <div class="thumb">
+          <img v-if="imgSrc" :src="imgSrc" :alt="warframe.name || 'thumbnail'" class="thumb-img" loading="lazy" @error="onImgError" />
+          <img v-else :alt="warframe.name || 'placeholder'" src="/icons/icon-192.svg" class="thumb-img" loading="lazy" />
         </div>
-      </div>
-    </div>
 
-    <div class="type">
-      <div class="type-top">{{ typeParts[0] }}</div>
-      <div class="type-bottom" v-if="typeParts.length > 1">{{ typeParts[1] }}</div>
-    </div>
-
-    <div class="progress">
-      <div class="progress-bar">
-        <div class="progress-fill" :style="{ width: progressPercent + '%', background: accentColor }"></div>
-      </div>
-    </div>
-
-    <div class="checks">
-      <div class="check-row">
-        <span>Neuroptics: {{ neuropticsCollected ? 'true' : 'false' }}</span>
-        <div class="row-actions">
-          <input type="checkbox" v-model="neuropticsCollected" />
-          <button class="toggle-res" @click="showNeuroptics = !showNeuroptics">▾</button>
-        </div>
-      </div>
-
-      <div class="resources" v-if="showNeuroptics">
-        <div v-for="(r, idx) in neuropticsResources" :key="r.name + idx" class="resource-row" :class="{ collected: r.collected }">
-          <label>
-            <input type="checkbox" v-model="r.collected" />
-            <span class="res-icon icon-neuro" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><circle cx="12" cy="8" r="3"/><path d="M12 11v6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/></svg>
+        <div class="title">
+          <!-- render plain text when no highlight is requested to avoid v-html oddities; use highlighted html only when highlight present -->
+          <h3 v-if="!props.highlight">{{ displayedName }}</h3>
+          <h3 v-else>
+            <span v-for="(p, i) in nameParts" :key="i">
+              <mark v-if="p.match">{{ p.text }}</mark>
+              <template v-else>{{ p.text }}</template>
             </span>
-            {{ r.name }} <small>×{{ r.quantity }}</small>
-          </label>
+          </h3>
+    <!-- name probe removed (debug) -->
+          <div class="meta">
+            <span class="badge theme-badge">{{ typeParts[0] }}</span>
+            <span class="crafted">{{ craftedCount }}/4 crafted</span>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template #content>
+      <!-- debug JSON removed: no longer displayed on card -->
+
+      <div class="type">
+        <div class="type-top">{{ typeParts[0] }}</div>
+        <div class="type-bottom" v-if="typeParts.length > 1">{{ typeParts[1] }}</div>
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar">
+          <div class="progress-fill" :style="{ width: progressPercent + '%', background: accentColor }"></div>
         </div>
       </div>
 
-      <div class="check-row">
-        <span>Chassis: {{ chassisCollected ? 'true' : 'false' }}</span>
-        <div class="row-actions">
-          <input type="checkbox" v-model="chassisCollected" />
-          <button class="toggle-res" @click="showChassis = !showChassis">▾</button>
+      <div class="checks">
+        <div class="check-row">
+          <span>Neuroptics:</span>
+          <div class="row-actions">
+            <input type="checkbox" v-model="neuropticsCollected" />
+            <button class="toggle-res" @click="showNeuroptics = !showNeuroptics">▾</button>
+          </div>
+        </div>
+
+        <div class="resources" v-if="showNeuroptics">
+          <div v-for="(r, idx) in neuropticsResources" :key="r.name + idx" class="resource-row" :class="{ collected: r.collected }">
+            <label>
+              <input type="checkbox" v-model="r.collected" />
+              <span class="res-icon icon-neuro" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><circle cx="12" cy="8" r="3"/><path d="M12 11v6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/></svg>
+              </span>
+              {{ r.name }} <small>×{{ r.quantity }}</small>
+            </label>
+          </div>
+        </div>
+
+        <div class="check-row">
+          <span>Chassis:</span>
+          <div class="row-actions">
+            <input type="checkbox" v-model="chassisCollected" />
+            <button class="toggle-res" @click="showChassis = !showChassis">▾</button>
+          </div>
+        </div>
+
+        <div class="resources" v-if="showChassis">
+          <div v-for="(r, idx) in chassisResources" :key="r.name + idx" class="resource-row" :class="{ collected: r.collected }">
+            <label>
+              <input type="checkbox" v-model="r.collected" />
+              <span class="res-icon icon-gear" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M2 12h2m16 0h2M12 2v2m0 16v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+              </span>
+              {{ r.name }} <small>×{{ r.quantity }}</small>
+            </label>
+          </div>
+        </div>
+
+        <div class="check-row">
+          <span>Systems:</span>
+          <div class="row-actions">
+            <input type="checkbox" v-model="systemsCollected" />
+            <button class="toggle-res" @click="showSystems = !showSystems">▾</button>
+          </div>
+        </div>
+
+        <div class="resources" v-if="showSystems">
+          <div v-for="(r, idx) in systemsResources" :key="r.name + idx" class="resource-row" :class="{ collected: r.collected }">
+            <label>
+              <input type="checkbox" v-model="r.collected" />
+              <span class="res-icon icon-bolt" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
+              </span>
+              {{ r.name }} <small>×{{ r.quantity }}</small>
+            </label>
+          </div>
+        </div>
+
+        <div class="check-row">
+          <span>Blueprint:</span>
+          <div class="row-actions">
+            <input type="checkbox" v-model="blueprintCollected" />
+            <button class="toggle-res" @click="showBlueprint = !showBlueprint">▾</button>
+          </div>
+        </div>
+
+        <div class="resources" v-if="showBlueprint">
+          <div v-for="(r, idx) in blueprintResources" :key="r.name + idx" class="resource-row" :class="{ collected: r.collected }">
+            <label>
+              <input type="checkbox" v-model="r.collected" />
+              <span class="res-icon icon-doc" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><rect x="4" y="3" width="12" height="18" rx="2"/><path d="M8 7h6M8 11h6M8 15h4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+              </span>
+              {{ r.name }} <small>×{{ r.quantity }}</small>
+            </label>
+          </div>
+        </div>
+
+        <div class="check-row">
+          <span>Mastered:</span>
+          <input
+            type="checkbox"
+            v-model="isMastered"
+            :disabled="!isAllPartsCollected"
+            :title="isAllPartsCollected ? 'Mark mastered' : 'Collect all parts to enable mastery'"
+          />
         </div>
       </div>
-
-      <div class="resources" v-if="showChassis">
-        <div v-for="(r, idx) in chassisResources" :key="r.name + idx" class="resource-row" :class="{ collected: r.collected }">
-          <label>
-            <input type="checkbox" v-model="r.collected" />
-            <span class="res-icon icon-gear" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M2 12h2m16 0h2M12 2v2m0 16v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            </span>
-            {{ r.name }} <small>×{{ r.quantity }}</small>
-          </label>
-        </div>
-      </div>
-
-      <div class="check-row">
-        <span>Systems: {{ systemsCollected ? 'true' : 'false' }}</span>
-        <div class="row-actions">
-          <input type="checkbox" v-model="systemsCollected" />
-          <button class="toggle-res" @click="showSystems = !showSystems">▾</button>
-        </div>
-      </div>
-
-      <div class="resources" v-if="showSystems">
-        <div v-for="(r, idx) in systemsResources" :key="r.name + idx" class="resource-row" :class="{ collected: r.collected }">
-          <label>
-            <input type="checkbox" v-model="r.collected" />
-            <span class="res-icon icon-bolt" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
-            </span>
-            {{ r.name }} <small>×{{ r.quantity }}</small>
-          </label>
-        </div>
-      </div>
-
-      <div class="check-row">
-        <span>Blueprint: {{ blueprintCollected ? 'true' : 'false' }}</span>
-        <div class="row-actions">
-          <input type="checkbox" v-model="blueprintCollected" />
-          <button class="toggle-res" @click="showBlueprint = !showBlueprint">▾</button>
-        </div>
-      </div>
-
-      <div class="resources" v-if="showBlueprint">
-        <div v-for="(r, idx) in blueprintResources" :key="r.name + idx" class="resource-row" :class="{ collected: r.collected }">
-          <label>
-            <input type="checkbox" v-model="r.collected" />
-            <span class="res-icon icon-doc" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><rect x="4" y="3" width="12" height="18" rx="2"/><path d="M8 7h6M8 11h6M8 15h4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            </span>
-            {{ r.name }} <small>×{{ r.quantity }}</small>
-          </label>
-        </div>
-      </div>
-
-      <div class="check-row">
-        <span>Mastered: {{ isMastered ? 'true' : 'false' }}</span>
-        <input type="checkbox" v-model="isMastered" />
-      </div>
-    </div>
-  </div>
+    </template>
+  </PCard>
 </template>
 
 <script lang="ts" setup>
@@ -138,7 +157,9 @@ const emit = defineEmits<{ (e: "update", payload: WarframeUpdate): void }>();
 // keep `warframe` as a reactive ref so updates from parent propagate
 import { ref, watch, computed, toRef } from "vue";
 import { onMounted, onBeforeUnmount } from "vue";
+import type { ComponentPublicInstance } from 'vue'
 import { probeImage } from '../lib/imageProbe'
+import PCard from 'primevue/card'
 const warframe = toRef(props as { warframe: Warframe }, "warframe");
 
 const testId = computed(() => {
@@ -175,7 +196,7 @@ interface AssetsManifest {
 }
 
 let manifestCache: AssetsManifest | null = null;
-const root = ref<HTMLElement | null>(null)
+const root = ref<Element | ComponentPublicInstance | null>(null)
 const _failedImgUrls = new Set<string>()
 
 async function findCdn(n: string, imageName?: string) {
@@ -256,10 +277,13 @@ function getWikiaThumbnail(wf?: Warframe | null): string | undefined {
 
 // image probing is handled by src/lib/imageProbe.ts which throttles concurrent Image loads
 
-function startObserving(el: Element | null) {
+function startObserving(el: Element | ComponentPublicInstance | null) {
+
+  // resolve potential component ref to underlying DOM element
+  const target: Element | null = (el instanceof Element) ? el : (el && (el as ComponentPublicInstance).$el) ? (el as ComponentPublicInstance).$el : null
 
   // start observing the element for lazy-load
-  if (!el || typeof IntersectionObserver === "undefined") return;
+  if (!target || typeof IntersectionObserver === "undefined") return;
 
   // Find the nearest scrollable ancestor and use it as the observer root so
   // intersection checks work correctly when cards are inside a scrolling
@@ -275,7 +299,7 @@ function startObserving(el: Element | null) {
     return null
   }
 
-  const root = findScrollParent(el) || null
+  const root = findScrollParent(target) || null
 
   observer = new IntersectionObserver(
     async (entries) => {
@@ -325,7 +349,7 @@ function startObserving(el: Element | null) {
     },
     { root, rootMargin: '200px' },
   );
-  observer.observe(el);
+  observer.observe(target);
 }
 
 onMounted(() => {
@@ -455,14 +479,14 @@ const craftedCount = computed(
 
 const progressPercent = computed(() => Math.round((craftedCount.value / 4) * 100));
 
-// simple accent color per type (prime vs non-prime)
-const accentColor = computed(() =>
-  String(warframe.value?.type || "")
-    .toLowerCase()
-    .includes("prime")
+// simple accent color: prefer gold when the card is gold (mastered), otherwise
+// use purple for prime and green for non-prime.
+const accentColor = computed(() => {
+  if (isGold.value) return "var(--accent-gold)";
+  return String(warframe.value?.type || "").toLowerCase().includes("prime")
     ? "var(--accent-purple)"
-    : "var(--accent-green)",
-);
+    : "var(--accent-green)";
+});
 
 // split type into up to two parts for top/bottom display
 const typeParts = computed(() => {
@@ -480,22 +504,30 @@ const typeParts = computed(() => {
 // whether the warframe is a Prime variant (type string contains 'prime')
 const isPrime = computed(() => String(warframe.value?.type || "").toLowerCase().includes("prime"));
 
-// highlightedName: if props.highlight provided, wrap the first occurrence in a <mark>
-const highlightedName = computed(() => {
+// nameParts: safe structure for rendering highlighted name without v-html
+const nameParts = computed(() => {
   const name = String(warframe.value?.name || "");
-  const hl = props.highlight || "";
-  if (!hl) return name;
+  const hl = String(props.highlight || "").trim();
+  if (!hl) return [{ text: name, match: false }];
   try {
-    const idx = name.toLowerCase().indexOf(String(hl).toLowerCase());
-    if (idx === -1) return name;
+    const lower = name.toLowerCase();
+    const idx = lower.indexOf(hl.toLowerCase());
+    if (idx === -1) return [{ text: name, match: false }];
     const before = name.slice(0, idx);
     const match = name.slice(idx, idx + hl.length);
     const after = name.slice(idx + hl.length);
-    return `${before}<mark>${match}</mark>${after}`;
+    return [
+      { text: before, match: false },
+      { text: match, match: true },
+      { text: after, match: false },
+    ];
   } catch {
-    return name;
+    return [{ text: name, match: false }];
   }
 });
+
+// displayedName: simple computed used by the template
+const displayedName = computed(() => String(warframe.value?.name || ''));
 
 // If all resources for a part are collected, mark that part as collected (ready to craft)
 const neuropticsAllResourcesCollected = computed(
@@ -533,8 +565,11 @@ const isAllPartsCollected = computed(() =>
   (blueprintCollected.value || blueprintAllResourcesCollected.value)
 )
 
-// gold state: all parts collected AND mastery checked
-const isGold = computed(() => isAllPartsCollected.value && Boolean(isMastered.value))
+// gold state: show gold styling only when the item is marked mastered.
+// Fully-collected items will use the 'collected' (green) styling. Mastery is a separate gold state.
+const isGold = computed(() => Boolean(isMastered.value))
+
+// debug helpers removed: no on-card JSON or automatic debug logging
 
 watch(neuropticsAllResourcesCollected, (val) => {
   if (val && !neuropticsCollected.value) neuropticsCollected.value = true;
@@ -547,6 +582,14 @@ watch(systemsAllResourcesCollected, (val) => {
 });
 watch(blueprintAllResourcesCollected, (val) => {
   if (val && !blueprintCollected.value) blueprintCollected.value = true;
+});
+
+// ensure mastery cannot remain set if parts become incomplete
+watch(isAllPartsCollected, (val) => {
+  if (!val && isMastered.value) {
+    // clear mastery to keep state consistent; emits will notify parent
+    isMastered.value = false;
+  }
 });
 </script>
 
@@ -589,7 +632,7 @@ watch(blueprintAllResourcesCollected, (val) => {
   padding: 12px;
   background: #1a1a1a;
   color: #eee;
-  margin: 8px;
+  margin: 0;
 }
 
 .type {
@@ -735,6 +778,8 @@ watch(blueprintAllResourcesCollected, (val) => {
   margin-left: 8px;
 }
 
+/* status label removed; checkbox indicates collected state */
+
 .card {
   transition: transform .12s ease, box-shadow .12s ease;
 }
@@ -783,5 +828,23 @@ watch(blueprintAllResourcesCollected, (val) => {
 .card.prime .thumb-img {
   box-shadow: 0 2px 8px rgba(255, 200, 60, 0.06);
   border: 1px solid rgba(255,215,64,0.06);
+}
+
+/* Gold state: used for mastered or fully-collected items */
+.card.gold {
+  border: 1px solid rgba(255, 215, 64, 1) !important;
+  background: linear-gradient(180deg, rgba(255,240,200,0.04), rgba(255,235,180,0.02)) !important;
+  box-shadow: 0 12px 40px rgba(255, 200, 60, 0.08) !important;
+  color: #fff !important;
+}
+.card.gold .top-accent {
+  background: linear-gradient(90deg, rgba(255,215,64,1), rgba(255,200,60,0.95));
+}
+.card.gold .accent {
+  background: linear-gradient(180deg, rgba(255,215,64,0.95), rgba(255,200,60,0.8));
+}
+.card.gold .thumb-img {
+  box-shadow: 0 4px 12px rgba(255,200,60,0.12);
+  border: 1px solid rgba(255,215,64,0.08);
 }
 </style>

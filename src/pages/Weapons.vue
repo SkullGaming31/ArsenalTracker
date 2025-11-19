@@ -46,8 +46,8 @@
         <div :style="{ height: totalHeight + 'px', position: 'relative' }">
           <div style="max-width:1200px; margin:0 auto; position:relative;">
             <div v-for="vi in virtualRenderItems" :key="vi.item.name" :style="{ position: 'absolute', top: vi.start + 'px', left: (vi.col * (100/columns)) + '%', width: (100/columns) + '%', height: itemSize + 'px' }">
-              <div style="padding:12px 8px; display:flex; align-items:flex-start; justify-content:center; height:100%; box-sizing:border-box;">
-                <div style="width:100%; max-width:300px;">
+                <div style="padding:12px 8px; display:flex; align-items:flex-start; justify-content:center; height:100%; box-sizing:border-box;">
+                <div class="card-wrap">
                   <WeaponCard class="weapon-card" :weapon="vi.item" @update="handleUpdate" />
                 </div>
               </div>
@@ -87,7 +87,7 @@
 <script setup lang="ts">
 // give component a multi-word name to satisfy eslint vue/multi-word-component-names
 defineOptions({ name: 'WeaponsPage' })
-import { computed, ref, onMounted, watch } from 'vue'
+import { computed, ref, onMounted, watch, onBeforeUnmount } from 'vue'
 import WeaponCard from '../components/WeaponCard.vue'
 // virtualizer
 // no external virtualizer: use a lightweight windowing implementation
@@ -187,9 +187,27 @@ const allSorted = computed(() => filtered.value.slice().sort((a, b) => (a.name |
 
 // Virtualizer + simple pagination setup
 const scrollRef = ref<HTMLElement | null>(null)
-const itemSize = 320
+// Increase itemSize so each virtual row provides more vertical space for
+// cards with parts. This prevents cramped cards and reduces chances the
+// footer/parts area need excessive internal scrolling.
+const itemSize = ref(380)
 type VirtualRow = { row: number; start: number; size: number }
-const columns = 4
+const columns = ref(4)
+
+function updateLayoutForWidth(w: number) {
+  if (w <= 640) {
+    columns.value = 1
+    itemSize.value = 360
+  } else if (w <= 900) {
+    columns.value = 2
+    itemSize.value = 380
+  } else {
+    columns.value = 4
+    itemSize.value = 420
+  }
+}
+
+function onResize() { updateLayoutForWidth(window.innerWidth) }
 
 // Pagination: allow quick capping of rendered list while diagnosing memory issues
 // pageSize = -1 means "All" (no pagination). This preserves previous behavior for tests.
@@ -202,21 +220,21 @@ const pagedAllSorted = computed(() => {
   return allSorted.value.slice(start, start + pageSize.value)
 })
 
-const totalRows = computed(() => Math.ceil(pagedAllSorted.value.length / columns))
+const totalRows = computed(() => Math.ceil(pagedAllSorted.value.length / columns.value))
 const visibleRange = ref({ start: 0, end: Math.min(totalRows.value, 10) })
 const virtualItems = computed(() => {
   const items: VirtualRow[] = []
   const start = visibleRange.value.start
   const end = visibleRange.value.end
-  for (let r = start; r < end; r++) items.push({ row: r, start: r * itemSize, size: itemSize })
+  for (let r = start; r < end; r++) items.push({ row: r, start: r * itemSize.value, size: itemSize.value })
   return items
 })
 
 const virtualRenderItems = computed(() => {
   const out: { item: Weapon; start: number; col: number }[] = []
   virtualItems.value.forEach((vr) => {
-    for (let c = 0; c < columns; c++) {
-      const idx = vr.row * columns + c
+    for (let c = 0; c < columns.value; c++) {
+      const idx = vr.row * columns.value + c
       const item = pagedAllSorted.value[idx]
       if (!item) continue
       out.push({ item, start: vr.start, col: c })
@@ -225,7 +243,7 @@ const virtualRenderItems = computed(() => {
   return out
 })
 
-const totalHeight = computed(() => totalRows.value * itemSize)
+const totalHeight = computed(() => totalRows.value * itemSize.value)
 const overscan = 5
 
 function recompute() {
@@ -233,11 +251,20 @@ function recompute() {
   if (!el) return
   const scrollTop = el.scrollTop
   const clientHeight = el.clientHeight || 600
-  const start = Math.floor(scrollTop / itemSize) - overscan
-  const end = Math.ceil((scrollTop + clientHeight) / itemSize) + overscan
+  const start = Math.floor(scrollTop / itemSize.value) - overscan
+  const end = Math.ceil((scrollTop + clientHeight) / itemSize.value) + overscan
   visibleRange.value.start = Math.max(0, start)
   visibleRange.value.end = Math.min(totalRows.value, end)
 }
+
+onMounted(() => {
+  updateLayoutForWidth(window.innerWidth)
+  window.addEventListener('resize', onResize)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', onResize)
+})
 
 function prevPage() {
   if (currentPage.value > 0) currentPage.value--
@@ -298,4 +325,16 @@ section h3 { margin-top:18px }
 .toggle input:checked + .slider { background: var(--accent-green, #2bb673) }
 .toggle input:checked + .slider::after { transform: translateX(18px); background: #fff }
 .toggle .toggle-label { color: var(--muted); font-size:0.95rem }
+.card-wrap { width:100%; max-width:340px }
+@media (max-width: 640px) {
+  .card-wrap { max-width: 92% }
+}
+
+/* Ensure the wrapper occupying the virtual cell expands to the row height
+   so the inner card (which is set to height:100%) can fill the slot and
+   avoid visual overlap between rows. */
+.card-wrap { height: 100%; box-sizing: border-box; display: flex; flex-direction: column }
+
+/* touch-friendly virtual scroller */
+.virtual-scroll { -webkit-overflow-scrolling: touch; touch-action: pan-y }
 </style>

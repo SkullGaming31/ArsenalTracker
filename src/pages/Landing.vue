@@ -6,6 +6,13 @@
       <button class="btn btn-primary" @click="onGetStarted">Get Started</button>
       <button class="btn btn-secondary" @click="onLearnMore">Learn More</button>
     </div>
+    <div class="landing-controls">
+      <label class="toggle control-particles">
+        <input type="checkbox" :checked="particlesEnabled" @change="onParticlesChange" />
+        <span class="slider" aria-hidden></span>
+        <span class="toggle-label">Particles</span>
+      </label>
+    </div>
   </section>
 </template>
 
@@ -18,10 +25,23 @@ const emit = defineEmits<{
 }>()
 
 const root = ref<HTMLElement | null>(null)
+const particlesEnabled = ref<boolean>(true)
+
+// particle settings — tweak these to lower density / frequency
+const PARTICLE_SETTINGS = {
+  // lower divisor -> more particles; increase to reduce particles
+  initialDensityDivisor: 40000, // default was ~20000 in original logic
+  maxCap: 300,
+  spawnBatch: 1,
+  spawnIntervalMs: 1200,
+  mobileScale: 0.35,
+}
+
 // particle pooling to avoid unbounded DOM growth and repeated allocations
 const particles: HTMLElement[] = []
 const particlePool: HTMLElement[] = []
 let spawnInterval: number | null = null
+const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false
 
 function onGetStarted() {
   emit('navigate', 'dashboard')
@@ -53,7 +73,7 @@ function createParticle(container: HTMLElement) {
     particles.push(p)
   } else {
     // reused from pool: mark as active
-    if (!particles.includes(p)) particles.push(p)
+    if (particles.indexOf(p) === -1) particles.push(p)
   }
 
   // compute random vector
@@ -83,11 +103,28 @@ function createParticle(container: HTMLElement) {
 }
 
 onMounted(() => {
+  // Read persisted preference (landing-specific toggle). If user has an explicit setting
+  // stored in localStorage, use it; otherwise respect prefers-reduced-motion.
+  const storedPref = typeof window !== 'undefined' ? window.localStorage.getItem('ui.particles.enabled') : null
+  if (storedPref === 'false') {
+    particlesEnabled.value = false
+    return
+  }
+  if (storedPref === 'true') {
+    particlesEnabled.value = true
+  }
+  if (prefersReducedMotion && storedPref !== 'true') {
+    particlesEnabled.value = false
+    return
+  }
+
   const container = root.value ?? document.body
-  // base initial burst, but cap aggressively to avoid OOM on low-memory devices
+  // base initial burst, scaled down to reduce particle density by default
   const viewportArea = Math.max(800, window.innerWidth) * Math.max(600, window.innerHeight)
-  const initialCount = Math.min(300, Math.max(50, Math.floor(viewportArea / 20000)))
-  const maxParticles = Math.max(initialCount, 400)
+  const isMobile = window.innerWidth <= 720
+  const baseInitial = Math.floor(viewportArea / PARTICLE_SETTINGS.initialDensityDivisor)
+  const initialCount = Math.min(PARTICLE_SETTINGS.maxCap, Math.max(12, Math.floor(baseInitial * (isMobile ? PARTICLE_SETTINGS.mobileScale : 1))))
+  const maxParticles = Math.max(initialCount, Math.min(PARTICLE_SETTINGS.maxCap, initialCount * 2))
 
   // create initial pool up to maxParticles but only attach initialCount visible ones
   for (let i = 0; i < maxParticles; i++) {
@@ -103,13 +140,11 @@ onMounted(() => {
   }
 
   // populate initial visible particles by reusing from pool
-  for (let i = 0; i < initialCount; i++) {
-    createParticle(container)
-  }
+  for (let i = 0; i < initialCount; i++) createParticle(container)
 
   // spawn a few particles less frequently to maintain density without unbounded growth
   spawnInterval = window.setInterval(() => {
-    const batch = 2
+    const batch = PARTICLE_SETTINGS.spawnBatch
     for (let i = 0; i < batch && particles.length < maxParticles; i++) createParticle(container)
     // occasionally recycle oldest particles back into the pool to avoid growth
     if (particles.length > maxParticles) {
@@ -119,8 +154,21 @@ onMounted(() => {
         if (rem) particlePool.push(rem)
       }
     }
-  }, 750)
+  }, PARTICLE_SETTINGS.spawnIntervalMs)
 })
+
+  // particles toggle handler (persist preference and reload to apply quickly)
+  function onParticlesChange(e: Event) {
+    const t = e.target as HTMLInputElement | null
+    if (!t) return
+    try {
+      window.localStorage.setItem('ui.particles.enabled', t.checked ? 'true' : 'false')
+    } catch {
+      // ignore
+    }
+    // Reload to apply the new preference and (re)run the landing particle initialization.
+    try { location.reload() } catch { /* noop in non-browser env */ }
+  }
 
 onUnmounted(() => {
   if (spawnInterval != null) {
@@ -180,6 +228,12 @@ onUnmounted(() => {
   .landing-sub { font-size: 1rem }
   .buttons { flex-direction: column }
 }
+
+/* small landing control area for toggles */
+.landing-controls { margin-top: 1rem; position: relative; z-index: 2 }
+.control-particles { display:inline-flex; align-items:center; gap:8px; cursor:pointer }
+.control-particles input[type="checkbox"] { width:16px; height:16px }
+.control-particles .toggle-label { font-size:0.95rem; color: #dfefe8 }
 </style>
 
 <style>
