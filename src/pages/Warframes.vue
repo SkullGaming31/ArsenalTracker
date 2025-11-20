@@ -164,20 +164,20 @@ const filteredNonPrimeWarframes = computed<Warframe[]>(() => {
 // itemSize is the assumed height (px) for each rendered row. We make this
 // responsive so cards fit better on narrow screens.
 type VirtualRow = { row: number; start: number; size: number }
-const itemSize = ref(400)
+const itemSize = ref(460)
 // responsive columns: 1 (mobile), 2 (tablet), 4 (desktop)
 const columns = ref(4)
 
 function updateLayoutForWidth(w: number) {
   if (w <= 640) {
     columns.value = 1
-    itemSize.value = 360
+    itemSize.value = 380
   } else if (w <= 900) {
     columns.value = 2
-    itemSize.value = 380
+    itemSize.value = 420
   } else {
     columns.value = 4
-    itemSize.value = 400
+    itemSize.value = 460
   }
 }
 
@@ -222,7 +222,8 @@ const primeVirtualRenderItems = computed(() => {
 })
 const primeTotalHeight = computed(() => primeTotalRows.value * itemSize.value)
 
-function recomputePrime() {
+let rafPrime: number | null = null
+function recomputePrimeOnce() {
   const el = primeScrollRef.value
   if (!el) return
   const scrollTop = el.scrollTop
@@ -231,6 +232,13 @@ function recomputePrime() {
   const end = Math.ceil((scrollTop + clientHeight) / itemSize.value) + 5
   primeVisibleRange.value.start = Math.max(0, start)
   primeVisibleRange.value.end = Math.min(primeTotalRows.value, end)
+}
+
+function recomputePrime() {
+  if (rafPrime !== null) return
+  rafPrime = requestAnimationFrame(() => {
+    try { recomputePrimeOnce() } finally { rafPrime = null }
+  })
 }
 
 onMounted(() => {
@@ -286,7 +294,8 @@ const nonPrimeVirtualRenderItems = computed(() => {
 })
 const nonPrimeTotalHeight = computed(() => nonPrimeTotalRows.value * itemSize.value)
 
-function recomputeNonPrime() {
+let rafNonPrime: number | null = null
+function recomputeNonPrimeOnce() {
   const el = nonPrimeScrollRef.value
   if (!el) return
   const scrollTop = el.scrollTop
@@ -295,6 +304,13 @@ function recomputeNonPrime() {
   const end = Math.ceil((scrollTop + clientHeight) / itemSize.value) + 5
   nonPrimeVisibleRange.value.start = Math.max(0, start)
   nonPrimeVisibleRange.value.end = Math.min(nonPrimeTotalRows.value, end)
+}
+
+function recomputeNonPrime() {
+  if (rafNonPrime !== null) return
+  rafNonPrime = requestAnimationFrame(() => {
+    try { recomputeNonPrimeOnce() } finally { rafNonPrime = null }
+  })
 }
 
 function primePrev() { if (primeCurrent.value > 0) primeCurrent.value-- }
@@ -388,7 +404,7 @@ function handleUpdate(payload: unknown) {
 .toggle input:checked + .slider { background: var(--accent-green, #2bb673) }
 .toggle input:checked + .slider::after { transform: translateX(18px); background: #fff }
 .toggle .toggle-label { color: var(--muted); font-size:0.95rem }
-.card-wrap { width:100%; max-width:300px }
+.card-wrap { width:100%; max-width:300px; padding-bottom:12px }
 @media (max-width: 640px) {
   .card-wrap { max-width: 92% }
 }

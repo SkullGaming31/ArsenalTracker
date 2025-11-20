@@ -13,24 +13,21 @@
 
     <!-- Desktop controls: hidden on small screens -->
     <div class="header-controls" v-if="showControls">
-      <input class="header-search" :value="query" @input="onInput" placeholder="Search..." />
-      <label class="toggle">
-        <input type="checkbox" :checked="hideCompleted" @change="onHideChange" />
-        <span class="slider" aria-hidden></span>
-        <span class="toggle-label">Hide completed</span>
-      </label>
+      <q-input dense rounded debounce="200" class="header-search" :model-value="query" @update:model-value="emitQuery" placeholder="Search...">
+        <template #append>
+          <q-icon name="search" />
+        </template>
+      </q-input>
+
+      <q-toggle dense :model-value="hideCompleted" @update:model-value="emitHideCompleted" label="Hide completed" />
     </div>
 
     <!-- Mobile toggle button: shows a popover with the same controls -->
     <div class="header-mobile-controls" v-if="showControls">
   <button class="controls-toggle" @click="controlsOpen = !controlsOpen" :aria-expanded="controlsOpen" aria-label="Show controls">☰</button>
       <div class="controls-popover" v-if="controlsOpen" role="dialog" aria-label="Header controls">
-        <input class="header-search" :value="query" @input="onInput" placeholder="Search..." />
-        <label class="toggle">
-          <input type="checkbox" :checked="hideCompleted" @change="onHideChange" />
-          <span class="slider" aria-hidden></span>
-          <span class="toggle-label">Hide completed</span>
-        </label>
+        <q-input dense rounded class="header-search" :model-value="query" @update:model-value="emitQuery" placeholder="Search..." />
+        <q-toggle dense :model-value="hideCompleted" @update:model-value="emitHideCompleted" label="Hide completed" />
       </div>
     </div>
   </header>
@@ -39,6 +36,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useDrawer } from '@/composables/useDrawer'
+import { QInput, QToggle, QIcon } from 'quasar'
 
 const { drawerOpen, toggle } = useDrawer()
 
@@ -56,16 +54,14 @@ const emit = defineEmits<{
 
 const controlsOpen = ref(false)
 
-function onInput(e: Event) {
-  const t = e.target as HTMLInputElement | null
-  if (!t) return
-  emit('update:query', t.value)
+function emitQuery(v: string | number | null) {
+  // QInput can emit string | number | null; normalize to string for our API
+  emit('update:query', v == null ? '' : String(v))
 }
 
-function onHideChange(e: Event) {
-  const t = e.target as HTMLInputElement | null
-  if (!t) return
-  emit('update:hideCompleted', t.checked)
+function emitHideCompleted(v: boolean | null) {
+  // normalize nullable values to boolean
+  emit('update:hideCompleted', !!v)
 }
 </script>
 

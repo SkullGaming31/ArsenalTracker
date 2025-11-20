@@ -142,6 +142,18 @@ const pageSubtitle = computed(() => {
   100% { transform: translateY(0) scale(1); opacity: 0.06 }
 }
 
+/* Respect users who prefer reduced motion: pause or remove heavy animations */
+@media (prefers-reduced-motion: reduce) {
+  .app-shell::after,
+  .app-shell::before,
+  .main-energy-orb,
+  .app-shell > * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .main-energy-orb { opacity: 0.02 !important }
+}
+
 /* skip link styles */
 .skip-link {
   position: absolute;
