@@ -49,19 +49,36 @@ import AppFooter from './components/AppFooter.vue'
 
 // Default to 'dashboard' when running unit tests so test expectations match; otherwise show landing.
 const isTestEnv = (() => {
-  // Node-style env
-  try {
-    if (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env && (globalThis as any).process.env.NODE_ENV === 'test') return true
-  } catch {}
+  // Node-style env (via globalThis.process)
+  const isNodeTest = (() => {
+    try {
+      const proc = (globalThis as unknown as { process?: { env?: { NODE_ENV?: string } } }).process
+      return typeof proc !== 'undefined' && proc.env?.NODE_ENV === 'test'
+    } catch {
+      return false
+    }
+  })()
+
   // Vite / import.meta.env
-  try {
-    if (typeof import.meta !== 'undefined' && (import.meta as any).env && (import.meta as any).env.MODE === 'test') return true
-  } catch {}
+  const isViteTest = (() => {
+    try {
+      const meta = import.meta as unknown as { env?: { MODE?: string } }
+      return typeof meta !== 'undefined' && meta.env?.MODE === 'test'
+    } catch {
+      return false
+    }
+  })()
+
   // Vitest global marker
-  try {
-    if (typeof globalThis !== 'undefined' && (globalThis as any).__vitest__ !== undefined) return true
-  } catch {}
-  return false
+  const isVitest = (() => {
+    try {
+      return (globalThis as unknown as { __vitest__?: unknown }).__vitest__ !== undefined
+    } catch {
+      return false
+    }
+  })()
+
+  return Boolean(isNodeTest || isViteTest || isVitest)
 })()
 
 // Also default to dashboard when running under automation (e.g. Playwright sets navigator.webdriver)
