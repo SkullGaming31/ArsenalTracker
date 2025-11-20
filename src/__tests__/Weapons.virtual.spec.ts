@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { Quasar } from 'quasar'
 import { setActivePinia, createPinia } from 'pinia'
 import Weapons from '../pages/Weapons.vue'
 import WeaponCard from '../components/WeaponCard.vue'
@@ -19,7 +20,7 @@ describe('Weapons page (virtualized)', () => {
   // @ts-expect-error - test helper assignment to pinia state
   store.weapons = weapons
 
-    const wrapper = mount(Weapons)
+    const wrapper = mount(Weapons, { global: { plugins: [Quasar] } })
     await nextTick()
 
   // only count WeaponCard components rendered inside the virtualized "All weapons" scroller

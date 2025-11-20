@@ -51,7 +51,7 @@ export function probeImage(url: string): Promise<boolean> {
         }
         // kick off load
         img.src = url
-      } catch (err) {
+      } catch {
         resolve(false)
         active = Math.max(0, active - 1)
         next()

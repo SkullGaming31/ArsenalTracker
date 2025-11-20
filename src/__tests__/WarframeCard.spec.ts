@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { Quasar } from 'quasar'
 import WarframeCard from '../components/WarframeCard.vue'
 
 const sample = {
@@ -18,7 +19,7 @@ const sample = {
 
 describe('WarframeCard', () => {
   it('renders name and type', () => {
-    const wrapper = mount(WarframeCard, { props: { warframe: sample } })
+    const wrapper = mount(WarframeCard, { props: { warframe: sample }, global: { plugins: [Quasar] } })
     expect(wrapper.text()).toContain('TestFrame')
     expect(wrapper.text()).toContain('prime')
   })

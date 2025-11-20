@@ -7,18 +7,13 @@
     <section class="section">
       <h3>Prime</h3>
       <div class="pager" style="display:flex; gap:8px; align-items:center; margin-bottom:8px">
-        <label>
-          Per page
-          <select v-model.number="primePageSize">
-            <option :value="20">20</option>
-            <option :value="50">50</option>
-            <option :value="100">100</option>
-            <option :value="-1">All</option>
-          </select>
-        </label>
-        <button @click="primePrev" :disabled="primeCurrent === 0">Prev</button>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <div>Per page</div>
+          <q-select dense outlined emit-value v-model.number="primePageSize" :options="primePageOptions" style="min-width:120px" />
+        </div>
+        <q-btn dense flat label="Prev" @click="primePrev" :disable="primeCurrent === 0" />
         <div>Page {{ primeCurrent + 1 }} / {{ primeTotalPages }}</div>
-        <button @click="primeNext" :disabled="primeCurrent >= primeTotalPages - 1">Next</button>
+        <q-btn dense flat label="Next" @click="primeNext" :disable="primeCurrent >= primeTotalPages - 1" />
       </div>
       <!-- virtualized prime list -->
   <div ref="primeScrollRef" class="virtual-scroll" style="height:60vh; overflow:auto;">
@@ -40,18 +35,13 @@
     <section class="section">
       <h3>Non-Prime</h3>
       <div class="pager" style="display:flex; gap:8px; align-items:center; margin-bottom:8px">
-        <label>
-          Per page
-          <select v-model.number="nonPrimePageSize">
-            <option :value="20">20</option>
-            <option :value="50">50</option>
-            <option :value="100">100</option>
-            <option :value="-1">All</option>
-          </select>
-        </label>
-        <button @click="nonPrimePrev" :disabled="nonPrimeCurrent === 0">Prev</button>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <div>Per page</div>
+          <q-select dense outlined emit-value v-model.number="nonPrimePageSize" :options="primePageOptions" style="min-width:120px" />
+        </div>
+        <q-btn dense flat label="Prev" @click="nonPrimePrev" :disable="nonPrimeCurrent === 0" />
         <div>Page {{ nonPrimeCurrent + 1 }} / {{ nonPrimeTotalPages }}</div>
-        <button @click="nonPrimeNext" :disabled="nonPrimeCurrent >= nonPrimeTotalPages - 1">Next</button>
+        <q-btn dense flat label="Next" @click="nonPrimeNext" :disable="nonPrimeCurrent >= nonPrimeTotalPages - 1" />
       </div>
       <!-- virtualized non-prime list -->
   <div ref="nonPrimeScrollRef" class="virtual-scroll" style="height:60vh; overflow:auto;">
@@ -190,6 +180,12 @@ const primeScrollRef = ref<HTMLElement | null>(null)
 // pagination for quick mitigation
 // pageSize < 0 means show all items (no pagination)
 const primePageSize = ref(-1)
+const primePageOptions = [
+  { label: '20', value: 20 },
+  { label: '50', value: 50 },
+  { label: '100', value: 100 },
+  { label: 'All', value: -1 }
+]
 const primeCurrent = ref(0)
 const primeTotalPages = computed(() => (primePageSize.value < 0 ? 1 : Math.max(1, Math.ceil(filteredPrimeWarframes.value.length / primePageSize.value))))
 const pagedPrime = computed(() => {

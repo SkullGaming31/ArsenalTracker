@@ -1,7 +1,6 @@
 <template>
-  <PCard :class="['card', 'weapon-card', { collected: isAllPartsCollected, gold: isGold, 'has-parts': parts.length > 0 }]" ref="root">
-    <template #title>
-      <div class="card-header">
+  <q-card :class="['card', 'weapon-card', { collected: isAllPartsCollected, gold: isGold, 'has-parts': parts.length > 0 }]" ref="root">
+    <div class="card-header">
         <div class="accent" :style="{ background: accentColor }"></div>
         <div class="thumb">
           <img v-if="imgSrc" :src="imgSrc" :alt="weapon.name || 'thumbnail'" class="thumb-img" loading="lazy" @error="onImgError" />
@@ -18,10 +17,7 @@
           </div>
         </div>
       </div>
-    </template>
-
-    <template #content>
-      <div class="content-scroll">
+    <div class="content-scroll">
         <div class="type">
           <div class="type-top">{{ typeParts[0] }}</div>
           <div class="type-bottom" v-if="typeParts.length > 1">{{ typeParts[1] }}</div>
@@ -78,16 +74,14 @@
           <span>Mastered: {{ isMastered ? 'true' : 'false' }}</span>
           <input type="checkbox" v-model="isMastered" @change="emitMastered" :disabled="!canMaster" :title="masteredTitle" />
         </div>
-      </div>
-    </template>
-  </PCard>
+    </div>
+  </q-card>
 </template>
 
 <script lang="ts" setup>
 import type { Weapon, Part, PartWithCollected } from '../types/weapon'
 import { ref, computed, watchEffect, watch, onMounted, onBeforeUnmount } from 'vue'
 import { probeImage } from '../lib/imageProbe'
-import PCard from 'primevue/card'
 
 const props = defineProps<{ weapon: Weapon }>()
 const emit = defineEmits<{
@@ -355,21 +349,11 @@ function rarityColor(rarity: string){
 }
 
 
-.card, .p-card.card {
+.card {
   height: 100%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-}
-.p-card.card .p-card-body,
-.p-card.card .p-card-content {
-  /* keep the PrimeVue body as a column so inner .content-scroll can
-     become the scrollable region; avoid forcing height:100% here because
-     that would push the footer out of view. */
-  display: flex;
-  flex-direction: column;
-  flex: 0 1 auto;
-  min-height: 0; /* allow flex child to not force parent's height */
 }
 
 /* ensure the card itself can shrink properly inside the flex cell and clip overflow */
@@ -492,37 +476,8 @@ function rarityColor(rarity: string){
 .card { transition: transform .12s ease, box-shadow .12s ease }
 .card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(2,6,23,0.6) }
 
-/* PrimeVue overrides to keep dark theme */
-.p-card.card { background: #111318 !important; color: #eee !important; border: 1px solid #2b2f33 !important }
-.p-card.card .p-card-body,
-.p-card.card .p-card-title,
-.p-card.card .p-card-subtitle { color: inherit !important }
-.p-badge { background: rgba(255,255,255,0.06) !important; color: #ffd54a !important }
-
-/* Footer area for PCard: keep visible and separated from scrollable body */
-.p-card.card.has-parts .p-card-footer {
-  border-top: 1px solid rgba(255,255,255,0.03);
-  padding: 8px 12px;
-  background: rgba(0,0,0,0.02);
-  /* make footer visible even when body scrolls: pin to bottom of card */
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-sizing: border-box;
-  z-index: 3; /* ensure footer sits above the scrollable content */
-  /* give a fixed height and center contents to avoid partial clipping */
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* ensure card root can position footer absolutely */
-.p-card.card.has-parts { position: relative; }
-
-/* add bottom padding so scrollable content doesn't hide under the footer */
-.p-card.card.has-parts .content-scroll { padding-bottom: 84px; position: relative; z-index: 1 }
+/* remove PrimeVue-specific overrides; keep styling applied to our .card */
+/* ensure any previous .p-card rules are not required */
 
 .part-left .small { font-size:0.85rem; color:#9fb8a6 }
 .resource-row label { color:#d6eede }
@@ -556,17 +511,5 @@ function rarityColor(rarity: string){
 
 /* PrimeVue sets a strong background on .p-card.card using !important; override that
    so the entire card background/border changes when collected/gold states are active. */
-.p-card.card.collected {
-  background: linear-gradient(180deg, rgba(43,182,115,0.04), rgba(0,0,0,0.14)) !important;
-  border-color: #2bb673 !important;
-  box-shadow: 0 10px 40px rgba(43,182,115,0.12) !important;
-}
-.p-card.card.collected .title h3 { color: #d7f7e8 !important }
-
-.p-card.card.gold {
-  background: linear-gradient(180deg, rgba(255,213,74,0.04), rgba(0,0,0,0.14)) !important;
-  border-color: #ffd54a !important;
-  box-shadow: 0 10px 40px rgba(255,213,74,0.12) !important;
-}
-.p-card.card.gold .title h3 { color: #fff7dc !important }
+/* removed PrimeVue-specific collected/gold overrides; use .card.collected/.card.gold rules above */
 </style>

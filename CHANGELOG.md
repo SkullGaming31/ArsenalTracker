@@ -1,3 +1,29 @@
+# Changelog
+
+## Unreleased - 2025-11-20
+
+- UI / Framework migration
+  - Replaced PrimeVue `PCard` usage with Quasar `q-card` in `src/components/WeaponCard.vue` and `src/components/WarframeCard.vue`.
+  - Removed local `PCard` imports and deleted PrimeVue-specific CSS overrides from the card components.
+  - Removed PrimeVue global registration from `src/main.ts` (app now boots Quasar only).
+
+- Navigation
+  - Simplified navigation in `src/components/NavBar.vue`: removed `Primary`, `Secondary`, and `Melee` links and renamed "All Weapons" to `Weapons` (desktop and mobile variants).
+  - Cleaned up leftover nav CSS variables related to the removed sections.
+
+- Tests & tooling
+  - Updated unit tests to register the Quasar plugin where needed (`WarframeCard.spec.ts`, `WeaponCard.spec.ts`, `NavBar.spec.ts`, and others).
+  - Added focused tests for `probeImage` behavior (`src/__tests__/imageProbe.spec.ts`).
+  - Fixed multiple lint/type issues surfaced by `vue-tsc` and ESLint (removed unused imports, narrowed catch params, adjusted typings in `NavBar` and `App.vue`).
+  - Adjusted the `lint:oxlint` script to ignore generated assets under `docs/`, `dist/`, and `coverage/` and added `.eslintignore` to avoid linting minified docs assets.
+
+- Validation
+  - Ran the full test suite and fixed discovered issues; current local test run: **26 files, 54 tests passed**.
+
+- Outstanding / follow-ups
+  - `primevue` / `primeicons` remain in `package.json` and `package-lock.json`; once you're happy with the Quasar migration I can remove those dependencies and update the lockfile.
+  - Manual visual smoke-testing (`npm run dev`) is recommended to confirm visual parity of card styling across breakpoints.
+
 ## 2025-10-22 16:40 - E2E stability and test fixes
 
 - Updated Playwright configuration (`playwright.config.ts`) to improve test stability:

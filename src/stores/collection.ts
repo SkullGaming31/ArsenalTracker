@@ -1,4 +1,4 @@
-import { ref, computed, watch } from 'vue'
+import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import warframesData from '../data/warframes.json'
 import weaponsData from '../data/weapons.json'

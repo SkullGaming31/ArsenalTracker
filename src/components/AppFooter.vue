@@ -1,10 +1,10 @@
 <template>
-  <footer class="app-footer">
+  <q-footer class="app-footer" elevated>
     <div :class="['inner', { centered: centered }]">
-      <div></div>
+      <div v-if="!centered"></div>
       <div class="copy">© {{ year }} SkullGamingHQ — All rights reserved.</div>
     </div>
-  </footer>
+  </q-footer>
 </template>
 
 <script setup lang="ts">

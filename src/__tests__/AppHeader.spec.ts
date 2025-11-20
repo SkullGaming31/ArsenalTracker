@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { Quasar } from 'quasar'
 import AppHeader from '../components/AppHeader.vue'
 
 describe('AppHeader', () => {
@@ -11,13 +12,16 @@ describe('AppHeader', () => {
         pageSubtitle: 'Sub text here',
         showControls: true,
       },
+      global: {
+        plugins: [Quasar],
+      },
     })
 
     // subtitle present
     expect(wrapper.text()).toContain('Sub text here')
 
     // input value
-    const input = wrapper.find('input.header-search')
+    const input = wrapper.find('.header-search input')
     expect((input.element as HTMLInputElement).value).toBe('test')
 
     // typing emits update:query
@@ -26,8 +30,9 @@ describe('AppHeader', () => {
     expect(wrapper.emitted('update:query')![0]).toEqual(['new'])
 
     // toggle emits update:hideCompleted
-  const checkbox = wrapper.find('input[type="checkbox"]')
-  await checkbox.setValue(true)
+  const qToggle = wrapper.findComponent({ name: 'QToggle' })
+  expect(qToggle.exists()).toBe(true)
+  await qToggle.trigger('click')
     expect(wrapper.emitted('update:hideCompleted')).toBeTruthy()
     expect(wrapper.emitted('update:hideCompleted')![0]).toEqual([true])
   })
@@ -35,6 +40,9 @@ describe('AppHeader', () => {
   it('hides controls when showControls=false', () => {
     const wrapper = mount(AppHeader, {
       props: { showControls: false, pageSubtitle: 'X' },
+      global: {
+        plugins: [Quasar],
+      },
     })
     expect(wrapper.find('.header-controls').exists()).toBe(false)
   })

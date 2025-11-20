@@ -1,6 +1,6 @@
 <template>
-  <PCard :class="['card', 'theme-card', { collected: isFullyCollected, prime: isPrime, gold: isGold }]" ref="root" :data-testid="testId">
-    <template #title>
+  <q-card :class="['card', 'theme-card', { collected: isFullyCollected, prime: isPrime, gold: isGold }]" ref="root" :data-testid="testId">
+    
       <div class="top-accent" :style="{ background: accentColor }" aria-hidden="true"></div>
       <div class="card-header">
         <div class="accent" :style="{ background: accentColor }"></div>
@@ -26,9 +26,8 @@
           </div>
         </div>
       </div>
-    </template>
 
-    <template #content>
+    
       <!-- debug JSON removed: no longer displayed on card -->
 
       <div class="type">
@@ -133,8 +132,7 @@
           />
         </div>
       </div>
-    </template>
-  </PCard>
+  </q-card>
 </template>
 
 <script lang="ts" setup>
@@ -159,7 +157,6 @@ import { ref, watch, computed, toRef } from "vue";
 import { onMounted, onBeforeUnmount } from "vue";
 import type { ComponentPublicInstance } from 'vue'
 import { probeImage } from '../lib/imageProbe'
-import PCard from 'primevue/card'
 const warframe = toRef(props as { warframe: Warframe }, "warframe");
 
 const testId = computed(() => {
@@ -785,21 +782,7 @@ watch(isAllPartsCollected, (val) => {
 }
 .card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(2,6,23,0.6) }
 
-/* PrimeVue overrides to keep dark theme */
-.p-card.card {
-  background: #111318 !important;
-  color: #eee !important;
-  border: 1px solid #2b2f33 !important;
-}
-.p-card.card .p-card-body,
-.p-card.card .p-card-title,
-.p-card.card .p-card-subtitle {
-  color: inherit !important;
-}
-.p-badge {
-  background: rgba(255, 255, 255, 0.06) !important;
-  color: #ffd54a !important;
-}
+/* PrimeVue overrides removed */
 
 /* collected state */
 .card.collected {

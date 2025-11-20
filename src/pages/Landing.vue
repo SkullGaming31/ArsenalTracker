@@ -3,15 +3,11 @@
     <h1 class="landing-title">Warframe Tracker</h1>
     <p class="landing-sub">Track, collect, and organize your Warframe items with ease.</p>
     <div class="buttons">
-      <button class="btn btn-primary" @click="onGetStarted">Get Started</button>
-      <button class="btn btn-secondary" @click="onLearnMore">Learn More</button>
+      <q-btn color="primary" unelevated label="Get Started" @click="onGetStarted" />
+      <q-btn flat outline color="secondary" label="Learn More" @click="onLearnMore" />
     </div>
     <div class="landing-controls">
-      <label class="toggle control-particles">
-        <input type="checkbox" :checked="particlesEnabled" @change="onParticlesChange" />
-        <span class="slider" aria-hidden></span>
-        <span class="toggle-label">Particles</span>
-      </label>
+      <q-toggle v-model="particlesEnabled" dense label="Particles" @update:model-value="onParticlesToggle" />
     </div>
   </section>
 </template>
@@ -158,15 +154,12 @@ onMounted(() => {
 })
 
   // particles toggle handler (persist preference and reload to apply quickly)
-  function onParticlesChange(e: Event) {
-    const t = e.target as HTMLInputElement | null
-    if (!t) return
+  function onParticlesToggle(value: boolean) {
     try {
-      window.localStorage.setItem('ui.particles.enabled', t.checked ? 'true' : 'false')
+      window.localStorage.setItem('ui.particles.enabled', value ? 'true' : 'false')
     } catch {
       // ignore
     }
-    // Reload to apply the new preference and (re)run the landing particle initialization.
     try { location.reload() } catch { /* noop in non-browser env */ }
   }
 

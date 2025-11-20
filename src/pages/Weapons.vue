@@ -1,25 +1,18 @@
 <template>
   <div class="weapons-page">
     <h2>Weapons</h2>
-    <div class="counts">Total weapons: {{ all.length }}</div>
+    <div class="counts">Total weapons: {{ displayedTotal }}</div>
 
     <div class="toolbar">
-      <label>
-        Type
-        <select v-model="selectedType">
-          <option value="all">All</option>
-          <option v-for="t in types" :key="t" :value="t" :disabled="!(typeCount(t) > 0)">{{ t }}</option>
-        </select>
-      </label>
+      <div style="display:flex; gap:8px; align-items:center">
+        <div>Type</div>
+        <q-select dense outlined v-model="selectedType" :options="typeOptions" style="min-width:160px" emit-value map-options />
+      </div>
 
-      <label>
-        Crafted
-        <select v-model="craftedFilter">
-          <option value="all">All</option>
-          <option value="crafted">Crafted</option>
-          <option value="not-crafted">Not crafted</option>
-        </select>
-      </label>
+      <div style="display:flex; gap:8px; align-items:center">
+        <div>Crafted</div>
+        <q-select dense outlined v-model="craftedFilter" :options="craftedOptions" style="min-width:160px" emit-value />
+      </div>
 
       <div class="results">Showing {{ filtered.length }} results</div>
     </div>
@@ -27,19 +20,13 @@
     <section>
       <h3>All weapons</h3>
       <div class="pager" style="display:flex; gap:8px; align-items:center; margin-bottom:8px">
-        <label>
-          Per page
-          <select v-model.number="pageSize">
-            <option :value="20">20</option>
-            <option :value="50">50</option>
-            <option :value="100">100</option>
-            <option :value="200">200</option>
-            <option :value="-1">All</option>
-          </select>
-        </label>
-        <button @click="prevPage" :disabled="currentPage === 0">Prev</button>
+        <div style="display:flex; gap:8px; align-items:center">
+          <div>Per page</div>
+          <q-select dense outlined v-model.number="pageSize" :options="pageOptions" style="min-width:140px" emit-value />
+        </div>
+        <q-btn dense flat label="Prev" @click="prevPage" :disable="currentPage === 0" />
         <div>Page {{ currentPage + 1 }} / {{ totalPages }}</div>
-        <button @click="nextPage" :disabled="currentPage >= totalPages - 1">Next</button>
+        <q-btn dense flat label="Next" @click="nextPage" :disable="currentPage >= totalPages - 1" />
       </div>
       <!-- Virtualized scroller for large lists: renders rows of 4 cards side-by-side -->
       <div ref="scrollRef" class="virtual-scroll" style="height:70vh; overflow:auto;">
@@ -103,6 +90,20 @@ const hideCompleted = computed(() => Boolean(props.hideCompleted))
 const selectedType = ref('all')
 const craftedFilter = ref('all') // all | crafted | not-crafted
 
+// QSelect option arrays
+const typeOptions = computed(() => {
+  return [
+    { label: 'All', value: 'all' },
+    ...types.value.map(t => ({ label: String(t), value: t, disable: !(typeCount(t) > 0) }))
+  ]
+})
+
+const craftedOptions = [
+  { label: 'All', value: 'all' },
+  { label: 'Crafted', value: 'crafted' },
+  { label: 'Not crafted', value: 'not-crafted' }
+]
+
 // canonical type order provided by game taxonomy
 const typeOrder: string[] = ['standard', 'prime', 'kuva', 'tenet', 'prisma', 'vandal', 'wraith', 'dex', 'nightwatch']
 
@@ -128,6 +129,11 @@ const typeCounts = computed<Record<string, number>>(() => {
 const typeCount = (t: string): number => {
   return typeCounts.value[t] ?? 0
 }
+
+const displayedTotal = computed(() => {
+  if (!selectedType.value || selectedType.value === 'all') return all.value.length
+  return typeCount(selectedType.value)
+})
 
 const flagTrue = (v: unknown): boolean => {
   if (v === true) return true
@@ -212,6 +218,13 @@ function onResize() { updateLayoutForWidth(window.innerWidth) }
 // Pagination: allow quick capping of rendered list while diagnosing memory issues
 // pageSize = -1 means "All" (no pagination). This preserves previous behavior for tests.
 const pageSize = ref(-1)
+const pageOptions = [
+  { label: '20', value: 20 },
+  { label: '50', value: 50 },
+  { label: '100', value: 100 },
+  { label: '200', value: 200 },
+  { label: 'All', value: -1 }
+]
 const currentPage = ref(0)
 const totalPages = computed(() => (pageSize.value < 0 ? 1 : Math.max(1, Math.ceil(allSorted.value.length / pageSize.value))))
 const pagedAllSorted = computed(() => {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-bind="$attrs">
     <!-- Desktop: render a plain persistent sidebar so we don't depend on Quasar QLayout -->
     <aside v-if="isDesktop" class="sidebar" aria-label="Main navigation">
       <div class="brand">Arsenal Tracker</div>
@@ -28,23 +28,9 @@
 
         <button class="nav-btn" data-testid="nav-weapons" @click="navigate('weapons')" :class="{ active: activeView === 'weapons' }">
           <svg viewBox="0 0 24 24" aria-hidden focusable="false"><path d="M3 21l6-6 3 3 9-9 3 3-12 12-6-6z" fill="currentColor"/></svg>
-          <span>All Weapons</span>
+          <span>Weapons</span>
         </button>
-
-        <button class="nav-btn" data-testid="nav-primary" @click="navigate('primary')" :class="{ active: activeView === 'primary' }">
-          <svg viewBox="0 0 24 24" aria-hidden focusable="false"><path d="M2 12h20v2H2zM6 6h12v2H6z" fill="currentColor"/></svg>
-          <span>Primary</span>
-        </button>
-
-        <button class="nav-btn" data-testid="nav-secondary" @click="navigate('secondary')" :class="{ active: activeView === 'secondary' }">
-          <svg viewBox="0 0 24 24" aria-hidden focusable="false"><path d="M3 6h18v2H3zM7 12h10v2H7zM11 18h2v2h-2z" fill="currentColor"/></svg>
-          <span>Secondary</span>
-        </button>
-
-        <button class="nav-btn" data-testid="nav-melee" @click="navigate('melee')" :class="{ active: activeView === 'melee' }">
-          <svg viewBox="0 0 24 24" aria-hidden focusable="false"><path d="M12 2l3 7h7l-5.5 4 2 8L12 17 5.5 21l2-8L2 9h7z" fill="currentColor"/></svg>
-          <span>Melee</span>
-        </button>
+        
       </nav>
     </aside>
 
@@ -87,29 +73,9 @@
             <q-item-section avatar>
               <q-icon name="settings_ethernet" />
             </q-item-section>
-            <q-item-section>All Weapons</q-item-section>
+            <q-item-section>Weapons</q-item-section>
           </q-item>
-
-          <q-item clickable data-testid="nav-primary" v-close-popup @click="navigate('primary')" :class="{ active: activeView === 'primary' }">
-            <q-item-section avatar>
-              <q-icon name="sports_kabaddi" />
-            </q-item-section>
-            <q-item-section>Primary</q-item-section>
-          </q-item>
-
-          <q-item clickable data-testid="nav-secondary" v-close-popup @click="navigate('secondary')" :class="{ active: activeView === 'secondary' }">
-            <q-item-section avatar>
-              <q-icon name="handyman" />
-            </q-item-section>
-            <q-item-section>Secondary</q-item-section>
-          </q-item>
-
-          <q-item clickable data-testid="nav-melee" v-close-popup @click="navigate('melee')" :class="{ active: activeView === 'melee' }">
-            <q-item-section avatar>
-              <q-icon name="sports_mma" />
-            </q-item-section>
-            <q-item-section>Melee</q-item-section>
-          </q-item>
+          
         </q-list>
       </div>
     </q-drawer>
@@ -211,9 +177,6 @@ function navigate(view: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'pri
 .nav-dashboard { --accent: #7c4dff }
 .nav-warframes { --accent: #9b5cff }
 .nav-weapons { --accent: #00bfff }
-.nav-primary { --accent: #ffd54a }
-.nav-secondary { --accent: #9b5cff }
-.nav-melee { --accent: #2bb673 }
 .nav-home { --accent: #00ffff }
 .nav-about { --accent: #6ee7b7 }
 

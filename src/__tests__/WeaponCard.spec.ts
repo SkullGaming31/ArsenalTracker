@@ -2,13 +2,13 @@
 import { mount } from '@vue/test-utils'
 import { describe, it, expect } from 'vitest'
 import WeaponCard from '../components/WeaponCard.vue'
+import { Quasar } from 'quasar'
 import { nextTick } from 'vue'
-import type { Weapon } from '../types/weapon'
 
 describe('WeaponCard.vue', () => {
   it('renders name, type default and progress when no parts', () => {
   const w: any = { name: 'Test Gun', parts: [] }
-    const wrapper = mount(WeaponCard, { props: { weapon: w } })
+      const wrapper = mount(WeaponCard, { props: { weapon: w }, global: { plugins: [Quasar] } })
     expect(wrapper.text()).toContain('Test Gun')
     // default badge text when no type
     expect(wrapper.find('.badge').text()).toBe('standard')
@@ -18,7 +18,7 @@ describe('WeaponCard.vue', () => {
 
   it('parses complex type into top and bottom parts', async () => {
   const w: any = { name: 'Combo', type: 'Primary | Secondary and Melee', parts: [] }
-    const wrapper = mount(WeaponCard, { props: { weapon: w } })
+      const wrapper = mount(WeaponCard, { props: { weapon: w }, global: { plugins: [Quasar] } })
     await nextTick()
     expect(wrapper.find('.type-top').text()).toBe('Primary')
     expect(wrapper.find('.type-bottom').text()).toContain('Secondary')
@@ -26,7 +26,7 @@ describe('WeaponCard.vue', () => {
 
   it('computes accent color for prime types', () => {
   const w: any = { name: 'PrimeGun', type: 'Prime Primary', parts: [] }
-    const wrapper = mount(WeaponCard, { props: { weapon: w } })
+      const wrapper = mount(WeaponCard, { props: { weapon: w }, global: { plugins: [Quasar] } })
     const accent = wrapper.find('.accent')
   // inline style background should equal the prime color (component uses rgb())
   expect(accent.attributes('style')).toContain('rgb(155, 92, 255)')
@@ -34,7 +34,7 @@ describe('WeaponCard.vue', () => {
 
   it('shows market labels for market shape and formats currency', () => {
   const w: any = { name: 'MarketGun', type: '', parts: [], market: { method: 'market', price: 1234567, currency: 'Platinum' } }
-    const wrapper = mount(WeaponCard, { props: { weapon: w } })
+      const wrapper = mount(WeaponCard, { props: { weapon: w }, global: { plugins: [Quasar] } })
     const badge = wrapper.find('.market-badge')
     expect(badge.exists()).toBe(true)
     // price should be formatted with commas
@@ -45,7 +45,7 @@ describe('WeaponCard.vue', () => {
 
   it('falls back to legacy market_price shape', () => {
   const w: any = { name: 'Legacy', parts: [], market_price: 2500, market_currency: 'Credits' }
-    const wrapper = mount(WeaponCard, { props: { weapon: w } })
+      const wrapper = mount(WeaponCard, { props: { weapon: w }, global: { plugins: [Quasar] } })
     const badge = wrapper.find('.market-badge')
     expect(badge.exists()).toBe(true)
     expect(badge.text()).toContain('Credits 2,500')
@@ -61,7 +61,7 @@ describe('WeaponCard.vue', () => {
         }
       ]
     }
-    const wrapper = mount(WeaponCard, { props: { weapon: w } })
+      const wrapper = mount(WeaponCard, { props: { weapon: w }, global: { plugins: [Quasar] } })
     // toggle the resource panel
     const toggle = wrapper.find('button.toggle-res')
     expect(toggle.exists()).toBe(true)
@@ -82,7 +82,7 @@ describe('WeaponCard.vue', () => {
       parts: [ { name: 'A' }, { name: 'B' } ],
       parts_collected: ['A']
     }
-    const wrapper = mount(WeaponCard, { props: { weapon: w } })
+      const wrapper = mount(WeaponCard, { props: { weapon: w }, global: { plugins: [Quasar] } })
     await nextTick()
     // initial crafted count should be 1
     expect(wrapper.text()).toContain('1/2 crafted')
@@ -116,7 +116,7 @@ describe('WeaponCard.vue', () => {
       ],
       market: { method: 'Syndicate' }
     }
-    const wrapper = mount(WeaponCard, { props: { weapon: w } })
+      const wrapper = mount(WeaponCard, { props: { weapon: w }, global: { plugins: [Quasar] } })
     // market method fallback (no price) should render method string
     const market = wrapper.find('.market-badge')
     expect(market.exists()).toBe(true)
@@ -139,7 +139,7 @@ describe('WeaponCard.vue', () => {
 
   it('allows mastering for market-only weapons and emits mastered', async () => {
     const w: any = { name: 'MarketOnly', parts: [], purchase: { method: 'market', price: 5, currency: 'Platinum' } }
-      const wrapper = mount(WeaponCard, { props: { weapon: w } })
+      const wrapper = mount(WeaponCard, { props: { weapon: w }, global: { plugins: [Quasar] } })
     await nextTick()
     const checks = wrapper.findAll('input[type="checkbox"]')
     const masteredCheckbox = checks[checks.length - 1]!
@@ -155,7 +155,7 @@ describe('WeaponCard.vue', () => {
   it('clears mastered via watcher when canMaster becomes false', async () => {
     // weapon with is_mastered true but no parts and no market -> should be cleared on mount
     const w: any = { name: 'BadMaster', parts: [], is_mastered: true }
-      const wrapper = mount(WeaponCard, { props: { weapon: w } })
+      const wrapper = mount(WeaponCard, { props: { weapon: w }, global: { plugins: [Quasar] } })
     await nextTick()
     const emitted = (wrapper.emitted('update') || []) as any[][]
     // the watcher only clears mastered when canMaster transitions from true->false,

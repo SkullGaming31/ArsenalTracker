@@ -1,11 +1,17 @@
 import { shallowMount } from '@vue/test-utils'
+import { Quasar } from 'quasar'
 import { nextTick } from 'vue'
 import { describe, it, expect } from 'vitest'
 import App from '../App.vue'
 
 describe('App.vue', () => {
   it('renders dashboard by default and toggles views via NavBar event', async () => {
-    const wrapper = shallowMount(App)
+    const wrapper = shallowMount(App, {
+      global: {
+        plugins: [Quasar],
+        stubs: { 'q-layout': false }
+      }
+    })
 
     // Dashboard should be rendered initially
     expect(wrapper.findComponent({ name: 'Dashboard' }).exists()).toBe(true)
@@ -27,7 +33,12 @@ describe('App.vue', () => {
   })
 
   it('renders fallback when view is unknown', async () => {
-    const wrapper = shallowMount(App)
+    const wrapper = shallowMount(App, {
+      global: {
+        plugins: [Quasar],
+        stubs: { 'q-layout': false }
+      }
+    })
 
     // Force an unknown view value (simulate unexpected state)
     // script-setup exposes view on the vm

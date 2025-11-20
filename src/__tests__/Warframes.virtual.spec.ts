@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { Quasar } from 'quasar'
 import { setActivePinia, createPinia } from 'pinia'
 import Warframes from '../pages/Warframes.vue'
 import WarframeCard from '../components/WarframeCard.vue'
@@ -18,7 +19,7 @@ describe('Warframes page (virtualized)', () => {
     // @ts-expect-error assign test data into store
     store.warframes = warframes
 
-    const wrapper = mount(Warframes)
+    const wrapper = mount(Warframes, { global: { plugins: [Quasar] } })
     await nextTick()
 
     const cards = wrapper.findAllComponents(WarframeCard)

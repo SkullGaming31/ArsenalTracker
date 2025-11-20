@@ -1,0 +1,4 @@
+# Ignore generated/minified assets and build artifacts
+docs/**
+dist/**
+coverage/**

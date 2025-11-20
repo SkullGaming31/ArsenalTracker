@@ -7,7 +7,7 @@ describe('NavBar', () => {
     const wrapper = mount(NavBar)
 
     // nav buttons
-    const btnNames = ['nav-dashboard','nav-warframes','nav-weapons','nav-primary','nav-secondary','nav-melee']
+    const btnNames = ['nav-dashboard','nav-warframes','nav-weapons']
     for (const id of btnNames) {
       const btn = wrapper.find(`button[data-testid="${id}"]`)
       expect(btn.exists()).toBe(true)
