@@ -165,7 +165,13 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": [],
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ],
     "market": {
       "price": 1500,
       "method": "market",
@@ -643,7 +649,13 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Braton Prime",
@@ -1356,7 +1368,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Kuva Chakkhurr",
@@ -1364,7 +1382,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Kuva Hind",
@@ -1372,7 +1396,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Kuva Hek",
@@ -1380,7 +1410,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Kuva Karak",
@@ -1388,7 +1424,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Kuva Kohm",
@@ -1396,7 +1438,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Kuva Ogris",
@@ -1404,7 +1452,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Kuva Quartakk",
@@ -1412,7 +1466,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Kuva Tonkor",
@@ -1420,7 +1480,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Kuva Zarr",
@@ -1428,7 +1494,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Latron",
@@ -3988,7 +4060,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Kuva Nukor",
@@ -3996,7 +4074,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Kulstar",
@@ -4033,7 +4117,13 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Lato Prime",
@@ -6654,7 +6744,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Lacera",
@@ -8170,7 +8266,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Bo",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Kunai",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Neural Sensors",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 1600,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Tipedo Prime",
@@ -8178,7 +8300,28 @@
     "type": "prime",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ornament",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 15,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Tonbo",
@@ -8186,7 +8329,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Control Module",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 2000,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 100,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 800,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Twin Basolk",
@@ -8194,7 +8363,28 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Atomos",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Control Module",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Dual Zoren",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Twin Krohkur",
@@ -8202,7 +8392,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Detonite Injector",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Krohkur",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Krohkur",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Vaykor Sydon",
@@ -8218,7 +8434,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Gallium",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 500,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 1000,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Venka Prime",
@@ -8226,7 +8468,28 @@
     "type": "prime",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blades",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Gauntlet",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 15,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Vitrica",
@@ -8234,7 +8497,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 15,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 925,
+        "collected": false
+      },
+      {
+        "name": "Purified Heciphron",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Tempered Bapholite",
+        "count": 60,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Volnus",
@@ -8242,7 +8531,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 11000,
+        "collected": false
+      },
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cryotic",
+        "count": 875,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 225,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Volnus Prime",
@@ -8250,7 +8565,28 @@
     "type": "prime",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Head",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 15,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "War",
@@ -8258,7 +8594,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Broken War",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Nitain Extract",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 2300,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 1400,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Wolf Sledge",
@@ -8266,7 +8628,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Head",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Motor",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Nitain Extract",
+        "count": 5,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Zenistar",
@@ -8274,7 +8662,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 450,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 500,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 2750,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Astilla",
@@ -8282,7 +8696,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 7500,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 175,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 875,
+        "collected": false
+      },
+      {
+        "name": "Tellurium",
+        "count": 4,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Astilla Prime",
@@ -8290,7 +8730,33 @@
     "type": "prime",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "AX-52",
@@ -8330,7 +8796,33 @@
     "type": "prime",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Grip",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Lower Limb",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "String",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Upper Limb",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Gorgon",
@@ -8338,7 +8830,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 1000,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 5000,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 6000,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Gotva Prime",
@@ -8354,7 +8872,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 700,
+        "collected": false
+      },
+      {
+        "name": "Neurodes",
+        "count": 6,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 1200,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 1000,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Javlok",
@@ -8362,7 +8906,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 10000,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Detonite Injector",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Javlok Capacitor",
+        "count": 6,
+        "collected": false
+      },
+      {
+        "name": "Nitain Extract",
+        "count": 5,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Nataruk",
@@ -8378,7 +8948,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Intact Sentient Core",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 12500,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 650,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Phantasma Prime",
@@ -8386,7 +8982,33 @@
     "type": "prime",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Quellor",
@@ -8394,7 +9016,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 15350,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 3600,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 6250,
+        "collected": false
+      },
+      {
+        "name": "Tellurium",
+        "count": 4,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Rakta Cernos",
@@ -8410,7 +9058,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Chassis",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Sobek",
@@ -8418,7 +9092,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 500,
+        "collected": false
+      },
+      {
+        "name": "Neurodes",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 400,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 900,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Arca Plasmor",
@@ -8426,7 +9126,33 @@
     "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Control Module",
+        "count": 25,
+        "collected": false
+      },
+      {
+        "name": "Cryotic",
+        "count": 925,
+        "collected": false
+      },
+      {
+        "name": "Fieldron",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Thronbak",
@@ -8442,7 +9168,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cryotic",
+        "count": 2800,
+        "collected": false
+      },
+      {
+        "name": "Nitain Extract",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 900,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Zhuge Prime",
@@ -8450,7 +9202,33 @@
     "type": "prime",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Grip",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "String",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Aeolak",
@@ -8458,7 +9236,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Thrax Plasm",
+        "count": 50,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "afentis",
@@ -8474,7 +9278,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 4000,
+        "collected": false
+      },
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Entrati Lanthorn",
+        "count": 16,
+        "collected": false
+      },
+      {
+        "name": "Thrax Plasm",
+        "count": 600,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Ambassador",
@@ -8482,7 +9312,28 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Basmu",
@@ -8490,7 +9341,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Carbides",
+        "count": 800,
+        "collected": false
+      },
+      {
+        "name": "Isos",
+        "count": 450,
+        "collected": false
+      },
+      {
+        "name": "Nullstones",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Titanium",
+        "count": 1500,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "bubonico",
@@ -8514,7 +9391,28 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Catchmoon",
@@ -8530,7 +9428,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Cedo Prime",
@@ -8538,7 +9462,33 @@
     "type": "prime",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Cinta",
@@ -8546,7 +9496,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Grip",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Lower Limb",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "String",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Upper Limb",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Coda Bassocyst",
@@ -8586,7 +9562,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Control Module",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Fieldron",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 900,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "EFV-5 Jupiter",
@@ -8602,7 +9604,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Control Module",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Gallium",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 1100,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 700,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Exergis",
@@ -8610,7 +9638,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 175,
+        "collected": false
+      },
+      {
+        "name": "Repeller Systems",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 8500,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Felarx",
@@ -8618,7 +9672,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 8000,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Voidgel Orb",
+        "count": 30,
+        "collected": false
+      },
+      {
+        "name": "Voidplume Pinion",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Voidplume Quill",
+        "count": 15,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Flux Rifle",
@@ -8626,7 +9706,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 900,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 6000,
+        "collected": false
+      },
+      {
+        "name": "Fieldron",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Hema",
@@ -8634,7 +9740,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 5000,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Mutagen Mass",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 50000,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Higasa",
@@ -8642,7 +9774,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fate Pearl",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Komorex",
@@ -8650,7 +9808,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 6200,
+        "collected": false
+      },
+      {
+        "name": "Fieldron",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Hexenon",
+        "count": 300,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Kuva Drakgoon",
@@ -8658,7 +9842,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Kuva Sobek",
@@ -8666,7 +9856,13 @@
     "type": "kuva",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Lanka",
@@ -8674,7 +9870,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 600,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fieldron",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Gallium",
+        "count": 20,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Mutalist Quanta",
@@ -8682,7 +9904,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 1200,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Mutagen Mass",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 15000,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Panthera",
@@ -8690,7 +9938,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Hikou",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Miter",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 600,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Panthera Prime",
@@ -8698,7 +9972,33 @@
     "type": "prime",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Paracyst",
@@ -8706,7 +10006,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 1200,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Mutagen Mass",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 15000,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Perigale",
@@ -8714,7 +10040,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Lua Thrax Plasm",
+        "count": 50,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Phage",
@@ -8722,7 +10074,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 1500,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Mutagen Mass",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 6000,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Phenmor",
@@ -8730,7 +10108,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 6000,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Entrati Lanthorn",
+        "count": 15,
+        "collected": false
+      },
+      {
+        "name": "Voidplume Pinion",
+        "count": 15,
+        "collected": false
+      },
+      {
+        "name": "Voidplume Quill",
+        "count": 20,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Prisma Grinlok",
@@ -8746,7 +10150,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Mutalist Cernos",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 25000,
+        "collected": false
+      },
+      {
+        "name": "Nitain Extract",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 1600,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "purgator 1",
@@ -8770,7 +10200,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Pathos Clamp",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Reconifex",
@@ -8778,7 +10234,28 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Secura Penta",
@@ -8794,7 +10271,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 1200,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 850,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Sporlacer",
@@ -8810,7 +10313,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cranial Foremount",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Stahlta",
@@ -8818,7 +10347,28 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Steflos",
@@ -8826,7 +10376,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Neurodes",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Synapse",
@@ -8834,7 +10410,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 3500,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Mutagen Mass",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 30000,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Synoid Simulor",
@@ -8850,7 +10452,13 @@
     "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Tenet Ferrox",
@@ -8858,7 +10466,13 @@
     "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Tenet Flux Rifle",
@@ -8866,7 +10480,13 @@
     "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Tenet Glaxion",
@@ -8874,7 +10494,13 @@
     "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Tenet Tetra",
@@ -8882,7 +10508,13 @@
     "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Tombfinger",
@@ -8898,7 +10530,33 @@
     "type": "prime",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "vadarya Prime",
@@ -8923,5 +10581,6652 @@
     "is_crafted": false,
     "is_mastered": false,
     "parts": []
+  },
+  {
+    "name": "Aegrit",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 8500,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 12500,
+        "collected": false
+      },
+      {
+        "name": "Kuva",
+        "count": 2200,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Afentis",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cryotic",
+        "count": 1200,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 8000,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 3500,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Agkuza",
+    "category": "arch-melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Guard",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Akarius",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Hexenon",
+        "count": 150,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 7500,
+        "collected": false
+      },
+      {
+        "name": "Neurodes",
+        "count": 3,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 1600,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Akarius Prime",
+    "category": "secondary",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Link",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Aklex",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Lex",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Lex",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Aklex Prime",
+    "category": "secondary",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Lex Prime",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Lex Prime",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Link",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Akmagnus",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Magnus",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Magnus",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Akmagnus Prime",
+    "category": "secondary",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Link",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Magnus Prime",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Magnus Prime",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Alternox Prime",
+    "category": "primary",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Amanata",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fate Pearl",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Arbucep",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Dull Button",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Arca Scisco",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fieldron",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 250,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 12500,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Argo & Vel",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Aggristone",
+        "count": 150,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Kovnik",
+        "count": 40,
+        "collected": false
+      },
+      {
+        "name": "Rune Marrow",
+        "count": 30,
+        "collected": false
+      },
+      {
+        "name": "Silphsela",
+        "count": 20,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Arum Spinosa",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cabochon Embolos",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Guard",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Rivet",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Trapezium Xenorhast",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Athodai",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ax-52",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Efervon Sample",
+        "count": 60,
+        "collected": false
+      },
+      {
+        "name": "HöLlvanian Pitchweave Fragment",
+        "count": 60,
+        "collected": false
+      },
+      {
+        "name": "Techrot Chitin",
+        "count": 25,
+        "collected": false
+      },
+      {
+        "name": "Techrot Motherboard",
+        "count": 5,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Azima",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 450,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 500,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 2750,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Azothane",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Maw Fang",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Rune Marrow",
+        "count": 30,
+        "collected": false
+      },
+      {
+        "name": "Saggen Pearl",
+        "count": 100,
+        "collected": false
+      },
+      {
+        "name": "Yao Shrub",
+        "count": 40,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Balla",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fish Scales",
+        "count": 15,
+        "collected": false
+      },
+      {
+        "name": "Nistlepod",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Pyrotic Alloy",
+        "count": 60,
+        "collected": false
+      },
+      {
+        "name": "Tear Azurite",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Boltace",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Boltor",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Gallium",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Kronen",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Boltor",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 100,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Neurodes",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 600,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 900,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Broken Scepter",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Kuva",
+        "count": 5000,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 300,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 2500,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Bubonico",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 3,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Mutagen Mass",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 22000,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 1200,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Buzlok",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 600,
+        "collected": false
+      },
+      {
+        "name": "Detonite Injector",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 5000,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Cadus",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Bo",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 1600,
+        "collected": false
+      },
+      {
+        "name": "Neural Sensors",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 3000,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Cantare",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 1400,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 1600,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 600,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Cassowar",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 150,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 1000,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 5700,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Catabolyst",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Mutagen Mass",
+        "count": 7,
+        "collected": false
+      },
+      {
+        "name": "Ocular Stem-Root",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Scintillant",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Stellated Necrathene",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Centaur",
+    "category": "arch-melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Aegis",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Cerata",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cryotic",
+        "count": 2500,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Mutagen Mass",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 1200,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ceti Lacera",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "count": 15,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 400,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 5950,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 8150,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Cobra & Crane",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 18750,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 875,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 4000,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Cobra & Crane Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Guard",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Hilt",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Coda Catabolyst",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Coda Caustacyst",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Coda Hirudo",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Coda Mire",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Coda Motovore",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Coda Pathocyst",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Coda Pox",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Coda Synapse",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Coda Tysis",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Corinth",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 13000,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cryotic",
+        "count": 725,
+        "collected": false
+      },
+      {
+        "name": "Gallium",
+        "count": 6,
+        "collected": false
+      },
+      {
+        "name": "Nitain Extract",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Corinth Prime",
+    "category": "primary",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Cortege",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cortege Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cortege Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cortege Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Corufell",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 3,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Corvas",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Corvas Prime",
+    "category": "arch-gun",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Cronus",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 500,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 75,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Cyanex",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fieldron",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Hexenon",
+        "count": 250,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 8750,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Cyath",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Breath Of The Eidolon",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fersteel Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Fish Scales",
+        "count": 55,
+        "collected": false
+      },
+      {
+        "name": "Marquise Veridos",
+        "count": 6,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Cycron",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 1500,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 9000,
+        "collected": false
+      },
+      {
+        "name": "Fieldron",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Cyngas",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Tellurium",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Dehtat",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fersteel Alloy",
+        "count": 40,
+        "collected": false
+      },
+      {
+        "name": "Fish Scales",
+        "count": 45,
+        "collected": false
+      },
+      {
+        "name": "Maprico",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Marquise Veridos",
+        "count": 8,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Despair",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 800,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 5000,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 4500,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Dex Nikana",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Dokrahm",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fish Scales",
+        "count": 45,
+        "collected": false
+      },
+      {
+        "name": "Marquise Veridos",
+        "count": 7,
+        "collected": false
+      },
+      {
+        "name": "Nistlepod",
+        "count": 25,
+        "collected": false
+      },
+      {
+        "name": "Pyrotic Alloy",
+        "count": 60,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Dorrclave",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Hilt",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Hook",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "String",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Dual Cestra",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cestra",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cestra",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fieldron",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Dual Coda Torxica",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Dual Decurion",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Control Module",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Decurion Barrel",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Decurion Receiver",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Dual Kamas",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Kama",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Kama",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Dual Keres",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 230,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 13250,
+        "collected": false
+      },
+      {
+        "name": "Tellurium",
+        "count": 3,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Dual Keres Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Dual Raza",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 200,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cryotic",
+        "count": 200,
+        "collected": false
+      },
+      {
+        "name": "Dual Kamas",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Dual Toxocyst",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Mutagen Mass",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 6500,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 1100,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Dual Viciss",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Hilt",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Dual Zoren Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Edun",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Connla Sprout",
+        "count": 40,
+        "collected": false
+      },
+      {
+        "name": "Nacreous Pebble",
+        "count": 50,
+        "collected": false
+      },
+      {
+        "name": "Rune Marrow",
+        "count": 30,
+        "collected": false
+      },
+      {
+        "name": "Tasoma Extract",
+        "count": 30,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Efv-5 Jupiter",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Efv-8 Mars",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ekhein",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Entrati Lanthorn",
+        "count": 3,
+        "collected": false
+      },
+      {
+        "name": "Entrati Obols",
+        "count": 2400,
+        "collected": false
+      },
+      {
+        "name": "Necracoil",
+        "count": 75,
+        "collected": false
+      },
+      {
+        "name": "Shrill Voca",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ekwana Ii Jai",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Condroc Wing",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Fersteel Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Maprico",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Mortus Horn",
+        "count": 5,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ekwana Ii Ruhang",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Condroc Wing",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Fersteel Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Maprico",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Tralok Eyes",
+        "count": 5,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ekwana Jai",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Condroc Wing",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Coprite Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Goopolla Spleen",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Nistlepod",
+        "count": 30,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ekwana Jai Ii",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Auroxium Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Breath Of The Eidolon",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Cetus Wisp",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Condroc Wing",
+        "count": 5,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ekwana Ruhang",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Charc Electroplax",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Condroc Wing",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Coprite Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Nistlepod",
+        "count": 30,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ekwana Ruhang Ii",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Auroxium Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Breath Of The Eidolon",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Cetus Wisp",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Condroc Wing",
+        "count": 5,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Endura",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 12000,
+        "collected": false
+      },
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Gallium",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 1200,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Epitaph",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 7,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Epitaph Prime",
+    "category": "secondary",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Falcor",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 8500,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 1650,
+        "collected": false
+      },
+      {
+        "name": "Fieldron",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Fluctus",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Limbs",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Fusilai",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Nitain Extract",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 1350,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 2950,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 10000,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Galariak Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Galvacord",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Atmo Systems",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 1000,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 3600,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ghoulsaw",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Chassis",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Engine",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Grip",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Gorgon Wraith",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Grattler",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 3500,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 6000,
+        "collected": false
+      },
+      {
+        "name": "Tellurium",
+        "count": 5,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Grimoire",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Echo Voca",
+        "count": 15,
+        "collected": false
+      },
+      {
+        "name": "Entrati Lanthorn",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Entrati Obols",
+        "count": 2000,
+        "collected": false
+      },
+      {
+        "name": "Necracoil",
+        "count": 50,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Gunsen",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 19750,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 200,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 1150,
+        "collected": false
+      },
+      {
+        "name": "Tellurium",
+        "count": 3,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Gunsen Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Harmony",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 5000,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Gallium",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "count": 18,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 500,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Hate",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 5000,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 6000,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 4500,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Hespar",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Thrax Plasm",
+        "count": 50,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Imperator",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 300,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 1500,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 150,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Imperator Vandal",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Tellurium",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Innodem",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Entrati Lanthorn",
+        "count": 15,
+        "collected": false
+      },
+      {
+        "name": "Thrax Plasm",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Voidplume Pinion",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Voidplume Quill",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Jai",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Condroc Wing",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Khut-Khut Venom Sac",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Nistlepod",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Pyrotic Alloy",
+        "count": 20,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Jai Ii",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Condroc Wing",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Nistlepod",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Pyrotic Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Yogwun Stomach",
+        "count": 5,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Jayap",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fersteel Alloy",
+        "count": 40,
+        "collected": false
+      },
+      {
+        "name": "Fish Oil",
+        "count": 50,
+        "collected": false
+      },
+      {
+        "name": "Maprico",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 600,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kaszas",
+    "category": "arch-melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Tellurium",
+        "count": 3,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Keratinos",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blades",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Gauntlet",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kestrel",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 4800,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "count": 8,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 5000,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 4000,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kestrel Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Grip",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Knux",
+    "category": "arch-melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Detonite Injector",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Furax",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Gallium",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kompressa",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 3,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kompressa Prime",
+    "category": "secondary",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Korb",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fish Oil",
+        "count": 50,
+        "collected": false
+      },
+      {
+        "name": "Iradite",
+        "count": 25,
+        "collected": false
+      },
+      {
+        "name": "Pyrotic Alloy",
+        "count": 60,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 650,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Korrudo",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Auroxium Alloy",
+        "count": 25,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Breath Of The Eidolon",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Esher Devar",
+        "count": 15,
+        "collected": false
+      },
+      {
+        "name": "Mawfish Bones",
+        "count": 20,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Korumm",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Coprite Alloy",
+        "count": 60,
+        "collected": false
+      },
+      {
+        "name": "Narmer Isoplast",
+        "count": 16,
+        "collected": false
+      },
+      {
+        "name": "Radiant Zodian",
+        "count": 6,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 3200,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kreska",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fieldron",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Longwinder Lathe Coagulant",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Mytocardia Spore",
+        "count": 40,
+        "collected": false
+      },
+      {
+        "name": "Star Amarast",
+        "count": 25,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kronsh",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Coprite Alloy",
+        "count": 60,
+        "collected": false
+      },
+      {
+        "name": "Esher Devar",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Fish Scales",
+        "count": 45,
+        "collected": false
+      },
+      {
+        "name": "Grokdrul",
+        "count": 20,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kroostra",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Breath Of The Eidolon",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 500,
+        "collected": false
+      },
+      {
+        "name": "Fersteel Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Fish Oil",
+        "count": 50,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kunai",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 3000,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 4000,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 4000,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kuva Ayanga",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kuva Brakk",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kuva Grattler",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kuva Kraken",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kuva Seer",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kwath",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cetus Wisp",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fersteel Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Fish Oil",
+        "count": 50,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 700,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Laetum",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 4000,
+        "collected": false
+      },
+      {
+        "name": "Voidgel Orb",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Voidplume Pinion",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Voidplume Quill",
+        "count": 5,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Laka",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Coprite Alloy",
+        "count": 60,
+        "collected": false
+      },
+      {
+        "name": "Cryotic",
+        "count": 750,
+        "collected": false
+      },
+      {
+        "name": "Fish Oil",
+        "count": 50,
+        "collected": false
+      },
+      {
+        "name": "Nistlepod",
+        "count": 20,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Larkspur",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Crisma Toroid",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Radiant Zodian",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Synathid Ecosynth Analyzer",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Venerdo Alloy",
+        "count": 80,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Larkspur Prime",
+    "category": "arch-gun",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Mandonel",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Echo Voca",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Mara Detron",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Masseter",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cryotic",
+        "count": 650,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 225,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 8600,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Masseter Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 15,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Mausolon",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Mewan",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cetus Wisp",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fersteel Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Fish Scales",
+        "count": 55,
+        "collected": false
+      },
+      {
+        "name": "Marquise Veridos",
+        "count": 6,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Mire",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 2000,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 1000,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 1500,
+        "collected": false
+      },
+      {
+        "name": "Neural Sensors",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Mk1-Bo",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Mk1-Braton",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Mk1-Furax",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Mk1-Furis",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Mk1-Kunai",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Mk1-Paris",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Mk1-Strun",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Morgha",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Morgha Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Morgha Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Morgha Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Nepheri",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fersteel Alloy",
+        "count": 80,
+        "collected": false
+      },
+      {
+        "name": "Narmer Isoplast",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Nitain Extract",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Tromyzon Entroplasma",
+        "count": 6,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ohma",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 15000,
+        "collected": false
+      },
+      {
+        "name": "Nitain Extract",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 1400,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Okina Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 15,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Onorix",
+    "category": "arch-melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Neurodes",
+        "count": 3,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Onos",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Entrati Lanthorn",
+        "count": 6,
+        "collected": false
+      },
+      {
+        "name": "Necracoil",
+        "count": 400,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 3000,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ooltha",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fish Scales",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Iradite",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Pyrotic Alloy",
+        "count": 60,
+        "collected": false
+      },
+      {
+        "name": "Tear Azurite",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Orvius",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Disc",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Kuva",
+        "count": 4000,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Pangolin Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 15,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Pennant",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 5300,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 1550,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 2100,
+        "collected": false
+      },
+      {
+        "name": "Tellurium",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Peye",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 850,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fish Oil",
+        "count": 50,
+        "collected": false
+      },
+      {
+        "name": "Iradite",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Pyrotic Alloy",
+        "count": 60,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Phaedra",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Tellurium",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Plague Akwin",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fish Scales",
+        "count": 15,
+        "collected": false
+      },
+      {
+        "name": "Iradite",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 1100,
+        "collected": false
+      },
+      {
+        "name": "Pyrotic Alloy",
+        "count": 30,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Plague Bokwin",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Coprite Alloy",
+        "count": 30,
+        "collected": false
+      },
+      {
+        "name": "Fish Scales",
+        "count": 15,
+        "collected": false
+      },
+      {
+        "name": "Grokdrul",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 1100,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Plague Keewar",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Plague Kripath",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Plinx",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 4375,
+        "collected": false
+      },
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Cryotic",
+        "count": 575,
+        "collected": false
+      },
+      {
+        "name": "Gyromag Systems",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Pox",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Mutagen Mass",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 6500,
+        "collected": false
+      },
+      {
+        "name": "Nitain Extract",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 1200,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Praedos",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 8000,
+        "collected": false
+      },
+      {
+        "name": "Thrax Plasm",
+        "count": 100,
+        "collected": false
+      },
+      {
+        "name": "Voidplume Pinion",
+        "count": 15,
+        "collected": false
+      },
+      {
+        "name": "Voidplume Quill",
+        "count": 30,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Prisma Angstrum",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Prisma Dual Cleavers",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Prisma Dual Decurions",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Prisma Lenz",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Prisma Machete",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Prisma Obex",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Prisma Ohma",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Prisma Skana",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Prisma Twin Gremlins",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Prisma Veritux",
+    "category": "arch-melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Pulmonars",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Devolved Namalon",
+        "count": 60,
+        "collected": false
+      },
+      {
+        "name": "Nano Spores",
+        "count": 24000,
+        "collected": false
+      },
+      {
+        "name": "Parasitic Tethermaw",
+        "count": 24,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Pupacyst",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Mutagen Mass",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 2250,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 8750,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Purgator 1",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Quassus",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Devolved Namalon",
+        "count": 60,
+        "collected": false
+      },
+      {
+        "name": "Scintillant",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Seriglass Shard",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Spinal Core Section",
+        "count": 15,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Quassus Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Quatz",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Neurodes",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 4200,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 12750,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Rabvee",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Esher Devar",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Fersteel Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Fish Scales",
+        "count": 50,
+        "collected": false
+      },
+      {
+        "name": "Grokdrul",
+        "count": 35,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Rakta Ballistica",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Rathbone",
+    "category": "arch-melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 300,
+        "collected": false
+      },
+      {
+        "name": "Control Module",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Head",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Riot-848",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 3,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ruhang",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Kuaka Spinal Claw",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Mawfish Bones",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Nistlepod",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Pyrotic Alloy",
+        "count": 20,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Ruhang Ii",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Kuaka Spinal Claw",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Nistlepod",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Pyrotic Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Yogwun Stomach",
+        "count": 5,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Rumblejack",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Ruvox",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Glove",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Sagek Prime",
+    "category": "secondary",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Sampotes",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Aggristone",
+        "count": 150,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Kovnik",
+        "count": 40,
+        "collected": false
+      },
+      {
+        "name": "Rune Marrow",
+        "count": 30,
+        "collected": false
+      },
+      {
+        "name": "Silphsela",
+        "count": 20,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Sancti Magistar",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Sarofang",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Lua Thrax Plasm",
+        "count": 50,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Scyotid",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Gauntlet",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Seekalla",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fish Oil",
+        "count": 50,
+        "collected": false
+      },
+      {
+        "name": "Grokdrul",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Pyrotic Alloy",
+        "count": 60,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 900,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Sepfahn",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Condroc Wing",
+        "count": 15,
+        "collected": false
+      },
+      {
+        "name": "Coprite Alloy",
+        "count": 60,
+        "collected": false
+      },
+      {
+        "name": "Fish Scales",
+        "count": 55,
+        "collected": false
+      },
+      {
+        "name": "Tear Azurite",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Sepulcrum",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Seriglass Shard",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Serro",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 400,
+        "collected": false
+      },
+      {
+        "name": "Fieldron",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Neural Sensors",
+        "count": 3,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 1000,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Shtung",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 850,
+        "collected": false
+      },
+      {
+        "name": "Fish Scales",
+        "count": 55,
+        "collected": false
+      },
+      {
+        "name": "Grokdrul",
+        "count": 25,
+        "collected": false
+      },
+      {
+        "name": "Pyrotic Alloy",
+        "count": 60,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Sirocco",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Skiajati",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 3250,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 75,
+        "collected": false
+      },
+      {
+        "name": "Plastids",
+        "count": 100,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Slaytra",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 13000,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Kuva",
+        "count": 2600,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 6300,
+        "collected": false
+      },
+      {
+        "name": "Tellurium",
+        "count": 8,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Spectra Vandal",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Chassis",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Spinnerex",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "String",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Staticor",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 6000,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 9000,
+        "collected": false
+      },
+      {
+        "name": "Fieldron",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Nitain Extract",
+        "count": 3,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Sun & Moon",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Kovnik",
+        "count": 100,
+        "collected": false
+      },
+      {
+        "name": "Lamentus",
+        "count": 40,
+        "collected": false
+      },
+      {
+        "name": "Rune Marrow",
+        "count": 35,
+        "collected": false
+      },
+      {
+        "name": "Silphsela",
+        "count": 45,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Syam",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Dracroot",
+        "count": 30,
+        "collected": false
+      },
+      {
+        "name": "Eevani",
+        "count": 30,
+        "collected": false
+      },
+      {
+        "name": "Maw Fang",
+        "count": 4,
+        "collected": false
+      },
+      {
+        "name": "Rune Marrow",
+        "count": 30,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Sydon",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Amphis",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 1100,
+        "collected": false
+      },
+      {
+        "name": "Detonite Injector",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 4000,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Synoid Heliocor",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Tak & Lug",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Guard",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Talons",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Control Module",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 1500,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "count": 1200,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tatsu",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Auroxium Alloy",
+        "count": 100,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Hespazym Alloy",
+        "count": 100,
+        "collected": false
+      },
+      {
+        "name": "Kuva",
+        "count": 1200,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tatsu Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 15,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Telos Boltace",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Tenet Agendus",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tenet Arca Plasmor",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tenet Cycron",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tenet Detron",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tenet Diplos",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tenet Exec",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tenet Grigori",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tenet Livia",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tenet Plinx",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tenet Spirex",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Thalys",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Entrati Obols",
+        "count": 1500,
+        "collected": false
+      },
+      {
+        "name": "Rune Marrow",
+        "count": 150,
+        "collected": false
+      },
+      {
+        "name": "Silphsela",
+        "count": 180,
+        "collected": false
+      },
+      {
+        "name": "Temporal Dust",
+        "count": 100,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Thornbak",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 300,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 100,
+        "collected": false
+      },
+      {
+        "name": "Neurodes",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "count": 100,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tonkkatt",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Twin Grakatas",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Forma",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Grakata",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Grakata",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Twin Rogga",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Alloy Plate",
+        "count": 2600,
+        "collected": false
+      },
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 15000,
+        "collected": false
+      },
+      {
+        "name": "Kuva",
+        "count": 1600,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Vadarya Prime",
+    "category": "primary",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Vargeet Ii Jai",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fersteel Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Kuaka Spinal Claw",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Maprico",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Mortus Horn",
+        "count": 5,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Vargeet Ii Ruhang",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Fersteel Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Kuaka Spinal Claw",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Maprico",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Tralok Eyes",
+        "count": 5,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Vargeet Jai",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Coprite Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Goopolla Spleen",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Kuaka Spinal Claw",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Nistlepod",
+        "count": 30,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Vargeet Jai Ii",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Auroxium Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Breath Of The Eidolon",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Cetus Wisp",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Kuaka Spinal Claw",
+        "count": 5,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Vargeet Ruhang",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Charc Electroplax",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Coprite Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Kuaka Spinal Claw",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Nistlepod",
+        "count": 30,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Vargeet Ruhang Ii",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Auroxium Alloy",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Breath Of The Eidolon",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Cetus Wisp",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Kuaka Spinal Claw",
+        "count": 5,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Vastilok",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Vaykor Marelok",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Velocitus",
+    "category": "arch-gun",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Control Module",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Velox",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 3,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Velox Prime",
+    "category": "secondary",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Venato",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Anomaly Shard",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Exceptional Sentient Core",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Iradite",
+        "count": 60,
+        "collected": false
+      },
+      {
+        "name": "Narmer Isoplast",
+        "count": 16,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Venato Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Verdilac",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Intact Sentient Core",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Mortus Horn",
+        "count": 20,
+        "collected": false
+      },
+      {
+        "name": "Narmer Isoplast",
+        "count": 12,
+        "collected": false
+      },
+      {
+        "name": "Star Amarast",
+        "count": 6,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Vericres",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Veritux",
+    "category": "arch-melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "count": 500,
+        "collected": false
+      },
+      {
+        "name": "Neurodes",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 500,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "count": 1000,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Vesper 77",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Vinquibus",
+    "category": [
+      "primary",
+      "melee"
+    ],
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Xoris",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blade",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Core",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Handle",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Zylok Prime",
+    "category": "secondary",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 5,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Zymos",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      }
+    ]
   }
 ]
