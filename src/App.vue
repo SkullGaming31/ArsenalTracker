@@ -14,7 +14,7 @@
           v-model:query="globalQuery"
           v-model:hideCompleted="globalHideCompleted"
           :pageSubtitle="pageSubtitle"
-          :showControls="view==='warframes' || view==='weapons' || view==='primary' || view==='secondary' || view==='melee'"
+          :showControls="view==='warframes' || view==='weapons' || view==='primary' || view==='secondary' || view==='melee' || view==='companions'"
         />
   <main id="main-content">
           <Landing v-if="view==='landing'" @navigate="onNavigate" />
@@ -25,6 +25,7 @@
           <Primary v-else-if="view==='primary'" v-model:query="globalQuery" v-model:hideCompleted="globalHideCompleted" />
           <Secondary v-else-if="view==='secondary'" v-model:query="globalQuery" v-model:hideCompleted="globalHideCompleted" />
           <Melee v-else-if="view==='melee'" v-model:query="globalQuery" v-model:hideCompleted="globalHideCompleted" />
+          <Companions v-else-if="view==='companions'" />
           <div v-else class="fallback">Nothing to display — select a page from the nav.</div>
         </main>
   <AppFooter class="site-nav" :centered="view === 'landing'" />
@@ -43,6 +44,7 @@ import Weapons from './pages/Weapons.vue'
 import Primary from './pages/Primary.vue'
 import Secondary from './pages/Secondary.vue'
 import Melee from './pages/Melee.vue'
+import Companions from './pages/Companions.vue'
 import NavBar from './components/NavBar.vue'
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
@@ -88,11 +90,11 @@ const isAutomated = (() => {
   return nav['webdriver'] === true
 })()
 
-const view = ref<'landing'|'about'|'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee'>(isTestEnv || isAutomated ? 'dashboard' : 'landing')
+const view = ref<'landing'|'about'|'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee'|'companions'>(isTestEnv || isAutomated ? 'dashboard' : 'landing')
 // Global header controls (driven from header, passed to pages)
 const globalQuery = ref<string>('')
 const globalHideCompleted = ref<boolean>(false)
-function onNavigate(v: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee') {
+function onNavigate(v: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee'|'companions') {
   console.log('[App] onNavigate ->', v)
   view.value = v
 }
@@ -113,6 +115,7 @@ const pageSubtitle = computed(() => {
   switch (view.value) {
     case 'warframes': return 'Track your collection progress across all warframes'
     case 'weapons': return 'Track your collection and mastery progress across all weapons'
+    case 'companions': return 'Track your companion collection and mastery progress'
     default: return 'Welcome to the Arsenal Tracker'
   }
 })

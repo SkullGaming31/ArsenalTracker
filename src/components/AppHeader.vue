@@ -84,6 +84,11 @@ function emitHideCompleted(v: boolean | null) {
 .page-subtitle { text-align:left; color: var(--muted, #9fb8a6); font-size:0.95rem; margin:6px 0 0 }
 .header-controls { display:flex; gap:10px; align-items:center }
 .header-search { padding:6px 8px; border-radius:6px; background:#0b0c0d; color:#eee; border:1px solid #2b2f33 }
+/* ensure the native input inside Quasar's QInput shows white text */
+.header-search :deep(input),
+.header-search :deep(input::placeholder) {
+  color: #ffffff !important;
+}
 
 .nav-toggle {
   display: inline-flex;

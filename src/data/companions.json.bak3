@@ -1,0 +1,190 @@
+[
+  {
+    "name": "Adarza Kavat",
+    "type": "standard",
+    "category": "beasts",
+    "subcategory": "Kavat",
+    "is_crafted": false,
+    "is_mastered": true,
+    "parts": []
+  },
+  {
+    "name": "Adlet Core",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Hound",
+    "is_crafted": true,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Adra Mutagen",
+    "type": "standard",
+    "category": "deimos",
+    "subcategory": null,
+    "is_crafted": true,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Aegron Gyro",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "MOA",
+    "is_crafted": true,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Alcrom Core",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "MOA",
+    "is_crafted": true,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Arioli Mutagen",
+    "type": "standard",
+    "category": "deimos",
+    "subcategory": "Predasite",
+    "is_crafted": true,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Atheca Gyro",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "MOA",
+    "is_crafted": true,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Bhaira Hound",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Hound",
+    "is_crafted": true,
+    "is_mastered": true,
+    "parts": []
+  },
+  {
+    "name": "Carrier",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Carrier Prime",
+    "type": "prime",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Cela Bracket",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Hound",
+    "is_crafted": true,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Chesa Kubrow",
+    "type": "standard",
+    "category": "beasts",
+    "subcategory": "Kubrow",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Chiten Mutagen",
+    "type": "standard",
+    "category": "deimos",
+    "subcategory": "Predasite",
+    "is_crafted": true,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Crescent Vulpaphyla",
+    "type": "standard",
+    "category": "deimos",
+    "subcategory": "Vulpaphyla",
+    "is_crafted": false,
+    "is_mastered": true,
+    "parts": []
+  },
+  {
+    "name": "Desus Antigen",
+    "type": "standard",
+    "category": "deimos",
+    "subcategory": null,
+    "is_crafted": true,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Dethcube",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Dethcube Prime",
+    "type": "prime",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Diriga",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Djinn",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Dorma Hound",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Hound",
+    "is_crafted": true,
+    "is_mastered": true,
+    "parts": []
+  },
+  {
+    "name": "Drex Core",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "MOA",
+    "is_crafted": true,
+    "is_mastered": false,
+    "parts": []
+  }]

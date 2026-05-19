@@ -15,10 +15,12 @@
     "test:e2e": "playwright test",
     "test:ci": "vitest --run --coverage",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build",
+    "typecheck": "vue-tsc --build",
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore --ignore-pattern \"docs/**\" --ignore-pattern \"dist/**\" --ignore-pattern \"coverage/**\"",
     "lint:eslint": "eslint . --fix",
-    "lint": "run-s lint:*"
+    "lint": "run-s lint:*",
+    "update:companions": "node scripts/update-companions.js",
+    "normalize:companions": "node scripts/normalize-companions.js"
   },
   "dependencies": {
     "@primeuix/themes": "^1.2.5",

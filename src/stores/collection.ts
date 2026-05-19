@@ -2,8 +2,10 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import warframesData from '../data/warframes.json'
 import weaponsData from '../data/weapons.json'
+import companionsData from '../data/companions.json'
 import type { Warframe } from '../types/warframe'
 import type { Weapon } from '../types/weapon'
+import type { Companion } from '../types/companion'
 
 export const STORAGE_KEY = 'arsenaltracker.v1'
 const CURRENT_VERSION = 1
@@ -14,6 +16,7 @@ export const useCollectionStore = defineStore('collection', () => {
   // underlying static data (source-of-truth from project files)
   const warframes = ref<Warframe[]>(warframesData as Warframe[])
   const weapons = ref<Weapon[]>(weaponsData as Weapon[])
+  const companions = ref<Companion[]>(companionsData as Companion[])
 
   // overrides persisted in localStorage keyed by warframe/weapon name
   const overrides = ref<Record<string, WarframeOverride>>({})
@@ -93,9 +96,9 @@ export const useCollectionStore = defineStore('collection', () => {
         } catch {
           // ignore sessionStorage failures
         }
-        } catch (diagErr) {
-          console.warn('[collection] diagnostics failed', diagErr)
-        }
+      } catch (diagErr) {
+        console.warn('[collection] diagnostics failed', diagErr)
+      }
     }
   }
 
@@ -133,6 +136,23 @@ export const useCollectionStore = defineStore('collection', () => {
         if (ov && typeof ov === 'object') {
           const existing = (map.get(w.name) || {}) as Record<string, unknown>
           map.set(w.name, { ...existing, ...ov })
+        }
+      }
+    }
+    return Array.from(map.values())
+  })
+
+  const mergedCompanions = computed(() => {
+    const map = new Map<string, unknown>()
+    for (const c of companions.value) {
+      if (!map.has(c.name)) {
+        const ov = overrides.value[c.name] || {}
+        map.set(c.name, { ...c, ...ov })
+      } else {
+        const ov = overrides.value[c.name]
+        if (ov && typeof ov === 'object') {
+          const existing = (map.get(c.name) || {}) as Record<string, unknown>
+          map.set(c.name, { ...existing, ...ov })
         }
       }
     }
@@ -186,8 +206,8 @@ export const useCollectionStore = defineStore('collection', () => {
       if (parsed && typeof parsed === 'object') {
         if (parsed.version === CURRENT_VERSION && parsed.overrides && typeof parsed.overrides === 'object') {
           overrides.value = parsed.overrides
-            // imported state is authoritative; persist immediately
-            saveToStorage()
+          // imported state is authoritative; persist immediately
+          saveToStorage()
           return true
         }
         // accept legacy format where the JSON is already the overrides map
@@ -227,9 +247,11 @@ export const useCollectionStore = defineStore('collection', () => {
   return {
     warframes,
     weapons,
+    companions,
     overrides,
     mergedWarframes,
     mergedWeapons,
+    mergedCompanions,
     setOverride,
     clearOverrides,
     exportState,

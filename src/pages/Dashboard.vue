@@ -60,6 +60,20 @@
           <div class="progress-small"><div class="fill" :style="{ width: Math.round((mastered.melee/Math.max(1,total.melee))*100) + '%' , background:'#2bb673' }"></div></div>
         </div>
       </div>
+
+      <div class="card summary stat-card">
+        <div class="stat-left">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M4 4h16v16H4z" stroke="#8fc1ff" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="stat-body">
+          <h4>Companions</h4>
+          <div class="big"><small class="muted">Mastered:</small> {{ companionsMastered }} <small class="muted">/ {{ totalCompanions }}</small></div>
+          <div class="muted small-row">Robotics: {{ roboticsMastered }} / {{ companionCounts.robotics || 0 }} · Beasts: {{ beastsMastered }} / {{ companionCounts.beasts || 0 }} · Infested: {{ deimosMastered }} / {{ companionCounts.deimos || 0 }}</div>
+          <div class="progress-small"><div class="fill" :style="{ width: Math.round((companionsMastered/Math.max(1,totalCompanions))*100) + '%' , background:'#8fc1ff' }"></div></div>
+        </div>
+      </div>
     </div>
     <!-- Import / Export controls -->
     <div class="recent">
@@ -108,10 +122,12 @@ import { ref, computed } from 'vue'
 import { parseImportFile, mapRowsToOverrides, exportOverridesToCSV, type ParsedRow } from '../lib/importer'
 import type { Warframe } from '../types/warframe'
 import type { Weapon } from '../types/weapon'
+import type { Companion } from '../types/companion'
 
 const collection = useCollectionStore()
 const wf = computed<Warframe[]>(() => collection.mergedWarframes as unknown as Warframe[])
 const wp = computed<Weapon[]>(() => collection.mergedWeapons as unknown as Weapon[])
+const companions = computed<Companion[]>(() => collection.mergedCompanions as unknown as Companion[])
 
 const totalWarframes = computed(() => wf.value.length)
 
@@ -124,7 +140,7 @@ const flagTrue = (v: unknown): boolean => {
   return Boolean(v)
 }
 
-const totalWarframesMastered = computed(() => wf.value.filter((w: Warframe) => flagTrue(w.is_mastered)).length)
+const totalWarframesMastered = computed(() => wf.value.filter((w: Warframe) => flagTrue(w.is_mastered) || partCollected(w)).length)
 
 const total = computed(() => ({
   primary: wp.value.filter((w: Weapon) => w.category === 'primary').length,
@@ -133,9 +149,9 @@ const total = computed(() => ({
 }))
 
 const mastered = computed(() => ({
-  primary: wp.value.filter((w: Weapon) => w.category === 'primary' && !!w.is_mastered).length,
-  secondary: wp.value.filter((w: Weapon) => w.category === 'secondary' && !!w.is_mastered).length,
-  melee: wp.value.filter((w: Weapon) => w.category === 'melee' && !!w.is_mastered).length,
+  primary: wp.value.filter((w: Weapon) => w.category === 'primary' && (flagTrue(w.is_mastered) || flagTrue(w.is_crafted))).length,
+  secondary: wp.value.filter((w: Weapon) => w.category === 'secondary' && (flagTrue(w.is_mastered) || flagTrue(w.is_crafted))).length,
+  melee: wp.value.filter((w: Weapon) => w.category === 'melee' && (flagTrue(w.is_mastered) || flagTrue(w.is_crafted))).length,
 }))
 
 // helper to identify prime vs non-prime
@@ -157,18 +173,50 @@ const standardsIn = (cat: string) => wp.value.filter((w: Weapon) => w.category =
 
 const primaryPrimesTotal = computed(() => primesIn('primary').length)
 const primaryStandardsTotal = computed(() => standardsIn('primary').length)
-const primaryPrimesCompleted = computed(() => primesIn('primary').filter((w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
-const primaryStandardsCompleted = computed(() => standardsIn('primary').filter((w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
+// helper to determine if a weapon should be counted as "completed" for dashboard
+// We consider a weapon completed when any of the following is true:
+// - `is_crafted` is truthy
+// - `is_mastered` is truthy
+// - Any part object has `collected: true`
+// - An overrides array `parts_collected` or `collected_parts` exists with >0 entries
+const weaponCompleted = (w: Weapon) => {
+  if (flagTrue(w.is_crafted) || flagTrue(w.is_mastered)) return true
+    const parts = (w.parts || []) as { name?: string; collected?: boolean }[]
+    if (parts.some(p => Boolean((p && (p).collected)))) return true
+  const raw = (w).parts_collected ?? (w).collected_parts
+  if (Array.isArray(raw) && raw.length > 0) return true
+  return false
+}
+
+const primaryPrimesCompleted = computed(() => primesIn('primary').filter((w: Weapon) => weaponCompleted(w)).length)
+const primaryStandardsCompleted = computed(() => standardsIn('primary').filter((w: Weapon) => weaponCompleted(w)).length)
 
 const secondaryPrimesTotal = computed(() => primesIn('secondary').length)
 const secondaryStandardsTotal = computed(() => standardsIn('secondary').length)
-const secondaryPrimesCompleted = computed(() => primesIn('secondary').filter((w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
-const secondaryStandardsCompleted = computed(() => standardsIn('secondary').filter((w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
+const secondaryPrimesCompleted = computed(() => primesIn('secondary').filter((w: Weapon) => weaponCompleted(w)).length)
+const secondaryStandardsCompleted = computed(() => standardsIn('secondary').filter((w: Weapon) => weaponCompleted(w)).length)
 
 const meleePrimesTotal = computed(() => primesIn('melee').length)
 const meleeStandardsTotal = computed(() => standardsIn('melee').length)
-const meleePrimesCompleted = computed(() => primesIn('melee').filter((w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
-const meleeStandardsCompleted = computed(() => standardsIn('melee').filter((w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)).length)
+const meleePrimesCompleted = computed(() => primesIn('melee').filter((w: Weapon) => weaponCompleted(w)).length)
+const meleeStandardsCompleted = computed(() => standardsIn('melee').filter((w: Weapon) => weaponCompleted(w)).length)
+
+const totalCompanions = computed(() => companions.value.length)
+
+const companionCounts = computed(() => {
+  const out: Record<string, number> = { robotics: 0, beasts: 0, deimos: 0, uncategorized: 0 }
+  for (const c of companions.value) {
+    const cat = String(c.category || 'uncategorized')
+    out[cat] = (out[cat] || 0) + 1
+  }
+  return out
+})
+
+const companionsMastered = computed(() => companions.value.filter(c => flagTrue((c).mastered)).length)
+
+const roboticsMastered = computed(() => companions.value.filter(c => String(c.category || '') === 'robotics' && flagTrue((c).mastered)).length)
+const beastsMastered = computed(() => companions.value.filter(c => String(c.category || '') === 'beasts' && flagTrue((c).mastered)).length)
+const deimosMastered = computed(() => companions.value.filter(c => String(c.category || '') === 'deimos' && flagTrue((c).mastered)).length)
 
 // (collection already initialized above)
 

@@ -31,6 +31,11 @@
           <span>Weapons</span>
         </button>
         
+        <button class="nav-btn" data-testid="nav-companions" @click="navigate('companions')" :class="{ active: activeView === 'companions' }">
+          <svg viewBox="0 0 24 24" aria-hidden focusable="false"><path d="M12 2a5 5 0 00-5 5v3a5 5 0 0010 0V7a5 5 0 00-5-5zm-7 18v-2a7 7 0 0114 0v2H5z" fill="currentColor"/></svg>
+          <span>Companions</span>
+        </button>
+        
       </nav>
     </aside>
 
@@ -76,6 +81,13 @@
             <q-item-section>Weapons</q-item-section>
           </q-item>
           
+          <q-item clickable data-testid="nav-companions" v-close-popup @click="navigate('companions')" :class="{ active: activeView === 'companions' }">
+            <q-item-section avatar>
+              <q-icon name="pets" />
+            </q-item-section>
+            <q-item-section>Companions</q-item-section>
+          </q-item>
+          
         </q-list>
       </div>
     </q-drawer>
@@ -83,7 +95,7 @@
     <!-- Social links (kept for desktop and mobile) -->
     <div class="nav-socials" aria-hidden>
       <div class="social-links">
-        <a class="icon-link discord" href="https://discord.com/invite/6TGV75sDjW" target="_blank" rel="noreferrer" aria-label="Discord">
+        <a class="icon-link discord" href="https://discord.com/invite/UhQuaASkKR" target="_blank" rel="noreferrer" aria-label="Discord">
           <svg width="30" height="30" viewBox="0 0 71 55" xmlns="http://www.w3.org/2000/svg" aria-hidden>
             <path fill="#5865F2" d="M60.104 4.552A58.648 58.648 0 0046.852.75a41.979 41.979 0 00-1.98 4.1 55.6 55.6 0 00-14.74 0 41.548 41.548 0 00-1.9-4.1 58.87 58.87 0 00-13.26 3.8C6.98 17.3 4.9 29.2 6.66 40.7 20.36 46 33.2 47.9 46.14 47.4c.1-.14.2-.28.3-.42.03 0 .06.01.09.01 13 0 25-1.5 39.3-6.9 1.76-11.6-.32-23.6-10.32-36.44z"/>
             <ellipse cx="22" cy="22" rx="4.2" ry="5.2" fill="#fff" transform="rotate(-8 22 22)" />
@@ -91,7 +103,7 @@
             <path d="M26 31c3 2 10 2 14 0" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.95" />
           </svg>
         </a>
-        <a class="icon-link instagram" href="https://www.instagram.com/skullgaminghq1" target="_blank" rel="noreferrer" aria-label="Instagram">
+        <a class="icon-link instagram" href="https://www.instagram.com/canadiendragonig" target="_blank" rel="noreferrer" aria-label="Instagram">
           <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden>
             <defs>
               <linearGradient id="igGrad" x1="0" x2="1" y1="0" y2="1">
@@ -107,7 +119,7 @@
             </g>
           </svg>
         </a>
-        <a class="icon-link twitter" href="https://twitter.com/skullgaminghq" target="_blank" rel="noreferrer" aria-label="Twitter X">
+        <a class="icon-link twitter" href="https://twitter.com/canadiendragon1" target="_blank" rel="noreferrer" aria-label="Twitter X">
           <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden>
             <path fill="#1DA1F2" d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.71 1.04 4.28 4.28 0 00-7.3 3.9A12.14 12.14 0 013 4.79a4.28 4.28 0 001.33 5.72 4.24 4.24 0 01-1.94-.54v.05a4.28 4.28 0 003.43 4.2c-.49.13-1.01.2-1.54.08a4.28 4.28 0 003.99 2.97A8.58 8.58 0 012 19.54 12.1 12.1 0 008.29 21c7.55 0 11.68-6.26 11.68-11.68v-.53A8.36 8.36 0 0022.46 6z"/>
           </svg>
@@ -134,14 +146,14 @@ onMounted(() => {
 onBeforeUnmount(() => window.removeEventListener('resize', updateIsDesktop))
 
 defineProps<{
-  activeView?: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee'
+  activeView?: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee'|'companions'
 }>()
 
 const emit = defineEmits<{
-  (e: 'navigate', view: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee'): void
+  (e: 'navigate', view: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee'|'companions'): void
 }>()
 
-function navigate(view: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee') {
+function navigate(view: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee'|'companions') {
   drawerOpen.value = false
   emit('navigate', view)
 }

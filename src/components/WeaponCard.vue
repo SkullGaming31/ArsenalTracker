@@ -285,20 +285,25 @@ function formatCurrency(n: number){
   catch { return String(n) }
 }
 
-function toggleCollected() {
-  // collected[idx] is bound with v-model so it already reflects the new value.
-  // emit updated collected parts to persist in overrides
-  const collectedNames = parts.value
+function getCollectedNames() {
+  return parts.value
     .map((p, i) => ({ p: p as PartWithCollected, i }))
     .filter(({ i }) => Boolean(collected.value[i]))
     .map(({ p }) => p.name)
-  // debug info to help diagnose class binding issues
+}
+
+function toggleCollected() {
+  // collected[idx] is bound with v-model so it already reflects the new value.
+  // emit updated collected parts and current mastered flag to persist together
+  const collectedNames = getCollectedNames()
   try { console.debug('toggleCollected', weapon.name, 'collected:', collected.value, 'all?', isAllPartsCollected.value) } catch {}
-  emit('update', { name: weapon.name, parts_collected: collectedNames })
+  emit('update', { name: weapon.name, parts_collected: collectedNames, is_mastered: isMastered.value })
 }
 
 function emitMastered() {
-  emit('update', { name: weapon.name, is_mastered: isMastered.value })
+  // include parts_collected when toggling mastered so updates are applied atomically
+  const collectedNames = getCollectedNames()
+  emit('update', { name: weapon.name, is_mastered: isMastered.value, parts_collected: collectedNames })
 }
 
 

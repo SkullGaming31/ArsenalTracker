@@ -1,0 +1,618 @@
+[
+  {
+    "name": "Adarza Kavat",
+    "type": "standard",
+    "category": "beasts",
+    "subcategory": "Kavat",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "source": "incubation",
+        "description": "Random chance to obtain when incubating a Kavat with a genetic code",
+        "chance": "random"
+      }
+    ]
+  },
+  {
+    "name": "Bhaira Hound",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Hound",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "model"
+      },
+      {
+        "name": "core"
+      },
+      {
+        "name": "Bracket"
+      },
+      {
+        "name": "Stabilizer"
+      }
+    ]
+  },
+  {
+    "name": "Carrier",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Carrier Prime",
+    "type": "prime",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Chesa Kubrow",
+    "type": "standard",
+    "category": "beasts",
+    "subcategory": "Kubrow",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "source": "incubation",
+        "description": "Random chance to obtain when incubating a Kubrow Egg",
+        "chance": "random"
+      }
+    ]
+  },
+  {
+    "name": "Crescent Vulpaphyla",
+    "type": "standard",
+    "category": "deimos",
+    "subcategory": "Vulpaphyla",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "item": "Mutagen",
+        "source": "component",
+        "description": "Crafting component used for Infested beast companions."
+      },
+      {
+        "item": "Antigen",
+        "source": "component",
+        "description": "Crafting component used for Infested beast companions."
+      }
+    ],
+    "acquisition": {
+      "method": "revivification/conservation",
+      "note": "Obtain a Weakened Crescent Vulpaphyla via Conservation after it has been attacked by Infested; also requires Mutagen and Antigen for crafting/revivification."
+    }
+  },
+  {
+    "name": "Dethcube",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Dethcube Prime",
+    "type": "prime",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Diriga",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Djinn",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Dorma Hound",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Hound",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "model"
+      },
+      {
+        "name": "core"
+      },
+      {
+        "name": "Bracket"
+      },
+      {
+        "name": "Stabilizer"
+      }
+    ]
+  },
+  {
+    "name": "Hec Hound",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Hound",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "model"
+      },
+      {
+        "name": "core"
+      },
+      {
+        "name": "Bracket"
+      },
+      {
+        "name": "Stabilizer"
+      }
+    ]
+  },
+  {
+    "name": "Helios",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Helios Prime",
+    "type": "prime",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Helminth Charger",
+    "type": "standard",
+    "category": "beasts",
+    "subcategory": "Kubrow",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "source": "incubation",
+        "description": "While using the infected Warframe with a fully matured cyst, the player can select Begin Incubation under the Kubrow Breeding tab.",
+        "chance": "100% (requires infected Warframe with fully matured cyst)"
+      }
+    ]
+  },
+  {
+    "name": "Huras Kubrow",
+    "type": "standard",
+    "category": "beasts",
+    "subcategory": "Kubrow",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "source": "incubation",
+        "description": "Random chance to obtain when incubating a Kubrow Egg",
+        "chance": "random"
+      }
+    ]
+  },
+  {
+    "name": "Lambeo Moa",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "MOA",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Core"
+      },
+      {
+        "name": "Bracket"
+      },
+      {
+        "name": "Gyro"
+      },
+      {
+        "name": "Stabilizer"
+      }
+    ]
+  },
+  {
+    "name": "Medjay Predasite",
+    "type": "standard",
+    "category": "deimos",
+    "subcategory": "Predasite",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "item": "Mutagen",
+        "source": "component",
+        "description": "Crafting component used for Infested beast companions."
+      },
+      {
+        "item": "Antigen",
+        "source": "component",
+        "description": "Crafting component used for Infested beast companions."
+      }
+    ],
+    "acquisition": {
+      "method": "revivification/conservation",
+      "note": "Obtain a Weakened Medjay Predasite via Conservation after it has been attacked by Infested; also requires Mutagen and Antigen for crafting/revivification."
+    }
+  },
+  {
+    "name": "Nautilus",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Nautilus Prime",
+    "type": "prime",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Nychus Moa",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "MOA",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Core"
+      },
+      {
+        "name": "Bracket"
+      },
+      {
+        "name": "Gyro"
+      },
+      {
+        "name": "Stabilizer"
+      }
+    ]
+  },
+  {
+    "name": "Oloro Moa",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "MOA",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Core"
+      },
+      {
+        "name": "Bracket"
+      },
+      {
+        "name": "Gyro"
+      },
+      {
+        "name": "Stabilizer"
+      }
+    ]
+  },
+  {
+    "name": "Oxylus",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Panzer Vulpaphyla",
+    "type": "standard",
+    "category": "deimos",
+    "subcategory": "Vulpaphyla",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "item": "Mutagen",
+        "source": "component",
+        "description": "Crafting component used for Infested beast companions."
+      },
+      {
+        "item": "Antigen",
+        "source": "component",
+        "description": "Crafting component used for Infested beast companions."
+      }
+    ],
+    "acquisition": {
+      "method": "revivification/conservation",
+      "note": "Obtain a Weakened Panzer Vulpaphyla via Conservation after it has been attacked by Infested; also requires Mutagen and Antigen for crafting/revivification."
+    }
+  },
+  {
+    "name": "Para Moa",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "MOA",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Core"
+      },
+      {
+        "name": "Bracket"
+      },
+      {
+        "name": "Gyro"
+      },
+      {
+        "name": "Stabilizer"
+      }
+    ]
+  },
+  {
+    "name": "Pharaoh Predasite",
+    "type": "standard",
+    "category": "deimos",
+    "subcategory": "Predasite",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "item": "Mutagen",
+        "source": "component",
+        "description": "Crafting component used for Infested beast companions."
+      },
+      {
+        "item": "Antigen",
+        "source": "component",
+        "description": "Crafting component used for Infested beast companions."
+      }
+    ],
+    "acquisition": {
+      "method": "revivification/conservation",
+      "note": "Obtain a Weakened Pharaoh Predasite via Conservation after it has been attacked by Infested; also requires Mutagen and Antigen for crafting/revivification."
+    }
+  },
+  {
+    "name": "Prisma Shade",
+    "type": "prime",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Raksa Kubrow",
+    "type": "standard",
+    "category": "beasts",
+    "subcategory": "Kubrow",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "source": "incubation",
+        "description": "Random chance to obtain when incubating a Kubrow Egg",
+        "chance": "random"
+      }
+    ]
+  },
+  {
+    "name": "Sahasa Kubrow",
+    "type": "standard",
+    "category": "beasts",
+    "subcategory": "Kubrow",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "source": "incubation",
+        "description": "Random chance to obtain when incubating a Kubrow Egg",
+        "chance": "random"
+      }
+    ]
+  },
+  {
+    "name": "Shade",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Shade Prime",
+    "type": "prime",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Sly Vulpaphyla",
+    "type": "standard",
+    "category": "deimos",
+    "subcategory": "Vulpaphyla",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "item": "Mutagen",
+        "source": "component",
+        "description": "Crafting component used for Infested beast companions."
+      },
+      {
+        "item": "Antigen",
+        "source": "component",
+        "description": "Crafting component used for Infested beast companions."
+      }
+    ],
+    "acquisition": {
+      "method": "revivification/conservation",
+      "note": "Obtain a Weakened sly Vulpaphyla via Conservation after it has been attacked by Infested; also requires Mutagen and Antigen for crafting/revivification."
+    }
+  },
+  {
+    "name": "Smeeta Kavat",
+    "type": "standard",
+    "category": "beasts",
+    "subcategory": "Kavat",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "source": "incubation",
+        "description": "Random chance to obtain when incubating a Kavat with a genetic code",
+        "chance": "random"
+      }
+    ]
+  },
+  {
+    "name": "Sunika Kubrow",
+    "type": "standard",
+    "category": "beasts",
+    "subcategory": "Kubrow",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "source": "incubation",
+        "description": "Random chance to obtain when incubating a Kubrow Egg",
+        "chance": "random"
+      }
+    ]
+  },
+  {
+    "name": "Taxon",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Vasca Kavat",
+    "type": "standard",
+    "category": "beasts",
+    "subcategory": "Kavat",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "source": "incubation",
+        "description": "Random chance to obtain when incubating a Kavat with a genetic code",
+        "chance": "random"
+      }
+    ]
+  },
+  {
+    "name": "Venari",
+    "type": "standard",
+    "category": "beasts",
+    "subcategory": "Kavat",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "source": "incubation",
+        "description": "Random chance to obtain when incubating a Kavat with a genetic code",
+        "chance": "random"
+      }
+    ]
+  },
+  {
+    "name": "Venari Prime",
+    "type": "prime",
+    "category": "beasts",
+    "subcategory": "Kavat",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "source": "warframe",
+        "description": "Khora Prime's signature pet",
+        "chance": "100% (requires Khora Prime equipped in the Arsenal)"
+      }
+    ]
+  },
+  {
+    "name": "Vizier Predasite",
+    "type": "standard",
+    "category": "deimos",
+    "subcategory": "Predasite",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "item": "Mutagen",
+        "source": "component",
+        "description": "Crafting component used for Infested beast companions."
+      },
+      {
+        "item": "Antigen",
+        "source": "component",
+        "description": "Crafting component used for Infested beast companions."
+      }
+    ],
+    "acquisition": {
+      "method": "revivification/conservation",
+      "note": "Obtain a Weakened Vizier Predasite via Conservation after it has been attacked by Infested; also requires Mutagen and Antigen for crafting/revivification."
+    }
+  },
+  {
+    "name": "Wyrm",
+    "type": "standard",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Wyrm Prime",
+    "type": "prime",
+    "category": "robotics",
+    "subcategory": "Sentinel",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  }
+]
