@@ -28,7 +28,7 @@ jobs:
         run: npm ci
 
       - name: Type check (vue-tsc)
-        run: npm run type-check
+        run: npm run typecheck
 
       - name: Run unit tests (Vitest)
         run: npm run test -- --run
