@@ -72,7 +72,7 @@
              and ensures consistent placement across cards. -->
         <div class="check-row footer" style="margin-top:8px">
           <span>Mastered: {{ isMastered ? 'true' : 'false' }}</span>
-          <input type="checkbox" v-model="isMastered" @change="emitMastered" :disabled="!canMaster" :title="masteredTitle" />
+          <input type="checkbox" v-model="isMastered" @change="onMasterChange" :disabled="!canMaster" :title="masteredTitle" />
         </div>
     </div>
   </q-card>
@@ -331,6 +331,18 @@ watch(canMaster, (allowed) => {
     emit('update', { name: weapon.name, is_mastered: false })
   }
 })
+
+function onMasterChange() {
+  // v-model already applied the new value; ensure we don't allow enabling when canMaster is false
+  if (!canMaster.value && isMastered.value) {
+    isMastered.value = false
+    // emit update to persist clearing if necessary
+    emit('update', { name: weapon.name, is_mastered: false })
+    return
+  }
+  // otherwise emit mastered state along with parts collected
+  emitMastered()
+}
 
 function rarityColor(rarity: string){
   switch(String(rarity||'').toLowerCase()){

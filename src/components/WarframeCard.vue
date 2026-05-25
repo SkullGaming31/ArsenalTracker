@@ -129,6 +129,7 @@
             v-model="isMastered"
             :disabled="!isAllPartsCollected"
             :title="isAllPartsCollected ? 'Mark mastered' : 'Collect all parts to enable mastery'"
+            @change="onMasterChange"
           />
         </div>
       </div>
@@ -588,6 +589,16 @@ watch(isAllPartsCollected, (val) => {
     isMastered.value = false;
   }
 });
+
+function onMasterChange() {
+  // If parts are not all collected, revert the change and do nothing.
+  if (!isAllPartsCollected.value) {
+    // revert v-model change
+    isMastered.value = false
+    return
+  }
+  // otherwise, emit will happen via the existing deep watcher that includes isMastered
+}
 </script>
 
 <style scoped>

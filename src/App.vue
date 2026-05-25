@@ -96,6 +96,8 @@ const globalQuery = ref<string>('')
 const globalHideCompleted = ref<boolean>(false)
 function onNavigate(v: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee'|'companions') {
   console.log('[App] onNavigate ->', v)
+  // clear global search when navigating between pages
+  if (v !== view.value) globalQuery.value = ''
   view.value = v
 }
 // const pageTitle = computed(() => {

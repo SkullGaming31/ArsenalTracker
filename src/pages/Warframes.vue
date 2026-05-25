@@ -113,10 +113,10 @@ const flagTrue = (v: unknown): boolean => {
 }
 
 const isCompleted = (w: Warframe) => {
-  // mastered OR all parts collected
+  // completed only when both mastery and all parts are present
   const mastered = flagTrue(w.is_mastered)
   const partsAll = flagTrue(w.neuroptics_collected) && flagTrue(w.chassis_collected) && flagTrue(w.systems_collected) && flagTrue(w.blueprint_collected)
-  return mastered || partsAll
+  return mastered && partsAll
 }
 
 // create/upate fuse index whenever the base list changes

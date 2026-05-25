@@ -1643,30 +1643,6 @@
     ]
   },
   {
-    "name": "MK1-Braton",
-    "category": "primary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
-    "name": "MK1-Paris",
-    "category": "primary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
-    "name": "MK1-Strun",
-    "category": "primary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
     "name": "Mutalist Cernos",
     "category": "primary",
     "type": "standard",
@@ -4268,38 +4244,6 @@
   },
   {
     "name": "Marelok Vaykor",
-    "category": "secondary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
-    "name": "MK1-Kunai",
-    "category": "secondary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
-    "name": "MK1-Furis",
-    "category": "secondary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
-    "name": "MK1-Lato",
-    "category": "secondary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
-    "name": "MK1-Viper",
     "category": "secondary",
     "type": "standard",
     "is_crafted": false,
@@ -6943,22 +6887,6 @@
     ]
   },
   {
-    "name": "MK1-Bo",
-    "category": "melee",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
-    "name": "MK1-Furax",
-    "category": "melee",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
     "name": "MK1-Machete",
     "category": "melee",
     "type": "standard",
@@ -8759,38 +8687,6 @@
     ]
   },
   {
-    "name": "AX-52",
-    "category": "primary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
-    "name": "boltor",
-    "category": "primary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
-    "name": "corinth",
-    "category": "primary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
-    "name": "corinth prime",
-    "category": "primary",
-    "type": "prime",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
     "name": "Daikyu Prime",
     "category": "primary",
     "type": "prime",
@@ -9155,14 +9051,6 @@
     ]
   },
   {
-    "name": "Thronbak",
-    "category": "primary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
     "name": "Zhuge",
     "category": "primary",
     "type": "standard",
@@ -9270,7 +9158,33 @@
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
-    "parts": []
+    "parts": [
+      {
+        "name": "credits",
+        "count": 20000,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "count": 8000,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "count": 3500,
+        "collected": false
+      },
+      {
+        "name": "Cryotic",
+        "count": 1200,
+        "collected": false
+      },
+      {
+        "name": "Argon Crystal",
+        "count": 2,
+        "collected": false
+      }
+    ]
   },
   {
     "name": "Alternox",
@@ -9368,22 +9282,6 @@
         "collected": false
       }
     ]
-  },
-  {
-    "name": "bubonico",
-    "category": "primary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
-    "name": "buzlok",
-    "category": "primary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
   },
   {
     "name": "Carmine Penta",
@@ -9549,14 +9447,6 @@
     "parts": []
   },
   {
-    "name": "Coda synapse",
-    "category": "primary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
     "name": "Convectrix",
     "category": "primary",
     "type": "standard",
@@ -9589,14 +9479,6 @@
         "collected": false
       }
     ]
-  },
-  {
-    "name": "EFV-5 Jupiter",
-    "category": "primary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
   },
   {
     "name": "Evensong",
@@ -10559,14 +10441,6 @@
     ]
   },
   {
-    "name": "vadarya Prime",
-    "category": "primary",
-    "type": "prime",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": []
-  },
-  {
     "name": "Vaykor Hek",
     "category": "primary",
     "type": "standard",
@@ -10612,40 +10486,6 @@
       {
         "name": "Morphics",
         "count": 2,
-        "collected": false
-      }
-    ]
-  },
-  {
-    "name": "Afentis",
-    "category": "primary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": [
-      {
-        "name": "Argon Crystal",
-        "count": 2,
-        "collected": false
-      },
-      {
-        "name": "Blueprint",
-        "count": 1,
-        "collected": false
-      },
-      {
-        "name": "Cryotic",
-        "count": 1200,
-        "collected": false
-      },
-      {
-        "name": "Ferrite",
-        "count": 8000,
-        "collected": false
-      },
-      {
-        "name": "Rubedo",
-        "count": 3500,
         "collected": false
       }
     ]
@@ -17228,5 +17068,13 @@
         "collected": false
       }
     ]
+  },
+  {
+    "name": "Sarofang Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
   }
 ]

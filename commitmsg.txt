@@ -1,0 +1,13 @@
+Deduplicate weapons, remove combined 'All weapons' scroller, and persist weapon updates
+
+- Deduplicated src/data/weapons.json; created backup at src/data/weapons.json.bak.
+- Removed the combined 'All weapons' virtual scroller and pagination from src/pages/Weapons.vue; keep Primary/Secondary/Melee sections only.
+- Removed unused virtualizer/pagination code and cleaned up related imports.
+- Wired WeaponCard @update handlers and restored handleUpdate to persist overrides via collection.setOverride so part-collection and mastered toggles are saved.
+- Restored saving behavior: checking all part boxes and toggling Mastered now persists across navigation.
+- Updated completion semantics so hideCompleted requires both parts collected and mastery across Weapons/Warframes/Companions, and prevented enabling Mastered unless parts are collected (gated in card components).
+- Normalized companion parts handling and made parts entries heterogeneous-friendly (supports p.item, p.name, p.description, p.qty, p.chance).
+- Cleared global header search on navigation (App.vue).
+- Identified and deduped duplicate weapon entries; addressed duplicate warframe entries and reclassified certain entries (e.g., Bonewidow, Voidrig) to type: "necramech" where applicable.
+- Fixed lint and type errors (removed unused vars, safer runtime guards) so lint and typecheck pass.
+- Note: Tests referencing the removed All-weapons scroller may need updates.

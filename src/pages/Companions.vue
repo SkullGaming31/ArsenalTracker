@@ -58,10 +58,31 @@ function onMasteredChange(c: Companion, e: Event) {
 const collection = useCollectionStore()
 const companionsAll = computed<Companion[]>(() => collection.mergedCompanions as Companion[])
 
+const props = defineProps<{ query?: string; hideCompleted?: boolean }>()
+const hideCompleted = computed(() => Boolean(props.hideCompleted))
+
+// helper to coerce various flag shapes into booleans
+const flagTrue = (v: unknown): boolean => {
+  if (v === true) return true
+  if (v === false) return false
+  if (typeof v === 'string') return v.toLowerCase() === 'true'
+  if (typeof v === 'number') return v !== 0
+  return Boolean(v)
+}
+
+function isCompanionCompleted(c: Companion) {
+  // require mastery and all parts collected (if any)
+  if (!flagTrue((c as unknown as Record<string, unknown>).mastered)) return false
+  const parts = (c.parts || []) as unknown[]
+  if (parts.length === 0) return true
+  return parts.every(p => flagTrue((p && (p as unknown as Record<string, unknown>).collected)))
+}
+
 // group by category -> subcategory -> list
 const grouped = computed(() => {
   const out: Record<string, Record<string, Companion[]>> = {}
-  for (const c of companionsAll.value) {
+  const source = companionsAll.value.filter(c => !hideCompleted.value || !isCompanionCompleted(c))
+  for (const c of source) {
     const cat = String(c.category || 'uncategorized')
     const sub = String(c.subcategory || c.type || 'General')
     out[cat] = out[cat] || {}

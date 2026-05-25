@@ -1738,7 +1738,7 @@
   },
   {
     "name": "Bonewidow",
-    "type": "non-prime",
+    "type": "necramech",
     "neuroptics_collected": false,
     "chassis_collected": false,
     "systems_collected": false,
@@ -1894,20 +1894,7 @@
   },
   {
     "name": "Voidrig",
-    "type": "non-prime",
-    "neuroptics_collected": false,
-    "chassis_collected": false,
-    "systems_collected": false,
-    "blueprint_collected": false,
-    "is_mastered": false,
-    "neuroptics_resources": [],
-    "chassis_resources": [],
-    "systems_resources": [],
-    "blueprint_resources": []
-  },
-  {
-    "name": "Follie",
-    "type": "non-prime",
+    "type": "necramech",
     "neuroptics_collected": false,
     "chassis_collected": false,
     "systems_collected": false,
@@ -1930,5 +1917,107 @@
     "chassis_resources": [],
     "systems_resources": [],
     "blueprint_resources": []
+  },
+  {
+    "name": "Follie",
+    "type": "non-prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [
+      {
+        "name": "Neurodes",
+        "quantity": 2,
+        "collected": false
+      },
+      {
+        "name": "Gallium",
+        "quantity": 3,
+        "collected": false
+      },
+      {
+        "name": "Cryotic",
+        "quantity": 150,
+        "collected": false
+      },
+      {
+        "name": "Neural Sensors",
+        "quantity": 2,
+        "collected": false
+      }
+    ],
+    "chassis_resources": [
+      {
+        "name": "Alloy Plate",
+        "quantity": 800,
+        "collected": false
+      },
+      {
+        "name": "Argon Crystal",
+        "quantity": 2,
+        "collected": false
+      },
+      {
+        "name": "Ferrite",
+        "quantity": 800,
+        "collected": false
+      },
+      {
+        "name": "Salvage",
+        "quantity": 600,
+        "collected": false
+      }
+    ],
+    "systems_resources": [
+      {
+        "name": "Circuits",
+        "quantity": 250,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "quantity": 500,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "quantity": 4,
+        "collected": false
+      },
+      {
+        "name": "Oxium",
+        "quantity": 50,
+        "collected": false
+      }
+    ],
+    "blueprint_resources": [
+      {
+        "name": "Credits",
+        "quantity": 30000,
+        "collected": false
+      },
+      {
+        "name": "Follie Neuroptics Blueprint",
+        "quantity": 1,
+        "collected": false
+      },
+      {
+        "name": "Follie Chassis Blueprint",
+        "quantity": 1,
+        "collected": false
+      },
+      {
+        "name": "Follie Systems Blueprint",
+        "quantity": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "quantity": 3,
+        "collected": false
+      }
+    ]
   }
 ]

@@ -6,14 +6,14 @@ This file contains the project roadmap, current status, and suggested next steps
 
 - Convert Warframe CSV to JSON — Parsed Warframe_export.csv into the project's Warframe JSON schema.
 - Write `src/data/warframes.json` — Created/overwrote the dataset used by the app.
-- Run diagnostics — Type-checks and basic diagnostics were run after importing data.
+- Run diagnostics — Typechecks and basic diagnostics were run after importing data.
 - Ensure weapons display cards — `WeaponCard.vue` styles/markup fixed.
 - Dashboard (landing page) — Dashboard with stats created.
 - Add footer with social links — `AppFooter.vue` added and wired.
 - Add social icons to footer — inline SVG icons added.
 - Fix WarframeCard empty render — corrected invalid markup so cards render.
 - Polish dashboard UI — enriched stat cards and progress visuals.
-- Add CI workflow — GitHub Actions for type-check and tests added.
+- Add CI workflow — GitHub Actions for typecheck and tests added.
 - Finish git init & initial commit — Local repo created and initial commit made.
 - Push repository to GitHub — Remote created and initial push completed.
 - Rename project to `arsenaltracker` — `package.json`, `README.md`, and references updated.
@@ -22,7 +22,8 @@ This file contains the project roadmap, current status, and suggested next steps
 
 ## In-progress
 
-None at the moment — short-term work items are listed under "Next steps (recommended)" and backlog.
+FIX: add cards like in the wardframe and weapon pages, with images
+FIX: fix discord link on about page
 
 ## Backlog / Not started
 
