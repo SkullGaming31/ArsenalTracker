@@ -25,3 +25,6 @@ yarn-error.log*
 NOTES.txt
 tmp-cdn-coverage-summary.json
 tmp-cdn-coverage.csv
+*.bak
+*.bak2
+*.bak3
