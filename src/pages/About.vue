@@ -118,7 +118,7 @@ function onHow() {
 function onHelp() {
   // open the community discord in a new tab
   try {
-    window.open('https://discord.com/invite/6TGV75sDjW', '_blank')
+    window.open('https://discord.com/invite/UhQuaASkKR', '_blank')
   } catch {
     // fallback: navigate to dashboard so user can find socials
     emit('navigate', 'dashboard')
