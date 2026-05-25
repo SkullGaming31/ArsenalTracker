@@ -9577,7 +9577,7 @@
   },
   {
     "name": "Tenet Envoy",
-    "category": "primary",
+    "category": "secondary",
     "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
@@ -9591,7 +9591,7 @@
   },
   {
     "name": "Tenet Ferrox",
-    "category": "primary",
+    "category": "melee",
     "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
@@ -9634,6 +9634,34 @@
   {
     "name": "Tenet Tetra",
     "category": "primary",
+    "type": "tenet",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tenet Quanta",
+    "category": "primary",
+    "type": "tenet",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Tenet Cycron",
+    "category": "secondary",
     "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
@@ -15386,7 +15414,7 @@
   {
     "name": "Tenet Agendus",
     "category": "melee",
-    "type": "standard",
+    "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
     "parts": [
@@ -15405,20 +15433,6 @@
   {
     "name": "Tenet Arca Plasmor",
     "category": "primary",
-    "type": "standard",
-    "is_crafted": false,
-    "is_mastered": false,
-    "parts": [
-      {
-        "name": "Blueprint",
-        "count": 1,
-        "collected": false
-      }
-    ]
-  },
-  {
-    "name": "Tenet Cycron",
-    "category": "secondary",
     "type": "standard",
     "is_crafted": false,
     "is_mastered": false,
@@ -15461,7 +15475,7 @@
   {
     "name": "Tenet Exec",
     "category": "melee",
-    "type": "standard",
+    "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
     "parts": [
@@ -15475,7 +15489,7 @@
   {
     "name": "Tenet Grigori",
     "category": "melee",
-    "type": "standard",
+    "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
     "parts": [
@@ -15489,7 +15503,7 @@
   {
     "name": "Tenet Livia",
     "category": "melee",
-    "type": "standard",
+    "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
     "parts": [
@@ -15503,7 +15517,7 @@
   {
     "name": "Tenet Plinx",
     "category": "secondary",
-    "type": "standard",
+    "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
     "parts": [
@@ -15517,7 +15531,7 @@
   {
     "name": "Tenet Spirex",
     "category": "secondary",
-    "type": "standard",
+    "type": "tenet",
     "is_crafted": false,
     "is_mastered": false,
     "parts": [
