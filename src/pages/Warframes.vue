@@ -2,9 +2,13 @@
   <div class="warframes">
     <div class="toolbar">
       <!-- Search and Hide Completed moved to global header -->
+      <div style="display:flex; gap:12px; align-items:center;">
+        <div>Show</div>
+        <q-select dense outlined emit-value v-model="primeFilter" :options="primeFilterOptions" style="min-width:160px" />
+      </div>
     </div>
       <!-- dev debug panel removed -->
-    <section class="section">
+    <section v-if="showPrimeSection" class="section">
       <h3>Prime</h3>
       <div class="pager" style="display:flex; gap:8px; align-items:center; margin-bottom:8px">
         <div style="display:flex; gap:8px; align-items:center;">
@@ -32,7 +36,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section v-if="showNonPrimeSection" class="section">
       <h3>Non-Prime</h3>
       <div class="pager" style="display:flex; gap:8px; align-items:center; margin-bottom:8px">
         <div style="display:flex; gap:8px; align-items:center;">
@@ -77,6 +81,17 @@ const props = defineProps<{ query?: string; hideCompleted?: boolean }>()
 const query = computed(() => props.query ?? '')
 const hideCompleted = computed(() => Boolean(props.hideCompleted))
 const search = useSearchStore()
+
+// Filter for showing prime/non-prime/all sections
+const primeFilter = ref('all') // 'all' | 'prime' | 'non-prime'
+const primeFilterOptions = [
+  { label: 'All', value: 'all' },
+  { label: 'Prime', value: 'prime' },
+  { label: 'Non-prime', value: 'non-prime' }
+]
+
+const showPrimeSection = computed(() => primeFilter.value === 'all' || primeFilter.value === 'prime')
+const showNonPrimeSection = computed(() => primeFilter.value === 'all' || primeFilter.value === 'non-prime')
 
 const warframesAll = computed<Warframe[]>(() => collection.mergedWarframes as Warframe[])
 

@@ -142,16 +142,22 @@ const flagTrue = (v: unknown): boolean => {
 
 const totalWarframesMastered = computed(() => wf.value.filter((w: Warframe) => flagTrue(w.is_mastered) || partCollected(w)).length)
 
+const hasCategory = (w: Weapon, cat: string) => {
+  const c = (w && (w as unknown as { category?: string | string[] }).category) as string | string[] | undefined
+  if (Array.isArray(c)) return c.includes(cat)
+  return String(c || '') === cat
+}
+
 const total = computed(() => ({
-  primary: wp.value.filter((w: Weapon) => w.category === 'primary').length,
-  secondary: wp.value.filter((w: Weapon) => w.category === 'secondary').length,
-  melee: wp.value.filter((w: Weapon) => w.category === 'melee').length,
+  primary: wp.value.filter((w: Weapon) => hasCategory(w, 'primary')).length,
+  secondary: wp.value.filter((w: Weapon) => hasCategory(w, 'secondary')).length,
+  melee: wp.value.filter((w: Weapon) => hasCategory(w, 'melee')).length,
 }))
 
 const mastered = computed(() => ({
-  primary: wp.value.filter((w: Weapon) => w.category === 'primary' && (flagTrue(w.is_mastered) || flagTrue(w.is_crafted))).length,
-  secondary: wp.value.filter((w: Weapon) => w.category === 'secondary' && (flagTrue(w.is_mastered) || flagTrue(w.is_crafted))).length,
-  melee: wp.value.filter((w: Weapon) => w.category === 'melee' && (flagTrue(w.is_mastered) || flagTrue(w.is_crafted))).length,
+  primary: wp.value.filter((w: Weapon) => hasCategory(w, 'primary') && (flagTrue(w.is_mastered) || flagTrue(w.is_crafted))).length,
+  secondary: wp.value.filter((w: Weapon) => hasCategory(w, 'secondary') && (flagTrue(w.is_mastered) || flagTrue(w.is_crafted))).length,
+  melee: wp.value.filter((w: Weapon) => hasCategory(w, 'melee') && (flagTrue(w.is_mastered) || flagTrue(w.is_crafted))).length,
 }))
 
 // helper to identify prime vs non-prime
@@ -168,8 +174,8 @@ const wfPrimesCompleted = computed(() => wf.value.filter((w: Warframe) => isPrim
 const wfStandardsCompleted = computed(() => wf.value.filter((w: Warframe) => !isPrime(w.type) && partCollected(w)).length)
 
 // Weapon category helper (use computed .value)
-const primesIn = (cat: string) => wp.value.filter((w: Weapon) => w.category === cat && isPrime(w.type))
-const standardsIn = (cat: string) => wp.value.filter((w: Weapon) => w.category === cat && !isPrime(w.type))
+const primesIn = (cat: string) => wp.value.filter((w: Weapon) => hasCategory(w, cat) && isPrime(w.type))
+const standardsIn = (cat: string) => wp.value.filter((w: Weapon) => hasCategory(w, cat) && !isPrime(w.type))
 
 const primaryPrimesTotal = computed(() => primesIn('primary').length)
 const primaryStandardsTotal = computed(() => standardsIn('primary').length)

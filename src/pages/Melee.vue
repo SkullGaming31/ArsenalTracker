@@ -38,9 +38,15 @@ const flagTrue = (v: unknown): boolean => {
 
 const isCompleted = (w: Weapon) => flagTrue(w.is_crafted) || flagTrue(w.is_mastered)
 
+const hasCategory = (w: Weapon, cat: string) => {
+  const c = (w && (w as unknown as { category?: string | string[] }).category) as string | string[] | undefined
+  if (Array.isArray(c)) return c.includes(cat)
+  return String(c || '') === cat
+}
+
 const filtered = computed(() => {
   const q = String(query.value || '').trim().toLowerCase()
-  let list = all.value.filter(w => w.category === 'melee' && (!q || w.name.toLowerCase().includes(q)))
+  let list = all.value.filter(w => hasCategory(w, 'melee') && (!q || w.name.toLowerCase().includes(q)))
   if (hideCompleted.value) list = list.filter(w => !isCompleted(w))
   // sort alphabetically
   return list.slice().sort((a, b) => (a.name || '').localeCompare(b.name || ''))

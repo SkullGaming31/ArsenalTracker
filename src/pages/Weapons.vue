@@ -22,7 +22,7 @@
     <section>
       <h3>Primary</h3>
       <div class="grid">
-        <WeaponCard v-for="w in primaries" :key="w.name" :weapon="w" @update="handleUpdate" />
+        <WeaponCard v-for="w in primaries" :key="`primary-${w.name}`" :weapon="w" @update="handleUpdate" />
       </div>
       
     </section>
@@ -30,7 +30,7 @@
     <section>
       <h3>Secondary</h3>
       <div class="grid">
-        <WeaponCard v-for="w in secondaries" :key="w.name" :weapon="w" @update="handleUpdate" />
+        <WeaponCard v-for="w in secondaries" :key="`secondary-${w.name}`" :weapon="w" @update="handleUpdate" />
       </div>
       
     </section>
@@ -38,7 +38,7 @@
     <section>
       <h3>Melee</h3>
       <div class="grid">
-        <WeaponCard v-for="w in melees" :key="w.name" :weapon="w" @update="handleUpdate" />
+        <WeaponCard v-for="w in melees" :key="`melee-${w.name}`" :weapon="w" @update="handleUpdate" />
       </div>
       
     </section>
@@ -178,9 +178,15 @@ const filtered = computed(() => {
   return list
 })
 
-const primaries = computed(() => filtered.value.filter(w => w.category === 'primary').slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
-const secondaries = computed(() => filtered.value.filter(w => w.category === 'secondary').slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
-const melees = computed(() => filtered.value.filter(w => w.category === 'melee').slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
+const hasCategory = (w: Weapon, cat: string) => {
+  const c = (w && (w as unknown as { category?: string | string[] }).category) as string | string[] | undefined
+  if (Array.isArray(c)) return c.includes(cat)
+  return String(c || '') === cat
+}
+
+const primaries = computed(() => filtered.value.filter(w => hasCategory(w, 'primary')).slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
+const secondaries = computed(() => filtered.value.filter(w => hasCategory(w, 'secondary')).slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
+const melees = computed(() => filtered.value.filter(w => hasCategory(w, 'melee')).slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
 
 // Virtual scroller and pagination removed; page now shows Primary/Secondary/Melee only
 

@@ -41,7 +41,7 @@
               </div>
               <div class="row-actions">
                 <!-- use v-model so Vue updates collected[idx] before change handler runs -->
-                <input type="checkbox" v-model="collected[idx]" @change="toggleCollected" />
+                <input type="checkbox" v-model="collected[idx]" @change="toggleCollected(idx)" />
                 <button v-if="(p.resources || []).length || (p.relics || []).length" class="toggle-res" @click="toggles[idx] = !toggles[idx]">▾</button>
               </div>
             </div>
@@ -292,8 +292,20 @@ function getCollectedNames() {
     .map(({ p }) => p.name)
 }
 
-function toggleCollected() {
-  // collected[idx] is bound with v-model so it already reflects the new value.
+function toggleCollected(changedIdx: number) {
+  // collected[changedIdx] already reflects the new value via v-model.
+  // When a part name appears multiple times (e.g. weapon appears in multiple categories
+  // or has duplicate part entries), toggle all parts with the same normalized name
+  // so the UI behaves as a single shared part.
+  const val = Boolean(collected.value[changedIdx])
+  const norm = String((parts.value[changedIdx] as PartWithCollected)?.name || '').trim().toLowerCase()
+  if (norm) {
+    for (let i = 0; i < parts.value.length; i++) {
+      const pn = String((parts.value[i] as PartWithCollected)?.name || '').trim().toLowerCase()
+      if (pn === norm) collected.value[i] = val
+    }
+  }
+
   // emit updated collected parts and current mastered flag to persist together
   const collectedNames = getCollectedNames()
   try { console.debug('toggleCollected', weapon.name, 'collected:', collected.value, 'all?', isAllPartsCollected.value) } catch {}

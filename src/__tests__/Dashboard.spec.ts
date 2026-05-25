@@ -11,12 +11,12 @@ describe('Dashboard', () => {
     setActivePinia(createPinia())
     const wrapper = mount(Dashboard, { global: { plugins: [createPinia()] } })
 
-  // Use the collection store merged views to match component behavior (deduped)
-  setActivePinia(createPinia())
-  const collection = useCollectionStore()
+    // Use the collection store merged views to match component behavior (deduped)
+    setActivePinia(createPinia())
+    const collection = useCollectionStore()
 
-  const totalWarframes = String(collection.mergedWarframes.length)
-  const totalWarframesMastered = String((collection.mergedWarframes as unknown as Warframe[]).filter(w => Boolean(w.is_mastered)).length)
+    const totalWarframes = String(collection.mergedWarframes.length)
+    const totalWarframesMastered = String((collection.mergedWarframes as unknown as Warframe[]).filter(w => Boolean(w.is_mastered)).length)
 
     // assert the rendered text contains the totals
     const text = wrapper.text()
@@ -24,9 +24,15 @@ describe('Dashboard', () => {
     expect(text).toContain(totalWarframesMastered)
 
     // check weapon totals present (primary/secondary/melee)
-  const totalPrimary = String((collection.mergedWeapons as unknown as Weapon[]).filter(w => w.category === 'primary').length)
-  const totalSecondary = String((collection.mergedWeapons as unknown as Weapon[]).filter(w => w.category === 'secondary').length)
-  const totalMelee = String((collection.mergedWeapons as unknown as Weapon[]).filter(w => w.category === 'melee').length)
+    const hasCategory = (w: Weapon, cat: string) => {
+      const c = (w as unknown as { category?: string | string[] }).category
+      if (Array.isArray(c)) return c.includes(cat)
+      return String(c || '') === cat
+    }
+
+    const totalPrimary = String((collection.mergedWeapons as unknown as Weapon[]).filter(w => hasCategory(w, 'primary')).length)
+    const totalSecondary = String((collection.mergedWeapons as unknown as Weapon[]).filter(w => hasCategory(w, 'secondary')).length)
+    const totalMelee = String((collection.mergedWeapons as unknown as Weapon[]).filter(w => hasCategory(w, 'melee')).length)
 
     expect(text).toContain(totalPrimary)
     expect(text).toContain(totalSecondary)
