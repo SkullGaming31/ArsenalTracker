@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Homepage: https://SkullGaming31.github.io/ArsenalTracker
+Homepage: https://arsenal-tracker.canadiendragon.live
 
 How to contribute: see `CONTRIBUTING.md` for local setup, tests, and PR guidelines.
 
@@ -76,6 +76,12 @@ The persisted payload is a versioned JSON object. Example (representative, field
     "Braton Prime": {
       "parts_collected": ["Barrel", "Receiver"],
       "is_mastered": false
+    },
+    "Carrier Prime": {
+      "mastered": true,
+      "parts_collected": ["Chassis", "Systems"],
+      "category": "robotics",
+      "notes": "Companion override example: mastered + parts"
     }
   }
 }
@@ -86,6 +92,7 @@ Notes:
 - `overrides` is a map keyed by the item name (warframe or weapon). Each override object is a partial set of the fields that appear on the original data; the store merges overrides onto the static data at runtime.
 - Typical warframe override fields: `neuroptics_collected`, `chassis_collected`, `systems_collected`, `blueprint_collected`, `is_mastered`, and optional per-part resource arrays (e.g. `neuroptics_resources`).
 - Typical weapon override fields: `parts_collected` (array of part names), `is_mastered`, or `parts` (detailed part shapes).
+- Typical companion override fields: `mastered` or `is_mastered` (boolean), `parts_collected` (array of part names), `category` (e.g. `robotics`, `beasts`, `deimos`), and optional per-part resource arrays or notes. Companion overrides are stored in the same top-level `overrides` map keyed by companion name.
 - You can export the current payload from the Dashboard (Export JSON) which uses the same versioned shape; importing accepts both the versioned shape and the legacy unversioned overrides map and will migrate automatically.
 
 Be careful when editing backups by hand: the store expects JSON and will merge whatever keys you provide into the in-memory merged data. Prefer using the app's Export/Import workflow to create and restore backups.
