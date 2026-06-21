@@ -234,6 +234,123 @@
     "blueprint_resources": []
   },
   {
+    "name": "sirius and orion",
+    "type": "standard",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [
+      {
+        "name": "Credits",
+        "quantity": 15000,
+        "collected": false
+      },
+      {
+        "name": "Circuits",
+        "quantity": 250,
+        "collected": false
+      },
+      {
+        "name": "Gallium",
+        "quantity": 5,
+        "collected": false
+      },
+      {
+        "name": "Nullstones",
+        "quantity": 5,
+        "collected": false
+      },
+      {
+        "name": "Asterite",
+        "quantity": 75,
+        "collected": false
+      }
+    ],
+    "chassis_resources": [
+      {
+        "name": "Credits",
+        "quantity": 15000,
+        "collected": false
+      },
+      {
+        "name": "Rubedo",
+        "quantity": 600,
+        "collected": false
+      },
+      {
+        "name": "Alloy Plate",
+        "quantity": 400,
+        "collected": false
+      },
+      {
+        "name": "Carbides",
+        "quantity": 600,
+        "collected": false
+      },
+      {
+        "name": "Ticor Plate",
+        "quantity": 500,
+        "collected": false
+      }
+    ],
+    "systems_resources": [
+      {
+        "name": "Credits",
+        "quantity": 15000,
+        "collected": false
+      },
+      {
+        "name": "Polymer Bundle",
+        "quantity": 500,
+        "collected": false
+      },
+      {
+        "name": "Morphics",
+        "quantity": 30,
+        "collected": false
+      },
+      {
+        "name": "Control Module",
+        "quantity": 20,
+        "collected": false
+      },
+      {
+        "name": "Isos",
+        "quantity": 100,
+        "collected": false
+      }
+    ],
+    "blueprint_resources": [
+      {
+        "name": "Credits",
+        "quantity": 25000,
+        "collected": false
+      },
+      {
+        "name": "sirius and orion neuroptics",
+        "quantity": 1,
+        "collected": false
+      },
+      {
+        "name": "sirius and orion systems",
+        "quantity": 1,
+        "collected": false
+      },
+      {
+        "name": "sirius and orion chassis",
+        "quantity": 5,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "quantity": 3,
+        "collected": false
+      }
+    ]
+  },
+  {
     "name": "Volt",
     "type": "non-prime",
     "neuroptics_collected": true,

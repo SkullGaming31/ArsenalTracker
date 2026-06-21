@@ -10260,6 +10260,64 @@
     ]
   },
   {
+    "name": "wrath",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "wrath blade",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Pride blade",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Pride",
+    "category": "melee",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "handle",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "wrath blade",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Pride blade",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
     "name": "Ax-52",
     "category": "primary",
     "type": "standard",
