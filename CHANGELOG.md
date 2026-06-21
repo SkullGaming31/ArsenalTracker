@@ -71,6 +71,28 @@ These changes were made to diagnose and resolve intermittent test failures where
   - If you want the current merged `weapons.json` committed, run `git add src/data/weapons.json && git commit -m "chore(data): populate weapons.parts from weapons.api.json"`.
  -More work done on Weapons data quality
 
+## 2026-06-20 - UI, data, and mobile UX
+
+- Data
+  - Added new Tenet weapon entry `Tenet Quanta` to `src/data/weapons.json` and updated `src/data/warframes.json` with the new warframe entry.
+
+- UI / Behavior
+  - Added external wiki links for weapons and warframes: names now link to `https://wiki.warframe.com/w/<Name>` using `encodeURIComponent` for multi-word names. Files: `src/components/WeaponCard.vue`, `src/components/WarframeCard.vue`.
+  - Improved name text contrast and link styling so names remain readable across themes.
+  - Adjusted `hideCompleted` and mastery behavior so mastery can only be toggled when all required parts are collected (market-only/no-parts remain editable).
+  - Parts toggles now propagate across duplicate cards with the same normalized name (syncs collection state for duplicates).
+
+- Mobile / Navigation
+  - Fixed mobile drawer background and ensured full-height dark background so the drawer no longer shows white gaps. File: `src/components/NavBar.vue`.
+  - Reworked mobile header controls: added a close (✕) button positioned above the search popover, enlarged hit area, and added outside-click + Escape handling. File: `src/components/AppHeader.vue`.
+
+- Tests & tooling
+  - Ran linters and unit tests locally: `npm run lint` and `npm test` — all lint rules passed and all unit tests passed (50 tests).
+
+Files changed (high level): `src/data/weapons.json`, `src/data/warframes.json`, `src/components/WeaponCard.vue`, `src/components/WarframeCard.vue`, `src/components/NavBar.vue`, `src/components/AppHeader.vue`.
+
+Commit: "UI: move header close button; fix mobile popover" (pushed to `main`).
+
 ## Unreleased - 2025-10-27
 
 - Tests & coverage
