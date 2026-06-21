@@ -74,7 +74,9 @@ These changes were made to diagnose and resolve intermittent test failures where
 ## 2026-06-20 - UI, data, and mobile UX
 
 - Data
-  - Added new Tenet weapon entry `Tenet Quanta` to `src/data/weapons.json` and updated `src/data/warframes.json` with the new warframe entry.
+  - Added new warframe `Sirius and Orion` (single combined warframe entry) to `src/data/warframes.json`.
+  - Added new melee weapons `Wrath` and `Pride` to `src/data/weapons.json` (including their component parts).
+  - Added new Tenet weapon entry `Tenet Quanta` to `src/data/weapons.json`.
 
 - UI / Behavior
   - Added external wiki links for weapons and warframes: names now link to `https://wiki.warframe.com/w/<Name>` using `encodeURIComponent` for multi-word names. Files: `src/components/WeaponCard.vue`, `src/components/WarframeCard.vue`.
