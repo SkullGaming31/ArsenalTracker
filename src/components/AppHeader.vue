@@ -24,17 +24,20 @@
 
     <!-- Mobile toggle button: shows a popover with the same controls -->
     <div class="header-mobile-controls" v-if="showControls">
-  <button class="controls-toggle" @click="controlsOpen = !controlsOpen" :aria-expanded="controlsOpen" aria-label="Show controls">☰</button>
-      <div class="controls-popover" v-if="controlsOpen" role="dialog" aria-label="Header controls">
-        <q-input dense rounded class="header-search" :model-value="query" @update:model-value="emitQuery" placeholder="Search..." />
-        <q-toggle dense :model-value="hideCompleted" @update:model-value="emitHideCompleted" label="Hide completed" />
-      </div>
-    </div>
+      <button ref="controlsToggle" class="controls-toggle" @click="controlsOpen = !controlsOpen" :aria-expanded="controlsOpen" aria-label="Show controls">☰</button>
+          <div ref="controlsPopover" class="controls-popover" v-if="controlsOpen" role="dialog" aria-label="Header controls">
+            <button class="controls-close" @click="controlsOpen = false" aria-label="Close controls">✕</button>
+            <div class="search-wrap">
+              <q-input dense rounded class="header-search" :model-value="query" @update:model-value="emitQuery" placeholder="Search..." />
+            </div>
+            <q-toggle dense :model-value="hideCompleted" @update:model-value="emitHideCompleted" label="Hide completed" />
+          </div>
+        </div>
   </header>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useDrawer } from '@/composables/useDrawer'
 import { QInput, QToggle, QIcon } from 'quasar'
 
@@ -53,6 +56,31 @@ const emit = defineEmits<{
 }>()
 
 const controlsOpen = ref(false)
+const controlsPopover = ref<HTMLElement | null>(null)
+const controlsToggle = ref<HTMLElement | null>(null)
+
+function onDocClick(e: MouseEvent) {
+  if (!controlsOpen.value) return
+  const p = controlsPopover.value
+  const t = controlsToggle.value
+  const target = e.target as Node | null
+  if (p && p.contains(target)) return
+  if (t && t.contains(target)) return
+  controlsOpen.value = false
+}
+
+function onKeydown(e: KeyboardEvent) {
+  if (e.key === 'Escape' && controlsOpen.value) controlsOpen.value = false
+}
+
+onMounted(() => {
+  document.addEventListener('click', onDocClick)
+  document.addEventListener('keydown', onKeydown)
+})
+onBeforeUnmount(() => {
+  document.removeEventListener('click', onDocClick)
+  document.removeEventListener('keydown', onKeydown)
+})
 
 function emitQuery(v: string | number | null) {
   // QInput can emit string | number | null; normalize to string for our API
@@ -69,6 +97,10 @@ function emitHideCompleted(v: boolean | null) {
 .header-mobile-controls { display: none }
 .controls-toggle { background: transparent; border: 1px solid rgba(255,255,255,0.06); padding:6px 8px; border-radius:6px; color:#fff }
 .controls-popover { position: absolute; right: 12px; top: 64px; background: #0b0c0d; padding:12px; border-radius:8px; box-shadow: 0 8px 24px rgba(0,0,0,0.6); z-index: 50; display:flex; flex-direction:column; gap:8px }
+.search-wrap { position: relative }
+.controls-popover { position: absolute; right: 12px; top: 64px; background: #0b0c0d; padding: 28px 12px 12px; border-radius:8px; box-shadow: 0 8px 24px rgba(0,0,0,0.6); z-index: 50; display:flex; flex-direction:column; gap:8px }
+.controls-close { position: absolute; right: 12px; top: -22px; background: rgba(255,255,255,0.03); border: none; color: #ddd; font-size: 1.1rem; padding: 10px; border-radius: 8px; z-index: 9999; pointer-events: auto; }
+.controls-close:active { transform: scale(0.98) }
 
 @media (max-width: 640px) {
   .header-controls { display: none }

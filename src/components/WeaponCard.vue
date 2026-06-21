@@ -7,7 +7,9 @@
           <img v-else :alt="weapon.name || 'placeholder'" src="/icons/icon-192.svg" class="thumb-img" loading="lazy" />
         </div>
         <div class="title">
-          <h3>{{ weapon.name }}</h3>
+          <h3>
+            <a :href="wikiUrl(weapon.name)" target="_blank" rel="noopener noreferrer">{{ weapon.name }}</a>
+          </h3>
           <div class="meta">
             <span class="badge">{{ weapon.type || 'standard' }}</span>
             <span class="crafted">{{ craftedCount }}/{{ parts.length }} crafted</span>
@@ -285,6 +287,11 @@ function formatCurrency(n: number){
   catch { return String(n) }
 }
 
+function wikiUrl(name: string) {
+  try { return `https://wiki.warframe.com/w/${encodeURIComponent(String(name || '').trim())}` }
+  catch { return 'https://wiki.warframe.com/' }
+}
+
 function getCollectedNames() {
   return parts.value
     .map((p, i) => ({ p: p as PartWithCollected, i }))
@@ -444,6 +451,15 @@ function rarityColor(rarity: string){
 .title h3 {
   margin: 0;
   font-size: 1.05rem;
+}
+
+/* Ensure linked names match card text for good contrast */
+.title h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.title h3 a:hover {
+  text-decoration: underline;
 }
 
 .meta {

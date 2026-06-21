@@ -262,4 +262,12 @@ function navigate(view: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'pri
   }
 }
 
+/* Quasar drawer (mobile hamburger) overrides: darker background and readable text */
+:deep(.q-drawer) { background: rgba(12,14,18,0.96) !important; min-height: 100vh; }
+:deep(.q-drawer .q-drawer__content) { background: transparent !important; min-height: 100vh; }
+:deep(.q-drawer .q-pa-md) { background: transparent; color: #e8f7ee !important; }
+:deep(.q-drawer .q-list .q-item), :deep(.q-drawer .q-list .q-item-section) { color: inherit !important; }
+:deep(.q-drawer .q-item) { background: transparent; }
+:deep(.q-drawer .q-item.active), :deep(.q-drawer .q-item--active) { color: #ffffff !important; background: rgba(255,255,255,0.03) !important; }
+
 </style>

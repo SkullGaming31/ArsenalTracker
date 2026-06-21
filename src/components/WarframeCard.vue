@@ -12,12 +12,16 @@
 
         <div class="title">
           <!-- render plain text when no highlight is requested to avoid v-html oddities; use highlighted html only when highlight present -->
-          <h3 v-if="!props.highlight">{{ displayedName }}</h3>
+          <h3 v-if="!props.highlight">
+            <a :href="wikiUrl(displayedName)" target="_blank" rel="noopener noreferrer">{{ displayedName }}</a>
+          </h3>
           <h3 v-else>
-            <span v-for="(p, i) in nameParts" :key="i">
-              <mark v-if="p.match">{{ p.text }}</mark>
-              <template v-else>{{ p.text }}</template>
-            </span>
+            <a :href="wikiUrl(displayedName)" target="_blank" rel="noopener noreferrer">
+              <span v-for="(p, i) in nameParts" :key="i">
+                <mark v-if="p.match">{{ p.text }}</mark>
+                <template v-else>{{ p.text }}</template>
+              </span>
+            </a>
           </h3>
     <!-- name probe removed (debug) -->
           <div class="meta">
@@ -271,6 +275,11 @@ function getWikiaThumbnail(wf?: Warframe | null): string | undefined {
   if (!wf) return undefined
   const meta = wf as unknown as { wikiaThumbnail?: unknown }
   return typeof meta.wikiaThumbnail === 'string' ? meta.wikiaThumbnail : undefined
+}
+
+function wikiUrl(name: string) {
+  try { return `https://wiki.warframe.com/w/${encodeURIComponent(String(name || '').trim())}` }
+  catch { return 'https://wiki.warframe.com/' }
 }
 
 // image probing is handled by src/lib/imageProbe.ts which throttles concurrent Image loads
@@ -706,6 +715,15 @@ function onMasterChange() {
 .title h3 {
   margin: 0;
   font-size: 1.05rem;
+}
+
+/* Ensure linked names match card text for good contrast */
+.title h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.title h3 a:hover {
+  text-decoration: underline;
 }
 
 .meta {

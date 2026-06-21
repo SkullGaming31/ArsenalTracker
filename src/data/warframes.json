@@ -221,6 +221,19 @@
     "blueprint_resources": []
   },
   {
+    "name": "Styanax Prime",
+    "type": "prime",
+    "neuroptics_collected": false,
+    "chassis_collected": false,
+    "systems_collected": false,
+    "blueprint_collected": false,
+    "is_mastered": false,
+    "neuroptics_resources": [],
+    "chassis_resources": [],
+    "systems_resources": [],
+    "blueprint_resources": []
+  },
+  {
     "name": "Volt",
     "type": "non-prime",
     "neuroptics_collected": true,
