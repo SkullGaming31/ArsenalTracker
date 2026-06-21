@@ -278,8 +278,18 @@ function getWikiaThumbnail(wf?: Warframe | null): string | undefined {
 }
 
 function wikiUrl(name: string) {
-  try { return `https://wiki.warframe.com/w/${encodeURIComponent(String(name || '').trim())}` }
-  catch { return 'https://wiki.warframe.com/' }
+  try {
+    const s = String(name || '').trim()
+    if (!s) return 'https://wiki.warframe.com/'
+    const capitalize = (t: string) => t.length ? (t[0].toUpperCase() + t.slice(1).toLowerCase()) : t
+    const tokens = s.split(/\s+/).map(t => {
+      if (t === '&' || t.toLowerCase() === 'and') return '%26'
+      return encodeURIComponent(capitalize(t))
+    })
+    return `https://wiki.warframe.com/w/${tokens.join('_')}`
+  } catch {
+    return 'https://wiki.warframe.com/'
+  }
 }
 
 // image probing is handled by src/lib/imageProbe.ts which throttles concurrent Image loads
