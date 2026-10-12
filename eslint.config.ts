@@ -1,25 +1,37 @@
 // globalIgnores removed in favor of 'ignores' in the config object
-import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescript'
+import tseslint from 'typescript-eslint'
 import pluginVue from 'eslint-plugin-vue'
 import pluginVitest from '@vitest/eslint-plugin'
 import pluginPlaywright from 'eslint-plugin-playwright'
 import pluginOxlint from 'eslint-plugin-oxlint'
+import vueParser from 'vue-eslint-parser'
 
 // To allow more languages other than `ts` in `.vue` files, uncomment the following lines:
 // import { configureVueProject } from '@vue/eslint-config-typescript'
 // configureVueProject({ scriptLangs: ['ts', 'tsx'] })
 // More info at https://github.com/vuejs/eslint-config-typescript/#advanced-setup
 
-export default defineConfigWithVueTs(
+export default tseslint.config(
+  {
+    ignores: ['docs/**', 'dist/**', 'coverage/**'],
+  },
   {
     name: 'app/files-to-lint',
     files: ['**/*.{ts,mts,tsx,vue}'],
-    ignores: ['docs/**', 'dist/**', 'coverage/**'],
   },
 
 
   pluginVue.configs['flat/essential'],
-  vueTsConfigs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    files: ['**/*.vue'],
+    languageOptions: {
+      parser: vueParser,
+      parserOptions: {
+        parser: tseslint.parser,
+      },
+    },
+  },
 
   {
     ...pluginVitest.configs.recommended,

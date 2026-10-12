@@ -10,7 +10,13 @@ import { VitePWA } from 'vite-plugin-pwa'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        transformAssetUrls: {
+          includeAbsolute: false,
+        },
+      },
+    }),
     vueJsx(),
     // Quasar Vite plugin - enables Quasar components and styles
     quasar({ sassVariables: 'src/quasar-variables.sass' }),

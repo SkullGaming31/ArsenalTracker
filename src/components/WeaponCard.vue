@@ -291,7 +291,7 @@ function wikiUrl(name: string) {
   try {
     const s = String(name || '').trim()
     if (!s) return 'https://wiki.warframe.com/'
-    const capitalize = (t: string) => t.length ? (t[0].toUpperCase() + t.slice(1).toLowerCase()) : t
+    const capitalize = (t: string) => t.length ? (t.charAt(0).toUpperCase() + t.slice(1).toLowerCase()) : t
     const tokens = s.split(/\s+/).map(t => {
       if (t === '&' || t.toLowerCase() === 'and') return '%26'
       return encodeURIComponent(capitalize(t))
