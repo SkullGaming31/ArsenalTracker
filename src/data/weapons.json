@@ -16453,5 +16453,203 @@
     "is_crafted": false,
     "is_mastered": false,
     "parts": []
+  },
+  {
+    "name": "Coda Bubonico",
+    "category": "primary",
+    "type": "coda",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Enkaus",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Haalvu",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
+  },
+  {
+    "name": "Nunchasa",
+    "category": "primary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Grip",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Lower Limb",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "String",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Upper Limb",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Perigale Prime",
+    "category": "primary",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Steflos Prime",
+    "category": "primary",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Orokin Cell",
+        "count": 10,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Stock",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Aksondol",
+    "category": "secondary",
+    "type": "standard",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Barrel",
+        "count": 2,
+        "collected": false
+      },
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Link",
+        "count": 1,
+        "collected": false
+      },
+      {
+        "name": "Receiver",
+        "count": 2,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "Kuva Ghoulsaw",
+    "category": "melee",
+    "type": "kuva",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": [
+      {
+        "name": "Blueprint",
+        "count": 1,
+        "collected": false
+      }
+    ]
+  },
+  {
+    "name": "War Prime",
+    "category": "melee",
+    "type": "prime",
+    "is_crafted": false,
+    "is_mastered": false,
+    "parts": []
   }
 ]

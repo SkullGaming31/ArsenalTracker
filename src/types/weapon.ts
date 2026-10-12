@@ -19,7 +19,7 @@ export interface RelicDrop {
 export interface Weapon {
   name: string
   category: 'primary' | 'secondary' | 'melee'
-  type: 'standard' | 'prime' | 'kuva' | 'tenet' | 'prisma' | 'vandal' | 'wraith' | 'dex' | 'nightwatch'
+  type: 'standard' | 'prime' | 'kuva' | 'coda' | 'tenet' | 'prisma' | 'vandal' | 'wraith' | 'dex' | 'nightwatch'
   is_crafted?: boolean
   is_mastered?: boolean
   parts: Part[]

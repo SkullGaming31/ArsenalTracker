@@ -79,7 +79,7 @@ const craftedOptions = [
 ]
 
 // canonical type order provided by game taxonomy
-const typeOrder: string[] = ['standard', 'prime', 'kuva', 'tenet', 'prisma', 'vandal', 'wraith', 'dex', 'nightwatch']
+const typeOrder: string[] = ['standard', 'prime', 'kuva', 'coda', 'tenet', 'prisma', 'vandal', 'wraith', 'dex', 'nightwatch']
 
 const types = computed(() => {
   // include the full canonical list first, then any extra types from data
