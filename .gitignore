@@ -28,3 +28,5 @@ tmp-cdn-coverage.csv
 *.bak
 *.bak2
 *.bak3
+.vercel
+.env*

@@ -1,5 +1,6 @@
 <template>
   <section class="landing-root" ref="root">
+    <TwitchAccount class="landing-account" />
     <h1 class="landing-title">Warframe Tracker</h1>
     <p class="landing-sub">Track, collect, and organize your Warframe items with ease.</p>
     <div class="buttons">
@@ -15,6 +16,7 @@
 <script setup lang="ts">
 defineOptions({ name: 'LandingPage' })
 import { onMounted, onUnmounted, ref } from 'vue'
+import TwitchAccount from '../components/TwitchAccount.vue'
 
 const emit = defineEmits<{
   (e: 'navigate', view: 'dashboard'|'warframes'|'weapons'|'primary'|'secondary'|'melee'|'landing'|'about'): void
@@ -191,6 +193,7 @@ onUnmounted(() => {
   overflow: hidden;
   position: relative;
 }
+.landing-account { position: absolute; top: 18px; right: 20px; z-index: 3; }
 .landing-title {
   font-size: 5rem;
   text-transform: uppercase;
@@ -220,6 +223,7 @@ onUnmounted(() => {
   .landing-title { font-size: 2.4rem }
   .landing-sub { font-size: 1rem }
   .buttons { flex-direction: column }
+  .landing-account { top: 12px; right: 12px; max-width: calc(100% - 24px); }
 }
 
 /* small landing control area for toggles */

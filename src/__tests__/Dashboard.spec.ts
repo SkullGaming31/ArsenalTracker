@@ -1,12 +1,16 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi, afterEach } from 'vitest'
 import type { Warframe } from '../types/warframe'
 import type { Weapon } from '../types/weapon'
-import { mount } from '@vue/test-utils'
+import { flushPromises, mount } from '@vue/test-utils'
 import { setActivePinia, createPinia } from 'pinia'
 import Dashboard from '../pages/Dashboard.vue'
 import { useCollectionStore } from '../stores/collection'
 
 describe('Dashboard', () => {
+  afterEach(() => {
+    vi.unstubAllGlobals()
+  })
+
   it('renders totals for warframes and weapons', () => {
     setActivePinia(createPinia())
     const wrapper = mount(Dashboard, { global: { plugins: [createPinia()] } })
@@ -37,5 +41,44 @@ describe('Dashboard', () => {
     expect(text).toContain(totalPrimary)
     expect(text).toContain(totalSecondary)
     expect(text).toContain(totalMelee)
+  })
+
+  it('syncs all collection categories for the signed-in Twitch account', async () => {
+    const fetchMock = vi.fn()
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ configured: true, user: { id: '123', login: 'tenno', displayName: 'Tenno' } }),
+      })
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ ok: true, syncedAt: '2026-10-19T00:00:00.000Z' }),
+      })
+    vi.stubGlobal('fetch', fetchMock)
+
+    const pinia = createPinia()
+    setActivePinia(pinia)
+    const wrapper = mount(Dashboard, { global: { plugins: [pinia] } })
+    await flushPromises()
+
+    const syncButton = wrapper.findAll('button').find(button => button.text() === 'Sync now')
+    expect(syncButton?.attributes('disabled')).toBeUndefined()
+    await syncButton?.trigger('click')
+    await flushPromises()
+
+    const [url, options] = fetchMock.mock.calls[1] as [string, RequestInit]
+    const payload = JSON.parse(String(options.body)) as {
+      version: number
+      collections: {
+        warframes: unknown[]
+        weapons: unknown[]
+        companions: unknown[]
+      }
+    }
+    expect(url).toBe('/api/collection/sync')
+    expect(payload.version).toBe(1)
+    expect(payload.collections.warframes.length).toBeGreaterThan(0)
+    expect(payload.collections.weapons.length).toBeGreaterThan(0)
+    expect(payload.collections.companions.length).toBeGreaterThan(0)
+    expect(wrapper.text()).toContain('Collection synced at')
   })
 })

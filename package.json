@@ -25,6 +25,7 @@
     "@quasar/extras": "^1.17.0",
     "@quasar/vite-plugin": "^1.10.0",
     "@vercel/analytics": "^2.0.1",
+    "@vercel/blob": "^2.8.2",
     "pinia": "^3.0.3",
     "quasar": "^2.35.1",
     "vue": "^3.5.22"

@@ -33,6 +33,7 @@
             <q-toggle dense :model-value="hideCompleted" @update:model-value="emitHideCompleted" label="Hide completed" />
           </div>
         </div>
+    <TwitchAccount class="header-account" />
   </header>
 </template>
 
@@ -40,6 +41,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useDrawer } from '@/composables/useDrawer'
 import { QInput, QToggle, QIcon } from 'quasar'
+import TwitchAccount from './TwitchAccount.vue'
 
 const { drawerOpen, toggle } = useDrawer()
 
@@ -105,6 +107,7 @@ function emitHideCompleted(v: boolean | null) {
 @media (max-width: 640px) {
   .header-controls { display: none }
   .header-mobile-controls { display: flex; align-items: center }
+  .header-account { max-width: 58%; }
   .brand { align-items:flex-start }
   .app-title { font-size: 1.15rem }
 }
@@ -115,6 +118,7 @@ function emitHideCompleted(v: boolean | null) {
 .app-title { text-align: left; font-weight: 900; font-size: 1.5rem; padding: 8px 12px 4px 18px; color: var(--accent-gold, #ffd54a); letter-spacing: 0.6px; }
 .page-subtitle { text-align:left; color: var(--muted, #9fb8a6); font-size:0.95rem; margin:6px 0 0 }
 .header-controls { display:flex; gap:10px; align-items:center }
+.header-account { margin-left: auto; }
 .header-search { padding:6px 8px; border-radius:6px; background:#0b0c0d; color:#eee; border:1px solid #2b2f33 }
 /* ensure the native input inside Quasar's QInput shows white text */
 .header-search :deep(input),

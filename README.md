@@ -97,6 +97,78 @@ Notes:
 
 Be careful when editing backups by hand: the store expects JSON and will merge whatever keys you provide into the in-memory merged data. Prefer using the app's Export/Import workflow to create and restore backups.
 
+### Twitch login
+
+Twitch login uses the authorization-code flow in Vercel serverless functions. Create a Twitch application and set its OAuth redirect URL to `https://<your-domain>/api/auth/callback`. Add these values to the Vercel project environment (and to an ignored `.env.local` when using Vercel CLI locally):
+
+- `TWITCH_CLIENT_ID`
+- `TWITCH_CLIENT_SECRET`
+- `TWITCH_REDIRECT_URI` — the exact callback URL registered with Twitch
+- `SESSION_SECRET` — a private random value of at least 32 characters
+
+Generate a session secret with `node -e "console.log(require('node:crypto').randomBytes(32).toString('base64url'))"`. Never commit the Twitch client secret or session secret. Run `npm run dev` to use the local Vite app and API middleware.
+
+#### Collection sync and Twitch Extension
+
+The Dashboard's **Sync now** action sends the full merged Warframe, weapon, and companion collections to the server. The server associates the snapshot with the numeric Twitch account ID from the signed-in website session; clients cannot choose the account ID. The snapshot is private and is overwritten by the next sync.
+
+Configure storage and extension access in the Vercel project environment:
+
+- Create and connect a **private Vercel Blob store** to this project, including the Development environment. For local development, link the project and pull its Development variables into an ignored file:
+
+  ```sh
+  npx vercel link
+  npx vercel env pull .env.development.local
+  ```
+
+  The Vercel Blob SDK uses `BLOB_STORE_ID` and `VERCEL_OIDC_TOKEN` for local OIDC access. A `BLOB_READ_WRITE_TOKEN` is an alternative for environments outside Vercel; keep it private.
+- `TWITCH_EXTENSION_CLIENT_ID` — the Twitch Extension's client ID.
+- `TWITCH_EXTENSION_SECRET` — the extension secret, base64-encoded as provided by Twitch.
+- `TWITCH_EXTENSION_ORIGIN` — the exact HTTPS extension iframe origin(s), comma-separated if there is more than one. Do not include paths or trailing slashes.
+
+The extension must enable identity sharing and request it from the embedded Twitch Extension Helper (`Twitch.ext.actions.requestIdShare()`). The API only returns a collection when the signed Extension JWT contains a linked numeric `user_id`; unlinked viewers cannot access account snapshots. Website OAuth uses the separate `TWITCH_CLIENT_ID` and `TWITCH_CLIENT_SECRET` settings above.
+
+API contract:
+
+- `POST /api/collection/sync` — requires the website's Twitch sign-in session cookie. Send `{ "version": 1, "collections": { "warframes": [...], "weapons": [...], "companions": [...] } }`. The response includes `syncedAt` and category counts.
+- `GET /api/extension/collection` — send `Authorization: Bearer <Twitch Extension JWT>`. The response is the stored snapshot, including `user`, `syncedAt`, and `collections`. It returns `404` if that Twitch account has not synced yet.
+
+The extension endpoint validates the JWT signature and expiry, checks the configured origin, and serves snapshots with private, no-store cache headers. Sync will return a storage error until the Blob store is connected and configured.
+
+#### Read the snapshot in the Twitch Extension
+
+Load the Twitch Extension Helper in the extension page. Enable identity sharing in the extension settings, then request it and fetch the snapshot whenever Twitch authorizes or refreshes the extension token:
+
+```js
+const trackerApi = 'https://<your-tracker-domain>'
+
+Twitch.ext.actions.requestIdShare()
+
+Twitch.ext.onAuthorized(async ({ token }) => {
+  const response = await fetch(`${trackerApi}/api/extension/collection`, {
+    headers: { Authorization: `Bearer ${token}` },
+    cache: 'no-store',
+  })
+
+  if (response.status === 404) {
+    showMessage('No collection synced yet. Sync from the tracker website first.')
+    return
+  }
+  if (!response.ok) {
+    showMessage('Unable to load the collection.')
+    return
+  }
+
+  const snapshot = await response.json()
+  const { warframes, weapons, companions } = snapshot.collections
+  renderCollection({ user: snapshot.user, syncedAt: snapshot.syncedAt, warframes, weapons, companions })
+})
+```
+
+Replace `trackerApi` with the deployed tracker origin. `showMessage` and `renderCollection` represent your extension's UI functions. The collection arrays contain the merged item records, including each item's `name` and progress fields. A `401` means the JWT is missing, expired, or has no linked viewer identity; a `403` means the extension origin is not in `TWITCH_EXTENSION_ORIGIN`.
+
+The snapshot is now available to the extension UI. To use it for AI responses, send the question and only the relevant collection data to your own server-side AI endpoint. Keep AI provider credentials on the server; do not put them in the extension bundle.
+
 ### Run End-to-End Tests with [Playwright](https://playwright.dev)
 
 ```sh

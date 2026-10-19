@@ -4,6 +4,18 @@
     <h1>Arsenal Overview</h1>
     <p class="lead">A summary of your collection and mastery progress.</p>
 
+    <section class="sync-section" aria-labelledby="sync-title">
+      <div class="sync-copy">
+        <h2 id="sync-title">Twitch Extension Sync</h2>
+        <p v-if="syncUsername">Signed in as {{ syncUsername }}. Sync your current collection for the extension.</p>
+        <p v-else>Sign in with Twitch to sync your collection for the extension.</p>
+        <p v-if="syncMessage" class="sync-message" :role="syncError ? 'alert' : 'status'">{{ syncMessage }}</p>
+      </div>
+      <button class="sync-button" type="button" :disabled="!syncReady || syncing" @click="syncNow">
+        {{ syncing ? 'Syncing...' : 'Sync now' }}
+      </button>
+    </section>
+
     <div class="cards">
       <div class="card summary stat-card">
         <div class="stat-left">
@@ -118,7 +130,7 @@
 // (uses the <script setup> compiler macro)
 defineOptions({ name: 'DashboardPage' } as const)
 import { useCollectionStore } from '../stores/collection'
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { parseImportFile, mapRowsToOverrides, exportOverridesToCSV, type ParsedRow } from '../lib/importer'
 import type { Warframe } from '../types/warframe'
 import type { Weapon } from '../types/weapon'
@@ -128,6 +140,69 @@ const collection = useCollectionStore()
 const wf = computed<Warframe[]>(() => collection.mergedWarframes as unknown as Warframe[])
 const wp = computed<Weapon[]>(() => collection.mergedWeapons as unknown as Weapon[])
 const companions = computed<Companion[]>(() => collection.mergedCompanions as unknown as Companion[])
+const syncReady = ref(false)
+const syncUsername = ref('')
+const syncing = ref(false)
+const syncMessage = ref('')
+const syncError = ref(false)
+
+interface SyncSessionResponse {
+  configured: boolean
+  user: { id: string; login: string; displayName: string } | null
+}
+
+interface SyncApiResponse {
+  error?: string
+  syncedAt?: string
+}
+
+async function loadSyncSession() {
+  try {
+    const response = await fetch('/api/auth/session', { credentials: 'same-origin', cache: 'no-store' })
+    if (!response.ok) throw new Error('Could not check Twitch sign-in status.')
+    const session = await response.json() as SyncSessionResponse
+    syncReady.value = session.configured && Boolean(session.user)
+    syncUsername.value = session.user?.displayName ?? ''
+  } catch {
+    syncError.value = true
+    syncMessage.value = 'Could not check Twitch sign-in status.'
+  }
+}
+
+async function syncNow() {
+  if (!syncReady.value || syncing.value) return
+  syncing.value = true
+  syncError.value = false
+  syncMessage.value = ''
+  try {
+    const response = await fetch('/api/collection/sync', {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        version: 1,
+        collections: {
+          warframes: wf.value,
+          weapons: wp.value,
+          companions: companions.value,
+        },
+      }),
+    })
+    const result = await response.json() as SyncApiResponse
+    if (!response.ok) throw new Error(result.error || 'Collection sync failed.')
+    const syncedTime = result.syncedAt ? new Date(result.syncedAt).toLocaleTimeString() : 'just now'
+    syncMessage.value = `Collection synced at ${syncedTime}.`
+  } catch (error) {
+    syncError.value = true
+    syncMessage.value = error instanceof Error ? error.message : 'Collection sync failed.'
+  } finally {
+    syncing.value = false
+  }
+}
+
+onMounted(() => {
+  void loadSyncSession()
+})
 
 const totalWarframes = computed(() => wf.value.length)
 
@@ -323,6 +398,12 @@ function onClear() {
 <style scoped>
 .dashboard { max-width:1200px; margin: 16px auto; padding: 16px }
 .lead { color: #9fb8a6; margin-bottom:12px }
+.sync-section { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0; margin:0 0 14px; border-top:1px solid rgba(255,255,255,0.12); border-bottom:1px solid rgba(255,255,255,0.12) }
+.sync-copy h2 { margin:0; font-size:1.05rem }
+.sync-copy p { margin:4px 0 0; color:#9fb8a6; font-size:0.9rem }
+.sync-message[role='alert'] { color:#ffb4ab }
+.sync-button { flex:0 0 auto; min-height:38px; padding:8px 14px; border:1px solid #9147ff; border-radius:4px; background:#9147ff; color:#fff; font:inherit; font-weight:700; cursor:pointer }
+.sync-button:disabled { opacity:0.5; cursor:not-allowed }
 .cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:12px }
 .card.summary { background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01)); color:#e8f6ee; padding:14px; border-radius:12px; border:1px solid rgba(255,255,255,0.03); display:flex; gap:12px; align-items:center }
 .stat-left { width:48px; height:48px; display:flex; align-items:center; justify-content:center; background: rgba(255,255,255,0.02); border-radius:8px }
@@ -336,5 +417,6 @@ function onClear() {
 .recent li { padding:8px 6px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.01) }
 .recent li:last-child { border-bottom: none }
 .tag { background: rgba(255,255,255,0.02); color:#cfe8d6; padding:4px 8px; border-radius:999px; font-size:0.8rem }
+@media (max-width: 640px) { .sync-section { align-items:flex-start; flex-direction:column } }
 </style>
 
