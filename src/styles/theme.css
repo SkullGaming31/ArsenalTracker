@@ -1,22 +1,30 @@
 :root {
-  /* Palette inspired by the provided screenshot */
-  --bg-900: #061018;
-  /* deep navy */
-  --bg-800: linear-gradient(180deg, #071018 0%, #04121a 100%);
+  /* Warframe-inspired palette */
+  --bg-900: #050810;
+  /* deep void black */
+  --bg-800: linear-gradient(180deg, #0a0f1a 0%, #050810 100%);
   /* header gradient */
-  --panel: #0f1720;
+  --panel: #0d1218;
   /* card background */
-  --muted: #9fb8a6;
-  /* soft green for subtle text */
+  --muted: #7a9a8c;
+  /* muted text */
+  --accent-cyan: #00d4ff;
+  /* Warframe signature cyan */
   --accent-purple: #9b5cff;
   /* prime accent */
   --accent-gold: #ffd54a;
   /* badge/gold */
   --accent-green: #2bb673;
-  /* default accent */
-  --card-border: rgba(255, 255, 255, 0.03);
-  --glass: rgba(255, 255, 255, 0.03);
-  --glass-strong: rgba(255, 255, 255, 0.06);
+  /* collected accent */
+  --accent-red: #ff3366;
+  /* alert/red */
+  --card-border: rgba(0, 212, 255, 0.15);
+  /* cyan border */
+  --glass: rgba(0, 212, 255, 0.03);
+  --glass-strong: rgba(0, 212, 255, 0.08);
+  --glow-cyan: 0 0 20px rgba(0, 212, 255, 0.4);
+  --glow-purple: 0 0 20px rgba(155, 92, 255, 0.4);
+  --glow-gold: 0 0 20px rgba(255, 213, 74, 0.4);
 }
 
 /* Global page surface */
@@ -25,6 +33,43 @@ body,
 #app {
   background: var(--bg-900);
   color: #e8f6ee;
+  position: relative;
+}
+
+/* Warframe hexagonal pattern overlay */
+html::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(30deg, rgba(0, 212, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 212, 255, 0.03) 87.5%, rgba(0, 212, 255, 0.03)),
+    linear-gradient(150deg, rgba(0, 212, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 212, 255, 0.03) 87.5%, rgba(0, 212, 255, 0.03)),
+    linear-gradient(30deg, rgba(0, 212, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 212, 255, 0.03) 87.5%, rgba(0, 212, 255, 0.03)),
+    linear-gradient(150deg, rgba(0, 212, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 212, 255, 0.03) 87.5%, rgba(0, 212, 255, 0.03)),
+    linear-gradient(60deg, rgba(155, 92, 255, 0.02) 25%, transparent 25.5%, transparent 75%, rgba(155, 92, 255, 0.02) 75%, rgba(155, 92, 255, 0.02)),
+    linear-gradient(60deg, rgba(155, 92, 255, 0.02) 25%, transparent 25.5%, transparent 75%, rgba(155, 92, 255, 0.02) 75%, rgba(155, 92, 255, 0.02));
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  opacity: 0.4;
+}
+
+/* Scanline effect */
+html::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  opacity: 0.3;
 }
 
 /* Nav header */
@@ -32,35 +77,120 @@ body,
   background: var(--bg-800);
   color: #e8f7ee;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  position: relative;
+}
+
+.site-nav::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+  opacity: 0.5;
 }
 
 /* Cards */
 .theme-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  background: linear-gradient(180deg, rgba(0, 212, 255, 0.02), rgba(0, 212, 255, 0.01));
   border: 1px solid var(--card-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+  opacity: 0.3;
+}
+
+.theme-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+  opacity: 0.3;
 }
 
 .theme-badge {
   background: var(--glass-strong);
   color: var(--accent-gold);
+  border: 1px solid rgba(255, 213, 74, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
 }
 
 /* Accent helpers */
 .accent-purple {
-  background: var(--accent-purple) !important
+  background: var(--accent-purple) !important;
+  box-shadow: var(--glow-purple);
 }
 
 .accent-green {
-  background: var(--accent-green) !important
+  background: var(--accent-green) !important;
+  box-shadow: 0 0 15px rgba(43, 182, 115, 0.4);
 }
 
-/* subtle input background */
+.accent-cyan {
+  background: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan);
+}
+
+/* HUD-style buttons */
+.btn {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:hover {
+  border-color: var(--accent-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+/* subtle input background with Warframe styling */
 input,
 select,
 textarea {
   background: #0b0c0d;
   color: #eee;
-  border: 1px solid #2b2f33
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+  outline: none;
 }
 
 /* Quasar form field fixes for dark theme */
@@ -111,7 +241,8 @@ textarea {
 /* Shared toggle switch styling used across pages */
 .toggle {
   display: inline-flex;
-  align-items: center
+  align-items: center;
+  gap: 8px;
 }
 
 .toggle input {
@@ -124,10 +255,12 @@ textarea {
 .toggle .slider {
   width: 40px;
   height: 22px;
-  background-color: #fff;
+  background-color: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
   border-radius: 999px;
   position: relative;
-  transition: background .12s ease
+  transition: all .2s ease;
+  box-shadow: inset 0 0 10px rgba(0, 212, 255, 0.1);
 }
 
 .toggle .slider::after {
@@ -137,21 +270,102 @@ textarea {
   top: 3px;
   width: 16px;
   height: 16px;
-  background-color: var(--toggle-knob, #0b0c0d);
+  background-color: var(--accent-cyan);
   border-radius: 50%;
-  transition: transform .12s ease
+  transition: all .2s ease;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
 }
 
 .toggle input:checked+.slider {
-  background: var(--accent-green, #2bb673)
+  background: var(--accent-green, #2bb673);
+  border-color: var(--accent-green);
+  box-shadow: 0 0 15px rgba(43, 182, 115, 0.4);
 }
 
 .toggle input:checked+.slider::after {
   transform: translateX(18px);
-  background: #fff
+  background: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .toggle .toggle-label {
   color: var(--muted);
-  font-size: 0.95rem
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/* Tech corner decorations */
+.tech-corner {
+  position: relative;
+}
+
+.tech-corner::before,
+.tech-corner::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tech-corner::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.tech-corner::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.tech-corner:hover::before,
+.tech-corner:hover::after {
+  border-color: var(--accent-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+/* Glowing text effect */
+.glow-text {
+  text-shadow: 0 0 10px var(--accent-cyan);
+}
+
+/* Hex-shaped decorative elements */
+.hex-decoration {
+  position: relative;
+}
+
+.hex-decoration::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--accent-cyan);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  opacity: 0.1;
+  animation: hexPulse 3s ease-in-out infinite;
+}
+
+@keyframes hexPulse {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  50% { opacity: 0.2; transform: scale(1.1); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html::before,
+  html::after,
+  .btn::before,
+  .toggle .slider,
+  .toggle .slider::after,
+  .hex-decoration::before {
+    animation: none !important;
+    transition: none !important;
+  }
 }

@@ -7,52 +7,23 @@
         <q-select dense outlined emit-value v-model="primeFilter" :options="primeFilterOptions" style="min-width:160px" />
       </div>
     </div>
-      <!-- dev debug panel removed -->
-    <section v-if="showPrimeSection" class="section">
-      <h3>Prime</h3>
-      <div class="pager" style="display:flex; gap:8px; align-items:center; margin-bottom:8px">
-        <div style="display:flex; gap:8px; align-items:center;">
-          <div>Per page</div>
-          <q-select dense outlined emit-value v-model.number="primePageSize" :options="primePageOptions" style="min-width:120px" />
-        </div>
-        <q-btn dense flat label="Prev" @click="primePrev" :disable="primeCurrent === 0" />
-        <div>Page {{ primeCurrent + 1 }} / {{ primeTotalPages }}</div>
-        <q-btn dense flat label="Next" @click="primeNext" :disable="primeCurrent >= primeTotalPages - 1" />
-      </div>
-      <!-- virtualized prime list -->
-  <div ref="primeScrollRef" class="virtual-scroll" style="height:60vh; overflow:auto;">
-        <div :style="{ height: primeTotalHeight + 'px', position: 'relative' }">
-          <!-- center and constrain the inner column so cards don't stretch full page width -->
-          <div style="max-width:1200px; margin:0 auto; position:relative;">
-            <div v-for="vi in primeVirtualRenderItems" :key="vi.item.name" :style="{ position: 'absolute', top: vi.start + 'px', left: (vi.col * (100/columns)) + '%', width: (100/columns) + '%' }">
-              <div style="padding:8px; display:flex; justify-content:center;">
-                <div class="card-wrap">
-                  <WarframeCard :warframe="vi.item" :highlight="query" @update="handleUpdate" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section v-if="showNonPrimeSection" class="section">
-      <h3>Non-Prime</h3>
+    <section class="section">
       <div class="pager" style="display:flex; gap:8px; align-items:center; margin-bottom:8px">
         <div style="display:flex; gap:8px; align-items:center;">
           <div>Per page</div>
-          <q-select dense outlined emit-value v-model.number="nonPrimePageSize" :options="primePageOptions" style="min-width:120px" />
+          <q-select dense outlined emit-value v-model.number="pageSize" :options="pageOptions" style="min-width:120px" />
         </div>
-        <q-btn dense flat label="Prev" @click="nonPrimePrev" :disable="nonPrimeCurrent === 0" />
-        <div>Page {{ nonPrimeCurrent + 1 }} / {{ nonPrimeTotalPages }}</div>
-        <q-btn dense flat label="Next" @click="nonPrimeNext" :disable="nonPrimeCurrent >= nonPrimeTotalPages - 1" />
+        <q-btn dense flat label="Prev" @click="prev" :disable="current === 0" />
+        <div>Page {{ current + 1 }} / {{ totalPages }}</div>
+        <q-btn dense flat label="Next" @click="next" :disable="current >= totalPages - 1" />
       </div>
-      <!-- virtualized non-prime list -->
-  <div ref="nonPrimeScrollRef" class="virtual-scroll" style="height:60vh; overflow:auto;">
-        <div :style="{ height: nonPrimeTotalHeight + 'px', position: 'relative' }">
+      <!-- virtualized combined list -->
+      <div ref="scrollRef" class="virtual-scroll" style="height:70vh; overflow:auto;">
+        <div :style="{ height: totalHeight + 'px', position: 'relative' }">
           <!-- center and constrain the inner column so cards don't stretch full page width -->
           <div style="max-width:1200px; margin:0 auto; position:relative;">
-            <div v-for="vi in nonPrimeVirtualRenderItems" :key="vi.item.name" :style="{ position: 'absolute', top: vi.start + 'px', left: (vi.col * (100/columns)) + '%', width: (100/columns) + '%' }">
+            <div v-for="vi in virtualRenderItems" :key="vi.item.name" :style="{ position: 'absolute', top: vi.start + 'px', left: (vi.col * (100/columns)) + '%', width: (100/columns) + '%' }">
               <div style="padding:8px; display:flex; justify-content:center;">
                 <div class="card-wrap">
                   <WarframeCard :warframe="vi.item" :highlight="query" @update="handleUpdate" />
@@ -63,7 +34,6 @@
         </div>
       </div>
     </section>
-    
   </div>
 </template>
 
@@ -82,7 +52,7 @@ const query = computed(() => props.query ?? '')
 const hideCompleted = computed(() => Boolean(props.hideCompleted))
 const search = useSearchStore()
 
-// Filter for showing prime/non-prime/all sections
+// Filter for showing prime/non-prime/all
 const primeFilter = ref('all') // 'all' | 'prime' | 'non-prime'
 const primeFilterOptions = [
   { label: 'All', value: 'all' },
@@ -90,13 +60,8 @@ const primeFilterOptions = [
   { label: 'Non-prime', value: 'non-prime' }
 ]
 
-const showPrimeSection = computed(() => primeFilter.value === 'all' || primeFilter.value === 'prime')
-const showNonPrimeSection = computed(() => primeFilter.value === 'all' || primeFilter.value === 'non-prime')
-
 const warframesAll = computed<Warframe[]>(() => collection.mergedWarframes as Warframe[])
 
-// debug: log base list to confirm collection provides data
-// removed debug logging of full warframes list
 // keep a no-op watcher so any necessary reactivity runs but avoid logging
 watch(warframesAll, () => {}, { immediate: true })
 
@@ -149,23 +114,27 @@ watch(() => query.value, (q) => {
   }, 200)
 })
 
-const filteredPrimeWarframes = computed<Warframe[]>(() => {
+// Combine prime and non-prime based on filter
+const filteredWarframes = computed<Warframe[]>(() => {
   const q = String(query.value || '').trim()
   const names = new Set(search.results.map(r => r.item.name))
-  let list = !q ? primeWarframes.value : primeWarframes.value.filter(w => names.has(w.name))
+
+  let baseList: Warframe[]
+  if (primeFilter.value === 'prime') {
+    baseList = primeWarframes.value
+  } else if (primeFilter.value === 'non-prime') {
+    baseList = nonPrimeWarframes.value
+  } else {
+    // Combine both: primes first, then non-primes
+    baseList = [...primeWarframes.value, ...nonPrimeWarframes.value]
+  }
+
+  let list = !q ? baseList : baseList.filter(w => names.has(w.name))
   if (hideCompleted.value) list = list.filter(w => !isCompleted(w))
   return list.slice().sort((a,b) => (a.name||'').localeCompare(b.name||''))
 })
 
-const filteredNonPrimeWarframes = computed<Warframe[]>(() => {
-  const q = String(query.value || '').trim()
-  const names = new Set(search.results.map(r => r.item.name))
-  let list = !q ? nonPrimeWarframes.value : nonPrimeWarframes.value.filter(w => names.has(w.name))
-  if (hideCompleted.value) list = list.filter(w => !isCompleted(w))
-  return list.slice().sort((a,b) => (a.name||'').localeCompare(b.name||''))
-})
-
-// --- Virtualization for prime and non-prime lists (responsive) ---
+// --- Virtualization for combined list (responsive) ---
 // itemSize is the assumed height (px) for each rendered row. We make this
 // responsive so cards fit better on narrow screens.
 type VirtualRow = { row: number; start: number; size: number }
@@ -190,160 +159,90 @@ function onResize() {
   updateLayoutForWidth(window.innerWidth)
 }
 
-// Prime
-const primeScrollRef = ref<HTMLElement | null>(null)
-// pagination for quick mitigation
-// pageSize < 0 means show all items (no pagination)
-const primePageSize = ref(-1)
-const primePageOptions = [
+// Combined virtual scroll
+const scrollRef = ref<HTMLElement | null>(null)
+// pagination
+const pageSize = ref(-1)
+const pageOptions = [
   { label: '20', value: 20 },
   { label: '50', value: 50 },
   { label: '100', value: 100 },
   { label: 'All', value: -1 }
 ]
-const primeCurrent = ref(0)
-const primeTotalPages = computed(() => (primePageSize.value < 0 ? 1 : Math.max(1, Math.ceil(filteredPrimeWarframes.value.length / primePageSize.value))))
-const pagedPrime = computed(() => {
-  if (primePageSize.value < 0) return filteredPrimeWarframes.value
-  const start = primeCurrent.value * primePageSize.value
-  return filteredPrimeWarframes.value.slice(start, start + primePageSize.value)
+const current = ref(0)
+const totalPages = computed(() => (pageSize.value < 0 ? 1 : Math.max(1, Math.ceil(filteredWarframes.value.length / pageSize.value))))
+const paged = computed(() => {
+  if (pageSize.value < 0) return filteredWarframes.value
+  const start = current.value * pageSize.value
+  return filteredWarframes.value.slice(start, start + pageSize.value)
 })
 
-const primeTotalRows = computed(() => Math.ceil(pagedPrime.value.length / columns.value))
-const primeVisibleRange = ref({ start: 0, end: Math.min(primeTotalRows.value, 10) })
-const primeVirtualItems = computed(() => {
+const totalRows = computed(() => Math.ceil(paged.value.length / columns.value))
+const visibleRange = ref({ start: 0, end: Math.min(totalRows.value, 10) })
+const virtualItems = computed(() => {
   const items: VirtualRow[] = []
-  const start = primeVisibleRange.value.start
-  const end = primeVisibleRange.value.end
+  const start = visibleRange.value.start
+  const end = visibleRange.value.end
   for (let r = start; r < end; r++) items.push({ row: r, start: r * itemSize.value, size: itemSize.value })
   return items
 })
 // expand each visible row into up to `columns` render cells with column index
-const primeVirtualRenderItems = computed(() => {
+const virtualRenderItems = computed(() => {
   const out: { item: Warframe; start: number; col: number }[] = []
-  primeVirtualItems.value.forEach((vr) => {
+  virtualItems.value.forEach((vr) => {
     for (let c = 0; c < columns.value; c++) {
       const idx = vr.row * columns.value + c
-      const item = pagedPrime.value[idx]
+      const item = paged.value[idx]
       if (!item) continue
       out.push({ item, start: vr.start, col: c })
     }
   })
   return out
 })
-const primeTotalHeight = computed(() => primeTotalRows.value * itemSize.value)
+const totalHeight = computed(() => totalRows.value * itemSize.value)
 
-let rafPrime: number | null = null
-function recomputePrimeOnce() {
-  const el = primeScrollRef.value
+let raf: number | null = null
+function recomputeOnce() {
+  const el = scrollRef.value
   if (!el) return
   const scrollTop = el.scrollTop
   const clientHeight = el.clientHeight || 600
   const start = Math.floor(scrollTop / itemSize.value) - 5
   const end = Math.ceil((scrollTop + clientHeight) / itemSize.value) + 5
-  primeVisibleRange.value.start = Math.max(0, start)
-  primeVisibleRange.value.end = Math.min(primeTotalRows.value, end)
+  visibleRange.value.start = Math.max(0, start)
+  visibleRange.value.end = Math.min(totalRows.value, end)
 }
 
-function recomputePrime() {
-  if (rafPrime !== null) return
-  rafPrime = requestAnimationFrame(() => {
-    try { recomputePrimeOnce() } finally { rafPrime = null }
+function recompute() {
+  if (raf !== null) return
+  raf = requestAnimationFrame(() => {
+    try { recomputeOnce() } finally { raf = null }
   })
 }
+
+function prev() { if (current.value > 0) current.value-- }
+function next() { if (current.value < totalPages.value - 1) current.value++ }
+
+// keep pages valid when underlying list changes
+watch([pageSize, filteredWarframes], () => {
+  if (current.value >= totalPages.value) current.value = Math.max(0, totalPages.value - 1)
+  visibleRange.value = { start: 0, end: Math.min(totalRows.value, 10) }
+})
 
 onMounted(() => {
   updateLayoutForWidth(window.innerWidth)
   window.addEventListener('resize', onResize)
-  const el = primeScrollRef.value
-  if (el) el.addEventListener('scroll', recomputePrime)
-  watch(filteredPrimeWarframes, () => recomputePrime())
-  setTimeout(recomputePrime, 0)
+  const el = scrollRef.value
+  if (el) el.addEventListener('scroll', recompute)
+  watch(filteredWarframes, () => recompute())
+  setTimeout(recompute, 0)
 })
 
-// debug: log virtual items to help trace missing data
-// removed debug logging of virtual render items
 // no-op watcher preserved for reactivity
-watch(primeVirtualRenderItems, () => {}, { immediate: true })
+watch(virtualRenderItems, () => {}, { immediate: true })
 
 onBeforeUnmount(() => {
   window.removeEventListener('resize', onResize)
-})
-
-// Non-prime
-const nonPrimeScrollRef = ref<HTMLElement | null>(null)
-// pagination for non-prime
-const nonPrimePageSize = ref(-1)
-const nonPrimeCurrent = ref(0)
-const nonPrimeTotalPages = computed(() => (nonPrimePageSize.value < 0 ? 1 : Math.max(1, Math.ceil(filteredNonPrimeWarframes.value.length / nonPrimePageSize.value))))
-const pagedNonPrime = computed(() => {
-  if (nonPrimePageSize.value < 0) return filteredNonPrimeWarframes.value
-  const start = nonPrimeCurrent.value * nonPrimePageSize.value
-  return filteredNonPrimeWarframes.value.slice(start, start + nonPrimePageSize.value)
-})
-
-const nonPrimeTotalRows = computed(() => Math.ceil(pagedNonPrime.value.length / columns.value))
-const nonPrimeVisibleRange = ref({ start: 0, end: Math.min(nonPrimeTotalRows.value, 10) })
-const nonPrimeVirtualItems = computed(() => {
-  const items: VirtualRow[] = []
-  const start = nonPrimeVisibleRange.value.start
-  const end = nonPrimeVisibleRange.value.end
-  for (let r = start; r < end; r++) items.push({ row: r, start: r * itemSize.value, size: itemSize.value })
-  return items
-})
-const nonPrimeVirtualRenderItems = computed(() => {
-  const out: { item: Warframe; start: number; col: number }[] = []
-  nonPrimeVirtualItems.value.forEach((vr) => {
-    for (let c = 0; c < columns.value; c++) {
-      const idx = vr.row * columns.value + c
-      const item = pagedNonPrime.value[idx]
-      if (!item) continue
-      out.push({ item, start: vr.start, col: c })
-    }
-  })
-  return out
-})
-const nonPrimeTotalHeight = computed(() => nonPrimeTotalRows.value * itemSize.value)
-
-let rafNonPrime: number | null = null
-function recomputeNonPrimeOnce() {
-  const el = nonPrimeScrollRef.value
-  if (!el) return
-  const scrollTop = el.scrollTop
-  const clientHeight = el.clientHeight || 600
-  const start = Math.floor(scrollTop / itemSize.value) - 5
-  const end = Math.ceil((scrollTop + clientHeight) / itemSize.value) + 5
-  nonPrimeVisibleRange.value.start = Math.max(0, start)
-  nonPrimeVisibleRange.value.end = Math.min(nonPrimeTotalRows.value, end)
-}
-
-function recomputeNonPrime() {
-  if (rafNonPrime !== null) return
-  rafNonPrime = requestAnimationFrame(() => {
-    try { recomputeNonPrimeOnce() } finally { rafNonPrime = null }
-  })
-}
-
-function primePrev() { if (primeCurrent.value > 0) primeCurrent.value-- }
-function primeNext() { if (primeCurrent.value < primeTotalPages.value - 1) primeCurrent.value++ }
-function nonPrimePrev() { if (nonPrimeCurrent.value > 0) nonPrimeCurrent.value-- }
-function nonPrimeNext() { if (nonPrimeCurrent.value < nonPrimeTotalPages.value - 1) nonPrimeCurrent.value++ }
-
-// keep pages valid when underlying list changes
-watch([primePageSize, filteredPrimeWarframes], () => {
-  if (primeCurrent.value >= primeTotalPages.value) primeCurrent.value = Math.max(0, primeTotalPages.value - 1)
-  primeVisibleRange.value = { start: 0, end: Math.min(primeTotalRows.value, 10) }
-})
-watch([nonPrimePageSize, filteredNonPrimeWarframes], () => {
-  if (nonPrimeCurrent.value >= nonPrimeTotalPages.value) nonPrimeCurrent.value = Math.max(0, nonPrimeTotalPages.value - 1)
-  nonPrimeVisibleRange.value = { start: 0, end: Math.min(nonPrimeTotalRows.value, 10) }
-})
-
-onMounted(() => {
-  const el = nonPrimeScrollRef.value
-  if (el) el.addEventListener('scroll', recomputeNonPrime)
-  watch(filteredNonPrimeWarframes, () => recomputeNonPrime())
-  setTimeout(recomputeNonPrime, 0)
 })
 
 interface WFUpdatePayload {

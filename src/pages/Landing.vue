@@ -1,11 +1,14 @@
 <template>
   <section class="landing-root" ref="root">
     <TwitchAccount class="landing-account" />
-    <h1 class="landing-title">Warframe Tracker</h1>
-    <p class="landing-sub">Track, collect, and organize your Warframe items with ease.</p>
-    <div class="buttons">
-      <q-btn color="primary" unelevated label="Get Started" @click="onGetStarted" />
-      <q-btn flat outline color="secondary" label="Learn More" @click="onLearnMore" />
+    <div class="hero-section">
+      <div class="hero-decoration"></div>
+      <h1 class="landing-title">Warframe Tracker</h1>
+      <p class="landing-sub">Track, collect, and organize your Warframe items with ease.</p>
+      <div class="buttons">
+        <q-btn class="btn-primary" unelevated label="Get Started" @click="onGetStarted" />
+        <q-btn class="btn-secondary" flat outline label="Learn More" @click="onLearnMore" />
+      </div>
     </div>
     <div class="landing-controls">
       <q-toggle v-model="particlesEnabled" dense label="Particles" @update:model-value="onParticlesToggle" />
@@ -189,15 +192,75 @@ onUnmounted(() => {
   justify-content: center;
   font-family: 'Orbitron', sans-serif;
   color: #fff;
-  background: radial-gradient(circle at 30% 30%, #1b0f40, #0b0b1e);
+  background: radial-gradient(circle at 30% 30%, #0d1a26, #050810);
   overflow: hidden;
   position: relative;
 }
-.landing-account { position: absolute; top: 18px; right: 20px; z-index: 3; }
+
+.landing-root::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(30deg, rgba(0, 212, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 212, 255, 0.03) 87.5%, rgba(0, 212, 255, 0.03)),
+    linear-gradient(150deg, rgba(0, 212, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 212, 255, 0.03) 87.5%, rgba(0, 212, 255, 0.03)),
+    linear-gradient(30deg, rgba(0, 212, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 212, 255, 0.03) 87.5%, rgba(0, 212, 255, 0.03)),
+    linear-gradient(150deg, rgba(0, 212, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 212, 255, 0.03) 87.5%, rgba(0, 212, 255, 0.03)),
+    linear-gradient(60deg, rgba(155, 92, 255, 0.02) 25%, transparent 25.5%, transparent 75%, rgba(155, 92, 255, 0.02) 75%, rgba(155, 92, 255, 0.02)),
+    linear-gradient(60deg, rgba(155, 92, 255, 0.02) 25%, transparent 25.5%, transparent 75%, rgba(155, 92, 255, 0.02) 75%, rgba(155, 92, 255, 0.02));
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.landing-root::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.landing-account { position: absolute; top: 18px; right: 20px; z-index: 10; }
+
+.hero-section {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-decoration {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.15), transparent 70%);
+  opacity: 0.5;
+  animation: pulse 4s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.3; }
+  50% { transform: translateX(-50%) scale(1.1); opacity: 0.5; }
+}
+
 .landing-title {
   font-size: 5rem;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #00bfff, #00ffff);
+  letter-spacing: 0.1em;
+  background: linear-gradient(90deg, #00d4ff, #9b5cff, #00d4ff);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -205,17 +268,90 @@ onUnmounted(() => {
   animation: shimmer 4s infinite linear;
   position: relative;
   z-index: 2;
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
 }
-@keyframes shimmer { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); } }
-.landing-sub { color: #b0b0b0; font-size: 1.5rem; text-align: center; margin-top: 1rem; max-width: 700px }
-.buttons { display:flex; gap:1rem; margin-top:3rem }
-.buttons { position: relative; z-index: 2 }
+
+@keyframes shimmer {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.landing-sub {
+  color: #7a9a8c;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  max-width: 700px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 2;
+}
+
+.buttons {
+  display:flex;
+  gap:1rem;
+  margin-top:3rem;
+  position: relative;
+  z-index: 2;
+}
+
 .landing-sub { position: relative; z-index: 2 }
-.btn { padding:1rem 2.5rem; border-radius:0.75rem; font-size:1.25rem; cursor:pointer; border: none; transition: all 0.3s ease }
-.btn-primary { background: linear-gradient(90deg, #007bff, #00bfff); color: white; box-shadow: 0 0 20px #007bff88 }
-.btn-primary:hover { background: linear-gradient(90deg, #00bfff, #00ffff); box-shadow: 0 0 30px #00ffffaa }
-.btn-secondary { background: #222; color: #00ffff; border: 1px solid #00ffff44 }
-.btn-secondary:hover { background: #00ffff22; box-shadow: 0 0 20px #00ffff44 }
+
+.btn {
+  padding:1rem 2.5rem;
+  border-radius:0.75rem;
+  font-size:1.25rem;
+  cursor:pointer;
+  border: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #00d4ff, #9b5cff);
+  color: white;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #9b5cff, #00d4ff);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: rgba(5, 8, 16, 0.8);
+  color: #00d4ff;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  transform: translateY(-2px);
+}
 
 /* particle styles are applied globally below to ensure dynamically-created elements receive them */
 
@@ -224,16 +360,17 @@ onUnmounted(() => {
   .landing-sub { font-size: 1rem }
   .buttons { flex-direction: column }
   .landing-account { top: 12px; right: 12px; max-width: calc(100% - 24px); }
+  .hero-decoration { width: 300px; height: 300px; }
 }
 
 /* small landing control area for toggles */
 .landing-controls { margin-top: 1rem; position: relative; z-index: 2 }
 .control-particles { display:inline-flex; align-items:center; gap:8px; cursor:pointer }
 .control-particles input[type="checkbox"] { width:16px; height:16px }
-.control-particles .toggle-label { font-size:0.95rem; color: #dfefe8 }
+.control-particles .toggle-label { font-size:0.95rem; color: #7a9a8c; text-transform: uppercase; letter-spacing: 0.05em; }
 </style>
 
 <style>
-.particle { position: absolute; background: #00ffff; border-radius: 50%; opacity: 0.4 }
+.particle { position: absolute; background: #00d4ff; border-radius: 50%; opacity: 0.4 }
 @keyframes float { from { transform: translate(0, 0); opacity: 0 } 20% { opacity: 1 } to { transform: translate(var(--dx), var(--dy)); opacity: 0 } }
 </style>

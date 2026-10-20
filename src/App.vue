@@ -137,9 +137,11 @@ const pageSubtitle = computed(() => {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(ellipse at 20% 30%, rgba(124,77,255,0.06), transparent 12%),
-              radial-gradient(ellipse at 80% 70%, rgba(110,231,183,0.05), transparent 12%),
-              linear-gradient(180deg, rgba(11,7,30,0.96), rgba(3,3,8,0.96));
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(0, 212, 255, 0.08), transparent 15%),
+    radial-gradient(ellipse at 80% 70%, rgba(155, 92, 255, 0.06), transparent 15%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 213, 74, 0.04), transparent 20%),
+    linear-gradient(180deg, rgba(5, 8, 16, 0.98), rgba(3, 5, 12, 0.98));
 }
 .app-shell::after {
   content: '';
@@ -147,15 +149,16 @@ const pageSubtitle = computed(() => {
   inset: -20% -20% -20% -20%;
   z-index: 0;
   pointer-events: none;
-  background-image: linear-gradient(120deg, rgba(124,77,255,0.06) 0%, transparent 20%, transparent 80%, rgba(107,181,255,0.03) 100%),
-                    linear-gradient(60deg, rgba(110,231,183,0.04) 0%, transparent 30%, transparent 70%, rgba(155,92,255,0.03) 100%);
+  background-image:
+    linear-gradient(120deg, rgba(0, 212, 255, 0.08) 0%, transparent 20%, transparent 80%, rgba(155, 92, 255, 0.05) 100%),
+    linear-gradient(60deg, rgba(43, 182, 115, 0.05) 0%, transparent 30%, transparent 70%, rgba(0, 212, 255, 0.04) 100%);
   background-size: 200% 200%;
-  animation: veinsMove 18s linear infinite;
-  filter: blur(8px) saturate(1.05);
+  animation: energyFlow 20s linear infinite;
+  filter: blur(10px) saturate(1.1);
 }
 .app-shell > * { position: relative; z-index: 2 }
 
-@keyframes veinsMove {
+@keyframes energyFlow {
   0% { background-position: 0% 0%, 100% 100% }
   50% { background-position: 100% 0%, 0% 100% }
   100% { background-position: 0% 0%, 100% 100% }
@@ -163,21 +166,40 @@ const pageSubtitle = computed(() => {
 
 .main-energy-orb {
   position: absolute;
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  filter: blur(36px);
-  opacity: 0.08;
+  filter: blur(40px);
+  opacity: 0.12;
   pointer-events: none;
   z-index: 1;
   mix-blend-mode: screen;
-  animation: orbFloat 10s infinite ease-in-out;
+  animation: orbFloat 12s infinite ease-in-out;
 }
 
 @keyframes orbFloat {
-  0% { transform: translateY(0) scale(1); opacity: 0.06 }
-  50% { transform: translateY(-16px) scale(1.03); opacity: 0.11 }
-  100% { transform: translateY(0) scale(1); opacity: 0.06 }
+  0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.08 }
+  50% { transform: translateY(-20px) scale(1.05) rotate(180deg); opacity: 0.15 }
+  100% { transform: translateY(0) scale(1) rotate(360deg); opacity: 0.08 }
+}
+
+/* Hexagonal overlay pattern */
+.app-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(30deg, rgba(0, 212, 255, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(0, 212, 255, 0.02) 87.5%, rgba(0, 212, 255, 0.02)),
+    linear-gradient(150deg, rgba(0, 212, 255, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(0, 212, 255, 0.02) 87.5%, rgba(0, 212, 255, 0.02)),
+    linear-gradient(30deg, rgba(0, 212, 255, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(0, 212, 255, 0.02) 87.5%, rgba(0, 212, 255, 0.02)),
+    linear-gradient(150deg, rgba(0, 212, 255, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(0, 212, 255, 0.02) 87.5%, rgba(0, 212, 255, 0.02)),
+    linear-gradient(60deg, rgba(155, 92, 255, 0.015) 25%, transparent 25.5%, transparent 75%, rgba(155, 92, 255, 0.015) 75%, rgba(155, 92, 255, 0.015)),
+    linear-gradient(60deg, rgba(155, 92, 255, 0.015) 25%, transparent 25.5%, transparent 75%, rgba(155, 92, 255, 0.015) 75%, rgba(155, 92, 255, 0.015));
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  opacity: 0.5;
 }
 
 /* Respect users who prefer reduced motion: pause or remove heavy animations */
@@ -189,7 +211,7 @@ const pageSubtitle = computed(() => {
     animation: none !important;
     transition: none !important;
   }
-  .main-energy-orb { opacity: 0.02 !important }
+  .main-energy-orb { opacity: 0.03 !important }
 }
 
 /* skip link styles */
@@ -214,14 +236,16 @@ const pageSubtitle = computed(() => {
   height: auto;
   padding: 8px 12px;
   z-index: 9999;
-  background: rgba(0,0,0,0.8);
-  color: #fff;
+  background: rgba(0, 212, 255, 0.9);
+  color: #000;
   border-radius: 6px;
   text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
 }
 
-.main-energy-orb.orb-a { left: 4%; top: 6%; background: radial-gradient(circle at 30% 30%, rgba(124,77,255,0.95), rgba(124,77,255,0.08)); animation-duration: 12s }
-.main-energy-orb.orb-b { right: 6%; bottom: 6%; background: radial-gradient(circle at 60% 40%, rgba(110,231,183,0.95), rgba(110,231,183,0.06)); animation-duration: 14s }
-.main-energy-orb.orb-c { left: 42%; top: 54%; background: radial-gradient(circle at 50% 50%, rgba(0,191,255,0.9), rgba(0,191,255,0.06)); animation-duration: 11s }
+.main-energy-orb.orb-a { left: 4%; top: 6%; background: radial-gradient(circle at 30% 30%, rgba(0, 212, 255, 0.95), rgba(0, 212, 255, 0.08)); animation-duration: 14s }
+.main-energy-orb.orb-b { right: 6%; bottom: 6%; background: radial-gradient(circle at 60% 40%, rgba(155, 92, 255, 0.95), rgba(155, 92, 255, 0.06)); animation-duration: 16s }
+.main-energy-orb.orb-c { left: 42%; top: 54%; background: radial-gradient(circle at 50% 50%, rgba(255, 213, 74, 0.9), rgba(255, 213, 74, 0.06)); animation-duration: 13s }
 /* Known-issue banner removed */
 </style>

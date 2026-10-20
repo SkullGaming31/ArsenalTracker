@@ -10,37 +10,43 @@
       </div>
 
       <div style="display:flex; gap:8px; align-items:center">
+        <div>Category</div>
+        <q-select dense outlined v-model="selectedCategory" :options="categoryOptions" style="min-width:160px" emit-value />
+      </div>
+
+      <div style="display:flex; gap:8px; align-items:center">
         <div>Crafted</div>
         <q-select dense outlined v-model="craftedFilter" :options="craftedOptions" style="min-width:160px" emit-value />
       </div>
 
       <div class="results">Showing {{ filtered.length }} results</div>
     </div>
-    
-    <!-- All-weapons scroller removed per request; page shows Primary/Secondary/Melee only -->
 
     <section>
-      <h3>Primary</h3>
-      <div class="grid">
-        <WeaponCard v-for="w in primaries" :key="`primary-${w.name}`" :weapon="w" @update="handleUpdate" />
+      <div class="pager" style="display:flex; gap:8px; align-items:center; margin-bottom:8px">
+        <div style="display:flex; gap:8px; align-items:center;">
+          <div>Per page</div>
+          <q-select dense outlined emit-value v-model.number="pageSize" :options="pageOptions" style="min-width:120px" />
+        </div>
+        <q-btn dense flat label="Prev" @click="prev" :disable="current === 0" />
+        <div>Page {{ current + 1 }} / {{ totalPages }}</div>
+        <q-btn dense flat label="Next" @click="next" :disable="current >= totalPages - 1" />
       </div>
-      
-    </section>
-
-    <section>
-      <h3>Secondary</h3>
-      <div class="grid">
-        <WeaponCard v-for="w in secondaries" :key="`secondary-${w.name}`" :weapon="w" @update="handleUpdate" />
+      <!-- virtualized combined list -->
+      <div ref="scrollRef" class="virtual-scroll" style="height:70vh; overflow:auto;">
+        <div :style="{ height: totalHeight + 'px', position: 'relative' }">
+          <!-- center and constrain the inner column so cards don't stretch full page width -->
+          <div style="max-width:1200px; margin:0 auto; position:relative;">
+            <div v-for="vi in virtualRenderItems" :key="vi.item.name" :style="{ position: 'absolute', top: vi.start + 'px', left: (vi.col * (100/columns)) + '%', width: (100/columns) + '%' }">
+              <div style="padding:8px; display:flex; justify-content:center;">
+                <div class="card-wrap">
+                  <WeaponCard :weapon="vi.item" @update="handleUpdate" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
-    </section>
-
-    <section>
-      <h3>Melee</h3>
-      <div class="grid">
-        <WeaponCard v-for="w in melees" :key="`melee-${w.name}`" :weapon="w" @update="handleUpdate" />
-      </div>
-      
     </section>
   </div>
 </template>
@@ -48,10 +54,8 @@
 <script setup lang="ts">
 // give component a multi-word name to satisfy eslint vue/multi-word-component-names
 defineOptions({ name: 'WeaponsPage' })
-import { computed, ref } from 'vue'
+import { computed, ref, watch, onMounted, onBeforeUnmount } from 'vue'
 import WeaponCard from '../components/WeaponCard.vue'
-// virtualizer
-// no external virtualizer: use a lightweight windowing implementation
 import { useCollectionStore } from '../stores/collection'
 import type { Weapon, Part, PartWithCollected } from '../types/weapon'
 
@@ -62,6 +66,7 @@ const props = defineProps<{ query?: string; hideCompleted?: boolean }>()
 const query = computed(() => props.query ?? '')
 const hideCompleted = computed(() => Boolean(props.hideCompleted))
 const selectedType = ref('all')
+const selectedCategory = ref('all')
 const craftedFilter = ref('all') // all | crafted | not-crafted
 
 // QSelect option arrays
@@ -71,6 +76,13 @@ const typeOptions = computed(() => {
     ...types.value.map(t => ({ label: String(t), value: t, disable: !(typeCount(t) > 0) }))
   ]
 })
+
+const categoryOptions = [
+  { label: 'All', value: 'all' },
+  { label: 'Primary', value: 'primary' },
+  { label: 'Secondary', value: 'secondary' },
+  { label: 'Melee', value: 'melee' }
+]
 
 const craftedOptions = [
   { label: 'All', value: 'all' },
@@ -163,10 +175,17 @@ const isCompleted = (w: Weapon) => {
   return flagTrue(w.is_mastered) && allPartsCollected(w)
 }
 
+const hasCategory = (w: Weapon, cat: string) => {
+  const c = (w && (w as unknown as { category?: string | string[] }).category) as string | string[] | undefined
+  if (Array.isArray(c)) return c.includes(cat)
+  return String(c || '') === cat
+}
+
 const filtered = computed(() => {
   const q = query.value.trim().toLowerCase()
   let list = all.value.filter(w => {
     if (selectedType.value !== 'all' && (w.type || 'standard') !== selectedType.value) return false
+    if (selectedCategory.value !== 'all' && !hasCategory(w, selectedCategory.value)) return false
     if (craftedFilter.value !== 'all') {
       const wantsCrafted = craftedFilter.value === 'crafted'
       if (isCrafted(w) !== wantsCrafted) return false
@@ -175,23 +194,119 @@ const filtered = computed(() => {
     return w.name.toLowerCase().includes(q)
   })
   if (hideCompleted.value) list = list.filter(w => !isCompleted(w))
-  return list
+  return list.slice().sort((a, b) => (a.name || '').localeCompare(b.name || ''))
 })
 
-const hasCategory = (w: Weapon, cat: string) => {
-  const c = (w && (w as unknown as { category?: string | string[] }).category) as string | string[] | undefined
-  if (Array.isArray(c)) return c.includes(cat)
-  return String(c || '') === cat
+// --- Virtualization for combined list (responsive) ---
+// itemSize is the assumed height (px) for each rendered row. We make this
+// responsive so cards fit better on narrow screens.
+type VirtualRow = { row: number; start: number; size: number }
+const itemSize = ref(460)
+// responsive columns: 1 (mobile), 2 (tablet), 4 (desktop)
+const columns = ref(4)
+
+function updateLayoutForWidth(w: number) {
+  if (w <= 640) {
+    columns.value = 1
+    itemSize.value = 380
+  } else if (w <= 900) {
+    columns.value = 2
+    itemSize.value = 420
+  } else {
+    columns.value = 4
+    itemSize.value = 460
+  }
 }
 
-const primaries = computed(() => filtered.value.filter(w => hasCategory(w, 'primary')).slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
-const secondaries = computed(() => filtered.value.filter(w => hasCategory(w, 'secondary')).slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
-const melees = computed(() => filtered.value.filter(w => hasCategory(w, 'melee')).slice().sort((a, b) => (a.name || '').localeCompare(b.name || '')))
+function onResize() {
+  updateLayoutForWidth(window.innerWidth)
+}
 
-// Virtual scroller and pagination removed; page now shows Primary/Secondary/Melee only
+// Combined virtual scroll
+const scrollRef = ref<HTMLElement | null>(null)
+// pagination
+const pageSize = ref(-1)
+const pageOptions = [
+  { label: '20', value: 20 },
+  { label: '50', value: 50 },
+  { label: '100', value: 100 },
+  { label: 'All', value: -1 }
+]
+const current = ref(0)
+const totalPages = computed(() => (pageSize.value < 0 ? 1 : Math.max(1, Math.ceil(filtered.value.length / pageSize.value))))
+const paged = computed(() => {
+  if (pageSize.value < 0) return filtered.value
+  const start = current.value * pageSize.value
+  return filtered.value.slice(start, start + pageSize.value)
+})
 
-// Note: removed the combined virtual scroller and pagination.
-// The page now displays separate Primary, Secondary, and Melee sections only.
+const totalRows = computed(() => Math.ceil(paged.value.length / columns.value))
+const visibleRange = ref({ start: 0, end: Math.min(totalRows.value, 10) })
+const virtualItems = computed(() => {
+  const items: VirtualRow[] = []
+  const start = visibleRange.value.start
+  const end = visibleRange.value.end
+  for (let r = start; r < end; r++) items.push({ row: r, start: r * itemSize.value, size: itemSize.value })
+  return items
+})
+// expand each visible row into up to `columns` render cells with column index
+const virtualRenderItems = computed(() => {
+  const out: { item: Weapon; start: number; col: number }[] = []
+  virtualItems.value.forEach((vr) => {
+    for (let c = 0; c < columns.value; c++) {
+      const idx = vr.row * columns.value + c
+      const item = paged.value[idx]
+      if (!item) continue
+      out.push({ item, start: vr.start, col: c })
+    }
+  })
+  return out
+})
+const totalHeight = computed(() => totalRows.value * itemSize.value)
+
+let raf: number | null = null
+function recomputeOnce() {
+  const el = scrollRef.value
+  if (!el) return
+  const scrollTop = el.scrollTop
+  const clientHeight = el.clientHeight || 600
+  const start = Math.floor(scrollTop / itemSize.value) - 5
+  const end = Math.ceil((scrollTop + clientHeight) / itemSize.value) + 5
+  visibleRange.value.start = Math.max(0, start)
+  visibleRange.value.end = Math.min(totalRows.value, end)
+}
+
+function recompute() {
+  if (raf !== null) return
+  raf = requestAnimationFrame(() => {
+    try { recomputeOnce() } finally { raf = null }
+  })
+}
+
+function prev() { if (current.value > 0) current.value-- }
+function next() { if (current.value < totalPages.value - 1) current.value++ }
+
+// keep pages valid when underlying list changes
+watch([pageSize, filtered], () => {
+  if (current.value >= totalPages.value) current.value = Math.max(0, totalPages.value - 1)
+  visibleRange.value = { start: 0, end: Math.min(totalRows.value, 10) }
+})
+
+onMounted(() => {
+  updateLayoutForWidth(window.innerWidth)
+  window.addEventListener('resize', onResize)
+  const el = scrollRef.value
+  if (el) el.addEventListener('scroll', recompute)
+  watch(filtered, () => recompute())
+  setTimeout(recompute, 0)
+})
+
+// no-op watcher preserved for reactivity
+watch(virtualRenderItems, () => {}, { immediate: true })
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', onResize)
+})
 
 // payload shape when WeaponCard emits updates
 interface UpdatePayload {
@@ -207,13 +322,10 @@ function handleUpdate(payload: unknown) {
   if (!p.name) return
   collection.setOverride(p.name, p as Partial<Record<string, unknown>>)
 }
-
-// All-weapons functionality removed
 </script>
 
 <style scoped>
 .weapons-page { max-width:1200px; margin: 16px auto; padding: 16px }
-.grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:12px }
 section h3 { margin-top:18px }
 .toolbar { display:flex; gap:12px; align-items:center; margin-bottom:12px }
 .toolbar input { flex:1; padding:8px; border-radius:6px; border:1px solid #2b2f33; background:#0b0c0d; color:#eee }

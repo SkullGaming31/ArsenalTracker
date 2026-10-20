@@ -115,22 +115,142 @@ function categoryLabel(cat: string) {
 
 <style scoped>
 .companions { max-width: 1100px; margin: 0 auto; padding: 24px 16px }
-.sub-title { margin: 8px 0; font-size: 1rem }
+.sub-title { margin: 8px 0; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: #00d4ff; text-shadow: 0 0 10px rgba(0, 212, 255, 0.3); }
 .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px }
-.companion-card { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 10px; color: #e8f7ee }
-.card-title { font-weight: 700; margin-bottom:6px }
-.card-meta { font-size: 0.9rem; opacity:0.85 }
-.card-parts { margin-top:8px; font-size:0.85rem }
-.card-parts ul { margin:6px 0 0 16px }
-.card-actions { display:flex; gap:8px; margin-top:8px; align-items:center }
-.action-item { display:flex; gap:6px; align-items:center; font-size:0.85rem }
-.action-item input { width:16px; height:16px }
+.companion-card {
+  background: linear-gradient(135deg, rgba(10, 20, 30, 0.95), rgba(20, 35, 50, 0.9));
+  padding: 16px;
+  border-radius: 12px;
+  color: #e8f7ee;
+  border: 1px solid #2a4a5a;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.companion-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='0.5'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.companion-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.companion-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.companion-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 212, 255, 0.15);
+  border-color: rgba(0, 212, 255, 0.4);
+}
+
+.card-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #e8f6ee;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.2);
+}
+
+.card-meta {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  color: #a8c8d8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-parts {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15));
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.card-parts ul {
+  margin: 8px 0 0 16px;
+  color: #d6eede;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.action-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #a8c8d8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.action-item input {
+  width: 18px;
+  height: 18px;
+  accent-color: #00d4ff;
+}
+
 .subgroups { display:flex; flex-direction:column; gap:12px }
 .subgroup { margin-bottom: 12px }
 
-.part-name { font-weight:600 }
-.part-meta { margin-left:6px; margin-top:4px; color:#9fb8a6; font-size:0.85rem; display:flex; flex-direction:column; gap:2px }
-.part-qty { font-weight:700; color: #cfe8d6 }
-.part-chance { opacity:0.9 }
+.part-name {
+  font-weight: 600;
+  color: #e8f6ee;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.part-meta {
+  margin-left: 6px;
+  margin-top: 4px;
+  color: #9fb8a6;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.part-qty { font-weight: 700; color: #cfe8d6 }
+.part-chance { opacity: 0.9 }
 
 </style>

@@ -166,24 +166,97 @@ function navigate(view: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'pri
   display:flex;
   flex-direction:column;
   padding:18px 12px;
-  background: rgba(6,8,12,0.45);
+  background: rgba(5, 8, 16, 0.85);
   color: #e8f7ee;
-  box-shadow: 2px 0 18px rgba(0,0,0,0.45);
+  box-shadow: 2px 0 18px rgba(0, 212, 255, 0.15);
   position:sticky;
   top:0;
-  z-index: 20; /* ensure sidebar sits above page content */
-  border-right: 1px solid rgba(124,77,255,0.06);
-  backdrop-filter: blur(6px) saturate(1.05);
+  z-index: 20;
+  border-right: 1px solid rgba(0, 212, 255, 0.2);
+  backdrop-filter: blur(8px) saturate(1.1);
+  position: relative;
 }
-.brand { font-weight:700; font-size:1.05rem; margin-bottom:12px }
+
+.sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--accent-cyan), transparent);
+  opacity: 0.5;
+}
+
+.brand {
+  font-weight:700;
+  font-size:1.05rem;
+  margin-bottom:12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: linear-gradient(90deg, var(--accent-cyan), #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
 .links { display:flex; flex-direction:column; gap:8px }
-.nav-btn { display:flex; align-items:center; gap:10px; text-align:left; padding:10px 12px; border-radius:10px; background:transparent; color:inherit; border:none; cursor:pointer; transition: all 180ms ease }
-.nav-btn svg { width:18px; height:18px; opacity:0.95; flex-shrink:0 }
-.nav-btn span { font-size:0.95rem }
-.nav-btn:hover { background: rgba(255,255,255,0.02); transform: translateX(4px) }
+.nav-btn {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-align:left;
+  padding:10px 12px;
+  border-radius:10px;
+  background:transparent;
+  color:inherit;
+  border: 1px solid transparent;
+  cursor:pointer;
+  transition: all 200ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-btn:hover::before {
+  opacity: 1;
+}
+
+.nav-btn svg { width:18px; height:18px; opacity:0.95; flex-shrink:0; transition: all 0.2s ease }
+.nav-btn span { font-size:0.95rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500 }
+.nav-btn:hover {
+  background: rgba(0, 212, 255, 0.05);
+  border-color: rgba(0, 212, 255, 0.2);
+  transform: translateX(4px);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+.nav-btn:hover svg {
+  filter: drop-shadow(0 0 6px var(--accent-cyan));
+}
 .nav-btn::before { content: ''; width:4px; height:100%; background: transparent; border-radius:4px; margin-right:6px }
-.nav-btn.active { color: #ffffff; box-shadow: 0 6px 22px rgba(124,77,255,0.08); transform: translateX(6px) }
-.nav-btn.active::before { background: linear-gradient(180deg, var(--accent, #7c4dff), rgba(124,77,255,0.6)); box-shadow: 0 0 18px var(--accent, #7c4dff)66 }
+.nav-btn.active {
+  color: #ffffff;
+  background: rgba(0, 212, 255, 0.1);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  transform: translateX(6px);
+}
+.nav-btn.active::before {
+  background: linear-gradient(180deg, var(--accent-cyan), rgba(0, 212, 255, 0.6));
+  box-shadow: 0 0 12px var(--accent-cyan);
+}
+.nav-btn.active svg {
+  filter: drop-shadow(0 0 8px var(--accent-cyan));
+}
 
 /* accents */
 .nav-dashboard { --accent: #7c4dff }
@@ -191,6 +264,7 @@ function navigate(view: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'pri
 .nav-weapons { --accent: #00bfff }
 .nav-home { --accent: #00ffff }
 .nav-about { --accent: #6ee7b7 }
+.nav-companions { --accent: #ffd54a }
 
 .nav-socials {
   position: fixed;
@@ -198,15 +272,30 @@ function navigate(view: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'pri
   bottom: 18px;
   padding: 8px 10px 6px;
   border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.04);
-  background: rgba(11,12,13,0.55);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  background: rgba(5, 8, 16, 0.85);
   z-index: 60;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);
 }
 .nav-socials .social-links { display:flex; gap:8px; margin-top:8px }
-.nav-socials .icon-link { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:8px; background:transparent }
+.nav-socials .icon-link {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  background: transparent;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  transition: all 0.2s ease;
+}
 .nav-socials .icon-link svg { display:block }
-.nav-socials .icon-link:hover { background: rgba(255,255,255,0.02) }
+.nav-socials .icon-link:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
 .nav-socials .icon-link { pointer-events: auto }
 
 /* mobile adjustments */
@@ -263,11 +352,20 @@ function navigate(view: 'landing'|'about'|'dashboard'|'warframes'|'weapons'|'pri
 }
 
 /* Quasar drawer (mobile hamburger) overrides: darker background and readable text */
-:deep(.q-drawer) { background: rgba(12,14,18,0.96) !important; min-height: 100vh; }
+:deep(.q-drawer) {
+  background: rgba(5, 8, 16, 0.95) !important;
+  min-height: 100vh;
+  border-right: 1px solid rgba(0, 212, 255, 0.2) !important;
+}
 :deep(.q-drawer .q-drawer__content) { background: transparent !important; min-height: 100vh; }
 :deep(.q-drawer .q-pa-md) { background: transparent; color: #e8f7ee !important; }
 :deep(.q-drawer .q-list .q-item), :deep(.q-drawer .q-list .q-item-section) { color: inherit !important; }
 :deep(.q-drawer .q-item) { background: transparent; }
-:deep(.q-drawer .q-item.active), :deep(.q-drawer .q-item--active) { color: #ffffff !important; background: rgba(255,255,255,0.03) !important; }
+:deep(.q-drawer .q-item.active), :deep(.q-drawer .q-item--active) {
+  color: #ffffff !important;
+  background: rgba(0, 212, 255, 0.1) !important;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
 
 </style>
