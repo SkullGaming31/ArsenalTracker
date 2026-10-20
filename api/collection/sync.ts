@@ -6,13 +6,13 @@ import {
   MAX_COLLECTION_SNAPSHOT_BYTES,
   readJsonBody,
   type StoredCollectionSnapshot,
-} from '../_lib/collectionSnapshot'
+} from '../_lib/collectionSnapshot.js'
 import {
   getTwitchConfig,
   readCookie,
   readSession,
   SESSION_COOKIE_NAME,
-} from '../_lib/twitchAuth'
+} from '../_lib/twitchAuth.js'
 
 function sendJson(response: ServerResponse, statusCode: number, body: Record<string, unknown>) {
   response.statusCode = statusCode

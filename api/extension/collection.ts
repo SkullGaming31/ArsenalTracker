@@ -1,10 +1,10 @@
 import { get } from '@vercel/blob'
 import type { IncomingMessage, ServerResponse } from 'node:http'
-import { collectionSnapshotPath } from '../_lib/collectionSnapshot'
+import { collectionSnapshotPath } from '../_lib/collectionSnapshot.js'
 import {
   getTwitchExtensionConfig,
   verifyTwitchExtensionToken,
-} from '../_lib/twitchAuth'
+} from '../_lib/twitchAuth.js'
 
 function sendJson(response: ServerResponse, statusCode: number, body: Record<string, unknown>) {
   response.statusCode = statusCode

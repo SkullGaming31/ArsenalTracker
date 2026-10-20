@@ -9,7 +9,7 @@ import {
   serializeCookie,
   signSession,
   type TwitchUser,
-} from '../_lib/twitchAuth'
+} from '../_lib/twitchAuth.js'
 
 interface TokenResponse {
   access_token?: string

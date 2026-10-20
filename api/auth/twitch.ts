@@ -5,7 +5,7 @@ import {
   OAUTH_STATE_COOKIE_NAME,
   requestUsesSecureCookie,
   serializeCookie,
-} from '../_lib/twitchAuth'
+} from '../_lib/twitchAuth.js'
 
 export default function handler(request: IncomingMessage, response: ServerResponse) {
   if (request.method !== 'GET') {

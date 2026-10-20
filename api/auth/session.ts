@@ -4,7 +4,7 @@ import {
   readCookie,
   readSession,
   SESSION_COOKIE_NAME,
-} from '../_lib/twitchAuth'
+} from '../_lib/twitchAuth.js'
 
 export default function handler(request: IncomingMessage, response: ServerResponse) {
   response.setHeader('Cache-Control', 'private, no-store, max-age=0')
