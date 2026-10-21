@@ -92,7 +92,8 @@ export default async function handler(request: IncomingMessage, response: Server
         companions: snapshot.collections.companions.length,
       },
     })
-  } catch {
+  } catch (error) {
+    console.error('[collection/sync] Blob write failed', error instanceof Error ? error.message : 'Unknown error')
     sendJson(response, 503, { error: 'Collection storage is unavailable. Check the private Blob store configuration.' })
   }
 }

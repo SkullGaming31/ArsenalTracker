@@ -114,7 +114,9 @@ The Dashboard's **Sync now** action sends the full merged Warframe, weapon, and 
 
 Configure storage and extension access in the Vercel project environment:
 
-- Create and connect a **private Vercel Blob store** to this project, including the Development environment. For local development, link the project and pull its Development variables into an ignored file:
+- Create separate **private Vercel Blob stores** for production and development. Connect `prod-arsenal-tracker-blob` to this project for the **Production** environment, and `arsenal-tracker-blob` for **Development** (and Preview only if you want previews to use development data). Do not connect the development store to Production. Vercel supplies the store's `BLOB_STORE_ID` and OIDC credentials per connected environment, which the Blob SDK uses automatically. Redeploy after changing the store connections so the production functions receive the Production credentials.
+
+  For local development, link the project and pull its Development variables into an ignored file:
 
   ```sh
   npx vercel link

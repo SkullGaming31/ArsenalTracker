@@ -63,7 +63,8 @@ export default async function handler(request: IncomingMessage, response: Server
     }
     const body = await new Response(snapshot.stream).json() as Record<string, unknown>
     sendJson(response, 200, body)
-  } catch {
+  } catch (error) {
+    console.error('[extension/collection] Blob read failed', error instanceof Error ? error.message : 'Unknown error')
     sendJson(response, 503, { error: 'Collection storage is unavailable.' })
   }
 }
