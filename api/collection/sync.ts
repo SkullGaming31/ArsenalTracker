@@ -13,6 +13,7 @@ import {
   readSession,
   SESSION_COOKIE_NAME,
 } from '../_lib/twitchAuth.js'
+import { getBlobOptions } from '../_lib/blobStorage.js'
 
 function sendJson(response: ServerResponse, statusCode: number, body: Record<string, unknown>) {
   response.statusCode = statusCode
@@ -82,6 +83,7 @@ export default async function handler(request: IncomingMessage, response: Server
       allowOverwrite: true,
       addRandomSuffix: false,
       contentType: 'application/json; charset=utf-8',
+      ...getBlobOptions(),
     })
     sendJson(response, 200, {
       ok: true,

@@ -5,6 +5,7 @@ import {
   getTwitchExtensionConfig,
   verifyTwitchExtensionToken,
 } from '../_lib/twitchAuth.js'
+import { getBlobOptions } from '../_lib/blobStorage.js'
 
 function sendJson(response: ServerResponse, statusCode: number, body: Record<string, unknown>) {
   response.statusCode = statusCode
@@ -56,6 +57,7 @@ export default async function handler(request: IncomingMessage, response: Server
     const snapshot = await get(collectionSnapshotPath(identity.userId), {
       access: 'private',
       useCache: false,
+      ...getBlobOptions(),
     })
     if (!snapshot || snapshot.statusCode !== 200) {
       sendJson(response, 404, { error: 'No synced collection exists for this Twitch account.' })
